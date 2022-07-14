@@ -1,0 +1,19 @@
+.ouiFilterGroup {
+  border: none;
+  border-radius: $ouiFormControlBorderRadius;
+  background-color: $ouiFormBackgroundColor;
+  box-shadow: inset 0 0 0 1px $ouiFormBorderColor;
+}
+
+.ouiFilterButton {
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  // Box shadow simulates bottom and left borders
+  box-shadow: 0 1px 0 0 $ouiFormBorderColor, -1px 0 0 0 $ouiFormBorderColor;
+
+  .ouiFilterButton--withNext + & {
+    // Remove just the left faux border
+    box-shadow: 0 1px 0 0 $ouiFormBorderColor;
+  }
+}

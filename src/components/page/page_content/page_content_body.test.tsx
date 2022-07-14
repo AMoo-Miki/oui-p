@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageContentBody, PADDING_SIZES } from './page_content_body';
+import { OuiPageContentBody, PADDING_SIZES } from './page_content_body';
 
-describe('EuiPageContentBody', () => {
+describe('OuiPageContentBody', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageContentBody {...requiredProps} />);
+    const component = render(<OuiPageContentBody {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('EuiPageContentBody', () => {
   describe('paddingSize', () => {
     PADDING_SIZES.forEach((size) => {
       it(`${size} is rendered`, () => {
-        const component = render(<EuiPageContentBody paddingSize={size} />);
+        const component = render(<OuiPageContentBody paddingSize={size} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -42,20 +42,20 @@ describe('EuiPageContentBody', () => {
 
   describe('restrict width', () => {
     test('can be set to a default', () => {
-      const component = render(<EuiPageContentBody restrictWidth={true} />);
+      const component = render(<OuiPageContentBody restrictWidth={true} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can be set to a custom number', () => {
-      const component = render(<EuiPageContentBody restrictWidth={1024} />);
+      const component = render(<OuiPageContentBody restrictWidth={1024} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can be set to a custom value and does not override custom style', () => {
       const component = render(
-        <EuiPageContentBody restrictWidth="24rem" style={{ color: 'red ' }} />
+        <OuiPageContentBody restrictWidth="24rem" style={{ color: 'red ' }} />
       );
 
       expect(component).toMatchSnapshot();

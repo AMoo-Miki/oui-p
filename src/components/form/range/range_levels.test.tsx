@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiRangeLevels } from './range_levels';
+import { OuiRangeLevels } from './range_levels';
 
-describe('EuiRangeLevels', () => {
+describe('OuiRangeLevels', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiRangeLevels
+      <OuiRangeLevels
         min={0}
         max={100}
         showTicks
@@ -52,7 +52,7 @@ describe('EuiRangeLevels', () => {
   test('should throw error if `level.min` is lower than `min`', () => {
     const component = () =>
       render(
-        <EuiRangeLevels
+        <OuiRangeLevels
           min={0}
           max={100}
           levels={[
@@ -71,7 +71,7 @@ describe('EuiRangeLevels', () => {
   test('should throw error if `level.max` is higher than `max`', () => {
     const component = () =>
       render(
-        <EuiRangeLevels
+        <OuiRangeLevels
           min={0}
           max={100}
           levels={[

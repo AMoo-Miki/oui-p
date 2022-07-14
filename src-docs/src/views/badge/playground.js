@@ -1,8 +1,8 @@
 import { PropTypes } from 'react-view';
 import {
-  EuiBadge,
-  EuiNotificationBadge,
-  EuiBetaBadge,
+  OuiBadge,
+  OuiNotificationBadge,
+  OuiBetaBadge,
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
@@ -11,9 +11,9 @@ import {
 } from '../../services/playground';
 
 export const badgeConfig = () => {
-  const docgenInfo = Array.isArray(EuiBadge.__docgenInfo)
-    ? EuiBadge.__docgenInfo[0]
-    : EuiBadge.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiBadge.__docgenInfo)
+    ? OuiBadge.__docgenInfo[0]
+    : OuiBadge.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -54,7 +54,7 @@ export const badgeConfig = () => {
       ...propsToUse.onClickAriaLabel.custom,
       checkDep: (val, state) => {
         if (state.onClick.value && !val) {
-          return 'When passing onClick to EuiBadge, you must also provide onClickAriaLabel';
+          return 'When passing onClick to OuiBadge, you must also provide onClickAriaLabel';
         }
         return undefined;
       },
@@ -76,14 +76,14 @@ export const badgeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBadge',
+      componentName: 'OuiBadge',
       props: propsToUse,
       scope: {
-        EuiBadge,
+        OuiBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBadge'],
+        '@opensearch-project/oui': {
+          named: ['OuiBadge'],
         },
       },
       customProps: {
@@ -94,9 +94,9 @@ export const badgeConfig = () => {
 };
 
 export const betaBadgeConfig = () => {
-  const docgenInfo = Array.isArray(EuiBetaBadge.__docgenInfo)
-    ? EuiBetaBadge.__docgenInfo[0]
-    : EuiBetaBadge.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiBetaBadge.__docgenInfo)
+    ? OuiBetaBadge.__docgenInfo[0]
+    : OuiBetaBadge.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.label = {
@@ -114,14 +114,14 @@ export const betaBadgeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBetaBadge',
+      componentName: 'OuiBetaBadge',
       props: propsToUse,
       scope: {
-        EuiBetaBadge,
+        OuiBetaBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBetaBadge'],
+        '@opensearch-project/oui': {
+          named: ['OuiBetaBadge'],
         },
       },
     },
@@ -129,9 +129,9 @@ export const betaBadgeConfig = () => {
 };
 
 export const notificationBadgeConfig = () => {
-  const docgenInfo = Array.isArray(EuiNotificationBadge.__docgenInfo)
-    ? EuiNotificationBadge.__docgenInfo[0]
-    : EuiNotificationBadge.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiNotificationBadge.__docgenInfo)
+    ? OuiNotificationBadge.__docgenInfo[0]
+    : OuiNotificationBadge.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -142,14 +142,14 @@ export const notificationBadgeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiNotificationBadge',
+      componentName: 'OuiNotificationBadge',
       props: propsToUse,
       scope: {
-        EuiNotificationBadge,
+        OuiNotificationBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiNotificationBadge'],
+        '@opensearch-project/oui': {
+          named: ['OuiNotificationBadge'],
         },
       },
     },

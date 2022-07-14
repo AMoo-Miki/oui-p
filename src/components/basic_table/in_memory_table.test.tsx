@@ -21,7 +21,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiInMemoryTable, EuiInMemoryTableProps } from './in_memory_table';
+import { OuiInMemoryTable, OuiInMemoryTableProps } from './in_memory_table';
 import { keys, SortDirection } from '../../services';
 import { SearchFilterConfig } from '../search_bar/filters';
 
@@ -42,9 +42,9 @@ interface ComplexItem {
   };
 }
 
-describe('EuiInMemoryTable', () => {
+describe('OuiInMemoryTable', () => {
   test('empty array', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [],
       columns: [
@@ -55,13 +55,13 @@ describe('EuiInMemoryTable', () => {
         },
       ],
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with message', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [],
       columns: [
@@ -73,13 +73,13 @@ describe('EuiInMemoryTable', () => {
       ],
       message: 'where my items at?',
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with message and loading', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [],
       columns: [
@@ -92,13 +92,13 @@ describe('EuiInMemoryTable', () => {
       message: 'Loading items....',
       loading: true,
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with executeQueryOptions', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [],
       columns: [
@@ -112,13 +112,13 @@ describe('EuiInMemoryTable', () => {
         defaultFields: ['name'],
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with items', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -133,13 +133,13 @@ describe('EuiInMemoryTable', () => {
         },
       ],
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with items and expanded item', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -158,13 +158,13 @@ describe('EuiInMemoryTable', () => {
         '1': <div>expanded row content</div>,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with items and message - expecting to show the items', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       message: 'show me!',
       items: [
@@ -180,13 +180,13 @@ describe('EuiInMemoryTable', () => {
         },
       ],
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -204,13 +204,13 @@ describe('EuiInMemoryTable', () => {
         pageSizeOptions: [2, 4, 6],
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination and default page size and index', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -230,13 +230,13 @@ describe('EuiInMemoryTable', () => {
         pageSizeOptions: [1, 2, 3],
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, default page size and error', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [{ id: '1', name: 'name1' }],
       error: 'ouch!',
@@ -252,13 +252,13 @@ describe('EuiInMemoryTable', () => {
         pageSizeOptions: [2, 4, 6],
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, hiding the per page options', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -276,14 +276,14 @@ describe('EuiInMemoryTable', () => {
         hidePerPageOptions: true,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('sorting', () => {
     test('with field sorting (off by default)', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '3', name: 'name3' },
@@ -300,17 +300,17 @@ describe('EuiInMemoryTable', () => {
         ],
         sorting: true,
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       expect(
         component
-          .find('tbody .euiTableCellContent__text')
+          .find('tbody .ouiTableCellContent__text')
           .map((cell) => cell.text())
       ).toEqual(['name3', 'name1', 'name2']);
     });
 
     test('with field sorting (on by default)', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '3', name: 'name3' },
@@ -332,17 +332,17 @@ describe('EuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       expect(
         component
-          .find('tbody .euiTableCellContent__text')
+          .find('tbody .ouiTableCellContent__text')
           .map((cell) => cell.text())
       ).toEqual(['name1', 'name2', 'name3']);
     });
 
     test('with name sorting', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '3', name: 'name3' },
@@ -364,17 +364,17 @@ describe('EuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       expect(
         component
-          .find('tbody .euiTableCellContent__text')
+          .find('tbody .ouiTableCellContent__text')
           .map((cell) => cell.text())
       ).toEqual(['name3', 'name2', 'name1']);
     });
 
     test('verify field sorting precedes name sorting', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '1', name: 'name3' },
@@ -402,18 +402,18 @@ describe('EuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       // name TDs should be sorted desc, id TDs should be asc,
       expect(
         component
-          .find('tbody .euiTableCellContent__text')
+          .find('tbody .ouiTableCellContent__text')
           .map((cell) => cell.text())
       ).toEqual(['name3', '1', 'name2', '2', 'name1', '3']);
     });
 
     test('verify an invalid sort field does not blow everything up', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '3', name: 'name3' },
@@ -436,7 +436,7 @@ describe('EuiInMemoryTable', () => {
         },
       };
       expect(() => {
-        mount(<EuiInMemoryTable {...props} />);
+        mount(<OuiInMemoryTable {...props} />);
       }).not.toThrow();
     });
   });
@@ -451,7 +451,7 @@ describe('EuiInMemoryTable', () => {
     // copy the array to ensure the `items` prop doesn't mutate
     const itemsProp = items.slice(0);
 
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: itemsProp,
       columns: [
@@ -469,14 +469,14 @@ describe('EuiInMemoryTable', () => {
         },
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
     expect(itemsProp).toEqual(items);
   });
 
   test('with initial selection', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -496,13 +496,13 @@ describe('EuiInMemoryTable', () => {
         initialSelected: [{ id: '1', name: 'name1' }],
       },
     };
-    const component = mount(<EuiInMemoryTable {...props} />);
+    const component = mount(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination and selection', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -522,13 +522,13 @@ describe('EuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection and sorting', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -550,13 +550,13 @@ describe('EuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and column renderer', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -581,13 +581,13 @@ describe('EuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and a single record action', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -619,13 +619,13 @@ describe('EuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting  and simple search', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -658,13 +658,13 @@ describe('EuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with search and component between search and table', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -693,13 +693,13 @@ describe('EuiInMemoryTable', () => {
       search: true,
       childrenBetween: <div>Children Between</div>,
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and configured search', () => {
-    const props: EuiInMemoryTableProps<BasicItem> = {
+    const props: OuiInMemoryTableProps<BasicItem> = {
       ...requiredProps,
       items: [
         { id: '1', name: 'name1' },
@@ -747,14 +747,14 @@ describe('EuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<EuiInMemoryTable {...props} />);
+    const component = shallow(<OuiInMemoryTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('search interaction & functionality', () => {
     it('updates the results as based on the entered query', () => {
-      const props: EuiInMemoryTableProps<StateItem> = {
+      const props: OuiInMemoryTableProps<StateItem> = {
         items: [
           {
             active: true,
@@ -785,12 +785,12 @@ describe('EuiInMemoryTable', () => {
         className: 'testTable',
       };
 
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       // should render with all three results visible
-      expect(component.find('.testTable EuiTableRow').length).toBe(3);
+      expect(component.find('.testTable OuiTableRow').length).toBe(3);
 
-      const searchField = component.find('EuiFieldSearch input[type="search"]');
+      const searchField = component.find('OuiFieldSearch input[type="search"]');
 
       searchField.simulate('keyUp', {
         target: {
@@ -801,7 +801,7 @@ describe('EuiInMemoryTable', () => {
       component.update();
 
       // should render with the two active results
-      expect(component.find('.testTable EuiTableRow').length).toBe(2);
+      expect(component.find('.testTable OuiTableRow').length).toBe(2);
 
       searchField.simulate('keyUp', {
         target: {
@@ -812,11 +812,11 @@ describe('EuiInMemoryTable', () => {
       component.update();
 
       // should render with the one inactive result
-      expect(component.find('.testTable EuiTableRow').length).toBe(1);
+      expect(component.find('.testTable OuiTableRow').length).toBe(1);
     });
 
     it('passes down the executeQueryOptions properly', () => {
-      const props: EuiInMemoryTableProps<ComplexItem> = {
+      const props: OuiInMemoryTableProps<ComplexItem> = {
         items: [
           {
             active: true,
@@ -855,12 +855,12 @@ describe('EuiInMemoryTable', () => {
         message: <span className="customMessage">No items found!</span>,
       };
 
-      const noDefaultFieldsComponent = mount(<EuiInMemoryTable {...props} />);
+      const noDefaultFieldsComponent = mount(<OuiInMemoryTable {...props} />);
       // should render with the no items found text
       expect(noDefaultFieldsComponent.find('.customMessage').length).toBe(1);
 
       // With defaultFields and a search query, we should only see one
-      const props2: EuiInMemoryTableProps<ComplexItem> = {
+      const props2: OuiInMemoryTableProps<ComplexItem> = {
         items: [
           {
             active: true,
@@ -899,8 +899,8 @@ describe('EuiInMemoryTable', () => {
         message: <span className="customMessage">No items found!</span>,
       };
 
-      const defaultFieldComponent = mount(<EuiInMemoryTable {...props2} />);
-      expect(defaultFieldComponent.find('.testTable EuiTableRow').length).toBe(
+      const defaultFieldComponent = mount(<OuiInMemoryTable {...props2} />);
+      expect(defaultFieldComponent.find('.testTable OuiTableRow').length).toBe(
         1
       );
     });
@@ -908,7 +908,7 @@ describe('EuiInMemoryTable', () => {
 
   describe('custom column sorting', () => {
     it('calls the sortable function and uses its return value for sorting', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: 7, name: 'Alfred' },
@@ -930,9 +930,9 @@ describe('EuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
-      expect((component.find('EuiBasicTable').props() as any).items).toEqual([
+      expect((component.find('OuiBasicTable').props() as any).items).toEqual([
         { id: 3, name: 'Betty' },
         { id: 5, name: 'Charlie' },
         { id: 7, name: 'Alfred' },
@@ -942,7 +942,7 @@ describe('EuiInMemoryTable', () => {
 
   describe('behavior', () => {
     test('pagination', async () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '1', name: 'name1' },
@@ -961,13 +961,13 @@ describe('EuiInMemoryTable', () => {
           pageSizeOptions: [2, 4, 6],
         },
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       component
-        .find('EuiButtonEmpty[data-test-subj="pagination-button-1"]')
+        .find('OuiButtonEmpty[data-test-subj="pagination-button-1"]')
         .simulate('click');
 
-      // forces EuiInMemoryTable's getDerivedStateFromProps to re-execute
+      // forces OuiInMemoryTable's getDerivedStateFromProps to re-execute
       // this is specifically testing regression against https://github.com/elastic/eui/issues/1007
       component.setProps({});
 
@@ -975,7 +975,7 @@ describe('EuiInMemoryTable', () => {
     });
 
     test('pagination with actions column and sorting set to true', async () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '1', name: 'name1' },
@@ -994,15 +994,15 @@ describe('EuiInMemoryTable', () => {
           pageSizeOptions: [2, 4, 6],
         },
       };
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       component
-        .find('EuiButtonEmpty[data-test-subj="pagination-button-1"]')
+        .find('OuiButtonEmpty[data-test-subj="pagination-button-1"]')
         .simulate('click');
     });
 
     test('onTableChange callback', () => {
-      const props: EuiInMemoryTableProps<BasicItem> = {
+      const props: OuiInMemoryTableProps<BasicItem> = {
         ...requiredProps,
         items: [
           { id: '1', name: 'name1' },
@@ -1025,11 +1025,11 @@ describe('EuiInMemoryTable', () => {
         onTableChange: jest.fn(),
       };
 
-      const component = mount(<EuiInMemoryTable {...props} />);
+      const component = mount(<OuiInMemoryTable {...props} />);
 
       expect(props.onTableChange).toHaveBeenCalledTimes(0);
       component
-        .find('EuiButtonEmpty[data-test-subj="pagination-button-1"]')
+        .find('OuiButtonEmpty[data-test-subj="pagination-button-1"]')
         .simulate('click');
       expect(props.onTableChange).toHaveBeenCalledTimes(1);
       expect(props.onTableChange).toHaveBeenCalledWith({
@@ -1083,7 +1083,7 @@ describe('EuiInMemoryTable', () => {
       ];
       const onTableChange = jest.fn();
       const component = mount(
-        <EuiInMemoryTable
+        <OuiInMemoryTable
           items={items}
           columns={columns}
           pagination={pagination}
@@ -1101,7 +1101,7 @@ describe('EuiInMemoryTable', () => {
 
       // click the first pagination button
       component
-        .find('EuiButtonEmpty[data-test-subj="pagination-button-0"]')
+        .find('OuiButtonEmpty[data-test-subj="pagination-button-0"]')
         .simulate('click');
       expect(onTableChange).toHaveBeenCalledTimes(1);
       expect(onTableChange).toHaveBeenCalledWith({
@@ -1155,7 +1155,7 @@ describe('EuiInMemoryTable', () => {
       ];
       const onTableChange = jest.fn();
       const component = mount(
-        <EuiInMemoryTable
+        <OuiInMemoryTable
           items={items}
           columns={columns}
           pagination={pagination}

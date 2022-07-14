@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiAccordion, EuiPanel } from '../../../../src/components/';
+import { OuiAccordion, OuiPanel } from '../../../../src/components/';
 import { htmlIdGenerator } from '../../../../src/services';
 import {
   propUtilityForPlayground,
@@ -9,9 +9,9 @@ import {
 } from '../../services/playground';
 
 export const accordionConfig = () => {
-  const docgenInfo = Array.isArray(EuiAccordion.__docgenInfo)
-    ? EuiAccordion.__docgenInfo[0]
-    : EuiAccordion.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiAccordion.__docgenInfo)
+    ? OuiAccordion.__docgenInfo[0]
+    : OuiAccordion.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.buttonContent = {
@@ -26,9 +26,9 @@ export const accordionConfig = () => {
   };
 
   propsToUse.children = {
-    value: `<EuiPanel color="subdued">
-  Any content inside of <strong>EuiAccordion</strong> will appear here.
-</EuiPanel>`,
+    value: `<OuiPanel color="subdued">
+  Any content inside of <strong>OuiAccordion</strong> will appear here.
+</OuiPanel>`,
     type: PropTypes.ReactNode,
     hidden: false,
   };
@@ -49,15 +49,15 @@ export const accordionConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiAccordion',
+      componentName: 'OuiAccordion',
       props: propsToUse,
       scope: {
-        EuiAccordion,
-        EuiPanel,
+        OuiAccordion,
+        OuiPanel,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiAccordion', 'EuiPanel'],
+        '@opensearch-project/oui': {
+          named: ['OuiAccordion', 'OuiPanel'],
         },
       },
       customProps: {

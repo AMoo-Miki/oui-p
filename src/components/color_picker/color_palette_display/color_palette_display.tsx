@@ -22,32 +22,32 @@ import classnames from 'classnames';
 import { ExclusiveUnion, keysOf } from '../../common';
 import { ColorStop } from '../color_stops';
 import {
-  EuiColorPaletteDisplayFixed,
-  EuiColorPaletteDisplayFixedProps,
+  OuiColorPaletteDisplayFixed,
+  OuiColorPaletteDisplayFixedProps,
 } from './color_palette_display_fixed';
 import {
-  EuiColorPaletteDisplayGradient,
-  EuiColorPaletteDisplayGradientProps,
+  OuiColorPaletteDisplayGradient,
+  OuiColorPaletteDisplayGradientProps,
 } from './color_palette_display_gradient';
 
 const sizeToClassNameMap = {
-  xs: 'euiColorPaletteDisplay--sizeExtraSmall',
-  s: 'euiColorPaletteDisplay--sizeSmall',
-  m: 'euiColorPaletteDisplay--sizeMedium',
+  xs: 'ouiColorPaletteDisplay--sizeExtraSmall',
+  s: 'ouiColorPaletteDisplay--sizeSmall',
+  m: 'ouiColorPaletteDisplay--sizeMedium',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiColorPaletteDisplaySize = keyof typeof sizeToClassNameMap;
+export type OuiColorPaletteDisplaySize = keyof typeof sizeToClassNameMap;
 
-export interface EuiColorPaletteDisplayShared {
+export interface OuiColorPaletteDisplayShared {
   /**
    * Array of color `strings` or an array of #ColorStop. The stops must be numbers in an ordered range.
    */
   palette: string[] | ColorStop[];
 }
 
-interface DisplayGradient extends EuiColorPaletteDisplayGradientProps {
+interface DisplayGradient extends OuiColorPaletteDisplayGradientProps {
   /**
    *   Specify the type of palette.
    *  `gradient`: each color fades into the next.
@@ -55,21 +55,21 @@ interface DisplayGradient extends EuiColorPaletteDisplayGradientProps {
   type: 'gradient';
 }
 
-interface DisplayFixed extends EuiColorPaletteDisplayFixedProps {
+interface DisplayFixed extends OuiColorPaletteDisplayFixedProps {
   /**
    *  `fixed`: individual color blocks.
    */
   type?: 'fixed';
 }
 
-export type EuiColorPaletteDisplayProps = {
+export type OuiColorPaletteDisplayProps = {
   /**
    * Height of the palette display
    */
-  size?: EuiColorPaletteDisplaySize;
+  size?: OuiColorPaletteDisplaySize;
 } & ExclusiveUnion<DisplayFixed, DisplayGradient>;
 
-export const EuiColorPaletteDisplay: FunctionComponent<EuiColorPaletteDisplayProps> = ({
+export const OuiColorPaletteDisplay: FunctionComponent<OuiColorPaletteDisplayProps> = ({
   type = 'fixed',
   palette,
   className,
@@ -77,7 +77,7 @@ export const EuiColorPaletteDisplay: FunctionComponent<EuiColorPaletteDisplayPro
   ...rest
 }) => {
   const classes = classnames(
-    'euiColorPaletteDisplay',
+    'ouiColorPaletteDisplay',
     className,
     sizeToClassNameMap[size]
   );
@@ -85,13 +85,13 @@ export const EuiColorPaletteDisplay: FunctionComponent<EuiColorPaletteDisplayPro
   return (
     <>
       {type === 'fixed' ? (
-        <EuiColorPaletteDisplayFixed
+        <OuiColorPaletteDisplayFixed
           className={classes}
           palette={palette}
           {...rest}
         />
       ) : (
-        <EuiColorPaletteDisplayGradient
+        <OuiColorPaletteDisplayGradient
           className={classes}
           palette={palette}
           {...rest}

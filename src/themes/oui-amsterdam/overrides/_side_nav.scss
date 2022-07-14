@@ -1,0 +1,17 @@
+.ouiSideNavItem--root {
+  padding-bottom: $ouiSizeS;
+
+  & + & {
+    padding-top: $ouiSizeS;
+    margin-top: $ouiSizeS;
+  }
+
+  & > .ouiSideNavItemButton {
+    margin-bottom: $ouiSizeXS;
+
+    .ouiSideNavItemButton__label {
+      @include ouiTitle('xxs');
+      color: inherit;
+    }
+  }
+}

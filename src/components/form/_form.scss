@@ -1,8 +1,8 @@
-.euiForm__error {
-  @include euiFontSizeS;
+.ouiForm__error {
+  @include ouiFontSizeS;
   list-style: disc;
 }
 
-.euiForm__errors {
-  margin-bottom: $euiSize;
+.ouiForm__errors {
+  margin-bottom: $ouiSize;
 }

@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiRange, EuiSpacer, EuiDualRange } from '../../../../src/components';
+import { OuiRange, OuiSpacer, OuiDualRange } from '../../../../src/components';
 
 import { DisplayToggles } from '../form_controls/display_toggles';
 import { htmlIdGenerator } from '../../../../src/services';
@@ -33,27 +33,27 @@ export default () => {
   return (
     <Fragment>
       <DisplayToggles canAppend canPrepend>
-        <EuiRange
+        <OuiRange
           id={htmlIdGenerator()()}
           value={value}
           onChange={onChange}
           showInput="inputWithPopover"
           showLabels
-          aria-label="An example of EuiRange with showInput prop"
+          aria-label="An example of OuiRange with showInput prop"
         />
       </DisplayToggles>
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
       <DisplayToggles canAppend canPrepend canLoading={false}>
-        <EuiDualRange
+        <OuiDualRange
           id={htmlIdGenerator()()}
           value={dualValue}
           onChange={onDualChange}
           showInput="inputWithPopover"
           showLabels
           levels={levels}
-          aria-label="An example of EuiDualRange with showInput prop"
+          aria-label="An example of OuiDualRange with showInput prop"
         />
       </DisplayToggles>
     </Fragment>

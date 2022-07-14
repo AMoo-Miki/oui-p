@@ -20,12 +20,12 @@
 import { requiredProps } from '../../../test/required_props';
 
 import {
-  EuiSelectableTemplateSitewideOption,
-  euiSelectableTemplateSitewideFormatOptions,
-  euiSelectableTemplateSitewideRenderOptions,
+  OuiSelectableTemplateSitewideOption,
+  ouiSelectableTemplateSitewideFormatOptions,
+  ouiSelectableTemplateSitewideRenderOptions,
 } from './selectable_template_sitewide_option';
 
-const options: EuiSelectableTemplateSitewideOption[] = [
+const options: OuiSelectableTemplateSitewideOption[] = [
   {
     label: 'Basic data application',
     avatar: {
@@ -85,24 +85,24 @@ const options: EuiSelectableTemplateSitewideOption[] = [
   },
 ];
 
-describe('EuiSelectableTemplateSitewideOptions', () => {
-  const formattedOptions = euiSelectableTemplateSitewideFormatOptions(options);
+describe('OuiSelectableTemplateSitewideOptions', () => {
+  const formattedOptions = ouiSelectableTemplateSitewideFormatOptions(options);
 
-  test('different configurations are formatted with euiSelectableTemplateSitewideFormatOptions()', () => {
+  test('different configurations are formatted with ouiSelectableTemplateSitewideFormatOptions()', () => {
     expect(formattedOptions).toMatchSnapshot();
   });
 
-  test('different configurations are rendered with euiSelectableTemplateSitewideRenderOptions()', () => {
+  test('different configurations are rendered with ouiSelectableTemplateSitewideRenderOptions()', () => {
     options.forEach((option) => {
-      const component = euiSelectableTemplateSitewideRenderOptions(option, '');
+      const component = ouiSelectableTemplateSitewideRenderOptions(option, '');
 
       expect(component).toMatchSnapshot();
     });
   });
 
-  test('different configurations are rendered with euiSelectableTemplateSitewideRenderOptions() and search text', () => {
+  test('different configurations are rendered with ouiSelectableTemplateSitewideRenderOptions() and search text', () => {
     options.forEach((option) => {
-      const component = euiSelectableTemplateSitewideRenderOptions(
+      const component = ouiSelectableTemplateSitewideRenderOptions(
         option,
         'data'
       );

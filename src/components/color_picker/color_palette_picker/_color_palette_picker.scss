@@ -1,9 +1,9 @@
-.euiColorPalettePicker {
+.ouiColorPalettePicker {
   &__itemTitle {
-    @include euiFontSizeXS;
+    @include ouiFontSizeXS;
   }
 
-  &__itemTitle + .euiColorPaletteDisplay {
-    margin-top: $euiSizeXS;
+  &__itemTitle + .ouiColorPaletteDisplay {
+    margin-top: $ouiSizeXS;
   }
 }

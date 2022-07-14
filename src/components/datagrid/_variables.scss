@@ -1,7 +1,7 @@
-$euiDataGridColumnResizerWidth: 3px; // Odd number because it straddles a border
-$euiDataGridPopoverMaxHeight: $euiSize * 25;
+$ouiDataGridColumnResizerWidth: 3px; // Odd number because it straddles a border
+$ouiDataGridPopoverMaxHeight: $ouiSize * 25;
 
-$euiDataGridCellPaddingS: $euiSizeXS;
-$euiDataGridCellPaddingM: $euiSizeM / 2;
-$euiDataGridCellPaddingL: $euiSizeS;
-$euiDataGridVerticalBorder: solid 1px tintOrShade($euiBorderColor, 60%, 30%);
+$ouiDataGridCellPaddingS: $ouiSizeXS;
+$ouiDataGridCellPaddingM: $ouiSizeM / 2;
+$ouiDataGridCellPaddingL: $ouiSizeS;
+$ouiDataGridVerticalBorder: solid 1px tintOrShade($ouiBorderColor, 60%, 30%);

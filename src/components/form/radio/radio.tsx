@@ -53,11 +53,11 @@ interface withId extends RadioProps {
   id: string;
 }
 
-export type EuiRadioProps = CommonProps &
+export type OuiRadioProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'id'> &
   ExclusiveUnion<ExclusiveUnion<RadioProps, idWithLabel>, withId>;
 
-export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
+export const OuiRadio: FunctionComponent<OuiRadioProps> = ({
   className,
   id,
   name,
@@ -72,14 +72,14 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiRadio',
+    'ouiRadio',
     {
-      'euiRadio--noLabel': !label,
-      'euiRadio--compressed': compressed,
+      'ouiRadio--noLabel': !label,
+      'ouiRadio--compressed': compressed,
     },
     className
   );
-  const labelClasses = classNames('euiRadio__label', labelProps?.className);
+  const labelClasses = classNames('ouiRadio__label', labelProps?.className);
   let optionalLabel;
 
   if (label) {
@@ -93,7 +93,7 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
   return (
     <div className={classes} {...rest}>
       <input
-        className="euiRadio__input"
+        className="ouiRadio__input"
         type="radio"
         id={id}
         name={name}
@@ -103,7 +103,7 @@ export const EuiRadio: FunctionComponent<EuiRadioProps> = ({
         disabled={disabled}
         autoFocus={autoFocus}
       />
-      <div className="euiRadio__circle" />
+      <div className="ouiRadio__circle" />
 
       {optionalLabel}
     </div>

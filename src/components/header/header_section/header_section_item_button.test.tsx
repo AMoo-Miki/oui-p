@@ -22,43 +22,43 @@ import { mount, render, shallow } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
 import {
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonRef,
+  OuiHeaderSectionItemButton,
+  OuiHeaderSectionItemButtonRef,
 } from './header_section_item_button';
 
-describe('EuiHeaderSectionItemButton', () => {
+describe('OuiHeaderSectionItemButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderSectionItemButton {...requiredProps} />);
+    const component = render(<OuiHeaderSectionItemButton {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders children', () => {
     const component = render(
-      <EuiHeaderSectionItemButton>
+      <OuiHeaderSectionItemButton>
         <span>Ahoy!</span>
-      </EuiHeaderSectionItemButton>
+      </OuiHeaderSectionItemButton>
     );
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders a link', () => {
-    const component = render(<EuiHeaderSectionItemButton href="#" />);
+    const component = render(<OuiHeaderSectionItemButton href="#" />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('renders notification', () => {
     test('as a badge', () => {
-      const component = render(<EuiHeaderSectionItemButton notification="1" />);
+      const component = render(<OuiHeaderSectionItemButton notification="1" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('as a dot', () => {
       const component = render(
-        <EuiHeaderSectionItemButton notification={true} />
+        <OuiHeaderSectionItemButton notification={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -66,7 +66,7 @@ describe('EuiHeaderSectionItemButton', () => {
 
     test('color', () => {
       const component = render(
-        <EuiHeaderSectionItemButton
+        <OuiHeaderSectionItemButton
           notification="1"
           notificationColor="subdued"
         />
@@ -89,13 +89,13 @@ describe('EuiHeaderSectionItemButton', () => {
       expect.assertions(2);
 
       mount(
-        <EuiHeaderSectionItemButton ref={testAnimation} notification={true} />
+        <OuiHeaderSectionItemButton ref={testAnimation} notification={true} />
       );
 
-      function testAnimation(element: EuiHeaderSectionItemButtonRef) {
+      function testAnimation(element: OuiHeaderSectionItemButtonRef) {
         if (element) {
           expect(element.animate).toHaveBeenCalledTimes(0);
-          element.euiAnimate();
+          element.ouiAnimate();
           expect(element.animate).toHaveBeenCalledTimes(1);
         }
       }
@@ -106,7 +106,7 @@ describe('EuiHeaderSectionItemButton', () => {
     test("isn't called upon instantiation", () => {
       const onClickHandler = jest.fn();
 
-      shallow(<EuiHeaderSectionItemButton onClick={onClickHandler} />);
+      shallow(<OuiHeaderSectionItemButton onClick={onClickHandler} />);
 
       expect(onClickHandler).not.toHaveBeenCalled();
     });
@@ -115,7 +115,7 @@ describe('EuiHeaderSectionItemButton', () => {
       const onClickHandler = jest.fn();
 
       const $button = shallow(
-        <EuiHeaderSectionItemButton onClick={onClickHandler} />
+        <OuiHeaderSectionItemButton onClick={onClickHandler} />
       );
 
       $button.simulate('click');
@@ -127,7 +127,7 @@ describe('EuiHeaderSectionItemButton', () => {
   describe('ref', () => {
     it('is the button element', () => {
       const ref = jest.fn();
-      const component = mount(<EuiHeaderSectionItemButton ref={ref} />);
+      const component = mount(<OuiHeaderSectionItemButton ref={ref} />);
 
       expect(ref).toHaveBeenCalledTimes(1);
       expect(ref).toHaveBeenCalledWith(component.find('button').getDOMNode());
@@ -136,7 +136,7 @@ describe('EuiHeaderSectionItemButton', () => {
     it('is the anchor element', () => {
       const ref = jest.fn();
       const component = mount(
-        <EuiHeaderSectionItemButton href="#" ref={ref} />
+        <OuiHeaderSectionItemButton href="#" ref={ref} />
       );
 
       expect(ref).toHaveBeenCalledTimes(1);

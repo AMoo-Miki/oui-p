@@ -1,9 +1,9 @@
 // Export basic class & modifiers
-@include euiPanel($selector: '.euiPanel');
+@include ouiPanel($selector: '.ouiPanel');
 
 // Padding
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPanel--#{$modifier} {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPanel--#{$modifier} {
     padding: $amount;
   }
 }

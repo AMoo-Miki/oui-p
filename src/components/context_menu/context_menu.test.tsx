@@ -21,7 +21,7 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiContextMenu, SIZES } from './context_menu';
+import { OuiContextMenu, SIZES } from './context_menu';
 import { setTimeout } from 'timers';
 
 const panel3 = {
@@ -79,16 +79,16 @@ export const tick = (ms = 0) =>
     setTimeout(resolve, ms);
   });
 
-describe('EuiContextMenu', () => {
+describe('OuiContextMenu', () => {
   test('is rendered', () => {
-    const component = render(<EuiContextMenu {...requiredProps} />);
+    const component = render(<OuiContextMenu {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   it('panel item can contain JSX', () => {
     const component = render(
-      <EuiContextMenu panels={panels} initialPanelId={3} />
+      <OuiContextMenu panels={panels} initialPanelId={3} />
     );
 
     expect(component).toMatchSnapshot();
@@ -96,7 +96,7 @@ describe('EuiContextMenu', () => {
 
   it('panel item can be a separator line', () => {
     const component = render(
-      <EuiContextMenu
+      <OuiContextMenu
         panels={[
           {
             id: 3,
@@ -117,7 +117,7 @@ describe('EuiContextMenu', () => {
 
   it('can pass-through horizontal rule props', () => {
     const component = render(
-      <EuiContextMenu
+      <OuiContextMenu
         panels={[
           {
             id: 3,
@@ -143,7 +143,7 @@ describe('EuiContextMenu', () => {
     describe('panels and initialPanelId', () => {
       it('renders the referenced panel', () => {
         const component = render(
-          <EuiContextMenu panels={panels} initialPanelId={2} />
+          <OuiContextMenu panels={panels} initialPanelId={2} />
         );
 
         expect(component).toMatchSnapshot();
@@ -151,7 +151,7 @@ describe('EuiContextMenu', () => {
 
       it('allows you to click the title button to go back to the previous panel', async () => {
         const component = mount(
-          <EuiContextMenu panels={panels} initialPanelId={2} />
+          <OuiContextMenu panels={panels} initialPanelId={2} />
         );
 
         await tick(20);
@@ -173,7 +173,7 @@ describe('EuiContextMenu', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
           const component = render(
-            <EuiContextMenu panels={panels} initialPanelId={2} size={size} />
+            <OuiContextMenu panels={panels} initialPanelId={2} size={size} />
           );
 
           expect(component).toMatchSnapshot();

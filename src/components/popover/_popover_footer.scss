@@ -1,13 +1,13 @@
-.euiPopoverFooter {
-  @include euiPopoverFooter;
+.ouiPopoverFooter {
+  @include ouiPopoverFooter;
 }
 
-.euiPopoverFooter--paddingNone {
+.ouiPopoverFooter--paddingNone {
   padding: 0;
 }
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPopoverFooter--#{$modifier} {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPopoverFooter--#{$modifier} {
     padding: $amount;
   }
 }
@@ -16,12 +16,12 @@
 // ensure the title expands to cover that padding and
 // take on the same amount of padding horizontally
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPopover__panel.euiPanel--#{$modifier} .euiPopoverFooter {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPopover__panel.ouiPanel--#{$modifier} .ouiPopoverFooter {
     margin: $amount ($amount * -1) ($amount * -1);
 
-    &:not([class*='euiPopoverFooter--padding']) {
-      padding: $euiSizeM $amount;
+    &:not([class*='ouiPopoverFooter--padding']) {
+      padding: $ouiSizeM $amount;
     }
   }
 }

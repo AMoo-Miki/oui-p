@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiTableSortMobile } from './table_sort_mobile';
+import { OuiTableSortMobile } from './table_sort_mobile';
 
-describe('EuiTableSortMobile', () => {
+describe('OuiTableSortMobile', () => {
   test('is rendered', () => {
-    const component = render(<EuiTableSortMobile {...requiredProps} />);
+    const component = render(<OuiTableSortMobile {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

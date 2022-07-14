@@ -18,20 +18,20 @@
  */
 
 export {
-  EuiContextMenu,
-  EuiContextMenuProps,
-  EuiContextMenuPanelDescriptor,
-  EuiContextMenuPanelItemDescriptor,
+  OuiContextMenu,
+  OuiContextMenuProps,
+  OuiContextMenuPanelDescriptor,
+  OuiContextMenuPanelItemDescriptor,
 } from './context_menu';
 
 export {
-  EuiContextMenuPanel,
-  EuiContextMenuPanelProps,
+  OuiContextMenuPanel,
+  OuiContextMenuPanelProps,
 } from './context_menu_panel';
 
 export {
-  EuiContextMenuItem,
-  EuiContextMenuItemProps,
-  EuiContextMenuItemIcon,
-  EuiContextMenuItemLayoutAlignment,
+  OuiContextMenuItem,
+  OuiContextMenuItemProps,
+  OuiContextMenuItemIcon,
+  OuiContextMenuItemLayoutAlignment,
 } from './context_menu_item';

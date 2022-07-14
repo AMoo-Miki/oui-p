@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiPopover, EuiButton, EuiText } from '../../../../src/components';
+import { OuiPopover, OuiButton, OuiText } from '../../../../src/components';
 
 export default () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -10,21 +10,21 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   return (
-    <EuiPopover
+    <OuiPopover
       button={
-        <EuiButton
+        <OuiButton
           iconType="arrowDown"
           iconSide="right"
           onClick={onButtonClick}>
           Text scaling
-        </EuiButton>
+        </OuiButton>
       }
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       panelClassName="guideDemo__textLines">
-      <EuiText style={{ width: 100 }}>
+      <OuiText style={{ width: 100 }}>
         <p>This has a custom class that applies some grid lines.</p>
-      </EuiText>
-    </EuiPopover>
+      </OuiText>
+    </OuiPopover>
   );
 };

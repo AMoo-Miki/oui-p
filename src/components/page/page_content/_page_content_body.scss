@@ -1,10 +1,10 @@
-.euiPageContentBody {
-  @include euiPageRestrictWidth;
+.ouiPageContentBody {
+  @include ouiPageRestrictWidth;
 }
 
-// Uses the same values as EuiPanel
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPageContentBody--#{$modifier} {
+// Uses the same values as OuiPanel
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPageContentBody--#{$modifier} {
     padding: $amount;
   }
 }

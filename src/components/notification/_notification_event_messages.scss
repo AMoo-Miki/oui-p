@@ -1,17 +1,17 @@
-.euiNotificationEventMessages {
-  font-size: $euiFontSizeS;
+.ouiNotificationEventMessages {
+  font-size: $ouiFontSizeS;
 
   &__accordion {
-    color: $euiColorDarkShade;
+    color: $ouiColorDarkShade;
   }
 
   &__accordionButton {
-    color: $euiLinkColor;
+    color: $ouiLinkColor;
   }
 
   &__accordionContent {
     > * {
-      padding-top: $euiSizeS;
+      padding-top: $ouiSizeS;
     }
   }
 }

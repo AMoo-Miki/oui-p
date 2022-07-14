@@ -21,12 +21,12 @@ import { CommonProps } from '../common';
 
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 
-import { EuiCodeBlockImpl, EuiCodeBlockImplProps } from './_code_block';
+import { OuiCodeBlockImpl, OuiCodeBlockImplProps } from './_code_block';
 
-export type EuiCodeProps = CommonProps &
-  Pick<EuiCodeBlockImplProps, 'language' | 'transparentBackground'> &
+export type OuiCodeProps = CommonProps &
+  Pick<OuiCodeBlockImplProps, 'language' | 'transparentBackground'> &
   HTMLAttributes<HTMLElement>;
 
-export const EuiCode: FunctionComponent<EuiCodeProps> = ({ ...rest }) => {
-  return <EuiCodeBlockImpl inline={true} {...rest} />;
+export const OuiCode: FunctionComponent<OuiCodeProps> = ({ ...rest }) => {
+  return <OuiCodeBlockImpl inline={true} {...rest} />;
 };

@@ -20,7 +20,7 @@
 import React, { FunctionComponent, ReactNode, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
-export type EuiTableHeaderProps = CommonProps &
+export type OuiTableHeaderProps = CommonProps &
   HTMLAttributes<HTMLElement> & {
     /**
      * Children must be valid DOM structure residing within `<thead>`.
@@ -33,7 +33,7 @@ export type EuiTableHeaderProps = CommonProps &
     wrapWithTableRow?: boolean;
   };
 
-export const EuiTableHeader: FunctionComponent<EuiTableHeaderProps> = ({
+export const OuiTableHeader: FunctionComponent<OuiTableHeaderProps> = ({
   children,
   className,
   wrapWithTableRow = true,

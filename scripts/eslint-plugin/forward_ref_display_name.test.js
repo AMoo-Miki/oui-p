@@ -26,7 +26,7 @@ const ruleTester = new RuleTester({
 
 const valid = [
   `const Component = React.forwardRef<ref>(() => {})
-   Component.displayName = "EuiBadgeGroup"
+   Component.displayName = "OuiBadgeGroup"
 `,
 ];
 

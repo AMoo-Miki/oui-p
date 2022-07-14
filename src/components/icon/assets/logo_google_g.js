@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoGoogleG = ({ title, titleId, ...props }) => (
+const OuiIconLogoGoogleG = ({ title, titleId, ...props }) => (
   <svg
     viewBox="0 0 32 32"
     width={32}
@@ -76,4 +76,4 @@ const EuiIconLogoGoogleG = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoGoogleG;
+export const icon = OuiIconLogoGoogleG;

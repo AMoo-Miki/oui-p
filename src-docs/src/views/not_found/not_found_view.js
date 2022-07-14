@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { EuiText } from '../../../../src/components/text';
+import { OuiText } from '../../../../src/components/text';
 
 export const NotFoundView = () => (
   <div className="guideContentPage">
     <div className="guideContentPage__content">
-      <EuiText>
+      <OuiText>
         <h1 className="guideTitle">404</h1>
 
         <p className="guideText">
@@ -21,7 +21,7 @@ export const NotFoundView = () => (
           }
           ?
         </p>
-      </EuiText>
+      </OuiText>
     </div>
   </div>
 );

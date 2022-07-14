@@ -22,25 +22,25 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
 
-import { EuiIcon } from '../icon';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiResizeObserver } from '../observer/resize_observer';
-import { EuiI18n } from '../i18n';
+import { OuiIcon } from '../icon';
+import { OuiLoadingSpinner } from '../loading';
+import { OuiResizeObserver } from '../observer/resize_observer';
+import { OuiI18n } from '../i18n';
 import { htmlIdGenerator } from '../../services';
 
 const paddingSizeToClassNameMap = {
   none: '',
-  xs: 'euiAccordion__padding--xs',
-  s: 'euiAccordion__padding--s',
-  m: 'euiAccordion__padding--m',
-  l: 'euiAccordion__padding--l',
-  xl: 'euiAccordion__padding--xl',
+  xs: 'ouiAccordion__padding--xs',
+  s: 'ouiAccordion__padding--s',
+  m: 'ouiAccordion__padding--m',
+  l: 'ouiAccordion__padding--l',
+  xl: 'ouiAccordion__padding--xl',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
-export type EuiAccordionSize = keyof typeof paddingSizeToClassNameMap;
+export type OuiAccordionSize = keyof typeof paddingSizeToClassNameMap;
 
-export type EuiAccordionProps = CommonProps &
+export type OuiAccordionProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'id'> & {
     id: string;
     /**
@@ -74,7 +74,7 @@ export type EuiAccordionProps = CommonProps &
     /**
      * The padding around the exposed accordion content.
      */
-    paddingSize?: EuiAccordionSize;
+    paddingSize?: OuiAccordionSize;
     /**
      * Placement of the arrow indicator, or 'none' to hide it.
      */
@@ -93,8 +93,8 @@ export type EuiAccordionProps = CommonProps &
     isLoadingMessage?: boolean | ReactNode;
   };
 
-export class EuiAccordion extends Component<
-  EuiAccordionProps,
+export class OuiAccordion extends Component<
+  OuiAccordionProps,
   { isOpen: boolean }
 > {
   static defaultProps = {
@@ -181,9 +181,9 @@ export class EuiAccordion extends Component<
     const isOpen = forceState ? forceState === 'open' : this.state.isOpen;
 
     const classes = classNames(
-      'euiAccordion',
+      'ouiAccordion',
       {
-        'euiAccordion-isOpen': isOpen,
+        'ouiAccordion-isOpen': isOpen,
       },
       className
     );
@@ -193,29 +193,29 @@ export class EuiAccordion extends Component<
       : undefined;
 
     const childrenClasses = classNames(paddingClass, {
-      'euiAccordion__children-isLoading': isLoading,
+      'ouiAccordion__children-isLoading': isLoading,
     });
 
     const buttonClasses = classNames(
-      'euiAccordion__button',
+      'ouiAccordion__button',
       {
-        euiAccordion__buttonReverse: !extraAction && arrowDisplay === 'right',
+        ouiAccordion__buttonReverse: !extraAction && arrowDisplay === 'right',
       },
       buttonClassName,
       buttonProps?.className
     );
 
-    const iconClasses = classNames('euiAccordion__icon', {
-      'euiAccordion__icon-isOpen': isOpen,
+    const iconClasses = classNames('ouiAccordion__icon', {
+      'ouiAccordion__icon-isOpen': isOpen,
     });
 
-    const iconWrapperClasses = classNames('euiAccordion__iconWrapper', {
-      euiAccordion__iconButton: extraAction && arrowDisplay === 'right',
+    const iconWrapperClasses = classNames('ouiAccordion__iconWrapper', {
+      ouiAccordion__iconButton: extraAction && arrowDisplay === 'right',
     });
 
     let baseIcon;
     if (arrowDisplay !== 'none') {
-      baseIcon = <EuiIcon className={iconClasses} type="arrowRight" size="m" />;
+      baseIcon = <OuiIcon className={iconClasses} type="arrowRight" size="m" />;
     }
 
     let icon;
@@ -241,12 +241,12 @@ export class EuiAccordion extends Component<
 
     if (extraAction && !isLoading) {
       optionalAction = (
-        <div className="euiAccordion__optionalAction">{extraAction}</div>
+        <div className="ouiAccordion__optionalAction">{extraAction}</div>
       );
     } else if (isLoading) {
       optionalAction = (
-        <div className="euiAccordion__optionalAction">
-          <EuiLoadingSpinner />
+        <div className="ouiAccordion__optionalAction">
+          <OuiLoadingSpinner />
         </div>
       );
     }
@@ -255,12 +255,12 @@ export class EuiAccordion extends Component<
     if (isLoading && isLoadingMessage) {
       childrenContent = (
         <>
-          <EuiLoadingSpinner className="euiAccordion__spinner" />
+          <OuiLoadingSpinner className="ouiAccordion__spinner" />
           <span>
             {isLoadingMessage && isLoadingMessage !== true ? (
               isLoadingMessage
             ) : (
-              <EuiI18n token="euiAccordion.isLoading" default="Loading" />
+              <OuiI18n token="ouiAccordion.isLoading" default="Loading" />
             )}
           </span>
         </>
@@ -271,7 +271,7 @@ export class EuiAccordion extends Component<
 
     return (
       <div className={classes} {...rest}>
-        <div className="euiAccordion__triggerWrapper">
+        <div className="ouiAccordion__triggerWrapper">
           <button
             {...buttonProps}
             id={buttonId}
@@ -283,7 +283,7 @@ export class EuiAccordion extends Component<
             {icon}
             <span
               className={classNames(
-                'euiIEFlexWrapFix',
+                'ouiIEFlexWrapFix',
                 buttonContentClassName
               )}>
               {buttonContent}
@@ -294,7 +294,7 @@ export class EuiAccordion extends Component<
         </div>
 
         <div
-          className="euiAccordion__childWrapper"
+          className="ouiAccordion__childWrapper"
           ref={(node) => {
             this.childWrapper = node;
           }}
@@ -302,7 +302,7 @@ export class EuiAccordion extends Component<
           role="region"
           aria-labelledby={buttonId}
           id={id}>
-          <EuiResizeObserver onResize={this.setChildContentHeight}>
+          <OuiResizeObserver onResize={this.setChildContentHeight}>
             {(resizeRef) => (
               <div
                 ref={(ref) => {
@@ -312,7 +312,7 @@ export class EuiAccordion extends Component<
                 <div className={childrenClasses}>{childrenContent}</div>
               </div>
             )}
-          </EuiResizeObserver>
+          </OuiResizeObserver>
         </div>
       </div>
     );

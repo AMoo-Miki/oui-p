@@ -1,14 +1,14 @@
-@mixin euiAccordionIconFocus {
-  @include euiFocusRing;
-  color: $euiColorPrimary;
+@mixin ouiAccordionIconFocus {
+  @include ouiFocusRing;
+  color: $ouiColorPrimary;
 }
 
-@mixin euiAccordionIconMargin($align: left) {
+@mixin ouiAccordionIconMargin($align: left) {
   @if $align == left {
-    margin-left: $euiSizeXS;
-    margin-right: $euiSizeS;
+    margin-left: $ouiSizeXS;
+    margin-right: $ouiSizeS;
   } @else {
-    margin-left: $euiSizeS;
-    margin-right: $euiSizeXS;
+    margin-left: $ouiSizeS;
+    margin-right: $ouiSizeXS;
   }
 }

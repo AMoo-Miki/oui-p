@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconFolderExclamation = ({ title, titleId, ...props }) => (
+const OuiIconFolderExclamation = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconFolderExclamation = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconFolderExclamation;
+export const icon = OuiIconFolderExclamation;

@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiSelectableMessage,
-  EuiSelectableMessageProps,
+  OuiSelectableMessage,
+  OuiSelectableMessageProps,
 } from './selectable_message';

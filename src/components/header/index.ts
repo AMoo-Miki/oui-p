@@ -17,24 +17,24 @@
  * under the License.
  */
 
-export { EuiHeader, EuiHeaderProps, EuiHeaderSections } from './header';
+export { OuiHeader, OuiHeaderProps, OuiHeaderSections } from './header';
 
-export { EuiHeaderAlert, EuiHeaderAlertProps } from './header_alert';
+export { OuiHeaderAlert, OuiHeaderAlertProps } from './header_alert';
 
-export { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
+export { OuiHeaderBreadcrumbs } from './header_breadcrumbs';
 
 export {
-  EuiHeaderLink,
-  EuiHeaderLinkProps,
-  EuiHeaderLinks,
-  EuiHeaderLinksProps,
+  OuiHeaderLink,
+  OuiHeaderLinkProps,
+  OuiHeaderLinks,
+  OuiHeaderLinksProps,
 } from './header_links';
 
-export { EuiHeaderLogo, EuiHeaderLogoProps } from './header_logo';
+export { OuiHeaderLogo, OuiHeaderLogoProps } from './header_logo';
 
 export {
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonProps,
+  OuiHeaderSection,
+  OuiHeaderSectionItem,
+  OuiHeaderSectionItemButton,
+  OuiHeaderSectionItemButtonProps,
 } from './header_section';

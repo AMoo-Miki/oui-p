@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiControlBar, EuiControlBarProps } from './control_bar';
+export { OuiControlBar, OuiControlBarProps } from './control_bar';

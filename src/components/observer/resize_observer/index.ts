@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiResizeObserver,
-  EuiResizeObserverProps,
+  OuiResizeObserver,
+  OuiResizeObserverProps,
   useResizeObserver,
 } from './resize_observer';

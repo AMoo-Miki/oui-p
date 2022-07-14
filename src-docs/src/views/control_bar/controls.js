@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiControlBar, EuiLink } from '../../../../src/components';
+import { OuiControlBar, OuiLink } from '../../../../src/components';
 
 export default () => {
   const controls = [
@@ -52,7 +52,7 @@ export default () => {
     {
       controlType: 'text',
       id: 'some_text',
-      text: <EuiLink>A sample link</EuiLink>,
+      text: <OuiLink>A sample link</OuiLink>,
     },
     {
       controlType: 'spacer',
@@ -71,5 +71,5 @@ export default () => {
     },
   ];
 
-  return <EuiControlBar controls={controls} position="relative" showOnMobile />;
+  return <OuiControlBar controls={controls} position="relative" showOnMobile />;
 };

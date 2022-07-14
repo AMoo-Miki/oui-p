@@ -22,12 +22,12 @@ import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
 import { STATUS } from './step_number';
-import { EuiStepHorizontal } from './step_horizontal';
+import { OuiStepHorizontal } from './step_horizontal';
 
-describe('EuiStepHorizontal', () => {
+describe('OuiStepHorizontal', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStepHorizontal {...requiredProps} onClick={() => {}} />
+      <OuiStepHorizontal {...requiredProps} onClick={() => {}} />
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe('EuiStepHorizontal', () => {
   describe('props', () => {
     test('step', () => {
       const component = render(
-        <EuiStepHorizontal step={5} onClick={() => {}} />
+        <OuiStepHorizontal step={5} onClick={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe('EuiStepHorizontal', () => {
 
     test('title', () => {
       const component = render(
-        <EuiStepHorizontal title={'First step'} onClick={() => {}} />
+        <OuiStepHorizontal title={'First step'} onClick={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe('EuiStepHorizontal', () => {
 
     test('isSelected', () => {
       const component = render(
-        <EuiStepHorizontal isSelected onClick={() => {}} />
+        <OuiStepHorizontal isSelected onClick={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe('EuiStepHorizontal', () => {
 
     test('isComplete', () => {
       const component = render(
-        <EuiStepHorizontal isComplete onClick={() => {}} />
+        <OuiStepHorizontal isComplete onClick={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -70,7 +70,7 @@ describe('EuiStepHorizontal', () => {
       STATUS.forEach((status) => {
         test(`${status} is rendered`, () => {
           const component = render(
-            <EuiStepHorizontal status={status} onClick={() => {}} />
+            <OuiStepHorizontal status={status} onClick={() => {}} />
           );
 
           expect(component).toMatchSnapshot();
@@ -83,7 +83,7 @@ describe('EuiStepHorizontal', () => {
         const onClickHandler = jest.fn();
 
         const component = mount(
-          <EuiStepHorizontal step={1} onClick={onClickHandler} />
+          <OuiStepHorizontal step={1} onClick={onClickHandler} />
         );
 
         component.simulate('click');
@@ -95,7 +95,7 @@ describe('EuiStepHorizontal', () => {
         const onClickHandler = jest.fn();
 
         const component = mount(
-          <EuiStepHorizontal disabled step={1} onClick={onClickHandler} />
+          <OuiStepHorizontal disabled step={1} onClick={onClickHandler} />
         );
 
         component.simulate('click');

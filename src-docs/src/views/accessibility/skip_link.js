@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiSkipLink,
-  EuiCallOut,
-  EuiText,
-  EuiSpacer,
-  EuiSwitch,
+  OuiSkipLink,
+  OuiCallOut,
+  OuiText,
+  OuiSpacer,
+  OuiSwitch,
 } from '../../../../src/components';
 
 export default () => {
@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <>
-      <EuiText>
+      <OuiText>
         {isFixed ? (
           <p>
             <em>
@@ -30,25 +30,25 @@ export default () => {
             </em>
           </p>
         )}
-      </EuiText>
-      <EuiSpacer />
-      <EuiSwitch
+      </OuiText>
+      <OuiSpacer />
+      <OuiSwitch
         label="Fix link to top of screen"
         checked={isFixed}
         onChange={(e) => setFixed(e.target.checked)}
       />
-      <EuiSpacer />
-      <EuiSkipLink
+      <OuiSpacer />
+      <OuiSkipLink
         destinationId="/utilities/accessibility"
         position={isFixed ? 'fixed' : 'static'}
         data-test-subj="skip-link-demo-subj">
         Skip to {isFixed && 'main '}content
-      </EuiSkipLink>
+      </OuiSkipLink>
       {isFixed && (
         <>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
-            title="A functional &lsquo;Skip to main content&rsquo; link will be added to the EUI docs site once our URL format is updated."
+            title="A functional &lsquo;Skip to main content&rsquo; link will be added to the OUI docs site once our URL format is updated."
             iconType="iInCircle"
           />
         </>

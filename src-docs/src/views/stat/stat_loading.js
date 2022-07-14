@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSwitch, EuiStat, EuiSpacer } from '../../../../src/components';
+import { OuiSwitch, OuiStat, OuiSpacer } from '../../../../src/components';
 
 export default () => {
   const [isLoading, setLoading] = useState(true);
@@ -11,13 +11,13 @@ export default () => {
 
   return (
     <div>
-      <EuiStat
+      <OuiStat
         title="7,600 mm"
         description="Total People"
         isLoading={isLoading}
       />
-      <EuiSpacer />
-      <EuiSwitch
+      <OuiSpacer />
+      <OuiSwitch
         label="Show as loading"
         checked={isLoading}
         onChange={onToggleChange}

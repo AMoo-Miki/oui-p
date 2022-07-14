@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiInputPopover,
-  EuiFieldText,
-  EuiSpacer,
+  OuiInputPopover,
+  OuiFieldText,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -18,14 +18,14 @@ export default () => {
   };
 
   const input = (
-    <EuiFieldText
+    <OuiFieldText
       onFocus={() => toggleIsPopoverOpen()}
       aria-label="Popover attached to input element"
     />
   );
 
   const inputTwo = (
-    <EuiFieldText
+    <OuiFieldText
       onFocus={() => {
         setInputWidth(400);
         toggleIsPopoverOpenTwo();
@@ -37,18 +37,18 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiInputPopover
+      <OuiInputPopover
         input={input}
         isOpen={isPopoverOpen}
         closePopover={() => {
           toggleIsPopoverOpen(false);
         }}>
         Popover content
-      </EuiInputPopover>
+      </OuiInputPopover>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiInputPopover
+      <OuiInputPopover
         input={inputTwo}
         isOpen={isPopoverOpenTwo}
         closePopover={() => {
@@ -56,7 +56,7 @@ export default () => {
           setInputWidth(200);
         }}>
         Popover will adjust in size as the input does
-      </EuiInputPopover>
+      </OuiInputPopover>
     </React.Fragment>
   );
 };

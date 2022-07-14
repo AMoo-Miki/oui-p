@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiToast } from '../../../../src/components';
+import { OuiToast } from '../../../../src/components';
 
 const esError =
   'Error: expected _scroll_id in the folling Elasticsearch response: ' +
@@ -8,10 +8,10 @@ const esError =
   '"hits":{"total":0,"max_score":0,"hits":[]}}';
 
 export default () => (
-  <EuiToast
+  <OuiToast
     title="Couldn't complete the search"
     color="danger"
     iconType="alert">
     <p>{esError}</p>
-  </EuiToast>
+  </OuiToast>
 );

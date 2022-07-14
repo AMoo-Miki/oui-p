@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiPopover, EuiButton, EuiText } from '../../../../src/components';
+import { OuiPopover, OuiButton, OuiText } from '../../../../src/components';
 
 export default () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -10,19 +10,19 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Show popover
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}>
-      <EuiText style={{ width: 300 }}>
+      <OuiText style={{ width: 300 }}>
         <p>Popover content that&rsquo;s wider than the default width</p>
-      </EuiText>
-    </EuiPopover>
+      </OuiText>
+    </OuiPopover>
   );
 };

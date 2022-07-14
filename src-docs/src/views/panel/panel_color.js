@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { EuiPanel, EuiSpacer } from '../../../../src/components';
+import { OuiPanel, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiPanel color="subdued" borderRadius="none" hasShadow={false}>
+    <OuiPanel color="subdued" borderRadius="none" hasShadow={false}>
       <p>I am a simple shaded box</p>
-    </EuiPanel>
+    </OuiPanel>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiPanel color="transparent" hasBorder={false}>
+    <OuiPanel color="transparent" hasBorder={false}>
       <p>I am a transparent box simply for padding</p>
-    </EuiPanel>
+    </OuiPanel>
   </div>
 );

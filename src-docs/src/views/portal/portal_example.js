@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiPortal } from '../../../../src/components';
+import { OuiCode, OuiPortal } from '../../../../src/components';
 
 import { Portal } from './portal';
 const portalSource = require('!!raw-loader!./portal');
@@ -30,13 +30,13 @@ export const PortalExample = {
       ],
       text: (
         <p>
-          <strong>EuiPortal</strong> allows you to append its contained children
+          <strong>OuiPortal</strong> allows you to append its contained children
           onto the document body. It is useful for moving fixed elements like
           modals, tooltips or toasts when you are worried about a z-index or
           overflow conflict.
         </p>
       ),
-      components: { EuiPortal },
+      components: { OuiPortal },
       demo: <Portal />,
     },
     {
@@ -54,23 +54,23 @@ export const PortalExample = {
       text: (
         <React.Fragment>
           <p>
-            There is an optional <EuiCode>insert</EuiCode> prop that can specify
+            There is an optional <OuiCode>insert</OuiCode> prop that can specify
             the portal&apos;s location in the DOM. When used, it is important to
             consider how the location relates to the component lifecycle, as it
             could be removed from the DOM by another component update.
           </p>
           <p>
-            <EuiCode>insert</EuiCode> is an object with two key-value pairs:{' '}
-            <EuiCode>sibling</EuiCode> and <EuiCode>position</EuiCode>.
-            <EuiCode>sibling</EuiCode> is the React node or HTMLElement to
-            insert the portal next to, and <EuiCode>position</EuiCode> specifies
+            <OuiCode>insert</OuiCode> is an object with two key-value pairs:{' '}
+            <OuiCode>sibling</OuiCode> and <OuiCode>position</OuiCode>.
+            <OuiCode>sibling</OuiCode> is the React node or HTMLElement to
+            insert the portal next to, and <OuiCode>position</OuiCode> specifies
             the portal&apos;s relative position, either{' '}
-            <EuiCode>before</EuiCode> or
-            <EuiCode>after</EuiCode>.
+            <OuiCode>before</OuiCode> or
+            <OuiCode>after</OuiCode>.
           </p>
         </React.Fragment>
       ),
-      props: { EuiPortal },
+      props: { OuiPortal },
       demo: <PortalInsert />,
     },
   ],

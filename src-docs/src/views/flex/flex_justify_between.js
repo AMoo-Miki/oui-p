@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup justifyContent="spaceBetween">
-    <EuiFlexItem grow={false}>One here on the left.</EuiFlexItem>
-    <EuiFlexItem grow={false}>The other over here on the right.</EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup justifyContent="spaceBetween">
+    <OuiFlexItem grow={false}>One here on the left.</OuiFlexItem>
+    <OuiFlexItem grow={false}>The other over here on the right.</OuiFlexItem>
+  </OuiFlexGroup>
 );

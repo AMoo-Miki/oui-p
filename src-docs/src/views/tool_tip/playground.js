@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiToolTip } from '../../../../src/components/';
+import { OuiToolTip } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -7,9 +7,9 @@ import {
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiToolTip.__docgenInfo)
-    ? EuiToolTip.__docgenInfo[0]
-    : EuiToolTip.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiToolTip.__docgenInfo)
+    ? OuiToolTip.__docgenInfo[0]
+    : OuiToolTip.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -35,14 +35,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiToolTip',
+      componentName: 'OuiToolTip',
       props: propsToUse,
       scope: {
-        EuiToolTip,
+        OuiToolTip,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiToolTip'],
+        '@opensearch-project/oui': {
+          named: ['OuiToolTip'],
         },
       },
       customProps: {

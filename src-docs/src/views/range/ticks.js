@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiRange,
-  EuiSpacer,
-  EuiTitle,
-  EuiDualRange,
+  OuiRange,
+  OuiSpacer,
+  OuiTitle,
+  OuiDualRange,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -23,24 +23,24 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         step={10}
         value={value}
         onChange={onChange}
         showTicks
-        aria-label="An example of EuiRange with ticks"
+        aria-label="An example of OuiRange with ticks"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h3>Custom tick interval</h3>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         value={value}
         onChange={onChange}
@@ -48,18 +48,18 @@ export default () => {
         showRange
         showTicks
         tickInterval={20}
-        aria-label="An example of EuiRange with custom tickInterval"
+        aria-label="An example of OuiRange with custom tickInterval"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h3>Custom ticks object</h3>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiDualRange
+      <OuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={onDualChange}
@@ -69,18 +69,18 @@ export default () => {
           { label: '100kb', value: 100 },
         ]}
         showInput
-        aria-label="An example of EuiDualRange with ticks"
+        aria-label="An example of OuiDualRange with ticks"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h3>Long labels</h3>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiDualRange
+      <OuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={onDualChange}
@@ -90,7 +90,7 @@ export default () => {
           { label: '50 kilobytes', value: 50 },
           { label: '100 kilobytes', value: 100 },
         ]}
-        aria-label="An example of EuiDualRange with long tick labels"
+        aria-label="An example of OuiDualRange with long tick labels"
       />
     </Fragment>
   );

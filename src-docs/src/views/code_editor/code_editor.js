@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiCodeEditor } from '../../../../src/components';
+import { OuiCodeEditor } from '../../../../src/components';
 import 'brace/theme/github';
 import 'brace/mode/javascript';
 import 'brace/snippets/javascript';
@@ -14,7 +14,7 @@ export default () => {
   };
 
   return (
-    <EuiCodeEditor
+    <OuiCodeEditor
       mode="javascript"
       theme="github"
       width="100%"

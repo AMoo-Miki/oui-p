@@ -20,7 +20,7 @@
 import React, { FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 
-export const EuiTableFooter: FunctionComponent<CommonProps> = ({
+export const OuiTableFooter: FunctionComponent<CommonProps> = ({
   children,
   className,
   ...rest

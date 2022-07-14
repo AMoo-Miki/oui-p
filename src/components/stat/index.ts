@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiStat, EuiStatProps } from './stat';
+export { OuiStat, OuiStatProps } from './stat';

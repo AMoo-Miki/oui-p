@@ -21,19 +21,19 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiModalBodyProps = FunctionComponent<
+export type OuiModalBodyProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiModalBody: EuiModalBodyProps = ({
+export const OuiModalBody: OuiModalBodyProps = ({
   className,
   children,
   ...rest
 }) => {
-  const classes = classnames('euiModalBody', className);
+  const classes = classnames('ouiModalBody', className);
   return (
     <div className={classes} {...rest}>
-      <div className="euiModalBody__overflow">{children}</div>
+      <div className="ouiModalBody__overflow">{children}</div>
     </div>
   );
 };

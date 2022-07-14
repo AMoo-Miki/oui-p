@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
+const OuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -15,7 +15,7 @@ const EuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
         d="M0 22c0 5.522 4.478 10 10 10V12C4.478 12 0 16.478 0 22"
       />
       <path
-        className="euiIcon__fillNegative"
+        className="ouiIcon__fillNegative"
         d="M10 12v10h10c0-5.522-4.478-10-10-10"
       />
       <path
@@ -26,4 +26,4 @@ const EuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoBusinessAnalytics;
+export const icon = OuiIconLogoBusinessAnalytics;

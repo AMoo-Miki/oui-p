@@ -18,8 +18,8 @@
  */
 
 export {
-  EuiCollapsibleNavGroup,
-  EuiCollapsibleNavGroupProps,
+  OuiCollapsibleNavGroup,
+  OuiCollapsibleNavGroupProps,
 } from './collapsible_nav_group';
 
-export { EuiCollapsibleNav, EuiCollapsibleNavProps } from './collapsible_nav';
+export { OuiCollapsibleNav, OuiCollapsibleNavProps } from './collapsible_nav';

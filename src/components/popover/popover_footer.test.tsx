@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPopoverFooter, PADDING_SIZES } from './popover_footer';
+import { OuiPopoverFooter, PADDING_SIZES } from './popover_footer';
 
-describe('EuiPopoverFooter', () => {
+describe('OuiPopoverFooter', () => {
   test('is rendered', () => {
-    const component = render(<EuiPopoverFooter {...requiredProps} />);
+    const component = render(<OuiPopoverFooter {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiPopoverFooter', () => {
     describe('paddingSize', () => {
       PADDING_SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiPopoverFooter paddingSize={size} />);
+          const component = render(<OuiPopoverFooter paddingSize={size} />);
 
           expect(component).toMatchSnapshot();
         });

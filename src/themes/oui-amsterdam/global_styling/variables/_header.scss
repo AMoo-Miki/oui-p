@@ -1,0 +1,7 @@
+// Curated border color to fade into the shadow without looking too much like a border
+// It adds separation between the header and flyout
+$ouiHeaderBorderColor: lightOrDarkTheme(shade($ouiBorderColor, 3%), shade($ouiColorEmptyShade, 35%));
+
+$ouiHeaderHeight: $ouiSizeXXL + $ouiSizeS;
+$ouiHeaderChildSize: $ouiSizeXXL;
+$ouiHeaderHeightCompensation: $ouiHeaderHeight;

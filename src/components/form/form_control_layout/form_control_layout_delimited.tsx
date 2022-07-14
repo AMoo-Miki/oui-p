@@ -25,14 +25,14 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiText } from '../../text';
+import { OuiText } from '../../text';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from './form_control_layout';
 
-export type EuiFormControlLayoutDelimitedProps = Partial<
-  EuiFormControlLayoutProps
+export type OuiFormControlLayoutDelimitedProps = Partial<
+  OuiFormControlLayoutProps
 > & {
   /**
    * Left side control
@@ -43,33 +43,33 @@ export type EuiFormControlLayoutDelimitedProps = Partial<
    */
   endControl: ReactElement;
   /**
-   * The center content. Accepts a string to be wrapped in a subdued EuiText
+   * The center content. Accepts a string to be wrapped in a subdued OuiText
    * or a single ReactElement
    */
   delimiter?: ReactNode;
   className?: string;
 };
 
-export const EuiFormControlLayoutDelimited: FunctionComponent<EuiFormControlLayoutDelimitedProps> = ({
+export const OuiFormControlLayoutDelimited: FunctionComponent<OuiFormControlLayoutDelimitedProps> = ({
   startControl,
   endControl,
   delimiter = '→',
   className,
   ...rest
 }) => {
-  const classes = classNames('euiFormControlLayoutDelimited', className);
+  const classes = classNames('ouiFormControlLayoutDelimited', className);
 
   return (
-    <EuiFormControlLayout className={classes} {...rest}>
+    <OuiFormControlLayout className={classes} {...rest}>
       {addClassesToControl(startControl)}
-      <EuiText
-        className="euiFormControlLayoutDelimited__delimeter"
+      <OuiText
+        className="ouiFormControlLayoutDelimited__delimeter"
         size="s"
         color="subdued">
         {delimiter}
-      </EuiText>
+      </OuiText>
       {addClassesToControl(endControl)}
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
   );
 };
 
@@ -77,7 +77,7 @@ function addClassesToControl(control: ReactElement) {
   return cloneElement(control, {
     className: classNames(
       control.props.className,
-      'euiFormControlLayoutDelimited__input'
+      'ouiFormControlLayoutDelimited__input'
     ),
   });
 }

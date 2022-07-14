@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiErrorBoundary } from '../../../../src/components';
+import { OuiErrorBoundary } from '../../../../src/components';
 
 const BadComponent = () => {
   throw new Error(
@@ -9,7 +9,7 @@ const BadComponent = () => {
 };
 
 export default () => (
-  <EuiErrorBoundary>
+  <OuiErrorBoundary>
     <BadComponent />
-  </EuiErrorBoundary>
+  </OuiErrorBoundary>
 );

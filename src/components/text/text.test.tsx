@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiText } from './text';
+import { OuiText } from './text';
 
-describe('EuiText', () => {
+describe('OuiText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiText {...requiredProps}>
+      <OuiText {...requiredProps}>
         <p>Content</p>
-      </EuiText>
+      </OuiText>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +38,9 @@ describe('EuiText', () => {
     describe('grow', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiText {...requiredProps} grow>
+          <OuiText {...requiredProps} grow>
             <p>Content</p>
-          </EuiText>
+          </OuiText>
         );
 
         expect(component).toMatchSnapshot();

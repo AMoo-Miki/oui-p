@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { OuiComboBox } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
 const optionsStatic = [
@@ -73,7 +73,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canDisabled={false} canReadOnly={false} canIsDisabled>
-      <EuiComboBox
+      <OuiComboBox
         placeholder="Select or create options"
         options={options}
         selectedOptions={selectedOptions}

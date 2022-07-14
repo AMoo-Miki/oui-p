@@ -1,6 +1,6 @@
-@function euiLoadingSpinnerBorderColors(
-  $main: $euiColorLightShade,
-  $highlight: $euiColorPrimary
+@function ouiLoadingSpinnerBorderColors(
+  $main: $ouiColorLightShade,
+  $highlight: $ouiColorPrimary
 ) {
   @return $highlight $main $main $main;
 }

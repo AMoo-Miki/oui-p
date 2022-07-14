@@ -20,17 +20,17 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiBreadcrumbs, EuiBreadcrumbsProps } from '../../breadcrumbs';
+import { OuiBreadcrumbs, OuiBreadcrumbsProps } from '../../breadcrumbs';
 
-export const EuiHeaderBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
+export const OuiHeaderBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   className,
   breadcrumbs,
   ...rest
 }) => {
-  const classes = classNames('euiHeaderBreadcrumbs', className);
+  const classes = classNames('ouiHeaderBreadcrumbs', className);
 
   return (
-    <EuiBreadcrumbs
+    <OuiBreadcrumbs
       max={4}
       truncate
       breadcrumbs={breadcrumbs}

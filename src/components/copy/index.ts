@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiCopy, EuiCopyProps } from './copy';
+export { OuiCopy, OuiCopyProps } from './copy';

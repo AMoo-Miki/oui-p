@@ -18,41 +18,41 @@
  */
 
 import React from 'react';
-import { EuiIcon } from '../icon';
-import { EuiToken } from '../token';
+import { OuiIcon } from '../icon';
+import { OuiToken } from '../token';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTreeView } from './tree_view';
+import { OuiTreeView } from './tree_view';
 
 const items = [
   {
     label: 'Item One',
     id: 'item_one',
-    icon: <EuiIcon type="folderClosed" />,
-    iconWhenExpanded: <EuiIcon type="folderOpen" />,
+    icon: <OuiIcon type="folderClosed" />,
+    iconWhenExpanded: <OuiIcon type="folderOpen" />,
     isExpanded: true,
     children: [
       {
         label: 'Item A',
         id: 'item_a',
-        icon: <EuiIcon type="document" />,
+        icon: <OuiIcon type="document" />,
       },
       {
         label: 'Item B',
         id: 'item_b',
-        icon: <EuiIcon type="arrowRight" />,
-        iconWhenExpanded: <EuiIcon type="arrowDown" />,
+        icon: <OuiIcon type="arrowRight" />,
+        iconWhenExpanded: <OuiIcon type="arrowDown" />,
         children: [
           {
             label: 'A Cloud',
             id: 'item_cloud',
-            icon: <EuiToken iconType="tokenConstant" />,
+            icon: <OuiToken iconType="tokenConstant" />,
           },
           {
             label: "I'm a Bug",
             id: 'item_bug',
-            icon: <EuiToken iconType="tokenEnum" />,
+            icon: <OuiToken iconType="tokenEnum" />,
             className: 'classForBug',
           },
         ],
@@ -60,18 +60,18 @@ const items = [
       {
         label: 'Item C',
         id: 'item_c',
-        icon: <EuiIcon type="arrowRight" />,
-        iconWhenExpanded: <EuiIcon type="arrowDown" />,
+        icon: <OuiIcon type="arrowRight" />,
+        iconWhenExpanded: <OuiIcon type="arrowDown" />,
         children: [
           {
             label: 'Another Cloud',
             id: 'item_cloud2',
-            icon: <EuiToken iconType="tokenConstant" />,
+            icon: <OuiToken iconType="tokenConstant" />,
           },
           {
             label: 'Another Bug',
             id: 'item_bug2',
-            icon: <EuiToken iconType="tokenEnum" />,
+            icon: <OuiToken iconType="tokenEnum" />,
           },
         ],
       },
@@ -83,16 +83,16 @@ const items = [
   },
 ];
 
-describe('EuiTreeView', () => {
+describe('OuiTreeView', () => {
   test('is rendered', () => {
-    const component = render(<EuiTreeView items={items} {...requiredProps} />);
+    const component = render(<OuiTreeView items={items} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('length of open items', () => {
-    const component = shallow<EuiTreeView>(
-      <EuiTreeView items={items} {...requiredProps} />
+    const component = shallow<OuiTreeView>(
+      <OuiTreeView items={items} {...requiredProps} />
     );
     const instance = component.instance();
 
@@ -103,8 +103,8 @@ describe('EuiTreeView', () => {
   });
 
   test('activeItem changes', () => {
-    const component = shallow<EuiTreeView>(
-      <EuiTreeView items={items} {...requiredProps} />
+    const component = shallow<OuiTreeView>(
+      <OuiTreeView items={items} {...requiredProps} />
     );
     const instance = component.instance();
 
@@ -115,8 +115,8 @@ describe('EuiTreeView', () => {
   });
 
   test('open node changes', () => {
-    const component = shallow<EuiTreeView>(
-      <EuiTreeView items={items} {...requiredProps} />
+    const component = shallow<OuiTreeView>(
+      <OuiTreeView items={items} {...requiredProps} />
     );
     const instance = component.instance();
 

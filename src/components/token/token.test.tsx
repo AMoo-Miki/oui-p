@@ -21,25 +21,25 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiToken, COLORS, SHAPES, SIZES, FILLS } from './token';
+import { OuiToken, COLORS, SHAPES, SIZES, FILLS } from './token';
 import { TOKEN_MAP } from './token_map';
 import { keysOf } from '../common';
 
 const tokenTypes = keysOf(TOKEN_MAP);
 const tokenColors = COLORS;
 
-describe('EuiToken', () => {
+describe('OuiToken', () => {
   test('is rendered', () => {
-    const component = render(<EuiToken iconType="dot" {...requiredProps} />);
+    const component = render(<OuiToken iconType="dot" {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
-    describe('iconType as EuiTokenMapType', () => {
+    describe('iconType as OuiTokenMapType', () => {
       tokenTypes.forEach((type) => {
         test(`${type} is rendered`, () => {
-          const component = render(<EuiToken iconType={type} />);
+          const component = render(<OuiToken iconType={type} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -49,7 +49,7 @@ describe('EuiToken', () => {
     describe('shape', () => {
       SHAPES.forEach((shape) => {
         test(`${shape} is rendered`, () => {
-          const component = render(<EuiToken iconType="dot" shape={shape} />);
+          const component = render(<OuiToken iconType="dot" shape={shape} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -59,14 +59,14 @@ describe('EuiToken', () => {
     describe('color', () => {
       tokenColors.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiToken iconType="dot" color={color} />);
+          const component = render(<OuiToken iconType="dot" color={color} />);
 
           expect(component).toMatchSnapshot();
         });
       });
 
       test('can be a custom hex', () => {
-        const component = render(<EuiToken iconType="dot" color="#FF0000" />);
+        const component = render(<OuiToken iconType="dot" color="#FF0000" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -76,7 +76,7 @@ describe('EuiToken', () => {
       SIZES.forEach((tokenSize) => {
         test(`${tokenSize} is rendered`, () => {
           const component = render(
-            <EuiToken iconType="dot" size={tokenSize} />
+            <OuiToken iconType="dot" size={tokenSize} />
           );
 
           expect(component).toMatchSnapshot();
@@ -87,7 +87,7 @@ describe('EuiToken', () => {
     describe('fill', () => {
       FILLS.forEach((fill) => {
         test(`${fill} is rendered`, () => {
-          const component = render(<EuiToken iconType="dot" fill={fill} />);
+          const component = render(<OuiToken iconType="dot" fill={fill} />);
 
           expect(component).toMatchSnapshot();
         });

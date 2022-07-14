@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import {
-  EuiBetaBadge,
-  EuiPageHeader,
-  EuiPageContent,
-  EuiPageContentBody,
+  OuiBetaBadge,
+  OuiPageHeader,
+  OuiPageContent,
+  OuiPageContentBody,
 } from '../../../../src/components';
 
 const GuidePageComponent = ({
@@ -20,7 +20,7 @@ const GuidePageComponent = ({
   history,
 }) => {
   const betaBadge = isBeta ? (
-    <EuiBetaBadge
+    <OuiBetaBadge
       label="Beta"
       tooltipContent="This component is still under development and may contain breaking changes in the nearby future."
     />
@@ -80,7 +80,7 @@ const GuidePageComponent = ({
 
   return (
     <>
-      <EuiPageHeader
+      <OuiPageHeader
         restrictWidth
         pageTitle={
           <>
@@ -89,16 +89,16 @@ const GuidePageComponent = ({
         }
         tabs={renderTabs()}>
         {intro}
-      </EuiPageHeader>
+      </OuiPageHeader>
 
-      <EuiPageContent
+      <OuiPageContent
         role="main"
         hasShadow={false}
         paddingSize="none"
         color="transparent"
         hasBorder={false}
         borderRadius="none">
-        <EuiPageContentBody restrictWidth>
+        <OuiPageContentBody restrictWidth>
           <Switch>
             {playground && (
               <Route path={`${match.path}/playground`}>{playground}</Route>
@@ -108,8 +108,8 @@ const GuidePageComponent = ({
             )}
             <Route path="">{children}</Route>
           </Switch>
-        </EuiPageContentBody>
-      </EuiPageContent>
+        </OuiPageContentBody>
+      </OuiPageContent>
     </>
   );
 };

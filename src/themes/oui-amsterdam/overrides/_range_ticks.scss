@@ -1,0 +1,42 @@
+.ouiRangeTicks:not(.ouiRangeTicks--compressed) {
+  .ouiRangeTick {
+    padding-top: 0;
+  }
+
+  .ouiRangeTick:not(.ouiRangeTick--hasTickMark)::before,
+  .ouiRangeTick__pseudo {
+    width: $ouiSizeXS;
+    height: $ouiSizeM / 2;
+    background-color: $ouiColorLightShade;
+    border-radius: $ouiBorderRadiusSmall;
+  }
+}
+
+.ouiRangeTicks--compressed {
+  .ouiRangeTick {
+    padding-top: $ouiSize - 2px;
+
+    &::before,
+    .ouiRangeTick__pseudo {
+      background-color: $ouiColorLightShade;
+      border-radius: $ouiBorderRadiusSmall;
+    }
+  }
+}
+
+.ouiRangeTick {
+  &::before {
+    background-color: $ouiColorLightShade;
+    border-radius: $ouiBorderRadiusSmall;
+  }
+
+  &:enabled:hover,
+  &:focus,
+  &--selected {
+    color: $ouiColorPrimary;
+  }
+
+  &--selected {
+    font-weight: $ouiFontWeightMedium;
+  }
+}

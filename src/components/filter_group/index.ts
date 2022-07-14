@@ -17,12 +17,12 @@
  * under the License.
  */
 
-export { EuiFilterGroup, EuiFilterGroupProps } from './filter_group';
+export { OuiFilterGroup, OuiFilterGroupProps } from './filter_group';
 
-export { EuiFilterButton, EuiFilterButtonProps } from './filter_button';
+export { OuiFilterButton, OuiFilterButtonProps } from './filter_button';
 
 export {
-  EuiFilterSelectItem,
-  EuiFilterSelectItemProps,
+  OuiFilterSelectItem,
+  OuiFilterSelectItemProps,
   FilterChecked,
 } from './filter_select_item';

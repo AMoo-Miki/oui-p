@@ -21,25 +21,25 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableHeader } from './table_header';
+import { OuiTableHeader } from './table_header';
 
-describe('EuiTableHeader', () => {
+describe('OuiTableHeader', () => {
   test('is rendered', () => {
     const component = (
-      <EuiTableHeader {...requiredProps}>
+      <OuiTableHeader {...requiredProps}>
         <td>children</td>
-      </EuiTableHeader>
+      </OuiTableHeader>
     );
     expect(render(component)).toMatchSnapshot();
   });
 
   test('is rendered without <tr>', () => {
     const component = (
-      <EuiTableHeader wrapWithTableRow={false}>
+      <OuiTableHeader wrapWithTableRow={false}>
         <tr>
           <td>children</td>
         </tr>
-      </EuiTableHeader>
+      </OuiTableHeader>
     );
     expect(render(component)).toMatchSnapshot();
   });

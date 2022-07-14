@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EUI_THEMES, EUI_THEME } from './themes';
+export { OUI_THEMES, OUI_THEME } from './themes';

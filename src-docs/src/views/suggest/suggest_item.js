@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { EuiSuggestItem, EuiSpacer } from '../../../../src/components';
+import { OuiSuggestItem, OuiSpacer } from '../../../../src/components';
 
 const shortDescription = 'This is the description';
 
 const longDescription =
-  'This is a long description. Fusce euismod dui eu metus sagittis molestie.';
+  'This is a long description. Fusce ouismod dui eu metus sagittis molestie.';
 
 const sampleItems = [
   {
@@ -67,33 +67,33 @@ const longLabel =
 export default () => (
   <div style={{ maxWidth: '800px' }}>
     {sampleItems.map((item, index) => (
-      <EuiSuggestItem
+      <OuiSuggestItem
         type={item.type}
         key={index}
         label={item.label}
         description={item.description}
       />
     ))}
-    <EuiSpacer size="m" />
-    <EuiSuggestItem
+    <OuiSpacer size="m" />
+    <OuiSuggestItem
       type={typeObj}
       label={longLabel}
       description="This item has a fixed width label"
     />
-    <EuiSuggestItem
+    <OuiSuggestItem
       type={typeObj}
       labelDisplay="expand"
       label={longLabel}
       description="This item will expand its label if needed"
     />
-    <EuiSpacer size="m" />
-    <EuiSuggestItem
+    <OuiSpacer size="m" />
+    <OuiSuggestItem
       type={{ iconType: 'search', color: 'tint10' }}
       label="Items with no description will expand their label"
     />
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
     {sampleItems2.map((item, index) => (
-      <EuiSuggestItem
+      <OuiSuggestItem
         type={item.type}
         key={index}
         labelWidth={item.labelWidth}
@@ -101,13 +101,13 @@ export default () => (
         description={item.description}
       />
     ))}
-    <EuiSpacer size="m" />
-    <EuiSuggestItem
+    <OuiSpacer size="m" />
+    <OuiSuggestItem
       type={typeObj}
       label="Item with a description that truncates"
       description={longDescription}
     />
-    <EuiSuggestItem
+    <OuiSuggestItem
       type={typeObj}
       label="Item with a description that wraps"
       description={longDescription}

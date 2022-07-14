@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiEmptyPrompt, EuiButton } from '../../../../src/components/';
+import { OuiEmptyPrompt, OuiButton } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiEmptyPrompt.__docgenInfo)
-    ? EuiEmptyPrompt.__docgenInfo[0]
-    : EuiEmptyPrompt.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiEmptyPrompt.__docgenInfo)
+    ? OuiEmptyPrompt.__docgenInfo[0]
+    : OuiEmptyPrompt.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title = {
@@ -42,15 +42,15 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiEmptyPrompt',
+      componentName: 'OuiEmptyPrompt',
       props: propsToUse,
       scope: {
-        EuiEmptyPrompt,
-        EuiButton,
+        OuiEmptyPrompt,
+        OuiButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiEmptyPrompt', 'EuiButton'],
+        '@opensearch-project/oui': {
+          named: ['OuiEmptyPrompt', 'OuiButton'],
         },
       },
     },

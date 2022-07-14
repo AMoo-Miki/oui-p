@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconVisBarVerticalStacked = ({ title, titleId, ...props }) => (
+const OuiIconVisBarVerticalStacked = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconVisBarVerticalStacked = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconVisBarVerticalStacked;
+export const icon = OuiIconVisBarVerticalStacked;

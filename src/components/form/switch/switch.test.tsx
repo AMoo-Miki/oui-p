@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSwitch } from './switch';
+import { OuiSwitch } from './switch';
 
 const props = {
   checked: false,
@@ -29,24 +29,24 @@ const props = {
   onChange: () => {},
 };
 
-describe('EuiSwitch', () => {
+describe('OuiSwitch', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSwitch id="test" {...props} {...requiredProps} />
+      <OuiSwitch id="test" {...props} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
   });
 
   test('assigns automatically generated ID to label', () => {
-    const component = render(<EuiSwitch {...props} />);
+    const component = render(<OuiSwitch {...props} />);
 
     expect(component).toMatchSnapshot();
   });
   describe('labelProps', () => {
     it('is rendered', () => {
       const component = render(
-        <EuiSwitch {...props} labelProps={requiredProps} />
+        <OuiSwitch {...props} labelProps={requiredProps} />
       );
 
       expect(component).toMatchSnapshot();

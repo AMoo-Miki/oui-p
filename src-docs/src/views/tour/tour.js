@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCodeBlock,
-  EuiForm,
-  EuiFormRow,
-  EuiSpacer,
-  EuiTextArea,
-  EuiTourStep,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiCodeBlock,
+  OuiForm,
+  OuiFormRow,
+  OuiSpacer,
+  OuiTextArea,
+  OuiTourStep,
 } from '../../../../src/components';
 
 const demoTourSteps = [
@@ -18,10 +18,10 @@ const demoTourSteps = [
     content: (
       <span>
         <p>Copy and paste this sample query.</p>
-        <EuiSpacer />
-        <EuiCodeBlock language="html" paddingSize="s" isCopyable>
+        <OuiSpacer />
+        <OuiCodeBlock language="html" paddingSize="s" isCopyable>
           {'SELECT email FROM “kibana_sample_data_ecommerce”'}
-        </EuiCodeBlock>
+        </OuiCodeBlock>
       </span>
     ),
     anchorRef: 'tourStep2',
@@ -97,13 +97,13 @@ export default () => {
 
   return (
     <div>
-      <EuiButtonEmpty iconType="refresh" flush="left" onClick={resetTour}>
+      <OuiButtonEmpty iconType="refresh" flush="left" onClick={resetTour}>
         Reset tour
-      </EuiButtonEmpty>
-      <EuiSpacer />
-      <EuiForm component="form">
-        <EuiFormRow label="Enter an ES SQL query">
-          <EuiTourStep
+      </OuiButtonEmpty>
+      <OuiSpacer />
+      <OuiForm component="form">
+        <OuiFormRow label="Enter an ES SQL query">
+          <OuiTourStep
             content={demoTourSteps[0].content}
             isStepOpen={state.currentTourStep === 1 && state.isTourActive}
             minWidth={state.tourPopoverWidth}
@@ -113,19 +113,19 @@ export default () => {
             subtitle={state.tourSubtitle}
             title={demoTourSteps[0].title}
             anchorPosition="rightUp">
-            <EuiTextArea
+            <OuiTextArea
               placeholder="Placeholder text"
               aria-label="Enter ES SQL query"
               value={queryValue}
               onChange={onChange}
               style={{ width: 400 }}
             />
-          </EuiTourStep>
-        </EuiFormRow>
+          </OuiTourStep>
+        </OuiFormRow>
 
-        <EuiSpacer />
+        <OuiSpacer />
 
-        <EuiTourStep
+        <OuiTourStep
           anchorPosition="rightUp"
           content={demoTourSteps[1].content}
           isStepOpen={state.currentTourStep === 2 && state.isTourActive}
@@ -135,9 +135,9 @@ export default () => {
           stepsTotal={demoTourSteps.length}
           subtitle={state.tourSubtitle}
           title={demoTourSteps[1].title}>
-          <EuiButton onClick={handleClick}>Save query</EuiButton>
-        </EuiTourStep>
-      </EuiForm>
+          <OuiButton onClick={handleClick}>Save query</OuiButton>
+        </OuiTourStep>
+      </OuiForm>
     </div>
   );
 };

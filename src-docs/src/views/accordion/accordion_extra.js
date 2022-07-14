@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { EuiAccordion, EuiButton } from '../../../../src/components';
+import { OuiAccordion, OuiButton } from '../../../../src/components';
 
 export default () => (
-  <EuiAccordion
+  <OuiAccordion
     id="accordionExtraWithLeftArrow"
     buttonContent="Click to open"
-    extraAction={<EuiButton size="s">Extra action!</EuiButton>}
+    extraAction={<OuiButton size="s">Extra action!</OuiButton>}
     paddingSize="l">
     <strong>Opened content.</strong>
-  </EuiAccordion>
+  </OuiAccordion>
 );

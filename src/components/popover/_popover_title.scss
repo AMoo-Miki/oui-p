@@ -1,13 +1,13 @@
-.euiPopoverTitle {
-  @include euiPopoverTitle;
+.ouiPopoverTitle {
+  @include ouiPopoverTitle;
 }
 
-.euiPopoverTitle--paddingNone {
+.ouiPopoverTitle--paddingNone {
   padding: 0;
 }
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPopoverTitle--#{$modifier} {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPopoverTitle--#{$modifier} {
     padding: $amount;
   }
 }
@@ -16,12 +16,12 @@
 // ensure the title expands to cover that padding and
 // take on the same amount of padding horizontally
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPopover__panel.euiPanel--#{$modifier} .euiPopoverTitle {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPopover__panel.ouiPanel--#{$modifier} .ouiPopoverTitle {
     margin: ($amount * -1) ($amount * -1) $amount;
 
-    &:not([class*='euiPopoverTitle--padding']) {
-      padding: $euiSizeM $amount;
+    &:not([class*='ouiPopoverTitle--padding']) {
+      padding: $ouiSizeM $amount;
     }
   }
 }

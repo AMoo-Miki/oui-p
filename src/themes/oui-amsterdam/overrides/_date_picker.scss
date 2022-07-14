@@ -1,0 +1,18 @@
+.ouiDatePicker {
+  &.ouiDatePicker--shadow {
+    .react-datepicker-popper,
+    .react-datepicker-popper[data-placement^='top'] {
+      border: none;
+      border-radius: $ouiBorderRadius;
+    }
+  }
+}
+
+
+.ouiDatePickerRange {
+  border-radius: $ouiFormControlBorderRadius;
+}
+
+.ouiDatePicker.ouiDatePicker--shadow.ouiDatePicker--inline .react-datepicker {
+  border: none;
+}

@@ -19,8 +19,8 @@
 
 export {
   COLORS,
-  EuiButtonEmpty,
-  EuiButtonEmptyColor,
-  EuiButtonEmptyProps,
-  EuiButtonEmptySizes,
+  OuiButtonEmpty,
+  OuiButtonEmptyColor,
+  OuiButtonEmptyProps,
+  OuiButtonEmptySizes,
 } from './button_empty';

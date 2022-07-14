@@ -1,4 +1,4 @@
-$euiBreakpoints: (
+$ouiBreakpoints: (
   'xs': 0,
   's':  575px,
   'm':  768px,
@@ -6,4 +6,4 @@ $euiBreakpoints: (
   'xl': 1200px
 ) !default;
 
-$euiBreakpointKeys: map-keys($euiBreakpoints);
+$ouiBreakpointKeys: map-keys($ouiBreakpoints);

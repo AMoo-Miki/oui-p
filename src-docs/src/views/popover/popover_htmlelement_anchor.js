@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import { render, unmountComponentAtNode } from 'react-dom';
 
-import { EuiWrappingPopover } from '../../../../src/components';
+import { OuiWrappingPopover } from '../../../../src/components';
 
 const PopoverApp = (props) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -18,12 +18,12 @@ const PopoverApp = (props) => {
   const closePopover = () => setIsPopoverOpen(false);
 
   return (
-    <EuiWrappingPopover
+    <OuiWrappingPopover
       button={props.anchor}
       isOpen={isPopoverOpen}
       closePopover={closePopover}>
       <div>Normal JSX content populates the popover.</div>
-    </EuiWrappingPopover>
+    </OuiWrappingPopover>
   );
 };
 
@@ -45,8 +45,8 @@ export default () => {
     <div
       dangerouslySetInnerHTML={{
         __html: `
-  <button id="popoverAnchorButton" class="euiButton euiButton--primary">
-    <span class="euiButton__content">This is an HTML button</span>
+  <button id="popoverAnchorButton" class="ouiButton ouiButton--primary">
+    <span class="ouiButton__content">This is an HTML button</span>
   </button>
         `,
       }}

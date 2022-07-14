@@ -1,17 +1,17 @@
-.euiFlyoutBody {
+.ouiFlyoutBody {
   flex-grow: 1;
   overflow-y: hidden;
   height: 100%;
 
-  .euiFlyoutBody__overflow {
-    @include euiYScrollWithShadows;
+  .ouiFlyoutBody__overflow {
+    @include ouiYScrollWithShadows;
 
-    &.euiFlyoutBody__overflow--hasBanner {
-      @include euiOverflowShadow('y', 'end');
+    &.ouiFlyoutBody__overflow--hasBanner {
+      @include ouiOverflowShadow('y', 'end');
     }
   }
 
-  .euiFlyoutBody__banner .euiCallOut {
+  .ouiFlyoutBody__banner .ouiCallOut {
     border: none; // Remove border from callout when it is a flyout banner
     border-radius: 0; // Ensures no border-radius in all themes
   }

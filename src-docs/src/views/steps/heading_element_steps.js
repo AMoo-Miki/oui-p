@@ -1,26 +1,26 @@
 import React from 'react';
 
-import { EuiSteps, EuiTitle, EuiSpacer } from '../../../../src/components';
+import { OuiSteps, OuiTitle, OuiSpacer } from '../../../../src/components';
 
 const steps = [
   {
     title: 'Inspect me',
     children: (
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <h3>Did you notice the step title is inside a Heading 2 element?</h3>
-      </EuiTitle>
+      </OuiTitle>
     ),
   },
 ];
 
 export default () => (
   <div>
-    <EuiTitle size="l">
+    <OuiTitle size="l">
       <h1>Heading 1</h1>
-    </EuiTitle>
+    </OuiTitle>
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
 
-    <EuiSteps steps={steps} headingElement="h2" />
+    <OuiSteps steps={steps} headingElement="h2" />
   </div>
 );

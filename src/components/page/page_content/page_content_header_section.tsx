@@ -21,16 +21,16 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiPageContentHeaderSectionProps
+export interface OuiPageContentHeaderSectionProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {}
 
-export const EuiPageContentHeaderSection: FunctionComponent<EuiPageContentHeaderSectionProps> = ({
+export const OuiPageContentHeaderSection: FunctionComponent<OuiPageContentHeaderSectionProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiPageContentHeaderSection', className);
+  const classes = classNames('ouiPageContentHeaderSection', className);
 
   return (
     <div className={classes} {...rest}>

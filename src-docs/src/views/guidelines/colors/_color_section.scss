@@ -1,15 +1,15 @@
-@include euiBreakpoint('m', 'l', 'xl') {
+@include ouiBreakpoint('m', 'l', 'xl') {
   .guideColorsPage__stickySlider {
     position: sticky;
-    top: $euiHeaderHeightCompensation;
-    z-index: $euiZLevel1 - 1; // Below header
+    top: $ouiHeaderHeightCompensation;
+    z-index: $ouiZLevel1 - 1; // Below header
   }
 }
 
 .guideColorSection__button {
-  padding: $euiSizeXS;
-  margin-bottom: $euiSizeXS / 2;
-  border-radius: $euiBorderRadius;
+  padding: $ouiSizeXS;
+  margin-bottom: $ouiSizeXS / 2;
+  border-radius: $ouiBorderRadius;
   width: 100%;
   max-width: 300px;
 }

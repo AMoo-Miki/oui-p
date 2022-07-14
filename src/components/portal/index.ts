@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiPortal, EuiPortalProps } from './portal';
+export { OuiPortal, OuiPortalProps } from './portal';

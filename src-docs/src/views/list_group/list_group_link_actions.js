@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiListGroup, EuiListGroupItem } from '../../../../src/components';
+import { OuiListGroup, OuiListGroupItem } from '../../../../src/components';
 
 export default () => {
   const [favorite1, setFavorite1] = useState(undefined);
@@ -37,11 +37,11 @@ export default () => {
   };
 
   return (
-    <EuiListGroup maxWidth={288}>
-      <EuiListGroupItem
+    <OuiListGroup maxWidth={288}>
+      <OuiListGroupItem
         id="link1"
         iconType="bullseye"
-        label="EUI button link"
+        label="OUI button link"
         onClick={() => {}}
         isActive
         extraAction={{
@@ -54,11 +54,11 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <OuiListGroupItem
         id="link2"
         iconType="visualizeApp"
         onClick={() => {}}
-        label="EUI button link"
+        label="OUI button link"
         extraAction={{
           color: 'subdued',
           onClick: link2Clicked,
@@ -69,12 +69,12 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <OuiListGroupItem
         id="link3"
         iconType="lensApp"
         iconProps={{ color: 'default' }}
         onClick={() => {}}
-        label="EUI button link"
+        label="OUI button link"
         extraAction={{
           color: 'subdued',
           onClick: link3Clicked,
@@ -85,11 +85,11 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <OuiListGroupItem
         id="link4"
         onClick={() => {}}
         iconType="broom"
-        label="EUI button link"
+        label="OUI button link"
         extraAction={{
           color: 'subdued',
           onClick: link4Clicked,
@@ -101,11 +101,11 @@ export default () => {
         }}
       />
 
-      <EuiListGroupItem
+      <OuiListGroupItem
         id="link5"
         iconType="brush"
         isDisabled
-        label="EUI button link"
+        label="OUI button link"
         extraAction={{
           color: 'subdued',
           onClick: () => {},
@@ -114,6 +114,6 @@ export default () => {
           'aria-label': 'Favorite link4',
         }}
       />
-    </EuiListGroup>
+    </OuiListGroup>
   );
 };

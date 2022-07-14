@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { EuiExpression, EuiSpacer } from '../../../../src/components';
+import { OuiExpression, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiExpression
+    <OuiExpression
       onClick={() => {}}
       description="sort by"
       value="count"
       isInvalid
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <div style={{ maxWidth: 220 }}>
-      <EuiExpression
+      <OuiExpression
         description="email"
         display="columns"
         isInvalid

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { EuiListGroup, EuiListGroupItem } from '../../../../src/components';
+import { OuiListGroup, OuiListGroupItem } from '../../../../src/components';
 
 export default () => (
-  <EuiListGroup showToolTips>
-    <EuiListGroupItem onClick={() => {}} label="First item" />
+  <OuiListGroup showToolTips>
+    <OuiListGroupItem onClick={() => {}} label="First item" />
 
-    <EuiListGroupItem onClick={() => {}} label="Second item" />
+    <OuiListGroupItem onClick={() => {}} label="Second item" />
 
-    <EuiListGroupItem
+    <OuiListGroupItem
       onClick={() => {}}
       label={
         <span>
@@ -18,10 +18,10 @@ export default () => (
       }
     />
 
-    <EuiListGroupItem
+    <OuiListGroupItem
       onClick={() => {}}
       wrapText
       label="Fourth very, very long item with wrapping enabled that will not force truncation"
     />
-  </EuiListGroup>
+  </OuiListGroup>
 );

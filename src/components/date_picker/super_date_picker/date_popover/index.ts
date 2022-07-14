@@ -17,13 +17,13 @@
  * under the License.
  */
 
-export { EuiAbsoluteTab, EuiAbsoluteTabProps } from './absolute_tab';
+export { OuiAbsoluteTab, OuiAbsoluteTabProps } from './absolute_tab';
 export {
-  EuiDatePopoverButton,
-  EuiDatePopoverButtonProps,
+  OuiDatePopoverButton,
+  OuiDatePopoverButtonProps,
 } from './date_popover_button';
 export {
-  EuiDatePopoverContent,
-  EuiDatePopoverContentProps,
+  OuiDatePopoverContent,
+  OuiDatePopoverContentProps,
 } from './date_popover_content';
-export { EuiRelativeTab, EuiRelativeTabProps } from './relative_tab';
+export { OuiRelativeTab, OuiRelativeTabProps } from './relative_tab';

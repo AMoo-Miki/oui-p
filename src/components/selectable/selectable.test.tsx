@@ -21,10 +21,10 @@ import React from 'react';
 import { mount, render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiSelectable } from './selectable';
-import { EuiSelectableOption } from './selectable_option';
+import { OuiSelectable } from './selectable';
+import { OuiSelectableOption } from './selectable_option';
 
-const options: EuiSelectableOption[] = [
+const options: OuiSelectableOption[] = [
   {
     label: 'Titan',
     'data-test-subj': 'titanOption',
@@ -38,10 +38,10 @@ const options: EuiSelectableOption[] = [
   },
 ];
 
-describe('EuiSelectable', () => {
+describe('OuiSelectable', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSelectable options={options} {...requiredProps} />
+      <OuiSelectable options={options} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -49,14 +49,14 @@ describe('EuiSelectable', () => {
 
   describe('props', () => {
     test('searchable', () => {
-      const component = render(<EuiSelectable options={options} searchable />);
+      const component = render(<OuiSelectable options={options} searchable />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('singleSelection', () => {
       const component = render(
-        <EuiSelectable options={options} singleSelection />
+        <OuiSelectable options={options} singleSelection />
       );
 
       expect(component).toMatchSnapshot();
@@ -64,21 +64,21 @@ describe('EuiSelectable', () => {
 
     test('allowExclusions', () => {
       const component = render(
-        <EuiSelectable options={options} allowExclusions />
+        <OuiSelectable options={options} allowExclusions />
       );
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading', () => {
-      const component = render(<EuiSelectable options={options} isLoading />);
+      const component = render(<OuiSelectable options={options} isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('height can be forced', () => {
       const component = render(
-        <EuiSelectable options={options} height={200} />
+        <OuiSelectable options={options} height={200} />
       );
 
       expect(component).toMatchSnapshot();
@@ -86,7 +86,7 @@ describe('EuiSelectable', () => {
 
     test('height can be full', () => {
       const component = render(
-        <EuiSelectable options={options} height="full" />
+        <OuiSelectable options={options} height="full" />
       );
 
       expect(component).toMatchSnapshot();
@@ -94,9 +94,9 @@ describe('EuiSelectable', () => {
 
     test('renderOption', () => {
       const component = render(
-        <EuiSelectable
+        <OuiSelectable
           options={options}
-          renderOption={(option: EuiSelectableOption, searchValue?: string) => {
+          renderOption={(option: OuiSelectableOption, searchValue?: string) => {
             return (
               <span>
                 {searchValue} =&gt; {option.label}
@@ -111,7 +111,7 @@ describe('EuiSelectable', () => {
 
     test('listProps', () => {
       const component = render(
-        <EuiSelectable
+        <OuiSelectable
           options={options}
           listProps={{
             windowProps: {
@@ -127,7 +127,7 @@ describe('EuiSelectable', () => {
 
   describe('custom options', () => {
     test('optional properties', () => {
-      type OptionalOption = EuiSelectableOption<{ value?: string }>;
+      type OptionalOption = OuiSelectableOption<{ value?: string }>;
       const options: OptionalOption[] = [
         {
           label: 'Titan',
@@ -149,18 +149,18 @@ describe('EuiSelectable', () => {
       };
 
       const component = mount(
-        <EuiSelectable<OptionalOption> options={options} onChange={onChange}>
+        <OuiSelectable<OptionalOption> options={options} onChange={onChange}>
           {(list) => list}
-        </EuiSelectable>
+        </OuiSelectable>
       );
 
       expect(
-        (component.find('EuiSelectableList').props() as any).visibleOptions
+        (component.find('OuiSelectableList').props() as any).visibleOptions
       ).toEqual(options);
     });
 
     test('required properties', () => {
-      type ExtendedOption = EuiSelectableOption<{ value: string }>;
+      type ExtendedOption = OuiSelectableOption<{ value: string }>;
       const options: ExtendedOption[] = [
         {
           label: 'Titan',
@@ -183,15 +183,15 @@ describe('EuiSelectable', () => {
       };
 
       const component = mount(
-        <EuiSelectable<ExtendedOption> options={options} onChange={onChange}>
+        <OuiSelectable<ExtendedOption> options={options} onChange={onChange}>
           {(list) => list}
-        </EuiSelectable>
+        </OuiSelectable>
       );
 
       component.update();
 
       expect(
-        (component.find('EuiSelectableList').props() as any).visibleOptions
+        (component.find('OuiSelectableList').props() as any).visibleOptions
       ).toEqual(options);
     });
   });

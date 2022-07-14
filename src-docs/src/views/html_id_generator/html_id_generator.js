@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButton,
-  EuiCode,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiButton,
+  OuiCode,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -18,17 +18,17 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup
+      <OuiFlexGroup
         justifyContent="flexStart"
         gutterSize="m"
         alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiCode>{value}</EuiCode>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={reGenerate}>Regenerate</EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiCode>{value}</OuiCode>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiButton onClick={reGenerate}>Regenerate</OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </Fragment>
   );
 };

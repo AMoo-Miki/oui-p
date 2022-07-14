@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiButton } from '../../../../src/components/';
+import { OuiButton } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiButton.__docgenInfo)
-    ? EuiButton.__docgenInfo[0]
-    : EuiButton.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiButton.__docgenInfo)
+    ? OuiButton.__docgenInfo[0]
+    : OuiButton.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.iconType = iconValidator(propsToUse.iconType);
@@ -41,14 +41,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiButton',
+      componentName: 'OuiButton',
       props: propsToUse,
       scope: {
-        EuiButton,
+        OuiButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiButton'],
+        '@opensearch-project/oui': {
+          named: ['OuiButton'],
         },
       },
     },

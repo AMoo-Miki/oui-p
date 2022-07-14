@@ -22,32 +22,32 @@ import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import classNames from 'classnames';
 
 import { isColorDark, hexToRgb, isValidHex } from '../../services/color';
-import { euiPaletteColorBlindBehindText, toInitials } from '../../services';
-import { IconType, EuiIcon, IconSize, IconColor } from '../icon';
+import { ouiPaletteColorBlindBehindText, toInitials } from '../../services';
+import { IconType, OuiIcon, IconSize, IconColor } from '../icon';
 
 const sizeToClassNameMap = {
-  s: 'euiAvatar--s',
-  m: 'euiAvatar--m',
-  l: 'euiAvatar--l',
-  xl: 'euiAvatar--xl',
+  s: 'ouiAvatar--s',
+  m: 'ouiAvatar--m',
+  l: 'ouiAvatar--l',
+  xl: 'ouiAvatar--xl',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
-export type EuiAvatarSize = keyof typeof sizeToClassNameMap;
+export type OuiAvatarSize = keyof typeof sizeToClassNameMap;
 
 const typeToClassNameMap = {
-  space: 'euiAvatar--space',
-  user: 'euiAvatar--user',
+  space: 'ouiAvatar--space',
+  user: 'ouiAvatar--user',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-export type EuiAvatarType = keyof typeof typeToClassNameMap;
+export type OuiAvatarType = keyof typeof typeToClassNameMap;
 
 /**
  * The avatar can only display one type of content,
  * initials, or image, or iconType
  */
-type _EuiAvatarContent = ExclusiveUnion<
+type _OuiAvatarContent = ExclusiveUnion<
   ExclusiveUnion<
     {
       /**
@@ -71,7 +71,7 @@ type _EuiAvatarContent = ExclusiveUnion<
   >,
   {
     /**
-     * Any EUI glyph, logo or custom icon to display instead of initials
+     * Any OUI glyph, logo or custom icon to display instead of initials
      */
     iconType: IconType;
     /**
@@ -85,9 +85,9 @@ type _EuiAvatarContent = ExclusiveUnion<
   }
 >;
 
-export type EuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
+export type OuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
   CommonProps &
-  _EuiAvatarContent & {
+  _OuiAvatarContent & {
     /**
      * Full name of avatar for title attribute and calculating initial if not provided
      */
@@ -104,8 +104,8 @@ export type EuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
      * `user` = circle
      * `space` = rounded square
      */
-    type?: EuiAvatarType;
-    size?: EuiAvatarSize;
+    type?: OuiAvatarType;
+    size?: OuiAvatarSize;
 
     /**
      * Grays out the avatar to simulate being disabled
@@ -113,7 +113,7 @@ export type EuiAvatarProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'> &
     isDisabled?: boolean;
   };
 
-export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
+export const OuiAvatar: FunctionComponent<OuiAvatarProps> = ({
   className,
   color,
   imageUrl,
@@ -129,15 +129,15 @@ export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
   style,
   ...rest
 }) => {
-  const visColors = euiPaletteColorBlindBehindText();
+  const visColors = ouiPaletteColorBlindBehindText();
 
   const classes = classNames(
-    'euiAvatar',
+    'ouiAvatar',
     sizeToClassNameMap[size],
     typeToClassNameMap[type],
     {
-      'euiAvatar-isDisabled': isDisabled,
-      'euiAvatar--plain': color === 'plain',
+      'ouiAvatar-isDisabled': isDisabled,
+      'ouiAvatar--plain': color === 'plain',
     },
     className
   );
@@ -176,8 +176,8 @@ export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
     content = <span aria-hidden="true">{calculatedInitials}</span>;
   } else if (iconType) {
     content = (
-      <EuiIcon
-        className="euiAvatar__icon"
+      <OuiIcon
+        className="ouiAvatar__icon"
         size={iconSize || size}
         type={iconType}
         aria-label={name}
@@ -199,21 +199,21 @@ export const EuiAvatar: FunctionComponent<EuiAvatarProps> = ({
 };
 
 // TODO: Migrate to a service
-export const checkValidColor = (color: EuiAvatarProps['color']) => {
+export const checkValidColor = (color: OuiAvatarProps['color']) => {
   const validHex = (color && isValidHex(color)) || color === 'plain';
   if (color && !validHex) {
     throw new Error(
-      'EuiAvatar needs to pass a valid color. This can either be a three ' +
+      'OuiAvatar needs to pass a valid color. This can either be a three ' +
         'or six character hex value'
     );
   }
 };
 
-function checkValidInitials(initials: EuiAvatarProps['initials']) {
+function checkValidInitials(initials: OuiAvatarProps['initials']) {
   // Must be a string of 1 or 2 characters
   if (initials && initials.length > 2) {
     console.warn(
-      'EuiAvatar only accepts a max of 2 characters for the initials as a string. It is displaying only the first 2 characters.'
+      'OuiAvatar only accepts a max of 2 characters for the initials as a string. It is displaying only the first 2 characters.'
     );
   }
 }

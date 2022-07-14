@@ -20,36 +20,36 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiText } from '../../text';
+import { OuiText } from '../../text';
 
-export type EuiSelectableMessageProps = Omit<
+export type OuiSelectableMessageProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   'color'
 > &
   CommonProps & {
     /**
-     * Match this to the `listProps.bordered` property of your `EuiSelectable` instance
+     * Match this to the `listProps.bordered` property of your `OuiSelectable` instance
      */
     bordered?: boolean;
   };
 
-export const EuiSelectableMessage: FunctionComponent<EuiSelectableMessageProps> = ({
+export const OuiSelectableMessage: FunctionComponent<OuiSelectableMessageProps> = ({
   children,
   className,
   bordered = false,
   ...rest
 }) => {
   const classes = classNames(
-    'euiSelectableMessage',
+    'ouiSelectableMessage',
     {
-      'euiSelectableMessage--bordered': bordered,
+      'ouiSelectableMessage--bordered': bordered,
     },
     className
   );
 
   return (
-    <EuiText color="subdued" size="xs" className={classes} {...rest}>
+    <OuiText color="subdued" size="xs" className={classes} {...rest}>
       {children}
-    </EuiText>
+    </OuiText>
   );
 };

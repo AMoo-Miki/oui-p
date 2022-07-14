@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiStat } from '../../../../src/components/';
+import { OuiStat } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiStat.__docgenInfo)
-    ? EuiStat.__docgenInfo[0]
-    : EuiStat.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiStat.__docgenInfo)
+    ? OuiStat.__docgenInfo[0]
+    : OuiStat.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.description = {
@@ -36,14 +36,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiStat',
+      componentName: 'OuiStat',
       props: propsToUse,
       scope: {
-        EuiStat,
+        OuiStat,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiStat'],
+        '@opensearch-project/oui': {
+          named: ['OuiStat'],
         },
       },
     },

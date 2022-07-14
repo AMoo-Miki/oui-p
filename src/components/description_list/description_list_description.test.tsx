@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDescriptionListDescription } from './description_list_description';
+import { OuiDescriptionListDescription } from './description_list_description';
 
-describe('EuiDescriptionListDescription', () => {
+describe('OuiDescriptionListDescription', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiDescriptionListDescription {...requiredProps}>
+      <OuiDescriptionListDescription {...requiredProps}>
         Content
-      </EuiDescriptionListDescription>
+      </OuiDescriptionListDescription>
     );
 
     expect(component).toMatchSnapshot();

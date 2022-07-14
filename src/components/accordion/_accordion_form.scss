@@ -1,38 +1,38 @@
-.euiAccordionForm__extraAction {
+.ouiAccordionForm__extraAction {
   opacity: 0;
-  transition: opacity $euiAnimSpeedNormal $euiAnimSlightResistance;
+  transition: opacity $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   &:focus {
     opacity: 1;
   }
 }
 
-.euiAccordionForm__title {
+.ouiAccordionForm__title {
   display: inline-block;
 }
 
-.euiAccordionForm__button {
-  padding: $euiSize $euiSize $euiSize 0;
+.ouiAccordionForm__button {
+  padding: $ouiSize $ouiSize $ouiSize 0;
 
   &:hover {
     text-decoration: none;
 
-    .euiAccordionForm__title {
+    .ouiAccordionForm__title {
       text-decoration: underline;
     }
   }
 }
 
-.euiAccordionForm {
-  border-top: $euiBorderThin;
-  border-bottom: $euiBorderThin;
+.ouiAccordionForm {
+  border-top: $ouiBorderThin;
+  border-bottom: $ouiBorderThin;
 
-  & + .euiAccordionForm {
+  & + .ouiAccordionForm {
     border-top: none;
   }
 
   &:hover {
-    .euiAccordionForm__extraAction {
+    .ouiAccordionForm__extraAction {
       opacity: 1;
       visibility: visible;
     }

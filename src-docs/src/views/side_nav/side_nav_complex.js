@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiIcon, EuiSideNav } from '../../../../src/components';
+import { OuiIcon, OuiSideNav } from '../../../../src/components';
 import { slugify } from '../../../../src/services';
 
 export default () => {
@@ -29,7 +29,7 @@ export default () => {
   const sideNav = [
     createItem('Elasticsearch', {
       onClick: undefined,
-      icon: <EuiIcon type="logoElasticsearch" />,
+      icon: <OuiIcon type="logoElasticsearch" />,
       items: [
         createItem('Data sources'),
         createItem('Users'),
@@ -42,7 +42,7 @@ export default () => {
     }),
     createItem('Kibana', {
       onClick: undefined,
-      icon: <EuiIcon type="logoKibana" />,
+      icon: <OuiIcon type="logoKibana" />,
       items: [
         createItem('Advanced settings', {
           items: [
@@ -50,10 +50,10 @@ export default () => {
             createItem('Timelion', {
               items: [
                 createItem('Time stuff', {
-                  icon: <EuiIcon type="clock" />,
+                  icon: <OuiIcon type="clock" />,
                 }),
                 createItem('Lion stuff', {
-                  icon: <EuiIcon type="stats" />,
+                  icon: <OuiIcon type="stats" />,
                 }),
               ],
             }),
@@ -67,13 +67,13 @@ export default () => {
     }),
     createItem('Logstash', {
       onClick: undefined,
-      icon: <EuiIcon type="logoLogstash" />,
+      icon: <OuiIcon type="logoLogstash" />,
       items: [createItem('Pipeline viewer')],
     }),
   ];
 
   return (
-    <EuiSideNav
+    <OuiSideNav
       aria-label="Complex example"
       mobileTitle="Navigate within $APP_NAME"
       toggleOpenOnMobile={toggleOpenOnMobile}

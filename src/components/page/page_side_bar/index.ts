@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiPageSideBar, EuiPageSideBarProps } from './page_side_bar';
+export { OuiPageSideBar, OuiPageSideBarProps } from './page_side_bar';

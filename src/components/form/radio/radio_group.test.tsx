@@ -21,14 +21,14 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiRadioGroup } from './radio_group';
+import { OuiRadioGroup } from './radio_group';
 
-jest.mock('../radio', () => ({ EuiRadio: 'eui_radio' }));
+jest.mock('../radio', () => ({ OuiRadio: 'oui_radio' }));
 
-describe('EuiRadioGroup', () => {
+describe('OuiRadioGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiRadioGroup {...requiredProps} options={[]} onChange={() => {}} />
+      <OuiRadioGroup {...requiredProps} options={[]} onChange={() => {}} />
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('EuiRadioGroup', () => {
   describe('props', () => {
     test('options are rendered', () => {
       const component = render(
-        <EuiRadioGroup
+        <OuiRadioGroup
           options={[
             { id: '1', label: 'Option #1' },
             { id: '2', label: 'Option #2', disabled: true },
@@ -51,7 +51,7 @@ describe('EuiRadioGroup', () => {
 
     test('name is propagated to radios', () => {
       const component = render(
-        <EuiRadioGroup
+        <OuiRadioGroup
           name="radiogroupname"
           options={[
             { id: '1', label: 'Option #1' },
@@ -66,7 +66,7 @@ describe('EuiRadioGroup', () => {
 
     test('idSelected is rendered', () => {
       const component = render(
-        <EuiRadioGroup
+        <OuiRadioGroup
           options={[
             { id: '1', label: 'Option #1' },
             { id: '2', label: 'Option #2' },
@@ -81,7 +81,7 @@ describe('EuiRadioGroup', () => {
 
     test('value is propagated to radios', () => {
       const component = render(
-        <EuiRadioGroup
+        <OuiRadioGroup
           name="radiogroupname"
           options={[
             { id: '1', label: 'Option #1', value: 'Value #1' },
@@ -96,7 +96,7 @@ describe('EuiRadioGroup', () => {
 
     test('legend is rendered', () => {
       const component = render(
-        <EuiRadioGroup
+        <OuiRadioGroup
           options={[
             { id: '1', label: 'Option #1' },
             { id: '2', label: 'Option #2' },
@@ -117,7 +117,7 @@ describe('EuiRadioGroup', () => {
       const callback = jest.fn();
 
       const component = mount(
-        <EuiRadioGroup
+        <OuiRadioGroup
           name="radiogroupname"
           options={[
             { id: '1', label: 'Option #1' },
@@ -138,7 +138,7 @@ describe('EuiRadioGroup', () => {
       const callback = jest.fn();
 
       const component = mount(
-        <EuiRadioGroup
+        <OuiRadioGroup
           name="radiogroupname"
           options={[
             { id: '1', label: 'Option #1', value: 'Value #1' },

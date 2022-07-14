@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoSlack = ({ title, titleId, ...props }) => (
+const OuiIconLogoSlack = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -30,4 +30,4 @@ const EuiIconLogoSlack = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoSlack;
+export const icon = OuiIconLogoSlack;

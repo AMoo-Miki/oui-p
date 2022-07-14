@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiSwitch, EuiSwitchProps, EuiSwitchEvent } from './switch';
+export { OuiSwitch, OuiSwitchProps, OuiSwitchEvent } from './switch';

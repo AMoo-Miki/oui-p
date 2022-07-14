@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { EuiCard, EuiCardProps } from './card';
-export { EuiCheckableCard, EuiCheckableCardProps } from './checkable_card';
+export { OuiCard, OuiCardProps } from './card';
+export { OuiCheckableCard, OuiCheckableCardProps } from './checkable_card';

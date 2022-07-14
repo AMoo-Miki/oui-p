@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import moment from 'moment';
 
-import { EuiDatePicker, EuiFormRow } from '../../../../src/components';
+import { OuiDatePicker, OuiFormRow } from '../../../../src/components';
 
 export default () => {
   const [startDate, setStartDate] = useState(moment());
@@ -12,8 +12,8 @@ export default () => {
   };
 
   return (
-    <EuiFormRow label="Select a date">
-      <EuiDatePicker selected={startDate} onChange={handleChange} />
-    </EuiFormRow>
+    <OuiFormRow label="Select a date">
+      <OuiDatePicker selected={startDate} onChange={handleChange} />
+    </OuiFormRow>
   );
 };

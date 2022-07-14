@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiSkipLink, POSITIONS } from './skip_link';
+import { OuiSkipLink, POSITIONS } from './skip_link';
 
-describe('EuiSkipLink', () => {
+describe('OuiSkipLink', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSkipLink destinationId="somewhere" {...requiredProps}>
+      <OuiSkipLink destinationId="somewhere" {...requiredProps}>
         Skip
-      </EuiSkipLink>
+      </OuiSkipLink>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('EuiSkipLink', () => {
   describe('props', () => {
     test('tabIndex is rendered', () => {
       const component = render(
-        <EuiSkipLink destinationId="somewhere" tabIndex={-1} />
+        <OuiSkipLink destinationId="somewhere" tabIndex={-1} />
       );
 
       expect(component).toMatchSnapshot();
@@ -45,7 +45,7 @@ describe('EuiSkipLink', () => {
 
     test('onClick is rendered', () => {
       const component = render(
-        <EuiSkipLink destinationId="somewhere" onClick={() => {}} />
+        <OuiSkipLink destinationId="somewhere" onClick={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('EuiSkipLink', () => {
       POSITIONS.forEach((position) => {
         test(`${position} is rendered`, () => {
           const component = render(
-            <EuiSkipLink destinationId="somewhere" position={position} />
+            <OuiSkipLink destinationId="somewhere" position={position} />
           );
 
           expect(component).toMatchSnapshot();

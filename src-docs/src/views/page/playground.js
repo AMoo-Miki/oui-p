@@ -1,8 +1,8 @@
 import { PropTypes } from 'react-view';
 import {
-  EuiPageTemplate,
-  EuiPageHeader,
-  EuiButton,
+  OuiPageTemplate,
+  OuiPageHeader,
+  OuiButton,
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
@@ -10,9 +10,9 @@ import {
 } from '../../services/playground';
 
 export const pageTemplateConfig = () => {
-  const docgenInfo = Array.isArray(EuiPageTemplate.__docgenInfo)
-    ? EuiPageTemplate.__docgenInfo[0]
-    : EuiPageTemplate.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiPageTemplate.__docgenInfo)
+    ? OuiPageTemplate.__docgenInfo[0]
+    : OuiPageTemplate.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   // TODO: Follow up on how to allow passing an object to a prop
@@ -54,16 +54,16 @@ export const pageTemplateConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiPageTemplate',
+      componentName: 'OuiPageTemplate',
       props: propsToUse,
       scope: {
-        EuiPageTemplate,
-        EuiPageHeader,
-        EuiButton,
+        OuiPageTemplate,
+        OuiPageHeader,
+        OuiButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPageTemplate', 'EuiPageHeader', 'EuiButton'],
+        '@opensearch-project/oui': {
+          named: ['OuiPageTemplate', 'OuiPageHeader', 'OuiButton'],
         },
       },
       customProps: generateCustomProps(['pageHeader']),

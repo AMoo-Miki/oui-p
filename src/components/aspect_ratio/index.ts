@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiAspectRatio, EuiAspectRatioProps } from './aspect_ratio';
+export { OuiAspectRatio, OuiAspectRatioProps } from './aspect_ratio';

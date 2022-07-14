@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCode,
-  EuiResizeObserver,
-  EuiPanel,
-  EuiSpacer,
-  EuiText,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiCode,
+  OuiResizeObserver,
+  OuiPanel,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 
 export const ResizeObserverExample = () => {
@@ -31,37 +31,37 @@ export const ResizeObserverExample = () => {
 
   return (
     <div>
-      <EuiText>
+      <OuiText>
         <p>
-          <EuiCode>{`height: ${height}; width: ${width}`}</EuiCode>
+          <OuiCode>{`height: ${height}; width: ${width}`}</OuiCode>
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiButton fill={true} onClick={togglePaddingSize}>
+      <OuiButton fill={true} onClick={togglePaddingSize}>
         Toggle container padding
-      </EuiButton>
+      </OuiButton>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiResizeObserver onResize={onResize}>
+      <OuiResizeObserver onResize={onResize}>
         {(resizeRef) => (
-          <div className="eui-displayInlineBlock" ref={resizeRef}>
-            <EuiPanel
-              className="eui-displayInlineBlock"
+          <div className="oui-displayInlineBlock" ref={resizeRef}>
+            <OuiPanel
+              className="oui-displayInlineBlock"
               paddingSize={paddingSize}>
               <ul>
                 {items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <EuiSpacer size="s" />
-              <EuiButtonEmpty onClick={addItem}>add item</EuiButtonEmpty>
-            </EuiPanel>
+              <OuiSpacer size="s" />
+              <OuiButtonEmpty onClick={addItem}>add item</OuiButtonEmpty>
+            </OuiPanel>
           </div>
         )}
-      </EuiResizeObserver>
+      </OuiResizeObserver>
     </div>
   );
 };

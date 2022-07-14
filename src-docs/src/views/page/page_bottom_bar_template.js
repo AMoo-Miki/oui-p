@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { EuiPageTemplate } from '../../../../src/components';
+import { OuiPageTemplate } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav, bottomBar }) => {
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       pageSideBar={sideNav}
       pageHeader={{
         iconType: 'logoElastic',
@@ -13,6 +13,6 @@ export default ({ button = <></>, content, sideNav, bottomBar }) => {
       }}
       bottomBar={bottomBar}>
       {content}
-    </EuiPageTemplate>
+    </OuiPageTemplate>
   );
 };

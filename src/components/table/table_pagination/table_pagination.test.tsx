@@ -21,9 +21,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiTablePagination } from './table_pagination';
+import { OuiTablePagination } from './table_pagination';
 
-describe('EuiTablePagination', () => {
+describe('OuiTablePagination', () => {
   const paginationProps = {
     activePage: 1,
     pageCount: 5,
@@ -31,7 +31,7 @@ describe('EuiTablePagination', () => {
   };
   test('is rendered', () => {
     const component = render(
-      <EuiTablePagination {...requiredProps} {...paginationProps} />
+      <OuiTablePagination {...requiredProps} {...paginationProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -39,7 +39,7 @@ describe('EuiTablePagination', () => {
 
   test('is rendered when hiding the per page options', () => {
     const component = render(
-      <EuiTablePagination
+      <OuiTablePagination
         {...requiredProps}
         {...paginationProps}
         hidePerPageOptions={true}

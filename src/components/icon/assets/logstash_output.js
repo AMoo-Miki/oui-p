@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogstashOutput = ({ title, titleId, ...props }) => (
+const OuiIconLogstashOutput = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconLogstashOutput = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogstashOutput;
+export const icon = OuiIconLogstashOutput;

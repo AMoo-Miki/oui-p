@@ -21,7 +21,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-export type EuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
+export type OuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
      * Aspect ratio height. For example 9 would be widescreen video.
@@ -37,7 +37,7 @@ export type EuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
     maxWidth?: number;
   };
 
-export const EuiAspectRatio: FunctionComponent<EuiAspectRatioProps> = ({
+export const OuiAspectRatio: FunctionComponent<OuiAspectRatioProps> = ({
   children,
   className,
   height,
@@ -45,7 +45,7 @@ export const EuiAspectRatio: FunctionComponent<EuiAspectRatioProps> = ({
   maxWidth,
   ...rest
 }) => {
-  const classes = classNames('euiAspectRatio', className);
+  const classes = classNames('ouiAspectRatio', className);
 
   const paddingBottom = `${(height / width) * 100}%`;
 

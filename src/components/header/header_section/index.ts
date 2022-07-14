@@ -17,14 +17,14 @@
  * under the License.
  */
 
-export { EuiHeaderSection, EuiHeaderSectionProps } from './header_section';
+export { OuiHeaderSection, OuiHeaderSectionProps } from './header_section';
 
 export {
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemProps,
+  OuiHeaderSectionItem,
+  OuiHeaderSectionItemProps,
 } from './header_section_item';
 
 export {
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonProps,
+  OuiHeaderSectionItemButton,
+  OuiHeaderSectionItemButtonProps,
 } from './header_section_item_button';

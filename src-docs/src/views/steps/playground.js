@@ -1,5 +1,5 @@
 import { PropTypes } from 'react-view';
-import { EuiStep, EuiStepHorizontal } from '../../../../src/components/steps';
+import { OuiStep, OuiStepHorizontal } from '../../../../src/components/steps';
 import {
   propUtilityForPlayground,
   createOptionalEnum,
@@ -8,9 +8,9 @@ import {
 } from '../../services/playground';
 
 export const stepConfig = () => {
-  const docgenInfo = Array.isArray(EuiStep.__docgenInfo)
-    ? EuiStep.__docgenInfo[0]
-    : EuiStep.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiStep.__docgenInfo)
+    ? OuiStep.__docgenInfo[0]
+    : OuiStep.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title.value = 'Step';
@@ -25,14 +25,14 @@ export const stepConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiStep',
+      componentName: 'OuiStep',
       props: propsToUse,
       scope: {
-        EuiStep,
+        OuiStep,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiStep'],
+        '@opensearch-project/oui': {
+          named: ['OuiStep'],
         },
       },
     },
@@ -40,9 +40,9 @@ export const stepConfig = () => {
 };
 
 export const stepHorizontalConfig = () => {
-  const docgenInfo = Array.isArray(EuiStepHorizontal.__docgenInfo)
-    ? EuiStepHorizontal.__docgenInfo[0]
-    : EuiStepHorizontal.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiStepHorizontal.__docgenInfo)
+    ? OuiStepHorizontal.__docgenInfo[0]
+    : OuiStepHorizontal.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title.value = 'Horizontal step';
@@ -53,14 +53,14 @@ export const stepHorizontalConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiStepHorizontal',
+      componentName: 'OuiStepHorizontal',
       props: propsToUse,
       scope: {
-        EuiStepHorizontal,
+        OuiStepHorizontal,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiStepHorizontal'],
+        '@opensearch-project/oui': {
+          named: ['OuiStepHorizontal'],
         },
       },
       customProps: {

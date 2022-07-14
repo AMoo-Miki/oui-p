@@ -1,12 +1,12 @@
-.euiNotificationEventReadIcon {
+.ouiNotificationEventReadIcon {
   display: flex;
   align-items: center;
-  height: $euiSizeL;
-  margin: 0 $euiSizeXS;
+  height: $ouiSizeL;
+  margin: 0 $ouiSizeXS;
 }
 
-.euiNotificationEventReadIcon--isRead svg {
+.ouiNotificationEventReadIcon--isRead svg {
   fill: transparent;
   stroke-width: 1px;
-  stroke: $euiBorderColor;
+  stroke: $ouiBorderColor;
 }

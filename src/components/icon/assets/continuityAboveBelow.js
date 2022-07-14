@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconContinuityAboveBelow = ({ title, titleId, ...props }) => (
+const OuiIconContinuityAboveBelow = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconContinuityAboveBelow = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconContinuityAboveBelow;
+export const icon = OuiIconContinuityAboveBelow;

@@ -20,7 +20,7 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiColorStops } from './color_stops';
+import { OuiColorStops } from './color_stops';
 
 import {
   VISUALIZATION_COLORS,
@@ -28,10 +28,10 @@ import {
   keys,
 } from '../../../services';
 import { requiredProps, findTestSubject } from '../../../test';
-import { EuiFieldNumber } from '../../form/field_number';
+import { OuiFieldNumber } from '../../form/field_number';
 
 jest.mock('../../portal', () => ({
-  EuiPortal: ({ children }: { children: any }) => children,
+  OuiPortal: ({ children }: { children: any }) => children,
 }));
 
 const onChange = jest.fn();
@@ -46,9 +46,9 @@ const colorStopsArray = [
 // - Tab to bypass thumbs (tabindex="-1" not respected)
 // - Drag to reposition thumb (we can't get real page position info)
 
-test('renders EuiColorStops', () => {
+test('renders OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -60,9 +60,9 @@ test('renders EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders free-range EuiColorStops', () => {
+test('renders free-range OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={[]}
@@ -72,9 +72,9 @@ test('renders free-range EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders min-only EuiColorStops', () => {
+test('renders min-only OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={[]}
@@ -85,9 +85,9 @@ test('renders min-only EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders max-only EuiColorStops', () => {
+test('renders max-only OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={[]}
@@ -98,9 +98,9 @@ test('renders max-only EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders compressed EuiColorStops', () => {
+test('renders compressed OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -113,9 +113,9 @@ test('renders compressed EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders readOnly EuiColorStops', () => {
+test('renders readOnly OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -128,9 +128,9 @@ test('renders readOnly EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders fullWidth EuiColorStops', () => {
+test('renders fullWidth OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -143,9 +143,9 @@ test('renders fullWidth EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders disabled EuiColorStops', () => {
+test('renders disabled OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -158,9 +158,9 @@ test('renders disabled EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders fixed stop EuiColorStops', () => {
+test('renders fixed stop OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -173,9 +173,9 @@ test('renders fixed stop EuiColorStops', () => {
   expect(colorStops).toMatchSnapshot();
 });
 
-test('renders stepped stop EuiColorStops', () => {
+test('renders stepped stop OuiColorStops', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -187,13 +187,13 @@ test('renders stepped stop EuiColorStops', () => {
     />
   );
   expect(
-    colorStops.find('.euiRangeHighlight__progress').prop('style')
+    colorStops.find('.ouiRangeHighlight__progress').prop('style')
   ).toMatchSnapshot();
 });
 
-test('renders empty EuiColorStops', () => {
+test('renders empty OuiColorStops', () => {
   const colorStops = render(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={[]}
@@ -207,7 +207,7 @@ test('renders empty EuiColorStops', () => {
 
 test('popover color selector is shown when the thumb is clicked', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -217,16 +217,16 @@ test('popover color selector is shown when the thumb is clicked', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const colorSelector = findTestSubject(colorStops, 'euiColorStopPopover');
+  const colorSelector = findTestSubject(colorStops, 'ouiColorStopPopover');
   expect(colorSelector.length).toBe(1);
 });
 
 test('passes value input props to number input', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -239,16 +239,16 @@ test('passes value input props to number input', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const colorSelector = findTestSubject(colorStops, 'euiColorStopPopover');
-  expect(colorSelector.find(EuiFieldNumber).prop('append')).toEqual('%');
+  const colorSelector = findTestSubject(colorStops, 'ouiColorStopPopover');
+  expect(colorSelector.find(OuiFieldNumber).prop('append')).toEqual('%');
 });
 
 test('stop input updates stops', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -258,7 +258,7 @@ test('stop input updates stops', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
   const event = { target: { value: '10' } };
@@ -278,7 +278,7 @@ test('stop input updates stops', () => {
 
 test('stop input updates stops with error prevention (reset to bounds)', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -288,7 +288,7 @@ test('stop input updates stops with error prevention (reset to bounds)', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
   const event = { target: { value: '1000' } };
@@ -307,7 +307,7 @@ test('stop input updates stops with error prevention (reset to bounds)', () => {
 
 test('hex input updates stops', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -317,7 +317,7 @@ test('hex input updates stops', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
   const event = { target: { value: '#FFFFFF' } };
@@ -337,7 +337,7 @@ test('hex input updates stops', () => {
 
 test('hex input updates stops with error', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -347,7 +347,7 @@ test('hex input updates stops with error', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
   const event = { target: { value: '#FFFFF' } };
@@ -366,7 +366,7 @@ test('hex input updates stops with error', () => {
 
 test('picker updates stops', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -376,10 +376,10 @@ test('picker updates stops', () => {
     />
   );
 
-  findTestSubject(colorStops, 'euiColorStopThumb')
+  findTestSubject(colorStops, 'ouiColorStopThumb')
     .first()
     .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const swatches = colorStops.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorStops.find('button.ouiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
   swatches.first().simulate('click');
   expect(onChange).toBeCalled();
@@ -395,7 +395,7 @@ test('picker updates stops', () => {
 
 test('thumb focus changes', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -405,8 +405,8 @@ test('thumb focus changes', () => {
     />
   );
 
-  const wrapper = findTestSubject(colorStops, 'euiColorStops');
-  const thumbs = findTestSubject(colorStops, 'euiColorStopThumb');
+  const wrapper = findTestSubject(colorStops, 'ouiColorStops');
+  const thumbs = findTestSubject(colorStops, 'ouiColorStopThumb');
   wrapper.simulate('focus');
   wrapper.simulate('keydown', {
     key: keys.ARROW_DOWN,
@@ -420,7 +420,7 @@ test('thumb focus changes', () => {
 
 test('thumb direction movement', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -430,8 +430,8 @@ test('thumb direction movement', () => {
     />
   );
 
-  const wrapper = findTestSubject(colorStops, 'euiColorStops');
-  const thumbs = findTestSubject(colorStops, 'euiColorStopThumb');
+  const wrapper = findTestSubject(colorStops, 'ouiColorStops');
+  const thumbs = findTestSubject(colorStops, 'ouiColorStopThumb');
   wrapper.simulate('focus');
   wrapper.simulate('keydown', {
     key: keys.ARROW_DOWN,
@@ -463,7 +463,7 @@ test('thumb direction movement', () => {
 
 test('add new thumb via keyboard', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -473,7 +473,7 @@ test('add new thumb via keyboard', () => {
     />
   );
 
-  const wrapper = findTestSubject(colorStops, 'euiColorStops');
+  const wrapper = findTestSubject(colorStops, 'ouiColorStops');
   wrapper.simulate('focus');
   wrapper.simulate('keydown', {
     key: keys.ENTER,
@@ -492,7 +492,7 @@ test('add new thumb via keyboard', () => {
 
 test('add new thumb via click', () => {
   const colorStops = mount(
-    <EuiColorStops
+    <OuiColorStops
       label="Test"
       onChange={onChange}
       colorStops={colorStopsArray}
@@ -502,7 +502,7 @@ test('add new thumb via click', () => {
     />
   );
 
-  const wrapper = findTestSubject(colorStops, 'euiColorStopsAdd');
+  const wrapper = findTestSubject(colorStops, 'ouiColorStopsAdd');
   wrapper.simulate('click', { pageX: 45, pageY: 0 });
   expect(onChange).toBeCalled();
   // This is a very odd expectation.

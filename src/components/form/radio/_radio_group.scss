@@ -1,7 +1,7 @@
-.euiRadioGroup__item + .euiRadioGroup__item {
-  margin-top: $euiSizeXS;
+.ouiRadioGroup__item + .ouiRadioGroup__item {
+  margin-top: $ouiSizeXS;
 
-  &.euiRadio--compressed {
+  &.ouiRadio--compressed {
     margin-top: 0;
   }
 }

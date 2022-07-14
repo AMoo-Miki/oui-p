@@ -1,16 +1,16 @@
-.euiSuperSelect__listbox {
-  @include euiScrollBar;
+.ouiSuperSelect__listbox {
+  @include ouiScrollBar;
   max-height: 300px;
   overflow: hidden;
   overflow-y: auto;
 }
 
-.euiSuperSelect__item {
-  @include euiFontSizeS;
-  @include euiInteractiveStates;
-  padding: $euiSizeS;
+.ouiSuperSelect__item {
+  @include ouiFontSizeS;
+  @include ouiInteractiveStates;
+  padding: $ouiSizeS;
 }
 
-.euiSuperSelect__item--hasDividers:not(:last-of-type) {
-  border-bottom: $euiBorderThin;
+.ouiSuperSelect__item--hasDividers:not(:last-of-type) {
+  border-bottom: $ouiBorderThin;
 }

@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiKeyPadMenu } from './key_pad_menu';
+import { OuiKeyPadMenu } from './key_pad_menu';
 
-describe('EuiKeyPadMenu', () => {
+describe('OuiKeyPadMenu', () => {
   test('is rendered', () => {
-    const component = render(<EuiKeyPadMenu {...requiredProps} />);
+    const component = render(<OuiKeyPadMenu {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

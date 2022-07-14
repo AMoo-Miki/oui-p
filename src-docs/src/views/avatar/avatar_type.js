@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { EuiAvatar, EuiTitle, EuiSpacer } from '../../../../src/components';
+import { OuiAvatar, OuiTitle, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiTitle size="xs">
+    <OuiTitle size="xs">
       <h3>Spaces</h3>
-    </EuiTitle>
-    <EuiSpacer />
-    <EuiAvatar size="s" type="space" name="Kibana" />
+    </OuiTitle>
+    <OuiSpacer />
+    <OuiAvatar size="s" type="space" name="Kibana" />
     &emsp;
-    <EuiAvatar type="space" name="Leonardo Space" />
+    <OuiAvatar type="space" name="Leonardo Space" />
     &emsp;
-    <EuiAvatar size="l" type="space" name="Default" />
+    <OuiAvatar size="l" type="space" name="Default" />
     &emsp;
-    <EuiAvatar size="xl" type="space" name="Engineering Space" />
+    <OuiAvatar size="xl" type="space" name="Engineering Space" />
   </div>
 );

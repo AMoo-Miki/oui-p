@@ -21,15 +21,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiBadge } from '../badge';
-import { EuiBadgeGroup, GUTTER_SIZES } from './badge_group';
+import { OuiBadge } from '../badge';
+import { OuiBadgeGroup, GUTTER_SIZES } from './badge_group';
 
-describe('EuiBadgeGroup', () => {
+describe('OuiBadgeGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiBadgeGroup {...requiredProps}>
-        <EuiBadge>Content</EuiBadge>
-      </EuiBadgeGroup>
+      <OuiBadgeGroup {...requiredProps}>
+        <OuiBadge>Content</OuiBadge>
+      </OuiBadgeGroup>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +38,7 @@ describe('EuiBadgeGroup', () => {
   describe('gutterSize', () => {
     GUTTER_SIZES.forEach((size) => {
       it(`${size} is rendered`, () => {
-        const component = render(<EuiBadgeGroup gutterSize={size} />);
+        const component = render(<OuiBadgeGroup gutterSize={size} />);
 
         expect(component).toMatchSnapshot();
       });

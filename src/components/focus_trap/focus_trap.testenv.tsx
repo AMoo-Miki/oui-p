@@ -19,12 +19,12 @@
 
 import React from 'react';
 
-export const EuiFocusTrap = ({
+export const OuiFocusTrap = ({
   children,
   'data-test-subj': dataTestSubj,
 }: any) => {
   return (
-    <div data-eui="EuiFocusTrap" data-test-subj={dataTestSubj}>
+    <div data-oui="OuiFocusTrap" data-test-subj={dataTestSubj}>
       {children}
     </div>
   );

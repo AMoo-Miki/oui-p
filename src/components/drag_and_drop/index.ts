@@ -18,19 +18,19 @@
  */
 
 export {
-  EuiDragDropContext,
-  EuiDragDropContextProps,
+  OuiDragDropContext,
+  OuiDragDropContextProps,
 } from './drag_drop_context';
-export { EuiDraggable, EuiDraggableProps } from './draggable';
-export { EuiDroppable, EuiDroppableProps } from './droppable';
+export { OuiDraggable, OuiDraggableProps } from './draggable';
+export { OuiDroppable, OuiDroppableProps } from './droppable';
 export {
-  euiDragDropCopy,
-  euiDragDropMove,
-  euiDragDropReorder,
+  ouiDragDropCopy,
+  ouiDragDropMove,
+  ouiDragDropReorder,
 } from './services';
 
-// Interfaces in react-beautiful-dnd that EUI abstracts over
-// allows consumers to pull these from EUI instead of react-beautiful-dnd
+// Interfaces in react-beautiful-dnd that OUI abstracts over
+// allows consumers to pull these from OUI instead of react-beautiful-dnd
 export {
   DraggableLocation,
   DraggableProps,

@@ -21,7 +21,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiControlBar, Control } from './control_bar';
+import { OuiControlBar, Control } from './control_bar';
 
 const handleClick = () => {
   console.log('You clicked');
@@ -74,10 +74,10 @@ const controls: Control[] = [
   },
 ];
 
-describe('EuiControlBar', () => {
+describe('OuiControlBar', () => {
   test('is rendered', () => {
     const component = takeMountedSnapshot(
-      mount(<EuiControlBar controls={controls} {...requiredProps} />)
+      mount(<OuiControlBar controls={controls} {...requiredProps} />)
     );
 
     expect(component).toMatchSnapshot();
@@ -86,7 +86,7 @@ describe('EuiControlBar', () => {
   describe('props', () => {
     test('mobile is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} showOnMobile />
+        <OuiControlBar controls={controls} showOnMobile />
       );
 
       expect(component).toMatchSnapshot();
@@ -94,9 +94,9 @@ describe('EuiControlBar', () => {
 
     test('showContent is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} showContent>
+        <OuiControlBar controls={controls} showContent>
           Content
-        </EuiControlBar>
+        </OuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -104,9 +104,9 @@ describe('EuiControlBar', () => {
 
     test('size is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} size="s">
+        <OuiControlBar controls={controls} size="s">
           Content
-        </EuiControlBar>
+        </OuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -114,9 +114,9 @@ describe('EuiControlBar', () => {
 
     test('maxHeight is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} maxHeight="20rem">
+        <OuiControlBar controls={controls} maxHeight="20rem">
           Content
-        </EuiControlBar>
+        </OuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -124,9 +124,9 @@ describe('EuiControlBar', () => {
 
     test('leftOffset is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} leftOffset={200}>
+        <OuiControlBar controls={controls} leftOffset={200}>
           Content
-        </EuiControlBar>
+        </OuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -134,9 +134,9 @@ describe('EuiControlBar', () => {
 
     test('rightOffset is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} rightOffset={200}>
+        <OuiControlBar controls={controls} rightOffset={200}>
           Content
-        </EuiControlBar>
+        </OuiControlBar>
       );
 
       expect(component).toMatchSnapshot();
@@ -144,9 +144,9 @@ describe('EuiControlBar', () => {
 
     test('position is rendered', () => {
       const component = mount(
-        <EuiControlBar controls={controls} position="absolute">
+        <OuiControlBar controls={controls} position="absolute">
           Content
-        </EuiControlBar>
+        </OuiControlBar>
       );
 
       expect(component).toMatchSnapshot();

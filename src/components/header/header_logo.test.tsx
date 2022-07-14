@@ -21,30 +21,30 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiHeaderLogo } from './header_logo';
+import { OuiHeaderLogo } from './header_logo';
 
-describe('EuiHeaderLogo', () => {
+describe('OuiHeaderLogo', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLogo {...requiredProps} />);
+    const component = render(<OuiHeaderLogo {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders href', () => {
-    const component = render(<EuiHeaderLogo href="#" />);
+    const component = render(<OuiHeaderLogo href="#" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders href with rel', () => {
-    const component = render(<EuiHeaderLogo href="#" rel="noreferrer" />);
+    const component = render(<OuiHeaderLogo href="#" rel="noreferrer" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders optional props', () => {
     const component = render(
-      <EuiHeaderLogo
+      <OuiHeaderLogo
         iconType="alert"
         iconTitle="Moby Dick"
         style={{ color: 'red' }}

@@ -18,11 +18,11 @@
  */
 
 export {
-  EuiSelectableList,
-  EuiSelectableListProps,
-  EuiSelectableOptionsListProps,
+  OuiSelectableList,
+  OuiSelectableListProps,
+  OuiSelectableOptionsListProps,
 } from './selectable_list';
 export {
-  EuiSelectableListItem,
-  EuiSelectableListItemProps,
+  OuiSelectableListItem,
+  OuiSelectableListItemProps,
 } from './selectable_list_item';

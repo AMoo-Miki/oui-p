@@ -5,47 +5,47 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
-  EuiCallOut,
+  OuiCode,
+  OuiKeyPadMenu,
+  OuiKeyPadMenuItem,
+  OuiCallOut,
 } from '../../../../src/components';
 import { keyPadMenuItemConfig } from './playground';
 
 import KeyPadMenu from './key_pad_menu';
 const keyPadMenuSource = require('!!raw-loader!./key_pad_menu');
 const keyPadMenuHtml = renderToHtml(KeyPadMenu);
-const keyPadMenuSnippet = `<EuiKeyPadMenu>
-  <EuiKeyPadMenuItem label={label1} href="#">
-    <EuiIcon type={icon1} size="l" />
-  </EuiKeyPadMenuItem>
-  <EuiKeyPadMenuItem label={label2} href="#">
-    <EuiIcon type={icon2} size="l" />
-  </EuiKeyPadMenuItem>
-</EuiKeyPadMenu>
+const keyPadMenuSnippet = `<OuiKeyPadMenu>
+  <OuiKeyPadMenuItem label={label1} href="#">
+    <OuiIcon type={icon1} size="l" />
+  </OuiKeyPadMenuItem>
+  <OuiKeyPadMenuItem label={label2} href="#">
+    <OuiIcon type={icon2} size="l" />
+  </OuiKeyPadMenuItem>
+</OuiKeyPadMenu>
 `;
 
 import KeyPadMenuItemButton from './key_pad_menu_item_button';
 const keyPadMenuItemButtonSource = require('!!raw-loader!./key_pad_menu_item_button');
 const keyPadMenuItemButtonHtml = renderToHtml(KeyPadMenuItemButton);
-const keyPadMenuItemButtonSnippet = `<EuiKeyPadMenuItem
+const keyPadMenuItemButtonSnippet = `<OuiKeyPadMenuItem
   label={label}
   onClick={handleClick}>
-  <EuiIcon type={icon} size="l" />
-</EuiKeyPadMenuItem>
+  <OuiIcon type={icon} size="l" />
+</OuiKeyPadMenuItem>
 `;
 
 import KeyPadBeta from './key_pad_beta';
 const keyPadBetaSource = require('!!raw-loader!./key_pad_beta');
 const keyPadBetaHtml = renderToHtml(KeyPadBeta);
-const keyPadBetaSnippet = `<EuiKeyPadMenuItem
+const keyPadBetaSnippet = `<OuiKeyPadMenuItem
   label={label}
   href="#"
   betaBadgeLabel={betaBadgeLabel}
   betaBadgeTooltipContent={tooltipContent}
   betaBadgeIconType={badgeIconType}>
-  <EuiIcon type={menuItemIcon} size="l" />
-</EuiKeyPadMenuItem>
+  <OuiIcon type={menuItemIcon} size="l" />
+</OuiKeyPadMenuItem>
 `;
 
 export const KeyPadMenuExample = {
@@ -65,26 +65,26 @@ export const KeyPadMenuExample = {
       text: (
         <>
           <p>
-            The <strong>EuiKeyPadMenu</strong> component presents{' '}
-            <strong>EuiKeyPadMenuItems</strong> in a tiled format, with a fixed
+            The <strong>OuiKeyPadMenu</strong> component presents{' '}
+            <strong>OuiKeyPadMenuItems</strong> in a tiled format, with a fixed
             width which will accommodate three items and then wrap.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             iconType="accessibility"
             title={
               <>
                 If the menu provides navigation for your application, wrap the{' '}
-                <strong>EuiKeyPadMenu</strong> with{' '}
-                <EuiCode language="html">
+                <strong>OuiKeyPadMenu</strong> with{' '}
+                <OuiCode language="html">
                   {'<nav aria-label="Nav title"></nav>'}
-                </EuiCode>
+                </OuiCode>
                 .
               </>
             }
           />
         </>
       ),
-      props: { EuiKeyPadMenu, EuiKeyPadMenuItem },
+      props: { OuiKeyPadMenu, OuiKeyPadMenuItem },
       snippet: keyPadMenuSnippet,
       demo: <KeyPadMenu />,
     },
@@ -102,9 +102,9 @@ export const KeyPadMenuExample = {
       ],
       text: (
         <p>
-          The <strong>EuiKeyPadMenuItem</strong> component can act both as an
-          anchor as well as a button by specifying <EuiCode>href</EuiCode> or
-          <EuiCode>onClick</EuiCode> respectively.
+          The <strong>OuiKeyPadMenuItem</strong> component can act both as an
+          anchor as well as a button by specifying <OuiCode>href</OuiCode> or
+          <OuiCode>onClick</OuiCode> respectively.
         </p>
       ),
       snippet: keyPadMenuItemButtonSnippet,
@@ -126,14 +126,14 @@ export const KeyPadMenuExample = {
         <div>
           <p>
             If the item links to a module that is not GA (beta, lab, etc), you
-            can add a <EuiCode>betaBadgeLabel</EuiCode> and{' '}
-            <EuiCode>betaBadgeTooltipContent</EuiCode> to the card and it will
-            properly create and position an <strong>EuiBetaBadge</strong>.
+            can add a <OuiCode>betaBadgeLabel</OuiCode> and{' '}
+            <OuiCode>betaBadgeTooltipContent</OuiCode> to the card and it will
+            properly create and position an <strong>OuiBetaBadge</strong>.
           </p>
           <p>
             Supplying just a label will only show the first letter in the badge
             and supply the full label to the tooltip. You can also pass an{' '}
-            <EuiCode>iconType</EuiCode> to replace the letter only badge and the
+            <OuiCode>iconType</OuiCode> to replace the letter only badge and the
             label will still become the title.
           </p>
         </div>

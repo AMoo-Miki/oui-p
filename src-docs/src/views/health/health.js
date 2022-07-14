@@ -1,29 +1,29 @@
 import React from 'react';
 
-import { EuiHealth, EuiSpacer } from '../../../../src/components';
+import { OuiHealth, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiHealth color="subdued">Inactive</EuiHealth>
+    <OuiHealth color="subdued">Inactive</OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth color="primary">Active</EuiHealth>
+    <OuiHealth color="primary">Active</OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth color="success">Healthy</EuiHealth>
+    <OuiHealth color="success">Healthy</OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth color="warning">Warning</EuiHealth>
+    <OuiHealth color="warning">Warning</OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth color="danger">Failure</EuiHealth>
+    <OuiHealth color="danger">Failure</OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth color="#000000">Custom color as hex</EuiHealth>
+    <OuiHealth color="#000000">Custom color as hex</OuiHealth>
   </div>
 );

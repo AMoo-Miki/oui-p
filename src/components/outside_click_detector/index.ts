@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiOutsideClickDetector,
-  EuiOutsideClickDetectorProps,
+  OuiOutsideClickDetector,
+  OuiOutsideClickDetectorProps,
 } from './outside_click_detector';

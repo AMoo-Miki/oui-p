@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiTabbedContent,
-  EuiTabbedContentTab,
-  EuiTabbedContentProps,
+  OuiTabbedContent,
+  OuiTabbedContentTab,
+  OuiTabbedContentProps,
 } from './tabbed_content';

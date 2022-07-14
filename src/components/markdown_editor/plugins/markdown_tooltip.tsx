@@ -18,10 +18,10 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { EuiMarkdownAstNodePosition, RemarkTokenizer } from '../markdown_types';
-import { EuiToolTip } from '../../tool_tip';
-import { EuiIcon } from '../../icon';
-import { EuiCodeBlock } from '../../code';
+import { OuiMarkdownAstNodePosition, RemarkTokenizer } from '../markdown_types';
+import { OuiToolTip } from '../../tool_tip';
+import { OuiIcon } from '../../icon';
+import { OuiCodeBlock } from '../../code';
 import { Plugin } from 'unified';
 
 interface TooltipNodeDetails {
@@ -41,9 +41,9 @@ const tooltipPlugin = {
     trimFirst: true,
   },
   helpText: (
-    <EuiCodeBlock language="md" paddingSize="s" fontSize="l">
+    <OuiCodeBlock language="md" paddingSize="s" fontSize="l">
       {'!{tooltip[anchor text](helpful description)}'}
-    </EuiCodeBlock>
+    </OuiCodeBlock>
   ),
 };
 
@@ -134,20 +134,20 @@ const TooltipParser: Plugin = function TooltipParser() {
 
 const tooltipMarkdownRenderer: FunctionComponent<
   TooltipNodeDetails & {
-    position: EuiMarkdownAstNodePosition;
+    position: OuiMarkdownAstNodePosition;
   }
 > = ({ content, children }) => {
   return (
     <span>
-      <EuiToolTip content={content}>
+      <OuiToolTip content={content}>
         <span>
           <strong>{children}</strong>
-          <EuiIcon
+          <OuiIcon
             type="questionInCircle"
-            className="euiMarkdownTooltip__icon"
+            className="ouiMarkdownTooltip__icon"
           />
         </span>
-      </EuiToolTip>
+      </OuiToolTip>
     </span>
   );
 };

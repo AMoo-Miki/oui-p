@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback, useMemo, useState } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiLink } from '../../../../src/components/';
+import { OuiDataGrid, OuiLink } from '../../../../src/components/';
 
 const columns = [
   {
@@ -36,13 +36,13 @@ const raw_data = [];
 for (let i = 1; i < 100; i++) {
   raw_data.push({
     name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    email: <EuiLink href="">{fake('{{internet.email}}')}</EuiLink>,
+    email: <OuiLink href="">{fake('{{internet.email}}')}</OuiLink>,
     location: (
       <Fragment>
         {`${fake('{{address.city}}')}, `}
-        <EuiLink href="https://google.com">
+        <OuiLink href="https://google.com">
           {fake('{{address.country}}')}
-        </EuiLink>
+        </OuiLink>
       </Fragment>
     ),
     date: fake('{{date.past}}'),
@@ -123,7 +123,7 @@ export default () => {
   }, [data, pagination.pageIndex, pagination.pageSize]);
 
   return (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="inMemory level defaulting to undefined data grid demo"
       columns={columns}
       columnVisibility={{ visibleColumns, setVisibleColumns }}

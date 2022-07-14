@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiFieldNumber } from '../../../../src/components';
+import { OuiFieldNumber } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default () => {
@@ -13,7 +13,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canPrepend canAppend>
-      <EuiFieldNumber
+      <OuiFieldNumber
         placeholder="Placeholder text"
         value={value}
         onChange={(e) => onChange(e)}

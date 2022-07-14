@@ -21,14 +21,14 @@ import React, { Component, HTMLAttributes, ReactNode } from 'react';
 import { CommonProps } from '../common';
 import PropTypes from 'prop-types';
 
-import { EuiText } from '../text';
+import { OuiText } from '../text';
 
-interface EuiErrorBoundaryState {
+interface OuiErrorBoundaryState {
   hasError: boolean;
   error?: string;
 }
 
-export type EuiErrorBoundaryProps = CommonProps &
+export type OuiErrorBoundaryProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * ReactNode to render as this component's content
@@ -36,18 +36,18 @@ export type EuiErrorBoundaryProps = CommonProps &
     children: ReactNode;
   };
 
-export class EuiErrorBoundary extends Component<
-  EuiErrorBoundaryProps,
-  EuiErrorBoundaryState
+export class OuiErrorBoundary extends Component<
+  OuiErrorBoundaryProps,
+  OuiErrorBoundaryState
 > {
   static propTypes = {
     children: PropTypes.node,
   };
 
-  constructor(props: EuiErrorBoundaryProps) {
+  constructor(props: OuiErrorBoundaryProps) {
     super(props);
 
-    const errorState: EuiErrorBoundaryState = {
+    const errorState: OuiErrorBoundaryState = {
       hasError: false,
       error: undefined,
     };
@@ -75,14 +75,14 @@ ${stackStr}`;
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
-        <div className="euiErrorBoundary" {...rest}>
-          <div className="euiErrorBoundary__text">
-            <EuiText size="xs">
+        <div className="ouiErrorBoundary" {...rest}>
+          <div className="ouiErrorBoundary__text">
+            <OuiText size="xs">
               <h1>Error</h1>
-              <pre className="euiErrorBoundary__stack">
+              <pre className="ouiErrorBoundary__stack">
                 <p>{this.state.error}</p>
               </pre>
-            </EuiText>
+            </OuiText>
           </div>
         </div>
       );

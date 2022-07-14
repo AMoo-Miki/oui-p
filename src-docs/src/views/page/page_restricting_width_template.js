@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { EuiPageTemplate } from '../../../../src/components';
+import { OuiPageTemplate } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav }) => {
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       pageSideBar={sideNav}
       restrictWidth="75%"
       pageHeader={{
@@ -14,6 +14,6 @@ export default ({ button = <></>, content, sideNav }) => {
         description: 'Restricting the width to 75%.',
       }}>
       {content}
-    </EuiPageTemplate>
+    </OuiPageTemplate>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox, EuiFormRow } from '../../../../src/components';
+import { OuiComboBox, OuiFormRow } from '../../../../src/components';
 
 const isValid = (value) => {
   // Only allow letters. No spaces, numbers, or special characters.
@@ -41,11 +41,11 @@ export default () => {
   };
 
   return (
-    <EuiFormRow
+    <OuiFormRow
       label="Only custom options"
       isInvalid={isInvalid}
       error={isInvalid ? 'Only letters are allowed' : undefined}>
-      <EuiComboBox
+      <OuiComboBox
         noSuggestions
         placeholder="Create some tags (letters only)"
         selectedOptions={selectedOptions}
@@ -54,6 +54,6 @@ export default () => {
         onSearchChange={onSearchChange}
         isInvalid={isInvalid}
       />
-    </EuiFormRow>
+    </OuiFormRow>
   );
 };

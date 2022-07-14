@@ -42,7 +42,7 @@ export {
   isWithinBreakpoints,
   isWithinMaxBreakpoint,
   isWithinMinBreakpoint,
-  EuiBreakpointSize,
+  OuiBreakpointSize,
 } from './breakpoint';
 
 export {
@@ -59,18 +59,18 @@ export {
   VISUALIZATION_COLORS,
   DEFAULT_VISUALIZATION_COLOR,
   colorPalette,
-  euiPaletteForLightBackground,
-  euiPaletteForDarkBackground,
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  ouiPaletteForLightBackground,
+  ouiPaletteForDarkBackground,
+  ouiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
   HSV,
   getSteppedGradient,
 } from './color';
@@ -117,7 +117,7 @@ export {
   performOnFrame,
 } from './transition';
 
-export { EuiWindowEvent } from './window_event';
+export { OuiWindowEvent } from './window_event';
 
 export {
   useCombinedRefs,

@@ -55,10 +55,10 @@ export interface RemarkRehypeHandler {
   (h: RemarkRehypeHandlerCallback, node: UnistNode): RehypeNode;
 }
 
-export interface EuiMarkdownEditorUiPluginEditorProps<NodeShape> {
+export interface OuiMarkdownEditorUiPluginEditorProps<NodeShape> {
   node: NodeShape | null;
   onCancel: () => void;
-  onSave: (markdown: string, config: EuiMarkdownStringTagConfig) => void;
+  onSave: (markdown: string, config: OuiMarkdownStringTagConfig) => void;
 }
 
 export const isPluginWithImmediateFormatting = (
@@ -68,16 +68,16 @@ export const isPluginWithImmediateFormatting = (
 };
 
 export interface PluginWithImmediateFormatting {
-  formatting: EuiMarkdownFormatting;
+  formatting: OuiMarkdownFormatting;
   editor?: never;
 }
 
 export interface PluginWithDelayedFormatting<NodeShape> {
   formatting?: never;
-  editor: ComponentType<EuiMarkdownEditorUiPluginEditorProps<NodeShape>>;
+  editor: ComponentType<OuiMarkdownEditorUiPluginEditorProps<NodeShape>>;
 }
 
-export type EuiMarkdownEditorUiPlugin<NodeShape = any> = {
+export type OuiMarkdownEditorUiPlugin<NodeShape = any> = {
   name: string;
   button: {
     label: string;
@@ -86,7 +86,7 @@ export type EuiMarkdownEditorUiPlugin<NodeShape = any> = {
   helpText?: ReactNode;
 } & (PluginWithImmediateFormatting | PluginWithDelayedFormatting<NodeShape>);
 
-export interface EuiMarkdownFormatting {
+export interface OuiMarkdownFormatting {
   prefix?: string;
   suffix?: string;
   blockPrefix?: string;
@@ -100,31 +100,31 @@ export interface EuiMarkdownFormatting {
   trimFirst?: boolean;
 }
 
-export interface EuiMarkdownAstNode {
+export interface OuiMarkdownAstNode {
   type: string;
-  children?: EuiMarkdownAstNode[];
-  position: EuiMarkdownAstNodePosition;
+  children?: OuiMarkdownAstNode[];
+  position: OuiMarkdownAstNodePosition;
 }
-export interface EuiMarkdownAstNodePosition {
+export interface OuiMarkdownAstNodePosition {
   start: { line: number; column: number; offset: number };
   end: { line: number; column: number; offset: number };
 }
 
-export type EuiMarkdownParseError = string | VFileMessage | Error;
+export type OuiMarkdownParseError = string | VFileMessage | Error;
 
-export interface EuiMarkdownDropHandler {
+export interface OuiMarkdownDropHandler {
   supportedFiles: string[];
   accepts: (itemType: string) => boolean;
   getFormattingForItem: (
     file: File
-  ) => EuiMarkdownDragAndDropResult | Promise<EuiMarkdownDragAndDropResult>;
+  ) => OuiMarkdownDragAndDropResult | Promise<OuiMarkdownDragAndDropResult>;
 }
 
-export interface EuiMarkdownStringTagConfig {
+export interface OuiMarkdownStringTagConfig {
   block: boolean;
 }
 
-export interface EuiMarkdownDragAndDropResult {
+export interface OuiMarkdownDragAndDropResult {
   text: string;
-  config: EuiMarkdownStringTagConfig;
+  config: OuiMarkdownStringTagConfig;
 }

@@ -21,20 +21,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderSection } from './header_section';
+import { OuiHeaderSection } from './header_section';
 
-describe('EuiHeaderSection', () => {
+describe('OuiHeaderSection', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderSection {...requiredProps} />);
+    const component = render(<OuiHeaderSection {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders optional params', () => {
     const component = render(
-      <EuiHeaderSection style={{ color: 'blue' }}>
+      <OuiHeaderSection style={{ color: 'blue' }}>
         <span>Some years ago never mind how long precisely...</span>
-      </EuiHeaderSection>
+      </OuiHeaderSection>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,13 +42,13 @@ describe('EuiHeaderSection', () => {
 
   describe('grow', () => {
     test('defaults to false', () => {
-      const component = render(<EuiHeaderSection />);
+      const component = render(<OuiHeaderSection />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders true', () => {
-      const component = render(<EuiHeaderSection grow />);
+      const component = render(<OuiHeaderSection grow />);
 
       expect(component).toMatchSnapshot();
     });
@@ -56,13 +56,13 @@ describe('EuiHeaderSection', () => {
 
   describe('side', () => {
     test('defaults to left', () => {
-      const component = render(<EuiHeaderSection />);
+      const component = render(<OuiHeaderSection />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders right', () => {
-      const component = render(<EuiHeaderSection side="right" />);
+      const component = render(<OuiHeaderSection side="right" />);
 
       expect(component).toMatchSnapshot();
     });

@@ -1,27 +1,27 @@
 import React from 'react';
 
 import {
-  EuiIcon,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
+  OuiIcon,
+  OuiKeyPadMenu,
+  OuiKeyPadMenuItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiKeyPadMenu>
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+  <OuiKeyPadMenu>
+    <OuiKeyPadMenuItem label="Dashboard" href="#">
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+    <OuiKeyPadMenuItem label="Dashboard" href="#">
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+    <OuiKeyPadMenuItem label="Dashboard" href="#">
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem isDisabled label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
-  </EuiKeyPadMenu>
+    <OuiKeyPadMenuItem isDisabled label="Dashboard" href="#">
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
+  </OuiKeyPadMenu>
 );

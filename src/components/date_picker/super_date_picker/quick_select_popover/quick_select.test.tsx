@@ -20,7 +20,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { EuiQuickSelect } from './quick_select';
+import { OuiQuickSelect } from './quick_select';
 
 const noop = () => {};
 const defaultProps = {
@@ -29,16 +29,16 @@ const defaultProps = {
   start: 'now-15m',
 };
 
-describe('EuiQuickSelect', () => {
+describe('OuiQuickSelect', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiQuickSelect {...defaultProps} />);
+    const component = shallow(<OuiQuickSelect {...defaultProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('prevQuickSelect', () => {
     const component = shallow(
-      <EuiQuickSelect
+      <OuiQuickSelect
         {...defaultProps}
         prevQuickSelect={{
           timeTense: 'Next',

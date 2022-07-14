@@ -1,0 +1,31 @@
+.ouiRangeHighlight {
+  z-index: 1;
+  pointer-events: none;
+
+  &__progress {
+    background-color: $ouiRangeHighlightColor;
+    border-color: $ouiRangeHighlightColor;
+
+    &--hasFocus {
+      background-color: $ouiColorPrimary;
+    }
+  }
+
+  &--compressed {
+    top: calc(50% - #{($ouiRangeTrackCompressedHeight/2)});
+
+    .ouiRangeHighlight__progress {
+      height: $ouiRangeHighlightCompressedHeight;
+    }
+
+    &.ouiRangeHighlight--hasTicks {
+      top: ($ouiRangeThumbHeight - $ouiRangeTrackCompressedHeight) / 2;
+    }
+  }
+
+  &:not(.ouiRangeHighlight--compressed) {
+    &.ouiRangeHighlight--hasTicks {
+      top: ($ouiRangeThumbHeight - $ouiRangeTrackHeight) / 2;
+    }
+  }
+}

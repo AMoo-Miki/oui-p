@@ -21,10 +21,10 @@ import React from 'react';
 import { mount, render } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../../test';
 
-import { EuiSuperSelect } from './super_select';
+import { OuiSuperSelect } from './super_select';
 
 jest.mock('../../portal', () => ({
-  EuiPortal: ({ children }: any) => children,
+  OuiPortal: ({ children }: any) => children,
 }));
 
 const options = [
@@ -32,10 +32,10 @@ const options = [
   { value: '2', inputDisplay: 'Option #2' },
 ];
 
-describe('EuiSuperSelect', () => {
+describe('OuiSuperSelect', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSuperSelect
+      <OuiSuperSelect
         {...requiredProps}
         options={options}
         onChange={() => {}}
@@ -48,7 +48,7 @@ describe('EuiSuperSelect', () => {
   describe('props', () => {
     test('fullWidth is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <OuiSuperSelect
           {...requiredProps}
           options={options}
           onChange={() => {}}
@@ -61,7 +61,7 @@ describe('EuiSuperSelect', () => {
 
     test('compressed is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <OuiSuperSelect
           {...requiredProps}
           options={options}
           onChange={() => {}}
@@ -74,7 +74,7 @@ describe('EuiSuperSelect', () => {
 
     test('is rendered with a prepend and append', () => {
       const component = render(
-        <EuiSuperSelect
+        <OuiSuperSelect
           {...requiredProps}
           options={options}
           onChange={() => {}}
@@ -88,7 +88,7 @@ describe('EuiSuperSelect', () => {
 
     test('select component is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <OuiSuperSelect
           options={[
             { value: '1', inputDisplay: 'Option #1' },
             { value: '2', inputDisplay: 'Option #2' },
@@ -102,7 +102,7 @@ describe('EuiSuperSelect', () => {
 
     test('options are rendered when select is open', () => {
       const component = mount(
-        <EuiSuperSelect
+        <OuiSuperSelect
           options={options}
           onChange={() => {}}
           data-test-subj="superSelect"
@@ -116,7 +116,7 @@ describe('EuiSuperSelect', () => {
 
     test('valueSelected is rendered', () => {
       const component = render(
-        <EuiSuperSelect
+        <OuiSuperSelect
           options={options}
           valueOfSelected="2"
           onChange={() => {}}
@@ -128,7 +128,7 @@ describe('EuiSuperSelect', () => {
 
     test('custom display is propagated to dropdown', () => {
       const component = mount(
-        <EuiSuperSelect
+        <OuiSuperSelect
           options={[
             {
               value: '1',
@@ -153,7 +153,7 @@ describe('EuiSuperSelect', () => {
 
     test('more props are propogated to each option', () => {
       const component = mount(
-        <EuiSuperSelect
+        <OuiSuperSelect
           options={[
             { value: '1', inputDisplay: 'Option #1', disabled: true },
             {

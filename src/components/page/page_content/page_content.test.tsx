@@ -21,36 +21,36 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageContent } from './page_content';
+import { OuiPageContent } from './page_content';
 
-describe('EuiPageContent', () => {
+describe('OuiPageContent', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageContent {...requiredProps} />);
+    const component = render(<OuiPageContent {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('verticalPosition is rendered', () => {
-    const component = render(<EuiPageContent verticalPosition="center" />);
+    const component = render(<OuiPageContent verticalPosition="center" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('horizontalPosition is rendered', () => {
-    const component = render(<EuiPageContent horizontalPosition="center" />);
+    const component = render(<OuiPageContent horizontalPosition="center" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('role can be removed', () => {
-    const component = render(<EuiPageContent role={null} />);
+    const component = render(<OuiPageContent role={null} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('accepts panel props', () => {
     const component = render(
-      <EuiPageContent
+      <OuiPageContent
         borderRadius="none"
         hasShadow={false}
         paddingSize="none"

@@ -39,7 +39,7 @@ const plugins = [
     async: false, // makes errors more visible, but potentially less performant
   }),
 
-  // Force EuiIcon's dynamic imports to be included in the single eui.js build,
+  // Force OuiIcon's dynamic imports to be included in the single oui.js build,
   // instead of being split out into multiple files
   new webpack.optimize.LimitChunkCountPlugin({
     maxChunks: 1,
@@ -63,7 +63,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: `eui${isProduction ? '.min' : ''}.js`,
+    filename: `oui${isProduction ? '.min' : ''}.js`,
   },
 
   resolve: {

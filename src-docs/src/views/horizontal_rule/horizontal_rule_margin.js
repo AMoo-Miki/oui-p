@@ -1,36 +1,36 @@
 import React from 'react';
 
-import { EuiHorizontalRule, EuiCode } from '../../../../src/components';
+import { OuiHorizontalRule, OuiCode } from '../../../../src/components';
 
 export default () => (
   <>
-    <EuiCode>none</EuiCode>
+    <OuiCode>none</OuiCode>
     <div>
-      <EuiHorizontalRule margin="none" />
+      <OuiHorizontalRule margin="none" />
     </div>
-    <EuiCode>xs</EuiCode>
+    <OuiCode>xs</OuiCode>
     <div>
-      <EuiHorizontalRule margin="xs" />
+      <OuiHorizontalRule margin="xs" />
     </div>
-    <EuiCode>s</EuiCode>
+    <OuiCode>s</OuiCode>
     <div>
-      <EuiHorizontalRule margin="s" />
+      <OuiHorizontalRule margin="s" />
     </div>
-    <EuiCode>m</EuiCode>
+    <OuiCode>m</OuiCode>
     <div>
-      <EuiHorizontalRule margin="m" />
+      <OuiHorizontalRule margin="m" />
     </div>
-    <EuiCode>l (default)</EuiCode>
+    <OuiCode>l (default)</OuiCode>
     <div>
-      <EuiHorizontalRule margin="l" />
+      <OuiHorizontalRule margin="l" />
     </div>
-    <EuiCode>xl</EuiCode>
+    <OuiCode>xl</OuiCode>
     <div>
-      <EuiHorizontalRule margin="xl" />
+      <OuiHorizontalRule margin="xl" />
     </div>
-    <EuiCode>xxl</EuiCode>
+    <OuiCode>xxl</OuiCode>
     <div>
-      <EuiHorizontalRule margin="xxl" />
+      <OuiHorizontalRule margin="xxl" />
     </div>
   </>
 );

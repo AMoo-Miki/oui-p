@@ -50,7 +50,7 @@ interface Props {
   children: ReactElement;
 }
 
-export class EuiKeyboardAccessible extends Component<Props> {
+export class OuiKeyboardAccessible extends Component<Props> {
   onKeyDown = (event: KeyboardEvent<any>) => {
     // Prevent a scroll from occurring if the user has hit space.
     if (event.key === keys.SPACE) {
@@ -92,9 +92,9 @@ export class EuiKeyboardAccessible extends Component<Props> {
   }
 }
 
-// @ts-ignore defining this as a static on EuiKeyboardAccessible breaks the
+// @ts-ignore defining this as a static on OuiKeyboardAccessible breaks the
 // tests
-EuiKeyboardAccessible.propTypes = {
+OuiKeyboardAccessible.propTypes = {
   children: keyboardInaccessibleElement,
 };
 

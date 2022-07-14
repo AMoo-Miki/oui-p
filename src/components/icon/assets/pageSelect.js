@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconPageSelect = ({ title, titleId, ...props }) => (
+const OuiIconPageSelect = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconPageSelect = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconPageSelect;
+export const icon = OuiIconPageSelect;

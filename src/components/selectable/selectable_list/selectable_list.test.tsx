@@ -21,10 +21,10 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelectableList } from './selectable_list';
-import { EuiSelectableOption } from '../selectable_option';
+import { OuiSelectableList } from './selectable_list';
+import { OuiSelectableOption } from '../selectable_option';
 
-const options: EuiSelectableOption[] = [
+const options: OuiSelectableOption[] = [
   {
     label: 'Titan',
     'data-test-subj': 'titanOption',
@@ -55,10 +55,10 @@ const selectableListRequiredProps = {
   ...requiredProps,
 };
 
-describe('EuiSelectableListItem', () => {
+describe('OuiSelectableListItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSelectableList options={options} {...selectableListRequiredProps} />
+      <OuiSelectableList options={options} {...selectableListRequiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -66,7 +66,7 @@ describe('EuiSelectableListItem', () => {
   describe('props', () => {
     test('visibleOptions', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           visibleOptions={options.slice(2)}
           {...selectableListRequiredProps}
@@ -78,7 +78,7 @@ describe('EuiSelectableListItem', () => {
 
     test('searchValue', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           searchValue="Mi"
           {...selectableListRequiredProps}
@@ -90,7 +90,7 @@ describe('EuiSelectableListItem', () => {
 
     test('searchValue', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           searchValue="Mi"
           {...selectableListRequiredProps}
@@ -102,9 +102,9 @@ describe('EuiSelectableListItem', () => {
 
     test('renderOption', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
-          renderOption={(option: EuiSelectableOption, searchValue?: string) => {
+          renderOption={(option: OuiSelectableOption, searchValue?: string) => {
             return (
               <span>
                 {searchValue} =&gt; {option.label}
@@ -120,7 +120,7 @@ describe('EuiSelectableListItem', () => {
 
     test('height is forced', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           height={200}
           {...selectableListRequiredProps}
@@ -132,7 +132,7 @@ describe('EuiSelectableListItem', () => {
 
     test('height is full', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           height="full"
           {...selectableListRequiredProps}
@@ -144,7 +144,7 @@ describe('EuiSelectableListItem', () => {
 
     test('allowExclusions', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           allowExclusions
           {...selectableListRequiredProps}
@@ -156,7 +156,7 @@ describe('EuiSelectableListItem', () => {
 
     test('activeOptionIndex', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           activeOptionIndex={2}
           {...selectableListRequiredProps}
@@ -168,7 +168,7 @@ describe('EuiSelectableListItem', () => {
 
     test('rowHeight', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           rowHeight={20}
           {...selectableListRequiredProps}
@@ -180,7 +180,7 @@ describe('EuiSelectableListItem', () => {
 
     test('showIcons can be turned off', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           showIcons={false}
           {...selectableListRequiredProps}
@@ -192,7 +192,7 @@ describe('EuiSelectableListItem', () => {
 
     test('singleSelection can be turned on', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           singleSelection={true}
           {...selectableListRequiredProps}
@@ -204,7 +204,7 @@ describe('EuiSelectableListItem', () => {
 
     test('singleSelection can be forced so that at least one must be selected', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           singleSelection="always"
           {...selectableListRequiredProps}
@@ -216,7 +216,7 @@ describe('EuiSelectableListItem', () => {
 
     test('bordered', () => {
       const component = render(
-        <EuiSelectableList
+        <OuiSelectableList
           options={options}
           bordered
           {...selectableListRequiredProps}

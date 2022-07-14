@@ -1,15 +1,15 @@
 import React from 'react';
 
 import {
-  EuiImage,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiImage,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem grow={false}>
-      <EuiImage
+  <OuiFlexGroup>
+    <OuiFlexItem grow={false}>
+      <OuiImage
         size="m"
         hasShadow
         allowFullScreen
@@ -17,9 +17,9 @@ export default () => (
         alt="Accessible image alt goes here"
         src="https://source.unsplash.com/2000x1000/?Nature"
       />
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiImage
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiImage
         size="m"
         hasShadow
         allowFullScreen
@@ -28,6 +28,6 @@ export default () => (
         fullScreenIconColor="dark"
         src="https://source.unsplash.com/1000x2000/?Nature"
       />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

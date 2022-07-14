@@ -1,19 +1,19 @@
 import React from 'react';
-import { EuiComment } from '../../../../src/components/comment_list';
-import { EuiButtonIcon } from '../../../../src/components/button';
-import { EuiText } from '../../../../src/components/text';
+import { OuiComment } from '../../../../src/components/comment_list';
+import { OuiButtonIcon } from '../../../../src/components/button';
+import { OuiText } from '../../../../src/components/text';
 
 const body = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
       Far out in the uncharted backwaters of the unfashionable end of the
       western spiral arm of the Galaxy lies a small unregarded yellow sun.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 const copyAction = (
-  <EuiButtonIcon
+  <OuiButtonIcon
     title="Custom action"
     aria-label="Custom action"
     color="subdued"
@@ -23,12 +23,12 @@ const copyAction = (
 
 export default () => (
   <div>
-    <EuiComment
+    <OuiComment
       username="janed"
       event="added a comment"
       actions={copyAction}
       timestamp="on Jan 1, 2020">
       {body}
-    </EuiComment>
+    </OuiComment>
   </div>
 );

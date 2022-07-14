@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSelect,
+  OuiDatePicker,
+  OuiFormRow,
+  OuiSelect,
 } from '../../../../src/components';
 
 export default () => {
@@ -25,21 +25,21 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="Select a date">
-        <EuiDatePicker
+      <OuiFormRow label="Select a date">
+        <OuiDatePicker
           selected={selected}
           showTimeSelect
           onChange={setStartDate}
           utcOffset={utcOffset * 60}
         />
-      </EuiFormRow>
-      <EuiFormRow label="UTC offset">
-        <EuiSelect
+      </OuiFormRow>
+      <OuiFormRow label="UTC offset">
+        <OuiSelect
           options={options}
           value={utcOffset}
           onChange={onSelectChange}
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </div>
   );
 };

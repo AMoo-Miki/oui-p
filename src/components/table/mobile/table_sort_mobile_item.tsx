@@ -21,9 +21,9 @@ import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-import { EuiContextMenuItem } from '../../context_menu';
+import { OuiContextMenuItem } from '../../context_menu';
 
-export interface EuiTableSortMobileItemProps extends CommonProps {
+export interface OuiTableSortMobileItemProps extends CommonProps {
   /**
    * Callback to know when an item has been clicked
    */
@@ -40,7 +40,7 @@ export interface EuiTableSortMobileItemProps extends CommonProps {
   ariaLabel?: string;
 }
 
-export const EuiTableSortMobileItem: FunctionComponent<EuiTableSortMobileItemProps> = ({
+export const OuiTableSortMobileItem: FunctionComponent<OuiTableSortMobileItemProps> = ({
   children,
   onSort,
   isSorted,
@@ -54,8 +54,8 @@ export const EuiTableSortMobileItem: FunctionComponent<EuiTableSortMobileItemPro
     sortIcon = isSortAscending ? 'sortUp' : 'sortDown';
   }
 
-  const buttonClasses = classNames('euiTableSortMobileItem', className, {
-    'euiTableSortMobileItem-isSorted': isSorted,
+  const buttonClasses = classNames('ouiTableSortMobileItem', className, {
+    'ouiTableSortMobileItem-isSorted': isSorted,
   });
 
   const columnTitle = ariaLabel ? ariaLabel : children;
@@ -64,13 +64,13 @@ export const EuiTableSortMobileItem: FunctionComponent<EuiTableSortMobileItemPro
   }`;
 
   return (
-    <EuiContextMenuItem
+    <OuiContextMenuItem
       className={buttonClasses}
       icon={sortIcon}
       onClick={onSort}
       aria-label={statefulAriaLabel}
       {...rest}>
       {children}
-    </EuiContextMenuItem>
+    </OuiContextMenuItem>
   );
 };

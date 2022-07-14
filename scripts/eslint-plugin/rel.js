@@ -9,7 +9,7 @@ module.exports = {
     return {
       /**
        * Props of any component is defined in ArrowFunctions
-       * Example: const EuiButton = ({ foo, bar }) => {};
+       * Example: const OuiButton = ({ foo, bar }) => {};
        */
       ArrowFunctionExpression(node) {
         // Functional component contains only single argument

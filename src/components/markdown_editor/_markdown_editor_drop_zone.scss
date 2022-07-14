@@ -1,8 +1,8 @@
-.euiMarkdownEditorDropZone {
+.ouiMarkdownEditorDropZone {
   display: flex;
   position: relative;
   flex-direction: column;
-  min-height: $euiMarkdownEditorMinHeight;
+  min-height: $ouiMarkdownEditorMinHeight;
 
   &__input {
     position: absolute;
@@ -23,36 +23,36 @@
   }
 
   &--isDragging {
-    .euiMarkdownEditorFooter,
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus,
-    .euiMarkdownEditor:focus-within .euiMarkdownEditorTextArea {
+    .ouiMarkdownEditorFooter,
+    .ouiMarkdownEditorTextArea,
+    .ouiMarkdownEditorTextArea:focus,
+    .ouiMarkdownEditor:focus-within .ouiMarkdownEditorTextArea {
       // sass-lint:disable-block no-important
-      background-color: transparentize($euiColorPrimary, .9) !important;
+      background-color: transparentize($ouiColorPrimary, .9) !important;
     }
 
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus {
+    .ouiMarkdownEditorTextArea,
+    .ouiMarkdownEditorTextArea:focus {
       // sass-lint:disable-block no-important
-      background-image: euiFormControlGradient($euiColorPrimary) !important;
+      background-image: ouiFormControlGradient($ouiColorPrimary) !important;
     }
   }
 
   &--isDraggingError {
-    .euiMarkdownEditorFooter,
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus,
-    .euiMarkdownEditor:focus-within .euiMarkdownEditorTextArea {
+    .ouiMarkdownEditorFooter,
+    .ouiMarkdownEditorTextArea,
+    .ouiMarkdownEditorTextArea:focus,
+    .ouiMarkdownEditor:focus-within .ouiMarkdownEditorTextArea {
       // sass-lint:disable-block no-important
-      background-color: transparentize($euiColorDanger, .9) !important;
+      background-color: transparentize($ouiColorDanger, .9) !important;
     }
   }
 
   &--hasError {
-    .euiMarkdownEditorTextArea,
-    .euiMarkdownEditorTextArea:focus {
+    .ouiMarkdownEditorTextArea,
+    .ouiMarkdownEditorTextArea:focus {
       // sass-lint:disable-block no-important
-      background-image: euiFormControlGradient($euiColorDanger) !important;
+      background-image: ouiFormControlGradient($ouiColorDanger) !important;
     }
   }
 }

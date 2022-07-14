@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { EuiI18n, EuiI18nProps, useEuiI18n } from './i18n';
-export { EuiI18nNumber, EuiI18nNumberProps } from './i18n_number';
+export { OuiI18n, OuiI18nProps, useOuiI18n } from './i18n';
+export { OuiI18nNumber, OuiI18nNumberProps } from './i18n_number';

@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTextColor } from './text_color';
+import { OuiTextColor } from './text_color';
 
-describe('EuiTextColor', () => {
+describe('OuiTextColor', () => {
   test('is rendered', () => {
-    const component = render(<EuiTextColor {...requiredProps} />);
+    const component = render(<OuiTextColor {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

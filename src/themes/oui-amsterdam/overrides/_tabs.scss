@@ -1,0 +1,15 @@
+// Fixed heights ensure proper alignment with pixel grid
+
+.ouiTab {
+  font-weight: $ouiFontWeightMedium;
+  height: $ouiSizeXXL + $ouiSizeS;
+}
+
+.ouiTabs--small .ouiTab {
+  height: $ouiSizeXXL;
+}
+
+.ouiTabs--large .ouiTab {
+  @include fontSize($ouiTabFontSizeL);
+  height: $ouiSizeXXL + $ouiSizeS;
+}

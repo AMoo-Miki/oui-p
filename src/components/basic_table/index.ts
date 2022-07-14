@@ -18,25 +18,25 @@
  */
 
 export {
-  EuiBasicTable,
-  EuiBasicTableProps,
-  EuiBasicTableColumn,
+  OuiBasicTable,
+  OuiBasicTableProps,
+  OuiBasicTableColumn,
   Criteria,
   CriteriaWithPagination,
 } from './basic_table';
 export {
-  EuiInMemoryTable,
-  EuiInMemoryTableProps,
+  OuiInMemoryTable,
+  OuiInMemoryTableProps,
   Search,
 } from './in_memory_table';
 export {
-  EuiTableDataType,
-  EuiTableFooterProps,
-  EuiTableFieldDataColumnType,
-  EuiTableComputedColumnType,
-  EuiTableActionsColumnType,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  OuiTableDataType,
+  OuiTableFooterProps,
+  OuiTableFieldDataColumnType,
+  OuiTableComputedColumnType,
+  OuiTableActionsColumnType,
+  OuiTableSelectionType,
+  OuiTableSortingType,
 } from './table_types';
 export { Pagination } from './pagination_bar';
 export { DefaultItemAction, CustomItemAction } from './action_types';

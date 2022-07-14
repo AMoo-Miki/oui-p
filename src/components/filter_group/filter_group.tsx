@@ -21,7 +21,7 @@ import React, { HTMLAttributes, ReactNode, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiFilterGroupProps = HTMLAttributes<HTMLDivElement> &
+export type OuiFilterGroupProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     children?: ReactNode;
     /**
@@ -30,16 +30,16 @@ export type EuiFilterGroupProps = HTMLAttributes<HTMLDivElement> &
     fullWidth?: boolean;
   };
 
-export const EuiFilterGroup: FunctionComponent<EuiFilterGroupProps> = ({
+export const OuiFilterGroup: FunctionComponent<OuiFilterGroupProps> = ({
   children,
   className,
   fullWidth = false,
   ...rest
 }) => {
   const classes = classNames(
-    'euiFilterGroup',
+    'ouiFilterGroup',
     {
-      'euiFilterGroup--fullWidth': fullWidth,
+      'ouiFilterGroup--fullWidth': fullWidth,
     },
     className
   );

@@ -19,24 +19,24 @@
 
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../../common';
-import { EuiFormLegendProps, EuiFormLegend } from './form_legend';
+import { OuiFormLegendProps, OuiFormLegend } from './form_legend';
 
-export interface EuiFormFieldsetProps
+export interface OuiFormFieldsetProps
   extends CommonProps,
     HTMLAttributes<HTMLFieldSetElement> {
   /**
-   * Adds an EuiFormLegend element as the first child
+   * Adds an OuiFormLegend element as the first child
    */
-  legend?: EuiFormLegendProps;
+  legend?: OuiFormLegendProps;
 }
 
-export const EuiFormFieldset: FunctionComponent<EuiFormFieldsetProps> = ({
+export const OuiFormFieldset: FunctionComponent<OuiFormFieldsetProps> = ({
   children,
   className,
   legend,
   ...rest
 }) => {
-  const legendDisplay = !!legend && <EuiFormLegend {...legend} />;
+  const legendDisplay = !!legend && <OuiFormLegend {...legend} />;
 
   return (
     <fieldset className={className} {...rest}>

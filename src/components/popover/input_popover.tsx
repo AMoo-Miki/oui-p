@@ -28,25 +28,25 @@ import classnames from 'classnames';
 import tabbable from 'tabbable';
 
 import { CommonProps } from '../common';
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiPopover, EuiPopoverProps } from './popover';
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { OuiFocusTrap } from '../focus_trap';
+import { OuiPopover, OuiPopoverProps } from './popover';
+import { OuiResizeObserver } from '../observer/resize_observer';
 import { cascadingMenuKeys } from '../../services';
 
-export interface _EuiInputPopoverProps
-  extends Omit<EuiPopoverProps, 'button' | 'buttonRef'> {
+export interface _OuiInputPopoverProps
+  extends Omit<OuiPopoverProps, 'button' | 'buttonRef'> {
   disableFocusTrap?: boolean;
   fullWidth?: boolean;
-  input: EuiPopoverProps['button'];
-  inputRef?: EuiPopoverProps['buttonRef'];
+  input: OuiPopoverProps['button'];
+  inputRef?: OuiPopoverProps['buttonRef'];
   onPanelResize?: (width?: number) => void;
 }
 
-export type EuiInputPopoverProps = CommonProps &
+export type OuiInputPopoverProps = CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  _EuiInputPopoverProps;
+  _OuiInputPopoverProps;
 
-export const EuiInputPopover: FunctionComponent<EuiInputPopoverProps> = ({
+export const OuiInputPopover: FunctionComponent<OuiInputPopoverProps> = ({
   children,
   className,
   disableFocusTrap = false,
@@ -108,33 +108,33 @@ export const EuiInputPopover: FunctionComponent<EuiInputPopoverProps> = ({
   };
 
   const classes = classnames(
-    'euiInputPopover',
+    'ouiInputPopover',
     {
-      'euiInputPopover--fullWidth': fullWidth,
+      'ouiInputPopover--fullWidth': fullWidth,
     },
     className
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       ownFocus={false}
       button={
-        <EuiResizeObserver onResize={onResize}>
+        <OuiResizeObserver onResize={onResize}>
           {(resizeRef) => <div ref={resizeRef}>{input}</div>}
-        </EuiResizeObserver>
+        </OuiResizeObserver>
       }
       buttonRef={inputRef}
       panelRef={panelRef}
       className={classes}
       {...props}>
-      <EuiFocusTrap clickOutsideDisables={true} disabled={disableFocusTrap}>
+      <OuiFocusTrap clickOutsideDisables={true} disabled={disableFocusTrap}>
         <div onKeyDown={onKeyDown}>{children}</div>
-      </EuiFocusTrap>
-    </EuiPopover>
+      </OuiFocusTrap>
+    </OuiPopover>
   );
 };
 
-EuiInputPopover.defaultProps = {
+OuiInputPopover.defaultProps = {
   anchorPosition: 'downLeft',
   attachToAnchor: true,
   display: 'block',

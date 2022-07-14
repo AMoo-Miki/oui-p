@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiIcon, EuiSideNav } from '../../../../src/components';
+import { OuiIcon, OuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
@@ -29,7 +29,7 @@ export default () => {
     {
       name: 'Kibana',
       id: 'Kibana',
-      icon: <EuiIcon type="logoKibana" />,
+      icon: <OuiIcon type="logoKibana" />,
       items: [
         createItem('Has normal children', {
           items: [
@@ -67,7 +67,7 @@ export default () => {
   ];
 
   return (
-    <EuiSideNav
+    <OuiSideNav
       aria-label="Force-open example"
       mobileTitle="Navigate within $APP_NAME"
       toggleOpenOnMobile={toggleOpenOnMobile}

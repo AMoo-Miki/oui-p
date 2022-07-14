@@ -1,8 +1,8 @@
-$euiFlyoutBorder: $euiBorderThin !default;
+$ouiFlyoutBorder: $ouiBorderThin !default;
 
-$euiFlyoutPaddingModifiers: (
+$ouiFlyoutPaddingModifiers: (
   'paddingNone': 0,
-  'paddingSmall': $euiSizeS,
-  'paddingMedium': $euiSize,
-  'paddingLarge': $euiSizeL
+  'paddingSmall': $ouiSizeS,
+  'paddingMedium': $ouiSize,
+  'paddingLarge': $ouiSizeL
 ) !default;

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverTitle,
-  EuiText,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiIcon,
+  OuiListGroup,
+  OuiListGroupItem,
+  OuiPopover,
+  OuiPopoverFooter,
+  OuiPopoverTitle,
+  OuiText,
 } from '../../../../src/components';
 
 export default (props) => {
@@ -26,35 +26,35 @@ export default (props) => {
   };
 
   const hashtagButton = (
-    <EuiButtonEmpty
+    <OuiButtonEmpty
       onClick={togglePopover}
       size="xs"
       iconType="arrowDown"
       aria-label="Saved Queries popover"
       iconSide="right">
-      <EuiIcon type="number" />
-    </EuiButtonEmpty>
+      <OuiIcon type="number" />
+    </OuiButtonEmpty>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id="popover"
       button={hashtagButton}
       isOpen={isPopoverOpen}
       anchorPosition="downLeft"
       panelPaddingSize="none"
       closePopover={closePopover}>
-      <EuiPopoverTitle paddingSize="s">SAVED QUERIES</EuiPopoverTitle>
+      <OuiPopoverTitle paddingSize="s">SAVED QUERIES</OuiPopoverTitle>
       <div>
-        <EuiText
+        <OuiText
           size="s"
           color="subdued"
           className="savedQueryManagement__text">
           <p>Save query text and filters that you want to use again.</p>
-        </EuiText>
+        </OuiText>
         <div className="savedQueryManagement__listWrapper">
-          <EuiListGroup className="savedQueryManagement__list" flush={true}>
-            <EuiListGroupItem
+          <OuiListGroup className="savedQueryManagement__list" flush={true}>
+            <OuiListGroupItem
               extraAction={{
                 color: 'danger',
                 iconType: 'trash',
@@ -63,7 +63,7 @@ export default (props) => {
               href="#"
               label="Popular shoes in America"
             />
-            <EuiListGroupItem
+            <OuiListGroupItem
               extraAction={{
                 color: 'danger',
                 iconType: 'trash',
@@ -72,20 +72,20 @@ export default (props) => {
               href="#"
               label="Popular shirts in Canada"
             />
-          </EuiListGroup>
+          </OuiListGroup>
         </div>
         {props.value !== '' ? (
-          <EuiPopoverFooter paddingSize="s">
-            <EuiFlexGroup direction="rowReverse" alignItems="center">
-              <EuiFlexItem grow={false}>
-                <EuiButton size="s" fill>
+          <OuiPopoverFooter paddingSize="s">
+            <OuiFlexGroup direction="rowReverse" alignItems="center">
+              <OuiFlexItem grow={false}>
+                <OuiButton size="s" fill>
                   Save
-                </EuiButton>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiPopoverFooter>
+                </OuiButton>
+              </OuiFlexItem>
+            </OuiFlexGroup>
+          </OuiPopoverFooter>
         ) : undefined}
       </div>
-    </EuiPopover>
+    </OuiPopover>
   );
 };

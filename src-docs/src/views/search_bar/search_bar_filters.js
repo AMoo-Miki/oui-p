@@ -2,15 +2,15 @@ import React, { useState, Fragment } from 'react';
 import { times } from '../../../../src/services/utils';
 import { Random } from '../../../../src/services/random';
 import {
-  EuiHealth,
-  EuiCallOut,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCodeBlock,
-  EuiTitle,
-  EuiBasicTable,
-  EuiSearchBar,
+  OuiHealth,
+  OuiCallOut,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiCodeBlock,
+  OuiTitle,
+  OuiBasicTable,
+  OuiSearchBar,
 } from '../../../../src/components';
 
 const random = new Random();
@@ -60,7 +60,7 @@ const items = times(10, (id) => {
   };
 });
 
-const initialQuery = EuiSearchBar.Query.MATCH_ALL;
+const initialQuery = OuiSearchBar.Query.MATCH_ALL;
 
 export const SearchBarFilters = () => {
   const [query, setQuery] = useState(initialQuery);
@@ -84,7 +84,7 @@ export const SearchBarFilters = () => {
         multiSelect: 'or',
         options: tags.map((tag) => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <OuiHealth color={tag.color}>{tag.name}</OuiHealth>,
         })),
       },
       {
@@ -95,7 +95,7 @@ export const SearchBarFilters = () => {
         multiSelect: 'or',
         options: tags.map((tag) => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <OuiHealth color={tag.color}>{tag.name}</OuiHealth>,
         })),
       },
       {
@@ -106,7 +106,7 @@ export const SearchBarFilters = () => {
         multiSelect: 'or',
         options: tags.map((tag) => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <OuiHealth color={tag.color}>{tag.name}</OuiHealth>,
         })),
       },
     ];
@@ -154,7 +154,7 @@ export const SearchBarFilters = () => {
     };
 
     return (
-      <EuiSearchBar
+      <OuiSearchBar
         defaultQuery={initialQuery}
         box={{
           placeholder: 'e.g. type:visualization -is:active joe',
@@ -173,12 +173,12 @@ export const SearchBarFilters = () => {
     }
     return (
       <Fragment>
-        <EuiCallOut
+        <OuiCallOut
           iconType="faceSad"
           color="danger"
           title={`Invalid search: ${error.message}`}
         />
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
       </Fragment>
     );
   };
@@ -222,54 +222,54 @@ export const SearchBarFilters = () => {
       },
     ];
 
-    const queriedItems = EuiSearchBar.Query.execute(query, items, {
+    const queriedItems = OuiSearchBar.Query.execute(query, items, {
       defaultFields: ['owner', 'tag', 'type'],
     });
 
-    return <EuiBasicTable items={queriedItems} columns={columns} />;
+    return <OuiBasicTable items={queriedItems} columns={columns} />;
   };
 
-  const esQueryDsl = EuiSearchBar.Query.toESQuery(query);
-  const esQueryString = EuiSearchBar.Query.toESQueryString(query);
+  const esQueryDsl = OuiSearchBar.Query.toESQuery(query);
+  const esQueryString = OuiSearchBar.Query.toESQueryString(query);
 
   const content = renderError() || (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={4}>
-        <EuiTitle size="s">
+    <OuiFlexGroup>
+      <OuiFlexItem grow={4}>
+        <OuiTitle size="s">
           <h3>Elasticsearch Query String</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiCodeBlock language="js">
           {esQueryString ? esQueryString : ''}
-        </EuiCodeBlock>
+        </OuiCodeBlock>
 
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
 
-        <EuiTitle size="s">
+        <OuiTitle size="s">
           <h3>Elasticsearch Query DSL</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiCodeBlock language="js">
           {esQueryDsl ? JSON.stringify(esQueryDsl, null, 2) : ''}
-        </EuiCodeBlock>
-      </EuiFlexItem>
+        </OuiCodeBlock>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={6}>
-        <EuiTitle size="s">
+      <OuiFlexItem grow={6}>
+        <OuiTitle size="s">
           <h3>JS execution</h3>
-        </EuiTitle>
+        </OuiTitle>
 
-        <EuiSpacer size="s" />
+        <OuiSpacer size="s" />
 
         {renderTable()}
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 
   return (
     <Fragment>
       {renderSearch()}
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
       {content}
     </Fragment>
   );

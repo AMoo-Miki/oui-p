@@ -1,23 +1,23 @@
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageHeader,
-  EuiPageSideBar,
-  EuiPageBody,
+  OuiPage,
+  OuiPageContent,
+  OuiPageContentBody,
+  OuiPageHeader,
+  OuiPageSideBar,
+  OuiPageBody,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav }) => {
   return (
-    <EuiPage paddingSize="none">
-      <EuiPageSideBar paddingSize="l" sticky>
+    <OuiPage paddingSize="none">
+      <OuiPageSideBar paddingSize="l" sticky>
         {sideNav}
-      </EuiPageSideBar>
+      </OuiPageSideBar>
 
-      <EuiPageBody panelled>
-        <EuiPageHeader
+      <OuiPageBody panelled>
+        <OuiPageHeader
           restrictWidth={'75%'}
           iconType="logoElastic"
           pageTitle="Page title"
@@ -25,17 +25,17 @@ export default ({ button = <></>, content, sideNav }) => {
           description="Restricting the width to 75%."
         />
 
-        <EuiPageContent
+        <OuiPageContent
           hasBorder={false}
           hasShadow={false}
           paddingSize="none"
           color="transparent"
           borderRadius="none">
-          <EuiPageContentBody restrictWidth={'75%'}>
+          <OuiPageContentBody restrictWidth={'75%'}>
             {content}
-          </EuiPageContentBody>
-        </EuiPageContent>
-      </EuiPageBody>
-    </EuiPage>
+          </OuiPageContentBody>
+        </OuiPageContent>
+      </OuiPageBody>
+    </OuiPage>
   );
 };

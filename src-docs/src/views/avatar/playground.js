@@ -1,14 +1,14 @@
 import { PropTypes } from 'react-view';
-import { EuiAvatar, checkValidColor } from '../../../../src/components/avatar';
+import { OuiAvatar, checkValidColor } from '../../../../src/components/avatar';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiAvatar.__docgenInfo)
-    ? EuiAvatar.__docgenInfo[0]
-    : EuiAvatar.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiAvatar.__docgenInfo)
+    ? OuiAvatar.__docgenInfo[0]
+    : OuiAvatar.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
   propsToUse.name.value = 'Avatar';
 
@@ -37,14 +37,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiAvatar',
+      componentName: 'OuiAvatar',
       props: propsToUse,
       scope: {
-        EuiAvatar,
+        OuiAvatar,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiAvatar'],
+        '@opensearch-project/oui': {
+          named: ['OuiAvatar'],
         },
       },
     },

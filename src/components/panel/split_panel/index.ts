@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiSplitPanel,
-  _EuiSplitPanelInnerProps,
-  _EuiSplitPanelOuterProps,
+  OuiSplitPanel,
+  _OuiSplitPanelInnerProps,
+  _OuiSplitPanelOuterProps,
 } from './split_panel';

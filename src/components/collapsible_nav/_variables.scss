@@ -1,12 +1,12 @@
 // Sizing
-$euiCollapsibleNavGroupLightBackgroundColor: $euiPageBackgroundColor !default;
+$ouiCollapsibleNavGroupLightBackgroundColor: $ouiPageBackgroundColor !default;
 
-$euiCollapsibleNavGroupDarkBackgroundColor: lightOrDarkTheme(
-  shade($euiColorDarkestShade, 20%),
-  shade($euiColorLightestShade, 50%),
+$ouiCollapsibleNavGroupDarkBackgroundColor: lightOrDarkTheme(
+  shade($ouiColorDarkestShade, 20%),
+  shade($ouiColorLightestShade, 50%),
 ) !default;
 
-$euiCollapsibleNavGroupDarkHighContrastColor: makeGraphicContrastColor(
-  $euiColorPrimary,
-  $euiCollapsibleNavGroupDarkBackgroundColor
+$ouiCollapsibleNavGroupDarkHighContrastColor: makeGraphicContrastColor(
+  $ouiColorPrimary,
+  $ouiCollapsibleNavGroupDarkBackgroundColor
 ) !default;

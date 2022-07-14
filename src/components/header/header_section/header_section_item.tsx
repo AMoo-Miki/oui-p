@@ -25,12 +25,12 @@ import { CommonProps } from '../../common';
 type Border = 'left' | 'right' | 'none';
 
 const borderToClassNameMap: { [border in Border]: string | undefined } = {
-  left: 'euiHeaderSectionItem--borderLeft',
-  right: 'euiHeaderSectionItem--borderRight',
+  left: 'ouiHeaderSectionItem--borderLeft',
+  right: 'ouiHeaderSectionItem--borderRight',
   none: undefined,
 };
 
-export type EuiHeaderSectionItemProps = CommonProps & {
+export type OuiHeaderSectionItemProps = CommonProps & {
   /**
    * Side to display a short border on.
    * Not supported in Amsterdam theme.
@@ -42,14 +42,14 @@ export type EuiHeaderSectionItemProps = CommonProps & {
   children?: ReactNode;
 };
 
-export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> = ({
+export const OuiHeaderSectionItem: FunctionComponent<OuiHeaderSectionItemProps> = ({
   border = 'left',
   children,
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderSectionItem',
+    'ouiHeaderSectionItem',
     borderToClassNameMap[border],
     className
   );

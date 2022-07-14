@@ -85,7 +85,7 @@ if (args.dry_run) {
 function parseArguments() {
   const parser = new argparse.ArgumentParser({
     add_help: true,
-    description: 'Tag and publish a new version of EUI',
+    description: 'Tag and publish a new version of OUI',
   });
 
   parser.add_argument('--type', {
@@ -241,7 +241,7 @@ async function promptUserForVersionType() {
 
 async function getOneTimePassword() {
   const version = require('../package.json').version
-  console.log(chalk.magenta(`Preparing to publish @elastic/eui@${version} to npm registry`));
+  console.log(chalk.magenta(`Preparing to publish @opensearch-project/oui@${version} to npm registry`));
   console.log('');
   console.log(chalk.magenta('The @elastic organization requires membership and 2FA to publish'));
 

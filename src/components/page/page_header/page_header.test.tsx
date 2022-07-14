@@ -21,10 +21,10 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageHeader, EuiPageHeaderProps } from './page_header';
+import { OuiPageHeader, OuiPageHeaderProps } from './page_header';
 import { ALIGN_ITEMS } from './page_header_content';
 
-export const tabs: EuiPageHeaderProps['tabs'] = [
+export const tabs: OuiPageHeaderProps['tabs'] = [
   {
     label: 'Tab 1',
     isSelected: true,
@@ -34,15 +34,15 @@ export const tabs: EuiPageHeaderProps['tabs'] = [
   },
 ];
 
-export const rightSideItems: EuiPageHeaderProps['rightSideItems'] = [
+export const rightSideItems: OuiPageHeaderProps['rightSideItems'] = [
   <button>Button 1</button>,
   <button>Button 2</button>,
 ];
 
-describe('EuiPageHeader', () => {
+describe('OuiPageHeader', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPageHeader {...requiredProps}>Anything</EuiPageHeader>
+      <OuiPageHeader {...requiredProps}>Anything</OuiPageHeader>
     );
 
     expect(component).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe('EuiPageHeader', () => {
     describe('page content props are passed down', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPageHeader
+          <OuiPageHeader
             pageTitle="Page title"
             iconType="logoKibana"
             iconProps={requiredProps}
@@ -62,7 +62,7 @@ describe('EuiPageHeader', () => {
             rightSideItems={rightSideItems}
             rightSideGroupProps={{ responsive: true, ...requiredProps }}>
             <p>Anything</p>
-          </EuiPageHeader>
+          </OuiPageHeader>
         );
 
         expect(component).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe('EuiPageHeader', () => {
       ALIGN_ITEMS.forEach((alignment) => {
         it(`${alignment} is rendered`, () => {
           const component = render(
-            <EuiPageHeader
+            <OuiPageHeader
               pageTitle="Page title"
               rightSideItems={rightSideItems}
               alignItems={alignment}
@@ -87,13 +87,13 @@ describe('EuiPageHeader', () => {
 
     describe('responsive', () => {
       test('is rendered as false', () => {
-        const component = render(<EuiPageHeader responsive={false} />);
+        const component = render(<OuiPageHeader responsive={false} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered as reverse', () => {
-        const component = render(<EuiPageHeader responsive={'reverse'} />);
+        const component = render(<OuiPageHeader responsive={'reverse'} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -101,13 +101,13 @@ describe('EuiPageHeader', () => {
 
     describe('restrictWidth', () => {
       test('is rendered as true', () => {
-        const component = render(<EuiPageHeader restrictWidth={true} />);
+        const component = render(<OuiPageHeader restrictWidth={true} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered as custom', () => {
-        const component = render(<EuiPageHeader restrictWidth={100} />);
+        const component = render(<OuiPageHeader restrictWidth={100} />);
 
         expect(component).toMatchSnapshot();
       });

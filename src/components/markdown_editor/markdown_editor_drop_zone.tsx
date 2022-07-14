@@ -20,21 +20,21 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import classNames from 'classnames';
 import { useDropzone } from 'react-dropzone';
-import { EuiMarkdownEditorFooter } from './markdown_editor_footer';
+import { OuiMarkdownEditorFooter } from './markdown_editor_footer';
 import {
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownParseError,
-  EuiMarkdownDropHandler,
-  EuiMarkdownStringTagConfig,
-  EuiMarkdownDragAndDropResult,
+  OuiMarkdownEditorUiPlugin,
+  OuiMarkdownParseError,
+  OuiMarkdownDropHandler,
+  OuiMarkdownStringTagConfig,
+  OuiMarkdownDragAndDropResult,
 } from './markdown_types';
 import { useResizeObserver } from '../observer/resize_observer';
 
-interface EuiMarkdownEditorDropZoneProps {
-  uiPlugins: EuiMarkdownEditorUiPlugin[];
-  errors: EuiMarkdownParseError[];
-  dropHandlers: EuiMarkdownDropHandler[];
-  insertText: (text: string, config: EuiMarkdownStringTagConfig) => void;
+interface OuiMarkdownEditorDropZoneProps {
+  uiPlugins: OuiMarkdownEditorUiPlugin[];
+  errors: OuiMarkdownParseError[];
+  dropHandlers: OuiMarkdownDropHandler[];
+  insertText: (text: string, config: OuiMarkdownStringTagConfig) => void;
   hasUnacceptedItems: boolean;
   setHasUnacceptedItems: (hasUnacceptedItems: boolean) => void;
   setEditorFooterHeight: (height: number) => void;
@@ -43,7 +43,7 @@ interface EuiMarkdownEditorDropZoneProps {
 
 const getUnacceptedItems = (
   items: DataTransferItemList,
-  dropHandlers: EuiMarkdownDropHandler[]
+  dropHandlers: OuiMarkdownDropHandler[]
 ) => {
   const unacceptedItems: DataTransferItem[] = [];
 
@@ -66,7 +66,7 @@ const getUnacceptedItems = (
   return unacceptedItems;
 };
 
-export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZoneProps> = (
+export const OuiMarkdownEditorDropZone: FunctionComponent<OuiMarkdownEditorDropZoneProps> = (
   props
 ) => {
   const [isDragging, toggleDragging] = React.useState(false);
@@ -85,10 +85,10 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
     isEditing,
   } = props;
 
-  const classes = classNames('euiMarkdownEditorDropZone', {
-    'euiMarkdownEditorDropZone--isDragging': isDragging,
-    'euiMarkdownEditorDropZone--hasError': hasUnacceptedItems,
-    'euiMarkdownEditorDropZone--isDraggingError': isDraggingError,
+  const classes = classNames('ouiMarkdownEditorDropZone', {
+    'ouiMarkdownEditorDropZone--isDragging': isDragging,
+    'ouiMarkdownEditorDropZone--hasError': hasUnacceptedItems,
+    'ouiMarkdownEditorDropZone--isDraggingError': isDraggingError,
   });
 
   const [
@@ -163,7 +163,7 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
       toggleDragging(false);
     },
     onDrop: (acceptedFiles) => {
-      const fileHandlers: EuiMarkdownDropHandler[] = [];
+      const fileHandlers: OuiMarkdownDropHandler[] = [];
 
       // verify all files being dropped are supported
       preparation: for (let i = 0; i < acceptedFiles.length; i++) {
@@ -186,7 +186,7 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
       toggleUploadingFiles(true);
 
       const resolved: Array<
-        EuiMarkdownDragAndDropResult | Promise<EuiMarkdownDragAndDropResult>
+        OuiMarkdownDragAndDropResult | Promise<OuiMarkdownDragAndDropResult>
       > = [];
       for (let i = 0; i < acceptedFiles.length; i++) {
         const file = acceptedFiles[i];
@@ -210,7 +210,7 @@ export const EuiMarkdownEditorDropZone: FunctionComponent<EuiMarkdownEditorDropZ
   return (
     <div {...getRootProps()} className={classes}>
       {children}
-      <EuiMarkdownEditorFooter
+      <OuiMarkdownEditorFooter
         ref={setEditorFooterRef}
         uiPlugins={uiPlugins}
         openFiles={() => {

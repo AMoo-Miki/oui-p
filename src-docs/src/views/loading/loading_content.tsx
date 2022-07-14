@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { EuiLoadingContent } from '../../../../src/components/loading';
+import { OuiLoadingContent } from '../../../../src/components/loading';
 
 export default () => (
   <div>
-    <EuiLoadingContent lines={3} />
+    <OuiLoadingContent lines={3} />
   </div>
 );

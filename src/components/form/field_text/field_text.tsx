@@ -22,15 +22,15 @@ import { CommonProps } from '../../common';
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
+import { OuiValidatableControl } from '../validatable_control';
 
-export type EuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
+export type OuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
   CommonProps & {
-    icon?: EuiFormControlLayoutProps['icon'];
+    icon?: OuiFormControlLayoutProps['icon'];
     isInvalid?: boolean;
     fullWidth?: boolean;
     isLoading?: boolean;
@@ -41,17 +41,17 @@ export type EuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
      * Creates an input group with element(s) coming before input.
      * `string` | `ReactElement` or an array of these
      */
-    prepend?: EuiFormControlLayoutProps['prepend'];
+    prepend?: OuiFormControlLayoutProps['prepend'];
 
     /**
      * Creates an input group with element(s) coming after input.
      * `string` | `ReactElement` or an array of these
      */
-    append?: EuiFormControlLayoutProps['append'];
+    append?: OuiFormControlLayoutProps['append'];
 
     /**
      * Completely removes form control layout wrapper and ignores
-     * icon, prepend, and append. Best used inside EuiFormControlLayoutDelimited.
+     * icon, prepend, and append. Best used inside OuiFormControlLayoutDelimited.
      */
     controlOnly?: boolean;
 
@@ -61,7 +61,7 @@ export type EuiFieldTextProps = InputHTMLAttributes<HTMLInputElement> &
     compressed?: boolean;
   };
 
-export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
+export const OuiFieldText: FunctionComponent<OuiFieldTextProps> = ({
   id,
   name,
   placeholder,
@@ -79,16 +79,16 @@ export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
   controlOnly,
   ...rest
 }) => {
-  const classes = classNames('euiFieldText', className, {
-    'euiFieldText--withIcon': icon,
-    'euiFieldText--fullWidth': fullWidth,
-    'euiFieldText--compressed': compressed,
-    'euiFieldText--inGroup': prepend || append,
-    'euiFieldText-isLoading': isLoading,
+  const classes = classNames('ouiFieldText', className, {
+    'ouiFieldText--withIcon': icon,
+    'ouiFieldText--fullWidth': fullWidth,
+    'ouiFieldText--compressed': compressed,
+    'ouiFieldText--inGroup': prepend || append,
+    'ouiFieldText-isLoading': isLoading,
   });
 
   const control = (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <OuiValidatableControl isInvalid={isInvalid}>
       <input
         type="text"
         id={id}
@@ -100,13 +100,13 @@ export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
         readOnly={readOnly}
         {...rest}
       />
-    </EuiValidatableControl>
+    </OuiValidatableControl>
   );
 
   if (controlOnly) return control;
 
   return (
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       icon={icon}
       fullWidth={fullWidth}
       isLoading={isLoading}
@@ -116,6 +116,6 @@ export const EuiFieldText: FunctionComponent<EuiFieldTextProps> = ({
       append={append}
       inputId={id}>
       {control}
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
   );
 };

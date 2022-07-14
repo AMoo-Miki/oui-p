@@ -21,14 +21,14 @@ import { ReactNode } from 'react';
 
 import {
   RenderItem,
-  _EuiSideNavItemButtonProps,
-  _EuiSideNavItemProps,
+  _OuiSideNavItemButtonProps,
+  _OuiSideNavItemProps,
 } from './side_nav_item';
 
-export interface EuiSideNavItemType<T>
-  extends Omit<_EuiSideNavItemButtonProps, 'children'>,
+export interface OuiSideNavItemType<T>
+  extends Omit<_OuiSideNavItemButtonProps, 'children'>,
     Omit<
-      _EuiSideNavItemProps,
+      _OuiSideNavItemProps,
       'isParent' | 'depth' | 'isOpen' | 'childrenOnly'
     > {
   /**
@@ -42,7 +42,7 @@ export interface EuiSideNavItemType<T>
   /**
    * Array containing additional item objects, representing nested children of this navigation item.
    */
-  items?: Array<EuiSideNavItemType<T>>;
+  items?: Array<OuiSideNavItemType<T>>;
   /**
    * React node representing the text to render for this item (usually a string will suffice).
    */

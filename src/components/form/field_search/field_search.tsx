@@ -24,13 +24,13 @@ import { CommonProps } from '../../common';
 import { keys } from '../../../services';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
+import { OuiValidatableControl } from '../validatable_control';
 
-export interface EuiFieldSearchProps
+export interface OuiFieldSearchProps
   extends CommonProps,
     InputHTMLAttributes<HTMLInputElement> {
   name?: string;
@@ -63,24 +63,24 @@ export interface EuiFieldSearchProps
    * Creates an input group with element(s) coming before input
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: OuiFormControlLayoutProps['prepend'];
 
   /**
    * Creates an input group with element(s) coming after input.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: OuiFormControlLayoutProps['append'];
 }
 
-interface EuiFieldSearchState {
+interface OuiFieldSearchState {
   value: string;
 }
 
 let isSearchSupported: boolean = false;
 
-export class EuiFieldSearch extends Component<
-  EuiFieldSearchProps,
-  EuiFieldSearchState
+export class OuiFieldSearch extends Component<
+  OuiFieldSearchProps,
+  OuiFieldSearchState
 > {
   static defaultProps = {
     fullWidth: false,
@@ -240,19 +240,19 @@ export class EuiFieldSearch extends Component<
     if (typeof this.props.value !== 'string') value = this.state.value;
 
     const classes = classNames(
-      'euiFieldSearch',
+      'ouiFieldSearch',
       {
-        'euiFieldSearch--fullWidth': fullWidth,
-        'euiFieldSearch--compressed': compressed,
-        'euiFieldSearch--inGroup': prepend || append,
-        'euiFieldSearch-isLoading': isLoading,
-        'euiFieldSearch-isClearable': isClearable && value,
+        'ouiFieldSearch--fullWidth': fullWidth,
+        'ouiFieldSearch--compressed': compressed,
+        'ouiFieldSearch--inGroup': prepend || append,
+        'ouiFieldSearch-isLoading': isLoading,
+        'ouiFieldSearch-isClearable': isClearable && value,
       },
       className
     );
 
     return (
-      <EuiFormControlLayout
+      <OuiFormControlLayout
         icon="search"
         fullWidth={fullWidth}
         isLoading={isLoading}
@@ -264,7 +264,7 @@ export class EuiFieldSearch extends Component<
         compressed={compressed}
         append={append}
         prepend={prepend}>
-        <EuiValidatableControl isInvalid={isInvalid}>
+        <OuiValidatableControl isInvalid={isInvalid}>
           <input
             type="search"
             id={id}
@@ -275,8 +275,8 @@ export class EuiFieldSearch extends Component<
             ref={this.setRef}
             {...rest}
           />
-        </EuiValidatableControl>
-      </EuiFormControlLayout>
+        </OuiValidatableControl>
+      </OuiFormControlLayout>
     );
   }
 }

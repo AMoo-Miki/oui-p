@@ -22,13 +22,13 @@ import { shallow, mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 import moment from 'moment';
 
-import { EuiDatePicker } from './date_picker';
-import { EuiContext } from '../context';
+import { OuiDatePicker } from './date_picker';
+import { OuiContext } from '../context';
 
-describe('EuiDatePicker', () => {
+describe('OuiDatePicker', () => {
   test('is rendered', () => {
-    const component = shallow<EuiDatePicker>(
-      <EuiDatePicker {...requiredProps} />
+    const component = shallow<OuiDatePicker>(
+      <OuiDatePicker {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot(); // snapshot of wrapping dom
@@ -38,7 +38,7 @@ describe('EuiDatePicker', () => {
   describe('popoverPlacement', () => {
     test('top-end is rendered', () => {
       const component = mount(
-        <EuiDatePicker {...requiredProps} popoverPlacement="top-end" />
+        <OuiDatePicker {...requiredProps} popoverPlacement="top-end" />
       );
 
       expect(component).toMatchSnapshot();
@@ -50,7 +50,7 @@ describe('EuiDatePicker', () => {
 
     test('accepts the locale prop', () => {
       const component = mount(
-        <EuiDatePicker
+        <OuiDatePicker
           {...requiredProps}
           inline
           selected={selectedDate}
@@ -63,9 +63,9 @@ describe('EuiDatePicker', () => {
 
     test('inherits locale from context', () => {
       const component = mount(
-        <EuiContext i18n={{ locale: 'fr' }}>
-          <EuiDatePicker {...requiredProps} inline selected={selectedDate} />
-        </EuiContext>
+        <OuiContext i18n={{ locale: 'fr' }}>
+          <OuiDatePicker {...requiredProps} inline selected={selectedDate} />
+        </OuiContext>
       );
 
       expect(takeMountedSnapshot(component)).toMatchSnapshot();

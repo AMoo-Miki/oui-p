@@ -36,9 +36,9 @@ interface DivLike
   extends BaseProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'onClick' | 'onMouseDown'> {}
 
-export type EuiRangeThumbProps = ExclusiveUnion<ButtonLike, DivLike>;
+export type OuiRangeThumbProps = ExclusiveUnion<ButtonLike, DivLike>;
 
-export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
+export const OuiRangeThumb: FunctionComponent<OuiRangeThumbProps> = ({
   className,
   min,
   max,
@@ -52,9 +52,9 @@ export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiRangeThumb',
+    'ouiRangeThumb',
     {
-      'euiRangeThumb--hasTicks': showTicks,
+      'ouiRangeThumb--hasTicks': showTicks,
     },
     className
   );

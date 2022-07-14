@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { EuiPageTemplate, EuiEmptyPrompt } from '../../../../src/components';
+import { OuiPageTemplate, OuiEmptyPrompt } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav }) => {
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       template="centeredBody"
       pageContentProps={{ paddingSize: 'none' }}
       pageSideBar={sideNav}>
-      <EuiEmptyPrompt
+      <OuiEmptyPrompt
         title={<span>No spice</span>}
         body={content}
         actions={button}
       />
-    </EuiPageTemplate>
+    </OuiPageTemplate>
   );
 };

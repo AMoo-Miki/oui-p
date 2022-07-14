@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiSelectable } from '../../../../src/components/selectable';
+import { OuiSelectable } from '../../../../src/components/selectable';
 import { Options } from './data';
 
 export default () => {
@@ -8,7 +8,7 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiSelectable
+      <OuiSelectable
         aria-label="Searchable example"
         searchable
         searchProps={{
@@ -22,7 +22,7 @@ export default () => {
             {list}
           </Fragment>
         )}
-      </EuiSelectable>
+      </OuiSelectable>
     </Fragment>
   );
 };

@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPopoverTitle, PADDING_SIZES } from './popover_title';
+import { OuiPopoverTitle, PADDING_SIZES } from './popover_title';
 
-describe('EuiPopoverTitle', () => {
+describe('OuiPopoverTitle', () => {
   test('is rendered', () => {
-    const component = render(<EuiPopoverTitle {...requiredProps} />);
+    const component = render(<OuiPopoverTitle {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiPopoverTitle', () => {
     describe('paddingSize', () => {
       PADDING_SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiPopoverTitle paddingSize={size} />);
+          const component = render(<OuiPopoverTitle paddingSize={size} />);
 
           expect(component).toMatchSnapshot();
         });

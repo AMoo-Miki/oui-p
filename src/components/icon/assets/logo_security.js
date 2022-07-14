@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoSecurity = ({ title, titleId, ...props }) => (
+const OuiIconLogoSecurity = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -19,9 +19,9 @@ const EuiIconLogoSecurity = ({ title, titleId, ...props }) => (
     />
     <path
       d="M9 10h8v14c-2.983-1.14-8-3.756-8-7.043V10z"
-      className="euiIcon__fillNegative"
+      className="ouiIcon__fillNegative"
     />
   </svg>
 );
 
-export const icon = EuiIconLogoSecurity;
+export const icon = OuiIconLogoSecurity;

@@ -1,18 +1,18 @@
 $spacerSizes: (
-  xs: $euiSizeXS,
-  s: $euiSizeS,
-  m: $euiSize,
-  l: $euiSizeL,
-  xl: $euiSizeXL,
-  xxl: $euiSizeXXL,
+  xs: $ouiSizeXS,
+  s: $ouiSizeS,
+  m: $ouiSize,
+  l: $ouiSizeL,
+  xl: $ouiSizeXL,
+  xxl: $ouiSizeXXL,
 );
 
-.euiSpacer {
+.ouiSpacer {
   flex-shrink: 0; // don't ever let this shrink in height if direct descendent of flex
 }
 
 @each $name, $size in $spacerSizes {
-  .euiSpacer--#{$name} {
+  .ouiSpacer--#{$name} {
     height: $size;
   }
 }

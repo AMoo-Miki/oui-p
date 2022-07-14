@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiText } from '../../../../src/components/';
+import { OuiDataGrid, OuiText } from '../../../../src/components/';
 
 const DataContext = createContext();
 
@@ -100,7 +100,7 @@ export default () => {
   );
 
   const grid = (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="Row height options demo"
       columns={columns}
       columnVisibility={{ visibleColumns, setVisibleColumns }}
@@ -119,9 +119,9 @@ export default () => {
 
   return (
     <DataContext.Provider value={dataContext}>
-      <EuiText>
+      <OuiText>
         <p>There are {mountedCellCount} rendered cells</p>
-      </EuiText>
+      </OuiText>
       {grid}
     </DataContext.Provider>
   );

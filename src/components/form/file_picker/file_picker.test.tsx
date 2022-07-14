@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiFilePicker } from './file_picker';
+import { OuiFilePicker } from './file_picker';
 
-describe('EuiFilePicker', () => {
+describe('OuiFilePicker', () => {
   test('is rendered', () => {
-    const component = render(<EuiFilePicker {...requiredProps} />);
+    const component = render(<OuiFilePicker {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

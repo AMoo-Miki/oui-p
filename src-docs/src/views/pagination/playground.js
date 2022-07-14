@@ -1,4 +1,4 @@
-import { EuiPagination, EuiText } from '../../../../src/components/';
+import { OuiPagination, OuiText } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -6,23 +6,23 @@ import {
 } from '../../services/playground';
 
 export const paginationConfig = () => {
-  const docgenInfo = Array.isArray(EuiPagination.__docgenInfo)
-    ? EuiPagination.__docgenInfo[0]
-    : EuiPagination.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiPagination.__docgenInfo)
+    ? OuiPagination.__docgenInfo[0]
+    : OuiPagination.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onPageClick = simulateFunction(propsToUse.onPageClick);
   return {
     config: {
-      componentName: 'EuiPagination',
+      componentName: 'OuiPagination',
       props: propsToUse,
       scope: {
-        EuiPagination,
-        EuiText,
+        OuiPagination,
+        OuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPagination', 'EuiText'],
+        '@opensearch-project/oui': {
+          named: ['OuiPagination', 'OuiText'],
         },
       },
       customProps: {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoMongodb = ({ title, titleId, ...props }) => (
+const OuiIconLogoMongodb = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -38,4 +38,4 @@ const EuiIconLogoMongodb = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoMongodb;
+export const icon = OuiIconLogoMongodb;

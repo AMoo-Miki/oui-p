@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiTextArea, EuiTextAreaProps } from './text_area';
+export { OuiTextArea, OuiTextAreaProps } from './text_area';

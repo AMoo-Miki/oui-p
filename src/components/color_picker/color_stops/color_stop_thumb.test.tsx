@@ -20,21 +20,21 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiColorStopThumb } from './color_stop_thumb';
+import { OuiColorStopThumb } from './color_stop_thumb';
 
 import { requiredProps } from '../../../test';
 
 jest.mock('../../portal', () => ({
-  EuiPortal: ({ children }: { children: any }) => children,
+  OuiPortal: ({ children }: { children: any }) => children,
 }));
 
 const onChange = jest.fn();
 
 // Note: Unit/interaction tests can be found in ./color_stops.test
 
-test('renders EuiColorStopThumb', () => {
+test('renders OuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <OuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -52,9 +52,9 @@ test('renders EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders swatch-only EuiColorStopThumb', () => {
+test('renders swatch-only OuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <OuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -72,9 +72,9 @@ test('renders swatch-only EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders picker-only EuiColorStopThumb', () => {
+test('renders picker-only OuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <OuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -92,9 +92,9 @@ test('renders picker-only EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders disabled EuiColorStopThumb', () => {
+test('renders disabled OuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <OuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"
@@ -113,9 +113,9 @@ test('renders disabled EuiColorStopThumb', () => {
   expect(thumb).toMatchSnapshot();
 });
 
-test('renders readOnly EuiColorStopThumb', () => {
+test('renders readOnly OuiColorStopThumb', () => {
   const thumb = render(
-    <EuiColorStopThumb
+    <OuiColorStopThumb
       onChange={onChange}
       stop={0}
       color="#FF0000"

@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { ExternalBadge } from './shared';
 import { TimeChart } from './time_chart';
 
-import { EuiCode } from '../../../../src/components';
+import { OuiCode } from '../../../../src/components';
 
 export const ElasticChartsTimeExample = {
   title: 'Time series',
@@ -27,14 +27,14 @@ export const ElasticChartsTimeExample = {
           </p>
           <ul>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 BarSeries.xScaleType = &quot;time&quot;
-              </EuiCode>
+              </OuiCode>
             </li>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 tickFormat = timeFormatter(niceTimeFormatByDay(1));
-              </EuiCode>
+              </OuiCode>
             </li>
           </ul>
         </Fragment>

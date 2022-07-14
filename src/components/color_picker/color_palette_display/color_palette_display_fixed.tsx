@@ -20,19 +20,19 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
 import { getFixedLinearGradient } from '../utils';
-import { EuiColorPaletteDisplayShared } from './color_palette_display';
+import { OuiColorPaletteDisplayShared } from './color_palette_display';
 
-export interface EuiColorPaletteDisplayFixedProps
+export interface OuiColorPaletteDisplayFixedProps
   extends HTMLAttributes<HTMLSpanElement>,
     CommonProps,
-    EuiColorPaletteDisplayShared {}
+    OuiColorPaletteDisplayShared {}
 
 interface paletteItem {
   color: string;
   width: string;
 }
 
-export const EuiColorPaletteDisplayFixed: FunctionComponent<EuiColorPaletteDisplayFixedProps> = ({
+export const OuiColorPaletteDisplayFixed: FunctionComponent<OuiColorPaletteDisplayFixedProps> = ({
   palette,
   ...rest
 }) => {
@@ -47,7 +47,7 @@ export const EuiColorPaletteDisplayFixed: FunctionComponent<EuiColorPaletteDispl
 
   return (
     <span {...rest}>
-      <span className="euiColorPaletteDisplayFixed__bleedArea">
+      <span className="ouiColorPaletteDisplayFixed__bleedArea">
         {paletteStops}
       </span>
     </span>

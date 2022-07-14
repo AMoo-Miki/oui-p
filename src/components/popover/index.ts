@@ -17,11 +17,11 @@
  * under the License.
  */
 
-export { EuiInputPopover, EuiInputPopoverProps } from './input_popover';
-export { EuiPopover, EuiPopoverProps, PopoverAnchorPosition } from './popover';
-export { EuiPopoverTitle, EuiPopoverTitleProps } from './popover_title';
-export { EuiPopoverFooter, EuiPopoverFooterProps } from './popover_footer';
+export { OuiInputPopover, OuiInputPopoverProps } from './input_popover';
+export { OuiPopover, OuiPopoverProps, PopoverAnchorPosition } from './popover';
+export { OuiPopoverTitle, OuiPopoverTitleProps } from './popover_title';
+export { OuiPopoverFooter, OuiPopoverFooterProps } from './popover_footer';
 export {
-  EuiWrappingPopover,
-  EuiWrappingPopoverProps,
+  OuiWrappingPopover,
+  OuiWrappingPopoverProps,
 } from './wrapping_popover';

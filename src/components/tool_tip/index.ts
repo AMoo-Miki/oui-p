@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiToolTip, ToolTipPositions, EuiToolTipProps } from './tool_tip';
+export { OuiToolTip, ToolTipPositions, OuiToolTipProps } from './tool_tip';
 
-export { EuiIconTip, EuiIconTipProps } from './icon_tip';
+export { OuiIconTip, OuiIconTipProps } from './icon_tip';

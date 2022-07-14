@@ -148,7 +148,7 @@ async function main() {
   const repo = await git.Repository.open(repoDir);
   const previousVersionCommit = await getCommitForTagName(repo, `v${oldPackageVersion}`);
 
-  // check for i18n token differences between the current file & the most recent EUI version
+  // check for i18n token differences between the current file & the most recent OUI version
   const originalTokens = await getPreviousI18nTokens(previousVersionCommit);
   const newTokens = require(tokensPath);
 

@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiFacetGroup, LAYOUTS, GUTTER_SIZES } from './facet_group';
+import { OuiFacetGroup, LAYOUTS, GUTTER_SIZES } from './facet_group';
 
-describe('EuiFacetGroup', () => {
+describe('OuiFacetGroup', () => {
   test('is rendered', () => {
-    const component = render(<EuiFacetGroup {...requiredProps} />);
+    const component = render(<OuiFacetGroup {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiFacetGroup', () => {
     describe('layout', () => {
       LAYOUTS.forEach((layout) => {
         test(`${layout} is rendered`, () => {
-          const component = render(<EuiFacetGroup layout={layout} />);
+          const component = render(<OuiFacetGroup layout={layout} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -44,7 +44,7 @@ describe('EuiFacetGroup', () => {
     describe('gutterSize', () => {
       GUTTER_SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiFacetGroup gutterSize={size} />);
+          const component = render(<OuiFacetGroup gutterSize={size} />);
 
           expect(component).toMatchSnapshot();
         });

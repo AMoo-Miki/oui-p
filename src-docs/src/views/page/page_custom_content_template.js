@@ -1,35 +1,35 @@
 import React from 'react';
 
 import {
-  EuiPageTemplate,
-  EuiButton,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiPanel,
+  OuiPageTemplate,
+  OuiButton,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiPanel,
 } from '../../../../src/components';
 
 export default ({ button = <></> }) => (
-  <EuiPageTemplate
+  <OuiPageTemplate
     restrictWidth={false}
     template="empty"
     pageHeader={{
       iconType: 'logoElastic',
       pageTitle: 'Page title',
-      rightSideItems: [button, <EuiButton>Do something</EuiButton>],
+      rightSideItems: [button, <OuiButton>Do something</OuiButton>],
     }}>
-    <EuiFlexGrid columns={2}>
-      <EuiFlexItem>
-        <EuiPanel style={{ height: 200 }} />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiPanel style={{ height: 200 }} />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiPanel style={{ height: 200 }} />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiPanel style={{ height: 200 }} />
-      </EuiFlexItem>
-    </EuiFlexGrid>
-  </EuiPageTemplate>
+    <OuiFlexGrid columns={2}>
+      <OuiFlexItem>
+        <OuiPanel style={{ height: 200 }} />
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiPanel style={{ height: 200 }} />
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiPanel style={{ height: 200 }} />
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiPanel style={{ height: 200 }} />
+      </OuiFlexItem>
+    </OuiFlexGrid>
+  </OuiPageTemplate>
 );

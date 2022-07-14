@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCommentList } from './comment_list';
+import { OuiCommentList } from './comment_list';
 
 const comments = [
   {
@@ -29,10 +29,10 @@ const comments = [
   },
 ];
 
-describe('EuiCommentList', () => {
+describe('OuiCommentList', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCommentList comments={comments} {...requiredProps} />
+      <OuiCommentList comments={comments} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

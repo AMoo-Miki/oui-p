@@ -1,8 +1,8 @@
 /**
   * 1. Prevent really long input from overflowing the container.
   */
-.euiSelectableMessage {
-  padding: $euiSizeS;
+.ouiSelectableMessage {
+  padding: $ouiSizeS;
   text-align: center;
   word-wrap: break-word; /* 1 */
   display: flex;
@@ -10,9 +10,9 @@
   align-items: center;
 }
 
-.euiSelectableMessage--bordered {
+.ouiSelectableMessage--bordered {
   // Match border from selectable_list
   overflow: hidden;
-  border: $euiBorderThin;
-  border-radius: $euiBorderRadius;
+  border: $ouiBorderThin;
+  border-radius: $ouiBorderRadius;
 }

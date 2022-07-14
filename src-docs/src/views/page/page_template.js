@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import { EuiPageTemplate } from '../../../../src/components';
+import { OuiPageTemplate } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav }) => {
   const [showBottomBar, setshowBottomBar] = useState(false);
 
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       pageSideBar={sideNav}
       bottomBar={showBottomBar ? 'Bottom bar' : undefined}
       pageHeader={{
@@ -22,6 +22,6 @@ export default ({ button = <></>, content, sideNav }) => {
         ],
       }}>
       {content}
-    </EuiPageTemplate>
+    </OuiPageTemplate>
   );
 };

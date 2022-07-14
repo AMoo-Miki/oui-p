@@ -20,30 +20,30 @@
 import React, { ButtonHTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiInnerText } from '../inner_text';
+import { OuiInnerText } from '../inner_text';
 
-import { IconType, EuiIcon } from '../icon';
+import { IconType, OuiIcon } from '../icon';
 
-export type EuiTableHeaderButtonProps = CommonProps &
+export type OuiTableHeaderButtonProps = CommonProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     iconType?: IconType;
   };
 
-export const EuiTableHeaderButton: FunctionComponent<EuiTableHeaderButtonProps> = ({
+export const OuiTableHeaderButton: FunctionComponent<OuiTableHeaderButtonProps> = ({
   children,
   className,
   iconType,
   ...rest
 }) => {
-  const classes = classNames('euiTableHeaderButton', className);
+  const classes = classNames('ouiTableHeaderButton', className);
 
   // Add an icon to the button if one exists.
   let buttonIcon;
 
   if (iconType) {
     buttonIcon = (
-      <EuiIcon
-        className="euiTableHeaderButton__icon"
+      <OuiIcon
+        className="ouiTableHeaderButton__icon"
         type={iconType}
         size="m"
         aria-hidden="true"
@@ -53,13 +53,13 @@ export const EuiTableHeaderButton: FunctionComponent<EuiTableHeaderButtonProps> 
 
   return (
     <button type="button" className={classes} {...rest}>
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <span title={innerText} ref={ref}>
             {children}
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
 
       {buttonIcon}
     </button>

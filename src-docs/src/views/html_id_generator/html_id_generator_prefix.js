@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiCode,
-  EuiFormRow,
+  OuiFieldText,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
+  OuiCode,
+  OuiFormRow,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -23,22 +23,22 @@ export const HtmlIdGeneratorPrefix = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup
+      <OuiFlexGroup
         justifyContent="flexStart"
         gutterSize="m"
         alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiFormRow label="Prefix">
-            <EuiFieldText
+        <OuiFlexItem grow={false}>
+          <OuiFormRow label="Prefix">
+            <OuiFieldText
               value={prefix}
               onChange={onSearchChange}
               placeholder="Enter prefix"
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="xl" />
-      <EuiCode>{customId} </EuiCode>
+          </OuiFormRow>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiSpacer size="xl" />
+      <OuiCode>{customId} </OuiCode>
     </Fragment>
   );
 };

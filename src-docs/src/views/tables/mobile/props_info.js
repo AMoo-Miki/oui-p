@@ -1,7 +1,7 @@
 export const propsInfo = {
   mobileOptions: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         show: {
           description: 'If false, will not render the cell at all for mobile',
@@ -22,7 +22,7 @@ export const propsInfo = {
         },
         header: {
           description:
-            "The column's header for use in mobile view (automatically passed down when using `EuiBasicTable`). " +
+            "The column's header for use in mobile view (automatically passed down when using `OuiBasicTable`). " +
             'Or pass `false` to not show a header at all.',
           required: false,
           type: { name: 'node | bool' },

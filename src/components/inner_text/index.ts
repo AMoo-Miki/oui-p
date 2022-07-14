@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { useInnerText, EuiInnerText, EuiInnerTextProps } from './inner_text';
+export { useInnerText, OuiInnerText, OuiInnerTextProps } from './inner_text';
 export { useRenderToText } from './render_to_text';

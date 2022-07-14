@@ -18,16 +18,16 @@
  */
 
 export {
-  EuiColorPaletteDisplay,
-  EuiColorPaletteDisplayProps,
+  OuiColorPaletteDisplay,
+  OuiColorPaletteDisplayProps,
 } from './color_palette_display';
 
 export {
-  EuiColorPaletteDisplayFixed,
-  EuiColorPaletteDisplayFixedProps,
+  OuiColorPaletteDisplayFixed,
+  OuiColorPaletteDisplayFixedProps,
 } from './color_palette_display_fixed';
 
 export {
-  EuiColorPaletteDisplayGradient,
-  EuiColorPaletteDisplayGradientProps,
+  OuiColorPaletteDisplayGradient,
+  OuiColorPaletteDisplayGradientProps,
 } from './color_palette_display_gradient';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoCeph = ({ title, titleId, ...props }) => (
+const OuiIconLogoCeph = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -17,4 +17,4 @@ const EuiIconLogoCeph = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoCeph;
+export const icon = OuiIconLogoCeph;

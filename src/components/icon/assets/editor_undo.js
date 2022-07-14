@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconEditorUndo = ({ title, titleId, ...props }) => (
+const OuiIconEditorUndo = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconEditorUndo = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconEditorUndo;
+export const icon = OuiIconEditorUndo;

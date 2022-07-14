@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingKibana, SIZES } from './loading_kibana';
+import { OuiLoadingKibana, SIZES } from './loading_kibana';
 
-describe('EuiLoadingKibana', () => {
+describe('OuiLoadingKibana', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingKibana {...requiredProps} />);
+    const component = render(<OuiLoadingKibana {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('EuiLoadingKibana', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<EuiLoadingKibana size={size} />);
+        const component = render(<OuiLoadingKibana size={size} />);
 
         expect(component).toMatchSnapshot();
       });

@@ -2,9 +2,9 @@ import React, { useState, useCallback, Fragment } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiButtonEmpty,
-  EuiLink,
+  OuiDataGrid,
+  OuiButtonEmpty,
+  OuiLink,
 } from '../../../../src/components/';
 
 const columns = [
@@ -32,7 +32,7 @@ for (let i = 1; i < 20; i++) {
     name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
     email: fake('{{internet.email}}'),
     city: (
-      <EuiLink href="http://google.com">{fake('{{address.city}}')}</EuiLink>
+      <OuiLink href="http://google.com">{fake('{{address.city}}')}</OuiLink>
     ),
     country: fake('{{address.country}}'),
     account: fake('{{finance.account}}'),
@@ -56,7 +56,7 @@ export default () => {
   );
 
   return (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="Data grid demo with additional controls"
       columns={columns}
       columnVisibility={{
@@ -78,22 +78,22 @@ export default () => {
       toolbarVisibility={{
         additionalControls: (
           <Fragment>
-            <EuiButtonEmpty
+            <OuiButtonEmpty
               size="xs"
               iconType="bell"
               color="primary"
-              className="euiDataGrid__controlBtn"
+              className="ouiDataGrid__controlBtn"
               onClick={() => {}}>
               New button
-            </EuiButtonEmpty>
-            <EuiButtonEmpty
+            </OuiButtonEmpty>
+            <OuiButtonEmpty
               size="xs"
               iconType="branch"
               color="danger"
-              className="euiDataGrid__controlBtn"
+              className="ouiDataGrid__controlBtn"
               onClick={() => {}}>
               Another button
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           </Fragment>
         ),
       }}

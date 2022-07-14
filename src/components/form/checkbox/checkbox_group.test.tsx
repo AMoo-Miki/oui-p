@@ -21,9 +21,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiCheckboxGroup } from './checkbox_group';
+import { OuiCheckboxGroup } from './checkbox_group';
 
-jest.mock('./checkbox', () => ({ EuiCheckbox: 'eui_checkbox' }));
+jest.mock('./checkbox', () => ({ OuiCheckbox: 'oui_checkbox' }));
 
 const checkboxGroupRequiredProps = {
   options: [],
@@ -31,10 +31,10 @@ const checkboxGroupRequiredProps = {
   onChange: () => {},
 };
 
-describe('EuiCheckboxGroup (mocked checkbox)', () => {
+describe('OuiCheckboxGroup (mocked checkbox)', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup {...checkboxGroupRequiredProps} {...requiredProps} />
+      <OuiCheckboxGroup {...checkboxGroupRequiredProps} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +42,7 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('options are rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana' },
@@ -56,7 +56,7 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('idToSelectedMap is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana' },
@@ -74,7 +74,7 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('disabled is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana' },
@@ -93,7 +93,7 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('individual disabled is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         options={[
           { id: '1', label: 'kibana', disabled: true },
@@ -111,7 +111,7 @@ describe('EuiCheckboxGroup (mocked checkbox)', () => {
 
   test('legend is rendered', () => {
     const component = render(
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         {...checkboxGroupRequiredProps}
         legend={{
           children: 'A legend',

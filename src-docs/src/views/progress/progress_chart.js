@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { EuiProgress, EuiSpacer } from '../../../../src/components';
+import { OuiProgress, OuiSpacer } from '../../../../src/components';
 
 const data = [
   { label: 'Basic percentage', value: '80' },
@@ -18,29 +18,29 @@ export default () => (
     <div style={{ maxWidth: 160 }}>
       {data.map((item) => (
         <>
-          <EuiProgress
+          <OuiProgress
             valueText={true}
             max={100}
             color="success"
             size="s"
             {...item}
           />
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
         </>
       ))}
     </div>
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
     <div style={{ maxWidth: 200 }}>
       {data.map((item) => (
         <>
-          <EuiProgress
+          <OuiProgress
             valueText={true}
             max={100}
             color="primary"
             size="m"
             {...item}
           />
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
         </>
       ))}
     </div>

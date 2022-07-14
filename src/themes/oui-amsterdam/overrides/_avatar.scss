@@ -1,0 +1,7 @@
+.ouiAvatar--space,
+.ouiAvatar--user {
+  // Remove faux outline
+  &:after {
+    display: none;
+  }
+}

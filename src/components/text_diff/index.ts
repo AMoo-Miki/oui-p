@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { useEuiTextDiff, EuiTextDiffProps } from './text_diff';
+export { useOuiTextDiff, OuiTextDiffProps } from './text_diff';

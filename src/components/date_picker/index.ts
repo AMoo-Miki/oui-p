@@ -19,17 +19,17 @@
 
 export * from './super_date_picker';
 
-export { EuiDatePicker, EuiDatePickerProps } from './date_picker';
+export { OuiDatePicker, OuiDatePickerProps } from './date_picker';
 
 export {
-  EuiDatePickerRange,
-  EuiDatePickerRangeProps,
+  OuiDatePickerRange,
+  OuiDatePickerRangeProps,
 } from './date_picker_range';
 
 export {
-  DurationRange as EuiSuperDatePickerCommonRange,
-  DurationRange as EuiSuperDatePickerDurationRange,
-  DurationRange as EuiSuperDatePickerRecentRange,
+  DurationRange as OuiSuperDatePickerCommonRange,
+  DurationRange as OuiSuperDatePickerDurationRange,
+  DurationRange as OuiSuperDatePickerRecentRange,
   TimeUnitId,
   TimeUnitFromNowId,
   TimeUnitLabel,
@@ -43,5 +43,5 @@ export {
   RelativeParts,
   RelativeOption,
   QuickSelect,
-  QuickSelectPanel as EuiSuperDatePickerQuickSelectPanel,
+  QuickSelectPanel as OuiSuperDatePickerQuickSelectPanel,
 } from './types';

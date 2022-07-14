@@ -26,19 +26,19 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiText } from '../text';
+import { OuiText } from '../text';
 import { IconType } from '../icon';
 import { CommonProps } from '../common';
-import { EuiDatePickerProps } from './date_picker';
+import { OuiDatePickerProps } from './date_picker';
 
-export type EuiDatePickerRangeProps = CommonProps & {
+export type OuiDatePickerRangeProps = CommonProps & {
   /**
    * Including any children will replace all innards with the provided children
    */
   children?: ReactNode;
 
   /**
-   * The end date `EuiDatePicker` element
+   * The end date `OuiDatePicker` element
    */
   endDateControl: ReactNode;
   fullWidth?: boolean;
@@ -55,12 +55,12 @@ export type EuiDatePickerRangeProps = CommonProps & {
   readOnly?: boolean;
 
   /**
-   * The start date `EuiDatePicker` element
+   * The start date `OuiDatePicker` element
    */
   startDateControl: ReactNode;
 };
 
-export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
+export const OuiDatePickerRange: FunctionComponent<OuiDatePickerRangeProps> = ({
   children,
   className,
   startDateControl,
@@ -72,10 +72,10 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiDatePickerRange',
+    'ouiDatePickerRange',
     {
-      'euiDatePickerRange--fullWidth': fullWidth,
-      'euiDatePickerRange--readOnly': readOnly,
+      'ouiDatePickerRange--fullWidth': fullWidth,
+      'ouiDatePickerRange--readOnly': readOnly,
     },
     className
   );
@@ -85,7 +85,7 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
 
   if (!isCustom) {
     startControl = cloneElement(
-      startDateControl as ReactElement<EuiDatePickerProps>,
+      startDateControl as ReactElement<OuiDatePickerProps>,
       {
         fullWidth: fullWidth,
         readOnly: readOnly,
@@ -95,7 +95,7 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
     );
 
     endControl = cloneElement(
-      endDateControl as ReactElement<EuiDatePickerProps>,
+      endDateControl as ReactElement<OuiDatePickerProps>,
       {
         showIcon: false,
         fullWidth: fullWidth,
@@ -112,12 +112,12 @@ export const EuiDatePickerRange: FunctionComponent<EuiDatePickerRangeProps> = ({
       ) : (
         <Fragment>
           {startControl}
-          <EuiText
-            className="euiDatePickerRange__delimeter"
+          <OuiText
+            className="ouiDatePickerRange__delimeter"
             size="s"
             color="subdued">
             →
-          </EuiText>
+          </OuiText>
           {endControl}
         </Fragment>
       )}

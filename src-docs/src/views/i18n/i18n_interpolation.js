@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiI18n,
-  EuiMark,
-  EuiSpacer,
-  EuiTitle,
-  useEuiI18n,
+  OuiButton,
+  OuiI18n,
+  OuiMark,
+  OuiSpacer,
+  OuiTitle,
+  useOuiI18n,
 } from '../../../../src/components';
 
 export default () => {
@@ -14,12 +14,12 @@ export default () => {
 
   return (
     <>
-      <EuiTitle size="xs">
-        <h3>useEuiI18n with string interpolation</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>useOuiI18n with string interpolation</h3>
+      </OuiTitle>
       <p>
-        {useEuiI18n(
-          'euiI18nInterpolation.clickedCount',
+        {useOuiI18n(
+          'ouiI18nInterpolation.clickedCount',
           'Clicked on button {count} times.',
           {
             count,
@@ -27,14 +27,14 @@ export default () => {
         )}
       </p>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>EuiI18n with string interpolation</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>OuiI18n with string interpolation</h3>
+      </OuiTitle>
       <p>
-        <EuiI18n
-          token="euiI18nInterpolation.clickedCount"
+        <OuiI18n
+          token="ouiI18nInterpolation.clickedCount"
           default="Clicked on button {count} times."
           values={{
             count,
@@ -42,41 +42,41 @@ export default () => {
         />
       </p>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>useEuiI18n with component interpolation</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>useOuiI18n with component interpolation</h3>
+      </OuiTitle>
       <p>
-        {useEuiI18n(
-          'euiI18nInterpolation.clickedCount',
+        {useOuiI18n(
+          'ouiI18nInterpolation.clickedCount',
           'Clicked on button {count} times.',
           {
-            count: <EuiMark color="primary">{count}</EuiMark>,
+            count: <OuiMark color="primary">{count}</OuiMark>,
           }
         )}
       </p>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>EuiI18n with component interpolation</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>OuiI18n with component interpolation</h3>
+      </OuiTitle>
       <p>
-        <EuiI18n
-          token="euiI18nInterpolation.clickedCount"
+        <OuiI18n
+          token="ouiI18nInterpolation.clickedCount"
           default="Clicked on button {count} times."
           values={{
-            count: <EuiMark color="primary">{count}</EuiMark>,
+            count: <OuiMark color="primary">{count}</OuiMark>,
           }}
         />
       </p>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiButton onClick={() => setCount(count + 1)} size="s">
+      <OuiButton onClick={() => setCount(count + 1)} size="s">
         Increase count
-      </EuiButton>
+      </OuiButton>
     </>
   );
 };

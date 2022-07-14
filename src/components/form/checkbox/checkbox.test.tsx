@@ -25,7 +25,7 @@ import {
   stopThrowingReactWarnings,
 } from '../../../test';
 
-import { EuiCheckbox, TYPES } from './checkbox';
+import { OuiCheckbox, TYPES } from './checkbox';
 
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
@@ -35,10 +35,10 @@ const checkboxRequiredProps = {
   onChange: () => {},
 };
 
-describe('EuiCheckbox', () => {
+describe('OuiCheckbox', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCheckbox id="id" onChange={() => {}} {...requiredProps} />
+      <OuiCheckbox id="id" onChange={() => {}} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe('EuiCheckbox', () => {
   describe('props', () => {
     test('check is rendered', () => {
       const component = render(
-        <EuiCheckbox {...checkboxRequiredProps} checked />
+        <OuiCheckbox {...checkboxRequiredProps} checked />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('EuiCheckbox', () => {
 
     test('label is rendered', () => {
       const component = render(
-        <EuiCheckbox {...checkboxRequiredProps} label={<span>Label</span>} />
+        <OuiCheckbox {...checkboxRequiredProps} label={<span>Label</span>} />
       );
 
       expect(component).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe('EuiCheckbox', () => {
 
     test('labelProps is rendered', () => {
       const component = render(
-        <EuiCheckbox
+        <OuiCheckbox
           {...checkboxRequiredProps}
           label="Label"
           labelProps={requiredProps}
@@ -76,7 +76,7 @@ describe('EuiCheckbox', () => {
       TYPES.forEach((value) => {
         test(`${value} is rendered`, () => {
           const component = render(
-            <EuiCheckbox {...checkboxRequiredProps} type={value} />
+            <OuiCheckbox {...checkboxRequiredProps} type={value} />
           );
 
           expect(component).toMatchSnapshot();
@@ -87,7 +87,7 @@ describe('EuiCheckbox', () => {
     describe('disabled', () => {
       test('disabled is rendered', () => {
         const component = render(
-          <EuiCheckbox {...checkboxRequiredProps} disabled />
+          <OuiCheckbox {...checkboxRequiredProps} disabled />
         );
 
         expect(component).toMatchSnapshot();

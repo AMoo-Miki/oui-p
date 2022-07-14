@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 
-import { EuiSideNavItemType } from '../../../../src/components/side_nav/side_nav_types';
-export const EuiSideNavItem: FunctionComponent<EuiSideNavItemType<
+import { OuiSideNavItemType } from '../../../../src/components/side_nav/side_nav_types';
+export const OuiSideNavItem: FunctionComponent<OuiSideNavItemType<
   any
 >> = () => <div />;
 
-import { EuiSideNavHeadingProps } from '../../../../src/components/side_nav/side_nav';
-export const EuiSideNavHeading: FunctionComponent<EuiSideNavHeadingProps> = () => (
+import { OuiSideNavHeadingProps } from '../../../../src/components/side_nav/side_nav';
+export const OuiSideNavHeading: FunctionComponent<OuiSideNavHeadingProps> = () => (
   <div />
 );

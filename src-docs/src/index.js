@@ -39,7 +39,7 @@ const routes = [
   {
     path: '/',
     component: HomeView,
-    name: 'Elastic UI',
+    name: 'OpenSearch UI',
   },
   ...childRoutes,
 ];

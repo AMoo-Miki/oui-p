@@ -24,16 +24,16 @@ import html from 'html';
 import { act } from 'react-dom/test-utils';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCodeBlock } from './code_block';
+import { OuiCodeBlock } from './code_block';
 import { FONT_SIZES, PADDING_SIZES } from './_code_block';
 
 const code = `var some = 'code';
 console.log(some);`;
 
-describe('EuiCodeBlock', () => {
+describe('OuiCodeBlock', () => {
   test('renders a code block', () => {
     const component = render(
-      <EuiCodeBlock {...requiredProps}>{code}</EuiCodeBlock>
+      <OuiCodeBlock {...requiredProps}>{code}</OuiCodeBlock>
     );
 
     expect(component).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe('EuiCodeBlock', () => {
     describe('transparentBackground', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCodeBlock transparentBackground>{code}</EuiCodeBlock>
+          <OuiCodeBlock transparentBackground>{code}</OuiCodeBlock>
         );
 
         expect(component).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe('EuiCodeBlock', () => {
 
     describe('isCopyable', () => {
       it('is rendered', () => {
-        const component = mount(<EuiCodeBlock isCopyable>{code}</EuiCodeBlock>);
+        const component = mount(<OuiCodeBlock isCopyable>{code}</OuiCodeBlock>);
 
         expect(component).toMatchSnapshot();
       });
@@ -61,7 +61,7 @@ describe('EuiCodeBlock', () => {
     describe('overflowHeight', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCodeBlock overflowHeight={200}>{code}</EuiCodeBlock>
+          <OuiCodeBlock overflowHeight={200}>{code}</OuiCodeBlock>
         );
 
         expect(component).toMatchSnapshot();
@@ -71,7 +71,7 @@ describe('EuiCodeBlock', () => {
     describe('language', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCodeBlock language="html">{code}</EuiCodeBlock>
+          <OuiCodeBlock language="html">{code}</OuiCodeBlock>
         );
 
         expect(component).toMatchSnapshot();
@@ -82,7 +82,7 @@ describe('EuiCodeBlock', () => {
       FONT_SIZES.forEach((fontSize) => {
         test(`${fontSize} is rendered`, () => {
           const component = render(
-            <EuiCodeBlock fontSize={fontSize}>{code}</EuiCodeBlock>
+            <OuiCodeBlock fontSize={fontSize}>{code}</OuiCodeBlock>
           );
 
           expect(component).toMatchSnapshot();
@@ -94,7 +94,7 @@ describe('EuiCodeBlock', () => {
       PADDING_SIZES.forEach((paddingSize) => {
         test(`${paddingSize} is rendered`, () => {
           const component = render(
-            <EuiCodeBlock paddingSize={paddingSize}>{code}</EuiCodeBlock>
+            <OuiCodeBlock paddingSize={paddingSize}>{code}</OuiCodeBlock>
           );
 
           expect(component).toMatchSnapshot();
@@ -123,7 +123,7 @@ describe('EuiCodeBlock', () => {
         const [value, setValue] = useState('State 1');
 
         useEffect(() => {
-          // Wait a tick for EuiCodeBlock internal state to update on render
+          // Wait a tick for OuiCodeBlock internal state to update on render
           setTimeout(() => {
             takeSnapshot();
             act(() => {
@@ -141,9 +141,9 @@ describe('EuiCodeBlock', () => {
 
         return (
           <div>
-            <EuiCodeBlock language="javascript">
+            <OuiCodeBlock language="javascript">
               const value = &apos;{value}&apos;
-            </EuiCodeBlock>
+            </OuiCodeBlock>
           </div>
         );
       }
@@ -153,15 +153,15 @@ describe('EuiCodeBlock', () => {
 
     it('displays content in fullscreen mode', () => {
       const component = mount(
-        <EuiCodeBlock language="javascript" overflowHeight={300}>
+        <OuiCodeBlock language="javascript" overflowHeight={300}>
           const value = &quot;hello&quot;
-        </EuiCodeBlock>
+        </OuiCodeBlock>
       );
 
-      component.find('EuiButtonIcon[iconType="fullScreen"]').simulate('click');
+      component.find('OuiButtonIcon[iconType="fullScreen"]').simulate('click');
       component.update();
 
-      expect(component.find('.euiCodeBlock-isFullScreen').text()).toBe(
+      expect(component.find('.ouiCodeBlock-isFullScreen').text()).toBe(
         'const value = "hello"'
       );
     });

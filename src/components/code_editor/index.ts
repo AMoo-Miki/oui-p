@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiCodeEditor, EuiCodeEditorProps } from './code_editor';
+export { OuiCodeEditor, OuiCodeEditorProps } from './code_editor';

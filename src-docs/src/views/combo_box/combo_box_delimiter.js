@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { OuiComboBox } from '../../../../src/components';
 
 const staticOptions = [
   {
@@ -73,7 +73,7 @@ export default () => {
   };
 
   return (
-    <EuiComboBox
+    <OuiComboBox
       placeholder="Select or create options"
       options={options}
       delimiter=","

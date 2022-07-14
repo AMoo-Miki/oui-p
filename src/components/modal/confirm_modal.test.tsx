@@ -30,7 +30,7 @@ import { keys } from '../../services';
 import {
   CANCEL_BUTTON,
   CONFIRM_BUTTON,
-  EuiConfirmModal,
+  OuiConfirmModal,
 } from './confirm_modal';
 
 let onConfirm: jest.Mock;
@@ -41,10 +41,10 @@ beforeEach(() => {
   onCancel = jest.fn();
 });
 
-describe('EuiConfirmModal', () => {
-  test('renders EuiConfirmModal', () => {
+describe('OuiConfirmModal', () => {
+  test('renders OuiConfirmModal', () => {
     const component = mount(
-      <EuiConfirmModal
+      <OuiConfirmModal
         title="A confirmation modal"
         onCancel={() => {}}
         onConfirm={onConfirm}
@@ -52,16 +52,16 @@ describe('EuiConfirmModal', () => {
         confirmButtonText="Confirm Button Text"
         {...requiredProps}>
         This is a confirmation modal example
-      </EuiConfirmModal>
+      </OuiConfirmModal>
     );
     expect(
       takeMountedSnapshot(component, { hasArrayOutput: true })
     ).toMatchSnapshot();
   });
 
-  test('renders EuiConfirmModal without EuiModalBody, if empty', () => {
+  test('renders OuiConfirmModal without OuiModalBody, if empty', () => {
     const component = mount(
-      <EuiConfirmModal
+      <OuiConfirmModal
         title="A confirmation modal"
         onCancel={() => {}}
         onConfirm={onConfirm}
@@ -77,7 +77,7 @@ describe('EuiConfirmModal', () => {
 
   test('onConfirm', () => {
     const component = mount(
-      <EuiConfirmModal
+      <OuiConfirmModal
         onCancel={onCancel}
         onConfirm={onConfirm}
         cancelButtonText="Cancel Button Text"
@@ -92,7 +92,7 @@ describe('EuiConfirmModal', () => {
 
   test('isLoading', () => {
     const component = mount(
-      <EuiConfirmModal
+      <OuiConfirmModal
         onCancel={onCancel}
         onConfirm={onConfirm}
         isLoading
@@ -107,7 +107,7 @@ describe('EuiConfirmModal', () => {
 
   test('onConfirm can be disabled', () => {
     const component = mount(
-      <EuiConfirmModal
+      <OuiConfirmModal
         onCancel={onCancel}
         onConfirm={onConfirm}
         cancelButtonText="Cancel Button Text"
@@ -124,7 +124,7 @@ describe('EuiConfirmModal', () => {
   describe('onCancel', () => {
     test('triggerd by click', () => {
       const component = mount(
-        <EuiConfirmModal
+        <OuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"
@@ -139,7 +139,7 @@ describe('EuiConfirmModal', () => {
 
     test('triggered by esc key', () => {
       const component = mount(
-        <EuiConfirmModal
+        <OuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"
@@ -159,7 +159,7 @@ describe('EuiConfirmModal', () => {
   describe('defaultFocusedButton', () => {
     test('is cancel', (done) => {
       const component = mount(
-        <EuiConfirmModal
+        <OuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"
@@ -181,7 +181,7 @@ describe('EuiConfirmModal', () => {
 
     test('is confirm', (done) => {
       const component = mount(
-        <EuiConfirmModal
+        <OuiConfirmModal
           onCancel={onCancel}
           onConfirm={onConfirm}
           cancelButtonText="Cancel Button Text"

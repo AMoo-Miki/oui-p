@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconEditorStrike = ({ title, titleId, ...props }) => (
+const OuiIconEditorStrike = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconEditorStrike = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconEditorStrike;
+export const icon = OuiIconEditorStrike;

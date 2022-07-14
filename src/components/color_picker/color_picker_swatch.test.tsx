@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiColorPickerSwatch } from './color_picker_swatch';
+import { OuiColorPickerSwatch } from './color_picker_swatch';
 
-describe('EuiColorPickerSwatch', () => {
+describe('OuiColorPickerSwatch', () => {
   test('is rendered', () => {
-    const component = render(<EuiColorPickerSwatch {...requiredProps} />);
+    const component = render(<OuiColorPickerSwatch {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

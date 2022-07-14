@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { OuiComboBox } from '../../../../src/components';
 
 export default () => {
   const [options, updateOptions] = useState([
@@ -70,7 +70,7 @@ export default () => {
   };
 
   return (
-    <EuiComboBox
+    <OuiComboBox
       placeholder="Select or create options"
       options={options}
       selectedOptions={selectedOptions}

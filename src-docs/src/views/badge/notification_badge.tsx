@@ -1,5 +1,5 @@
 import React from 'react';
 
-import { EuiNotificationBadge } from '../../../../src/components/badge/notification_badge';
+import { OuiNotificationBadge } from '../../../../src/components/badge/notification_badge';
 
-export default () => <EuiNotificationBadge>3</EuiNotificationBadge>;
+export default () => <OuiNotificationBadge>3</OuiNotificationBadge>;

@@ -21,10 +21,10 @@ import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
 import { ExclusiveUnion, PropsForAnchor, PropsForButton } from '../common';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button';
-import { EuiI18n } from '../i18n';
+import { OuiButtonEmpty, OuiButtonEmptyProps } from '../button';
+import { OuiI18n } from '../i18n';
 
-export type EuiPaginationButtonProps = EuiButtonEmptyProps & {
+export type OuiPaginationButtonProps = OuiButtonEmptyProps & {
   isActive?: boolean;
   /**
    * For ellipsis or other non-clickable buttons.
@@ -35,20 +35,20 @@ export type EuiPaginationButtonProps = EuiButtonEmptyProps & {
   totalPages?: number;
 };
 
-type EuiPaginationButtonPropsForAnchor = PropsForAnchor<
-  EuiPaginationButtonProps
+type OuiPaginationButtonPropsForAnchor = PropsForAnchor<
+  OuiPaginationButtonProps
 >;
 
-type EuiPaginationButtonPropsForButton = PropsForButton<
-  EuiPaginationButtonProps
+type OuiPaginationButtonPropsForButton = PropsForButton<
+  OuiPaginationButtonProps
 >;
 
 type Props = ExclusiveUnion<
-  EuiPaginationButtonPropsForAnchor,
-  EuiPaginationButtonPropsForButton
+  OuiPaginationButtonPropsForAnchor,
+  OuiPaginationButtonPropsForButton
 >;
 
-export const EuiPaginationButton: FunctionComponent<Props> = ({
+export const OuiPaginationButton: FunctionComponent<Props> = ({
   className,
   isActive,
   isPlaceholder,
@@ -57,10 +57,10 @@ export const EuiPaginationButton: FunctionComponent<Props> = ({
   totalPages,
   ...rest
 }) => {
-  const classes = classNames('euiPaginationButton', className, {
-    'euiPaginationButton-isActive': isActive,
-    'euiPaginationButton-isPlaceholder': isPlaceholder,
-    'euiPaginationButton--hideOnMobile': hideOnMobile,
+  const classes = classNames('ouiPaginationButton', className, {
+    'ouiPaginationButton-isActive': isActive,
+    'ouiPaginationButton-isPlaceholder': isPlaceholder,
+    'ouiPaginationButton--hideOnMobile': hideOnMobile,
   });
 
   const props = {
@@ -77,24 +77,24 @@ export const EuiPaginationButton: FunctionComponent<Props> = ({
   const pageNumber = pageIndex + 1;
 
   return (
-    <EuiI18n
-      token="euiPaginationButton.longPageString"
+    <OuiI18n
+      token="ouiPaginationButton.longPageString"
       default="Page {page} of {totalPages}"
       values={{ page: pageNumber, totalPages: totalPages }}>
       {(longPageString: string) => (
-        <EuiI18n
-          token="euiPaginationButton.shortPageString"
+        <OuiI18n
+          token="ouiPaginationButton.shortPageString"
           default="Page {page}"
           values={{ page: pageNumber }}>
           {(shortPageString: string) => (
-            <EuiButtonEmpty
+            <OuiButtonEmpty
               aria-label={totalPages ? longPageString : shortPageString}
-              {...(props as EuiButtonEmptyProps)}>
+              {...(props as OuiButtonEmptyProps)}>
               {pageNumber}
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           )}
-        </EuiI18n>
+        </OuiI18n>
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 };

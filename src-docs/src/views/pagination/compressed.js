@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiPagination } from '../../../../src/components';
+import { OuiPagination } from '../../../../src/components';
 
 export default function () {
   const [activePage, setActivePage] = useState(0);
@@ -11,7 +11,7 @@ export default function () {
   };
 
   return (
-    <EuiPagination
+    <OuiPagination
       pageCount={PAGE_COUNT}
       activePage={activePage}
       onPageClick={(activePage) => goToPage(activePage)}

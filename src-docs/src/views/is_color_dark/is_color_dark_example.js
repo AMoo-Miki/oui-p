@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode } from '../../../../src/components';
+import { OuiCode } from '../../../../src/components';
 
 import IsColorDark from './is_color_dark';
 const isColorDarkSource = require('!!raw-loader!./is_color_dark');
@@ -27,7 +27,7 @@ export const IsColorDarkExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>isColorDark</EuiCode> to determine whether or not to use
+          Use <OuiCode>isColorDark</OuiCode> to determine whether or not to use
           light or dark text against a background of a given color.
         </p>
       ),

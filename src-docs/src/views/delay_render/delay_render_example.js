@@ -1,7 +1,7 @@
 import React from 'react';
 import DelayRender from './delay_render';
 import { GuideSectionTypes } from '../../components';
-import { EuiDelayRender, EuiDelayHide } from '../../../../src/components';
+import { OuiDelayRender, OuiDelayHide } from '../../../../src/components';
 import { renderToHtml } from '../../services';
 import DelayHide from './delay_hide';
 
@@ -28,14 +28,14 @@ export const DelayRenderExample = {
       ],
       text: (
         <p>
-          <strong>EuiDelayRender</strong> is a component for conditionally
+          <strong>OuiDelayRender</strong> is a component for conditionally
           toggling the visibility of a child component. It will ensure that the
           child is hidden for at least 500ms (default). This allows delay UI
           rendering. That is helpful when you need to update aria live region(s)
           repeatedly.
         </p>
       ),
-      props: { EuiDelayRender },
+      props: { OuiDelayRender },
       demo: <DelayRender />,
     },
     {
@@ -52,14 +52,14 @@ export const DelayRenderExample = {
       ],
       text: (
         <p>
-          <strong>EuiDelayHide</strong> is a component for conditionally
+          <strong>OuiDelayHide</strong> is a component for conditionally
           toggling the visibility of a child component. It will ensure that the
           child is visible for at least 1000ms (default). This avoids UI
           glitches that are common with loading spinners and other elements that
           are rendered conditionally and potentially for a short amount of time.
         </p>
       ),
-      props: { EuiDelayHide },
+      props: { OuiDelayHide },
       demo: <DelayHide />,
     },
   ],

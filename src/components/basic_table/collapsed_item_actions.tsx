@@ -19,11 +19,11 @@
 
 import React, { Component, FocusEvent, ReactNode, ReactElement } from 'react';
 import { isString } from '../../services/predicate';
-import { EuiContextMenuItem, EuiContextMenuPanel } from '../context_menu';
-import { EuiPopover } from '../popover';
-import { EuiButtonIcon } from '../button';
-import { EuiToolTip } from '../tool_tip';
-import { EuiI18n } from '../i18n';
+import { OuiContextMenuItem, OuiContextMenuPanel } from '../context_menu';
+import { OuiPopover } from '../popover';
+import { OuiButtonIcon } from '../button';
+import { OuiToolTip } from '../tool_tip';
+import { OuiI18n } from '../i18n';
 import { Action, CustomItemAction } from './action_types';
 import { ItemIdResolved } from './table_types';
 
@@ -126,7 +126,7 @@ export class CollapsedItemActions<T> extends Component<
           const actionControlOnClick =
             actionControl && actionControl.props && actionControl.props.onClick;
           controls.push(
-            <EuiContextMenuItem
+            <OuiContextMenuItem
               key={key}
               onClick={() =>
                 this.onClickItem(
@@ -136,7 +136,7 @@ export class CollapsedItemActions<T> extends Component<
                 )
               }>
               {actionControl}
-            </EuiContextMenuItem>
+            </OuiContextMenuItem>
           );
         } else {
           const {
@@ -155,7 +155,7 @@ export class CollapsedItemActions<T> extends Component<
           const buttonContent = typeof name === 'function' ? name(item) : name;
 
           controls.push(
-            <EuiContextMenuItem
+            <OuiContextMenuItem
               key={key}
               disabled={!enabled}
               href={href}
@@ -166,7 +166,7 @@ export class CollapsedItemActions<T> extends Component<
                 this.onClickItem(onClick ? () => onClick(item) : undefined)
               }>
               {buttonContent}
-            </EuiContextMenuItem>
+            </OuiContextMenuItem>
           );
         }
         return controls;
@@ -175,9 +175,9 @@ export class CollapsedItemActions<T> extends Component<
     );
 
     const popoverButton = (
-      <EuiI18n token="euiCollapsedItemActions.allActions" default="All actions">
+      <OuiI18n token="ouiCollapsedItemActions.allActions" default="All actions">
         {(allActions: string) => (
-          <EuiButtonIcon
+          <OuiButtonIcon
             className={className}
             aria-label={allActions}
             iconType="boxesHorizontal"
@@ -185,24 +185,24 @@ export class CollapsedItemActions<T> extends Component<
             isDisabled={allDisabled}
             onClick={this.togglePopover.bind(this)}
             onFocus={onFocus}
-            data-test-subj="euiCollapsedItemActionsButton"
+            data-test-subj="ouiCollapsedItemActionsButton"
           />
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
 
     const withTooltip = !allDisabled && (
-      <EuiI18n token="euiCollapsedItemActions.allActions" default="All actions">
+      <OuiI18n token="ouiCollapsedItemActions.allActions" default="All actions">
         {(allActions: ReactNode) => (
-          <EuiToolTip content={allActions} delay="long">
+          <OuiToolTip content={allActions} delay="long">
             {popoverButton}
-          </EuiToolTip>
+          </OuiToolTip>
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
 
     return (
-      <EuiPopover
+      <OuiPopover
         className={className}
         popoverRef={this.registerPopoverDiv}
         id={`${itemId}-actions`}
@@ -211,8 +211,8 @@ export class CollapsedItemActions<T> extends Component<
         closePopover={this.closePopover}
         panelPaddingSize="none"
         anchorPosition="leftCenter">
-        <EuiContextMenuPanel items={controls} />
-      </EuiPopover>
+        <OuiContextMenuPanel items={controls} />
+      </OuiPopover>
     );
   }
 }

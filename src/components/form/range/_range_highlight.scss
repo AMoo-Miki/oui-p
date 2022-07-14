@@ -1,25 +1,25 @@
-.euiRangeHighlight {
+.ouiRangeHighlight {
   position: absolute;
   left: 0;
   width: 100%;
-  top: calc(50% - #{($euiRangeHighlightHeight / 2)});
+  top: calc(50% - #{($ouiRangeHighlightHeight / 2)});
   overflow: hidden;
 
   &__progress {
-    height: $euiRangeHighlightHeight;
-    border-radius: $euiRangeHighlightHeight;
-    background-color: $euiRangeTrackColor;
+    height: $ouiRangeHighlightHeight;
+    border-radius: $ouiRangeHighlightHeight;
+    background-color: $ouiRangeTrackColor;
 
     &--hasFocus {
-      background-color: $euiColorPrimary;
+      background-color: $ouiColorPrimary;
     }
   }
 
   &--hasTicks {
-    top: ($euiFormControlHeight / 4) - ($euiRangeHighlightHeight / 2);
+    top: ($ouiFormControlHeight / 4) - ($ouiRangeHighlightHeight / 2);
   }
 
-  &--hasTicks.euiRangeHighlight--compressed {
-    top: ($euiFormControlCompressedHeight / 4) - ($euiRangeHighlightHeight / 2);
+  &--hasTicks.ouiRangeHighlight--compressed {
+    top: ($ouiFormControlCompressedHeight / 4) - ($ouiRangeHighlightHeight / 2);
   }
 }

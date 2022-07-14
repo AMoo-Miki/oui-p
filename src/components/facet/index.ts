@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiFacetButton, EuiFacetButtonProps } from './facet_button';
+export { OuiFacetButton, OuiFacetButtonProps } from './facet_button';
 
-export { EuiFacetGroup, EuiFacetGroupProps } from './facet_group';
+export { OuiFacetGroup, OuiFacetGroupProps } from './facet_group';

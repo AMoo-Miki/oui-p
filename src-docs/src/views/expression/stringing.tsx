@@ -1,26 +1,26 @@
 import React from 'react';
 
-import { EuiExpression } from '../../../../src/components/expression';
+import { OuiExpression } from '../../../../src/components/expression';
 
 export default () => (
   <div>
-    <EuiExpression description="Select" value="count(*)" onClick={() => {}} />
-    <EuiExpression
+    <OuiExpression description="Select" value="count(*)" onClick={() => {}} />
+    <OuiExpression
       description="From"
       value="kibana_sample_data_ky_counties left"
     />
-    <EuiExpression
+    <OuiExpression
       description="join"
       value="kibana_sample_data_ky_avl right"
       onClick={() => {}}
     />
-    <EuiExpression description="on" value="left.smis = right.kytccountynmbr" />
-    <EuiExpression
+    <OuiExpression description="on" value="left.smis = right.kytccountynmbr" />
+    <OuiExpression
       description="group by"
       value="right.kytccountynmbr"
       onClick={() => {}}
       color="accent"
     />
-    <EuiExpression description="sort by" value="count" />
+    <OuiExpression description="sort by" value="count" />
   </div>
 );

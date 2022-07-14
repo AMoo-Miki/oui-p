@@ -18,7 +18,7 @@
  */
 
 import { createContext } from 'react';
-import { EuiMarkdownEditorUiPlugin } from './markdown_types';
+import { OuiMarkdownEditorUiPlugin } from './markdown_types';
 
 interface MarkdownPosition {
   start: { line: number; column: number; offset: number };
@@ -26,11 +26,11 @@ interface MarkdownPosition {
 }
 
 export interface ContextShape {
-  openPluginEditor: (plugin: EuiMarkdownEditorUiPlugin) => void;
+  openPluginEditor: (plugin: OuiMarkdownEditorUiPlugin) => void;
   replaceNode(position: MarkdownPosition, next: string): void;
 }
 
-export const EuiMarkdownContext = createContext<ContextShape>({
+export const OuiMarkdownContext = createContext<ContextShape>({
   openPluginEditor: () => {},
   replaceNode() {},
 });

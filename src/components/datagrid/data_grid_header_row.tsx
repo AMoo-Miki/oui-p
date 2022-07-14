@@ -20,25 +20,25 @@
 import React, { HTMLAttributes, forwardRef } from 'react';
 import classnames from 'classnames';
 import {
-  EuiDataGridColumnWidths,
-  EuiDataGridColumn,
-  EuiDataGridControlColumn,
+  OuiDataGridColumnWidths,
+  OuiDataGridColumn,
+  OuiDataGridControlColumn,
 } from './data_grid_types';
 import { CommonProps } from '../common';
 import {
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  OuiDataGridSchema,
+  OuiDataGridSchemaDetector,
 } from './data_grid_schema';
-import { EuiDataGridHeaderCell } from './data_grid_header_cell';
-import { EuiDataGridControlHeaderCell } from './data_grid_control_header_cell';
+import { OuiDataGridHeaderCell } from './data_grid_header_cell';
+import { OuiDataGridControlHeaderCell } from './data_grid_control_header_cell';
 
-export interface EuiDataGridHeaderRowPropsSpecificProps {
-  leadingControlColumns?: EuiDataGridControlColumn[];
-  trailingControlColumns?: EuiDataGridControlColumn[];
-  columns: EuiDataGridColumn[];
-  columnWidths: EuiDataGridColumnWidths;
-  schema: EuiDataGridSchema;
-  schemaDetectors: EuiDataGridSchemaDetector[];
+export interface OuiDataGridHeaderRowPropsSpecificProps {
+  leadingControlColumns?: OuiDataGridControlColumn[];
+  trailingControlColumns?: OuiDataGridControlColumn[];
+  columns: OuiDataGridColumn[];
+  columnWidths: OuiDataGridColumnWidths;
+  schema: OuiDataGridSchema;
+  schemaDetectors: OuiDataGridSchemaDetector[];
   defaultColumnWidth?: number | null;
   setColumnWidth: (columnId: string, width: number) => void;
   setVisibleColumns: (columnId: string[]) => void;
@@ -46,13 +46,13 @@ export interface EuiDataGridHeaderRowPropsSpecificProps {
   headerIsInteractive: boolean;
 }
 
-export type EuiDataGridHeaderRowProps = CommonProps &
+export type OuiDataGridHeaderRowProps = CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  EuiDataGridHeaderRowPropsSpecificProps;
+  OuiDataGridHeaderRowPropsSpecificProps;
 
-const EuiDataGridHeaderRow = forwardRef<
+const OuiDataGridHeaderRow = forwardRef<
   HTMLDivElement,
-  EuiDataGridHeaderRowProps
+  OuiDataGridHeaderRowProps
 >((props, ref) => {
   const {
     leadingControlColumns = [],
@@ -71,7 +71,7 @@ const EuiDataGridHeaderRow = forwardRef<
     ...rest
   } = props;
 
-  const classes = classnames('euiDataGridHeader', className);
+  const classes = classnames('ouiDataGridHeader', className);
   const dataTestSubj = classnames('dataGridHeader', _dataTestSubj);
 
   return (
@@ -82,16 +82,16 @@ const EuiDataGridHeaderRow = forwardRef<
       data-test-subj={dataTestSubj}
       {...rest}>
       {leadingControlColumns.map((controlColumn, index) => (
-        <EuiDataGridControlHeaderCell
+        <OuiDataGridControlHeaderCell
           key={controlColumn.id}
           index={index}
           controlColumn={controlColumn}
           headerIsInteractive={headerIsInteractive}
-          className="euiDataGridHeaderCell--controlColumn"
+          className="ouiDataGridHeaderCell--controlColumn"
         />
       ))}
       {columns.map((column, index) => (
-        <EuiDataGridHeaderCell
+        <OuiDataGridHeaderCell
           key={column.id}
           column={column}
           columns={columns}
@@ -107,18 +107,18 @@ const EuiDataGridHeaderRow = forwardRef<
         />
       ))}
       {trailingControlColumns.map((controlColumn, index) => (
-        <EuiDataGridControlHeaderCell
+        <OuiDataGridControlHeaderCell
           key={controlColumn.id}
           index={index + leadingControlColumns.length + columns.length}
           controlColumn={controlColumn}
           headerIsInteractive={headerIsInteractive}
-          className="euiDataGridHeaderCell--controlColumn"
+          className="ouiDataGridHeaderCell--controlColumn"
         />
       ))}
     </div>
   );
 });
 
-EuiDataGridHeaderRow.displayName = 'EuiDataGridHeaderRow';
+OuiDataGridHeaderRow.displayName = 'OuiDataGridHeaderRow';
 
-export { EuiDataGridHeaderRow };
+export { OuiDataGridHeaderRow };

@@ -17,10 +17,10 @@
  * under the License.
  */
 
-export { EuiBadge, EuiBadgeProps } from './badge';
+export { OuiBadge, OuiBadgeProps } from './badge';
 
-export { EuiBetaBadge, EuiBetaBadgeProps } from './beta_badge';
+export { OuiBetaBadge, OuiBetaBadgeProps } from './beta_badge';
 
-export { EuiNotificationBadge } from './notification_badge';
+export { OuiNotificationBadge } from './notification_badge';
 
-export { EuiBadgeGroup, EuiBadgeGroupProps } from './badge_group';
+export { OuiBadgeGroup, OuiBadgeGroupProps } from './badge_group';

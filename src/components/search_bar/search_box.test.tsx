@@ -20,9 +20,9 @@
 import React from 'react';
 import { requiredProps } from '../../test';
 import { shallow } from 'enzyme';
-import { EuiSearchBox } from './search_box';
+import { OuiSearchBox } from './search_box';
 
-describe('EuiSearchBox', () => {
+describe('OuiSearchBox', () => {
   test('render - no config', () => {
     const props = {
       ...requiredProps,
@@ -30,7 +30,7 @@ describe('EuiSearchBox', () => {
       onSearch: () => {},
     };
 
-    const component = shallow(<EuiSearchBox {...props} />);
+    const component = shallow(<OuiSearchBox {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -44,7 +44,7 @@ describe('EuiSearchBox', () => {
       incremental: true,
     };
 
-    const component = shallow(<EuiSearchBox {...props} />);
+    const component = shallow(<OuiSearchBox {...props} />);
 
     expect(component).toMatchSnapshot();
   });

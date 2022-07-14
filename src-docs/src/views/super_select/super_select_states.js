@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSuperSelect } from '../../../../src/components';
+import { OuiSuperSelect } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
 export default () => {
@@ -18,7 +18,7 @@ export default () => {
     {
       value: 'option_three',
       inputDisplay: (
-        <span className="eui-textTruncate eui-displayBlock">
+        <span className="oui-textTruncate oui-displayBlock">
           Option three has a super long text and added truncation
         </span>
       ),
@@ -33,7 +33,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canPrepend={true} canAppend={true}>
-      <EuiSuperSelect
+      <OuiSuperSelect
         options={options}
         valueOfSelected={value}
         onChange={(value) => onChange(value)}

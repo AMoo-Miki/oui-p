@@ -22,34 +22,34 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { PanelPaddingSize } from '../panel';
 
-export type EuiPopoverFooterProps = FunctionComponent<
+export type OuiPopoverFooterProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> &
     CommonProps & {
       /**
        * Customize the all around padding of the popover footer.
-       * Leave `undefined` to inherit from the `panelPaddingSize` of the containing EuiPopover
+       * Leave `undefined` to inherit from the `panelPaddingSize` of the containing OuiPopover
        */
       paddingSize?: PanelPaddingSize;
     }
 >;
 
 const paddingSizeToClassNameMap = {
-  none: 'euiPopoverFooter--paddingNone',
-  s: 'euiPopoverFooter--paddingSmall',
-  m: 'euiPopoverFooter--paddingMedium',
-  l: 'euiPopoverFooter--paddingLarge',
+  none: 'ouiPopoverFooter--paddingNone',
+  s: 'ouiPopoverFooter--paddingSmall',
+  m: 'ouiPopoverFooter--paddingMedium',
+  l: 'ouiPopoverFooter--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export const EuiPopoverFooter: EuiPopoverFooterProps = ({
+export const OuiPopoverFooter: OuiPopoverFooterProps = ({
   children,
   className,
   paddingSize,
   ...rest
 }) => {
   const classes = classNames(
-    'euiPopoverFooter',
+    'ouiPopoverFooter',
     paddingSize ? paddingSizeToClassNameMap[paddingSize] : null,
     className
   );

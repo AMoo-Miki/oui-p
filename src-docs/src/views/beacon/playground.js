@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiBeacon } from '../../../../src/components/';
+import { OuiBeacon } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const beaconConfig = () => {
-  const docgenInfo = Array.isArray(EuiBeacon.__docgenInfo)
-    ? EuiBeacon.__docgenInfo[0]
-    : EuiBeacon.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiBeacon.__docgenInfo)
+    ? OuiBeacon.__docgenInfo[0]
+    : OuiBeacon.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.size = {
@@ -16,14 +16,14 @@ export const beaconConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBeacon',
+      componentName: 'OuiBeacon',
       props: propsToUse,
       scope: {
-        EuiBeacon,
+        OuiBeacon,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBeacon'],
+        '@opensearch-project/oui': {
+          named: ['OuiBeacon'],
         },
       },
     },

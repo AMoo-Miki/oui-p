@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { EuiEmptyPrompt } from '../../../../src/components';
+import { OuiEmptyPrompt } from '../../../../src/components';
 
 export default () => (
-  <EuiEmptyPrompt
+  <OuiEmptyPrompt
     iconType="alert"
     iconColor="danger"
     title={<h2>Error loading Dashboards</h2>}

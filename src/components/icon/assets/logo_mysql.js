@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoMysql = ({ title, titleId, ...props }) => (
+const OuiIconLogoMysql = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -16,4 +16,4 @@ const EuiIconLogoMysql = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoMysql;
+export const icon = OuiIconLogoMysql;

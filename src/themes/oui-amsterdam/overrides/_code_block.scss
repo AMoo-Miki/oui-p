@@ -1,0 +1,8 @@
+.ouiCodeBlock.ouiCodeBlock--inline {
+  border-radius: $ouiBorderRadiusSmall;
+  color: makeHighContrastColor($ouiColorVis3, $ouiCodeBlockBackgroundColor);
+
+  .ouiCodeBlock__code {
+    font-weight: $ouiCodeFontWeightBold;
+  }
+}

@@ -5,21 +5,21 @@ import {
   iconValidator,
 } from '../../services/playground';
 import {
-  EuiFieldText,
-  EuiFieldSearch,
-  EuiFieldNumber,
-  EuiFieldPassword,
-  EuiTextArea,
-  EuiCheckbox,
-  EuiRadio,
-  EuiSwitch,
+  OuiFieldText,
+  OuiFieldSearch,
+  OuiFieldNumber,
+  OuiFieldPassword,
+  OuiTextArea,
+  OuiCheckbox,
+  OuiRadio,
+  OuiSwitch,
 } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 export const FieldTextConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldText.__docgenInfo)
-    ? EuiFieldText.__docgenInfo[0]
-    : EuiFieldText.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFieldText.__docgenInfo)
+    ? OuiFieldText.__docgenInfo[0]
+    : OuiFieldText.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -55,14 +55,14 @@ export const FieldTextConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldText',
+      componentName: 'OuiFieldText',
       props: propsToUse,
       scope: {
-        EuiFieldText,
+        OuiFieldText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldText'],
+        '@opensearch-project/oui': {
+          named: ['OuiFieldText'],
         },
       },
       customProps: {
@@ -73,9 +73,9 @@ export const FieldTextConfig = () => {
 };
 
 export const FieldSearchConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldSearch.__docgenInfo)
-    ? EuiFieldSearch.__docgenInfo[0]
-    : EuiFieldSearch.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFieldSearch.__docgenInfo)
+    ? OuiFieldSearch.__docgenInfo[0]
+    : OuiFieldSearch.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -108,14 +108,14 @@ export const FieldSearchConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldSearch',
+      componentName: 'OuiFieldSearch',
       props: propsToUse,
       scope: {
-        EuiFieldSearch,
+        OuiFieldSearch,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldSearch'],
+        '@opensearch-project/oui': {
+          named: ['OuiFieldSearch'],
         },
       },
       customProps: {
@@ -126,9 +126,9 @@ export const FieldSearchConfig = () => {
 };
 
 export const FieldNumberConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldNumber.__docgenInfo)
-    ? EuiFieldNumber.__docgenInfo[0]
-    : EuiFieldNumber.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFieldNumber.__docgenInfo)
+    ? OuiFieldNumber.__docgenInfo[0]
+    : OuiFieldNumber.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -166,14 +166,14 @@ export const FieldNumberConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldNumber',
+      componentName: 'OuiFieldNumber',
       props: propsToUse,
       scope: {
-        EuiFieldNumber,
+        OuiFieldNumber,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldNumber'],
+        '@opensearch-project/oui': {
+          named: ['OuiFieldNumber'],
         },
       },
       customProps: {
@@ -184,9 +184,9 @@ export const FieldNumberConfig = () => {
 };
 
 export const FieldPasswordConfig = () => {
-  const docgenInfo = Array.isArray(EuiFieldPassword.__docgenInfo)
-    ? EuiFieldPassword.__docgenInfo[0]
-    : EuiFieldPassword.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFieldPassword.__docgenInfo)
+    ? OuiFieldPassword.__docgenInfo[0]
+    : OuiFieldPassword.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -225,14 +225,14 @@ export const FieldPasswordConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFieldPassword',
+      componentName: 'OuiFieldPassword',
       props: propsToUse,
       scope: {
-        EuiFieldPassword,
+        OuiFieldPassword,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFieldPassword'],
+        '@opensearch-project/oui': {
+          named: ['OuiFieldPassword'],
         },
       },
       customProps: {
@@ -243,9 +243,9 @@ export const FieldPasswordConfig = () => {
 };
 
 export const TextAreaConfig = () => {
-  const docgenInfo = Array.isArray(EuiTextArea.__docgenInfo)
-    ? EuiTextArea.__docgenInfo[0]
-    : EuiTextArea.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiTextArea.__docgenInfo)
+    ? OuiTextArea.__docgenInfo[0]
+    : OuiTextArea.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -278,14 +278,14 @@ export const TextAreaConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiTextArea',
+      componentName: 'OuiTextArea',
       props: propsToUse,
       scope: {
-        EuiTextArea,
+        OuiTextArea,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTextArea'],
+        '@opensearch-project/oui': {
+          named: ['OuiTextArea'],
         },
       },
       customProps: {
@@ -296,9 +296,9 @@ export const TextAreaConfig = () => {
 };
 
 export const CheckboxConfig = () => {
-  const docgenInfo = Array.isArray(EuiCheckbox.__docgenInfo)
-    ? EuiCheckbox.__docgenInfo[0]
-    : EuiCheckbox.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCheckbox.__docgenInfo)
+    ? OuiCheckbox.__docgenInfo[0]
+    : OuiCheckbox.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.id = {
@@ -316,14 +316,14 @@ export const CheckboxConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCheckbox',
+      componentName: 'OuiCheckbox',
       props: propsToUse,
       scope: {
-        EuiCheckbox,
+        OuiCheckbox,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCheckbox'],
+        '@opensearch-project/oui': {
+          named: ['OuiCheckbox'],
         },
       },
       customProps: {
@@ -334,9 +334,9 @@ export const CheckboxConfig = () => {
 };
 
 export const RadioConfig = () => {
-  const docgenInfo = Array.isArray(EuiRadio.__docgenInfo)
-    ? EuiRadio.__docgenInfo[0]
-    : EuiRadio.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiRadio.__docgenInfo)
+    ? OuiRadio.__docgenInfo[0]
+    : OuiRadio.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.id = {
@@ -355,14 +355,14 @@ export const RadioConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiRadio',
+      componentName: 'OuiRadio',
       props: propsToUse,
       scope: {
-        EuiRadio,
+        OuiRadio,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiRadio'],
+        '@opensearch-project/oui': {
+          named: ['OuiRadio'],
         },
       },
       customProps: {
@@ -373,9 +373,9 @@ export const RadioConfig = () => {
 };
 
 export const SwitchConfig = () => {
-  const docgenInfo = Array.isArray(EuiSwitch.__docgenInfo)
-    ? EuiSwitch.__docgenInfo[0]
-    : EuiSwitch.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiSwitch.__docgenInfo)
+    ? OuiSwitch.__docgenInfo[0]
+    : OuiSwitch.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.label = {
@@ -393,14 +393,14 @@ export const SwitchConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiSwitch',
+      componentName: 'OuiSwitch',
       props: propsToUse,
       scope: {
-        EuiSwitch,
+        OuiSwitch,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiSwitch'],
+        '@opensearch-project/oui': {
+          named: ['OuiSwitch'],
         },
       },
       customProps: {

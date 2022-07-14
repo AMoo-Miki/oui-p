@@ -1,29 +1,29 @@
-$euiCheckableCardPadding: map-get($euiPanelPaddingModifiers, 'paddingMedium');
+$ouiCheckableCardPadding: map-get($ouiPanelPaddingModifiers, 'paddingMedium');
 
-.euiCheckableCard {
-  transition: border-color $euiAnimSpeedNormal ease-in;
+.ouiCheckableCard {
+  transition: border-color $ouiAnimSpeedNormal ease-in;
 
-  &:not(.euiCheckableCard-isDisabled) {
-    &.euiCheckableCard-isChecked {
-      border-color: $euiColorPrimary;
+  &:not(.ouiCheckableCard-isDisabled) {
+    &.ouiCheckableCard-isChecked {
+      border-color: $ouiColorPrimary;
     }
   }
 }
 
-.euiCheckableCard__label {
+.ouiCheckableCard__label {
   cursor: pointer;
   // Expand the label to cover the whole panel for easier click target
   display: block;
-  width: calc(100% + #{$euiCheckableCardPadding * 2});
-  padding: $euiCheckableCardPadding;
-  margin: -$euiCheckableCardPadding;
+  width: calc(100% + #{$ouiCheckableCardPadding * 2});
+  padding: $ouiCheckableCardPadding;
+  margin: -$ouiCheckableCardPadding;
 }
 
-.euiCheckableCard__label-isDisabled {
-  color: $euiFormControlDisabledColor;
+.ouiCheckableCard__label-isDisabled {
+  color: $ouiFormControlDisabledColor;
   cursor: not-allowed;
 }
 
-.euiCheckableCard__children {
-  margin-top: $euiSize;
+.ouiCheckableCard__children {
+  margin-top: $ouiSize;
 }

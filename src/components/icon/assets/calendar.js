@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconCalendar = ({ title, titleId, ...props }) => (
+const OuiIconCalendar = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconCalendar = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconCalendar;
+export const icon = OuiIconCalendar;

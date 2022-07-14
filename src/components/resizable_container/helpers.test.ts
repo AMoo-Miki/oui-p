@@ -19,7 +19,7 @@
 
 import { pxToPercent, sizesOnly, getPanelMinSize } from './helpers';
 
-import { EuiResizableContainerRegistry } from './types';
+import { OuiResizableContainerRegistry } from './types';
 
 describe('pxToPercent', () => {
   it('should convert px to percent of whole', () => {
@@ -40,7 +40,7 @@ describe('sizesOnly', () => {
       { id: '2', size: 20 },
       { id: '3', size: 30 },
       { id: '4', size: 0 },
-    ].reduce((out: EuiResizableContainerRegistry['panels'], panel) => {
+    ].reduce((out: OuiResizableContainerRegistry['panels'], panel) => {
       out[panel.id] = {
         getSizePx: () => 10,
         minSize: ['0px', '0px'],

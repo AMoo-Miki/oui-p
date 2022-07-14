@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconFilter = ({ title, titleId, ...props }) => (
+const OuiIconFilter = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconFilter = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconFilter;
+export const icon = OuiIconFilter;

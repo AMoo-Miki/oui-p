@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconSecuritySignalResolved = ({ title, titleId, ...props }) => (
+const OuiIconSecuritySignalResolved = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconSecuritySignalResolved = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconSecuritySignalResolved;
+export const icon = OuiIconSecuritySignalResolved;

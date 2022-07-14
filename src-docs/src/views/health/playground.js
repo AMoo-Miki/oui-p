@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiHealth } from '../../../../src/components/';
+import { OuiHealth } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiHealth.__docgenInfo)
-    ? EuiHealth.__docgenInfo[0]
-    : EuiHealth.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiHealth.__docgenInfo)
+    ? OuiHealth.__docgenInfo[0]
+    : OuiHealth.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -37,14 +37,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiHealth',
+      componentName: 'OuiHealth',
       props: propsToUse,
       scope: {
-        EuiHealth,
+        OuiHealth,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiHealth'],
+        '@opensearch-project/oui': {
+          named: ['OuiHealth'],
         },
       },
     },

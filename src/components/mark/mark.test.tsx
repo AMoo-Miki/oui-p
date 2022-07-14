@@ -20,11 +20,11 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiMark } from './mark';
+import { OuiMark } from './mark';
 
-describe('EuiMark', () => {
+describe('OuiMark', () => {
   test('is rendered', () => {
-    const component = render(<EuiMark>Marked</EuiMark>);
+    const component = render(<OuiMark>Marked</OuiMark>);
 
     expect(component).toMatchSnapshot();
   });

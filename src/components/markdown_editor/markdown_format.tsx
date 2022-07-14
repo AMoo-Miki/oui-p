@@ -25,7 +25,7 @@ import {
   defaultParsingPlugins,
 } from './plugins/markdown_default_plugins';
 
-export interface EuiMarkdownFormatProps {
+export interface OuiMarkdownFormatProps {
   children: string;
   /** array of unified plugins to parse content into an AST */
   parsingPluginList?: PluggableList;
@@ -33,7 +33,7 @@ export interface EuiMarkdownFormatProps {
   processingPluginList?: PluggableList;
 }
 
-export const EuiMarkdownFormat: FunctionComponent<EuiMarkdownFormatProps> = ({
+export const OuiMarkdownFormat: FunctionComponent<OuiMarkdownFormatProps> = ({
   children,
   parsingPluginList = defaultParsingPlugins,
   processingPluginList = defaultProcessingPlugins,
@@ -52,5 +52,5 @@ export const EuiMarkdownFormat: FunctionComponent<EuiMarkdownFormatProps> = ({
       return children;
     }
   }, [children, processor]);
-  return <div className="euiMarkdownFormat">{result}</div>;
+  return <div className="ouiMarkdownFormat">{result}</div>;
 };

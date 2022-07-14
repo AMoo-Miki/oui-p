@@ -1,4 +1,4 @@
-const componentNames = ['EuiButton', 'EuiButtonEmpty', 'EuiLink', 'EuiBadge'];
+const componentNames = ['OuiButton', 'OuiButtonEmpty', 'OuiLink', 'OuiBadge'];
 
 module.exports = {
   meta: {

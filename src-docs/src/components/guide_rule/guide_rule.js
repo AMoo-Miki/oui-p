@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { EuiFlexGroup } from '../../../../src/components';
+import { OuiFlexGroup } from '../../../../src/components';
 
 import { GuideRuleDescription } from './guide_rule_description';
 
@@ -33,9 +33,9 @@ export const GuideRule = ({
     <div className={classes} {...rest}>
       {descriptionNode}
 
-      <EuiFlexGroup className="guideRule__exampleRow" gutterSize="xl" wrap>
+      <OuiFlexGroup className="guideRule__exampleRow" gutterSize="xl" wrap>
         {children}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
     </div>
   );
 };

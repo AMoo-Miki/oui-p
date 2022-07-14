@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconIndexFlush = ({ title, titleId, ...props }) => (
+const OuiIconIndexFlush = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconIndexFlush = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconIndexFlush;
+export const icon = OuiIconIndexFlush;

@@ -17,11 +17,11 @@
  * under the License.
  */
 
-export { EuiComboBox, EuiComboBoxProps } from './combo_box';
+export { OuiComboBox, OuiComboBoxProps } from './combo_box';
 export * from './combo_box_input';
 export * from './combo_box_options_list';
 export {
-  EuiComboBoxOptionOption,
-  EuiComboBoxOptionsListPosition,
-  EuiComboBoxSingleSelectionShape,
+  OuiComboBoxOptionOption,
+  OuiComboBoxOptionsListPosition,
+  OuiComboBoxSingleSelectionShape,
 } from './types';

@@ -20,15 +20,15 @@
 import React, { ReactElement } from 'react';
 import { isString } from '../../services/predicate';
 import {
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiButtonEmptyColor,
-  EuiButtonIconColor,
+  OuiButtonEmpty,
+  OuiButtonIcon,
+  OuiButtonEmptyColor,
+  OuiButtonIconColor,
 } from '../button';
-import { EuiToolTip } from '../tool_tip';
+import { OuiToolTip } from '../tool_tip';
 import { DefaultItemAction as Action } from './action_types';
 import { htmlIdGenerator } from '../../services/accessibility';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { OuiScreenReaderOnly } from '../accessibility';
 
 export interface DefaultItemActionProps<T> {
   action: Action<T>;
@@ -54,7 +54,7 @@ export const DefaultItemAction = <T extends {}>({
   const onClick = action.onClick ? () => action.onClick!(item) : undefined;
 
   const buttonColor = action.color;
-  let color: EuiButtonIconColor = 'primary';
+  let color: OuiButtonIconColor = 'primary';
   if (buttonColor) {
     color = isString(buttonColor) ? buttonColor : buttonColor(item);
   }
@@ -76,7 +76,7 @@ export const DefaultItemAction = <T extends {}>({
     const ariaLabelId = htmlIdGenerator()();
     button = (
       <>
-        <EuiButtonIcon
+        <OuiButtonIcon
           className={className}
           aria-labelledby={ariaLabelId}
           isDisabled={!enabled}
@@ -88,18 +88,18 @@ export const DefaultItemAction = <T extends {}>({
           data-test-subj={action['data-test-subj']}
         />
         {/* actionContent (action.name) is a ReactNode and must be rendered to an element and referenced by ID for screen readers */}
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span id={ariaLabelId}>{actionContent}</span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       </>
     );
   } else {
     button = (
-      <EuiButtonEmpty
+      <OuiButtonEmpty
         className={className}
         size="s"
         isDisabled={!enabled}
-        color={color as EuiButtonEmptyColor}
+        color={color as OuiButtonEmptyColor}
         iconType={icon}
         onClick={onClick}
         href={action.href}
@@ -107,14 +107,14 @@ export const DefaultItemAction = <T extends {}>({
         data-test-subj={action['data-test-subj']}
         flush="right">
         {actionContent}
-      </EuiButtonEmpty>
+      </OuiButtonEmpty>
     );
   }
 
   return enabled && action.description ? (
-    <EuiToolTip content={action.description} delay="long">
+    <OuiToolTip content={action.description} delay="long">
       {button}
-    </EuiToolTip>
+    </OuiToolTip>
   ) : (
     button
   );

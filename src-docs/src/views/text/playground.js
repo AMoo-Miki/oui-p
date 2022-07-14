@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiText, EuiTextColor } from '../../../../src/components/';
+import { OuiText, OuiTextColor } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const textConfig = () => {
-  const docgenInfo = Array.isArray(EuiText.__docgenInfo)
-    ? EuiText.__docgenInfo[0]
-    : EuiText.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiText.__docgenInfo)
+    ? OuiText.__docgenInfo[0]
+    : OuiText.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -25,14 +25,14 @@ export const textConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiText',
+      componentName: 'OuiText',
       props: propsToUse,
       scope: {
-        EuiText,
+        OuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiText'],
+        '@opensearch-project/oui': {
+          named: ['OuiText'],
         },
       },
     },
@@ -41,9 +41,9 @@ export const textConfig = () => {
 };
 
 export const textColorConfig = () => {
-  const docgenInfo = Array.isArray(EuiTextColor.__docgenInfo)
-    ? EuiTextColor.__docgenInfo[0]
-    : EuiTextColor.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiTextColor.__docgenInfo)
+    ? OuiTextColor.__docgenInfo[0]
+    : OuiTextColor.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -58,14 +58,14 @@ export const textColorConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiTextColor',
+      componentName: 'OuiTextColor',
       props: propsToUse,
       scope: {
-        EuiTextColor,
+        OuiTextColor,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTextColor'],
+        '@opensearch-project/oui': {
+          named: ['OuiTextColor'],
         },
       },
     },

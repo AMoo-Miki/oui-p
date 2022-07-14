@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiMutationObserver,
-  EuiMutationObserverProps,
+  OuiMutationObserver,
+  OuiMutationObserverProps,
   useMutationObserver,
 } from './mutation_observer';

@@ -1,0 +1,10 @@
+// Color when not using currentColor
+$ouiFocusRingColor: $ouiColorPrimaryText;
+
+// Sizing
+$ouiFocusRingAnimStartSize: 2px;
+$ouiFocusRingSize: 2px;
+
+// Transparency
+$ouiFocusTransparency: lightOrDarkTheme(.9, .7);
+$ouiFocusBackgroundColor: transparentize($ouiColorPrimary, $ouiFocusTransparency);

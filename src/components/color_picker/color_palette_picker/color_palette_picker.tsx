@@ -19,16 +19,16 @@
 
 import React, { FunctionComponent } from 'react';
 
-import { EuiSuperSelect } from '../../form';
+import { OuiSuperSelect } from '../../form';
 
 import { CommonProps } from '../../common';
 
 import { ColorStop } from '../color_stops';
 
-import { EuiSuperSelectProps } from '../../form/super_select';
-import { EuiColorPaletteDisplay } from '../color_palette_display';
+import { OuiSuperSelectProps } from '../../form/super_select';
+import { OuiColorPaletteDisplay } from '../color_palette_display';
 
-export interface EuiColorPalettePickerPaletteTextProps extends CommonProps {
+export interface OuiColorPalettePickerPaletteTextProps extends CommonProps {
   /**
    *  For storing unique value of item
    */
@@ -47,7 +47,7 @@ export interface EuiColorPalettePickerPaletteTextProps extends CommonProps {
   palette?: string[] | ColorStop[];
 }
 
-export interface EuiColorPalettePickerPaletteFixedProps extends CommonProps {
+export interface OuiColorPalettePickerPaletteFixedProps extends CommonProps {
   /**
    *  For storing unique value of item
    */
@@ -66,7 +66,7 @@ export interface EuiColorPalettePickerPaletteFixedProps extends CommonProps {
   palette: string[] | ColorStop[];
 }
 
-export interface EuiColorPalettePickerPaletteGradientProps extends CommonProps {
+export interface OuiColorPalettePickerPaletteGradientProps extends CommonProps {
   /**
    *  For storing unique value of item
    */
@@ -85,14 +85,14 @@ export interface EuiColorPalettePickerPaletteGradientProps extends CommonProps {
   palette: string[] | ColorStop[];
 }
 
-export type EuiColorPalettePickerPaletteProps =
-  | EuiColorPalettePickerPaletteTextProps
-  | EuiColorPalettePickerPaletteFixedProps
-  | EuiColorPalettePickerPaletteGradientProps;
+export type OuiColorPalettePickerPaletteProps =
+  | OuiColorPalettePickerPaletteTextProps
+  | OuiColorPalettePickerPaletteFixedProps
+  | OuiColorPalettePickerPaletteGradientProps;
 
-export type EuiColorPalettePickerProps<T extends string> = CommonProps &
+export type OuiColorPalettePickerProps<T extends string> = CommonProps &
   Omit<
-    EuiSuperSelectProps<T>,
+    OuiSuperSelectProps<T>,
     'options' | 'itemLayoutAlign' | 'hasDividers'
   > & {
     /**
@@ -101,12 +101,12 @@ export type EuiColorPalettePickerProps<T extends string> = CommonProps &
     selectionDisplay?: 'palette' | 'title';
 
     /**
-     * An array of one of the following objects: #EuiColorPalettePickerPaletteText, #EuiColorPalettePickerPaletteFixed, #EuiColorPalettePickerPaletteGradient
+     * An array of one of the following objects: #OuiColorPalettePickerPaletteText, #OuiColorPalettePickerPaletteFixed, #OuiColorPalettePickerPaletteGradient
      */
-    palettes: EuiColorPalettePickerPaletteProps[];
+    palettes: OuiColorPalettePickerPaletteProps[];
   };
 
-export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps<
+export const OuiColorPalettePicker: FunctionComponent<OuiColorPalettePickerProps<
   string
 >> = ({
   className,
@@ -127,18 +127,18 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
     type,
     palette,
   }:
-    | EuiColorPalettePickerPaletteFixedProps
-    | EuiColorPalettePickerPaletteGradientProps) => {
+    | OuiColorPalettePickerPaletteFixedProps
+    | OuiColorPalettePickerPaletteGradientProps) => {
     // Working around ExclusiveUnion
     return type === 'gradient' ? (
-      <EuiColorPaletteDisplay type={type} palette={palette} />
+      <OuiColorPaletteDisplay type={type} palette={palette} />
     ) : (
-      <EuiColorPaletteDisplay type={type} palette={palette} />
+      <OuiColorPaletteDisplay type={type} palette={palette} />
     );
   };
 
   const paletteOptions = palettes.map(
-    (item: EuiColorPalettePickerPaletteProps) => {
+    (item: OuiColorPalettePickerPaletteProps) => {
       const { type, value, title, palette, ...rest } = item;
       const paletteForDisplay = item.type !== 'text' ? getPalette(item) : null;
       return {
@@ -148,9 +148,9 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
             ? title
             : paletteForDisplay,
         dropdownDisplay: (
-          <div className="euiColorPalettePicker__item">
+          <div className="ouiColorPalettePicker__item">
             {title && type !== 'text' && (
-              <div className="euiColorPalettePicker__itemTitle">{title}</div>
+              <div className="ouiColorPalettePicker__itemTitle">{title}</div>
             )}
             {type === 'text' ? title : paletteForDisplay}
           </div>
@@ -161,7 +161,7 @@ export const EuiColorPalettePicker: FunctionComponent<EuiColorPalettePickerProps
   );
 
   return (
-    <EuiSuperSelect
+    <OuiSuperSelect
       className={className}
       options={paletteOptions}
       valueOfSelected={valueOfSelected}

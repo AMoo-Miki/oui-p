@@ -21,25 +21,25 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageBody } from './page_body';
+import { OuiPageBody } from './page_body';
 
-describe('EuiPageBody', () => {
+describe('OuiPageBody', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageBody {...requiredProps} />);
+    const component = render(<OuiPageBody {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('panelled', () => {
     test('can be set to true', () => {
-      const component = render(<EuiPageBody panelled={true} />);
+      const component = render(<OuiPageBody panelled={true} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('also accepts panelProps', () => {
       const component = render(
-        <EuiPageBody panelled={true} panelProps={{ color: 'subdued' }} />
+        <OuiPageBody panelled={true} panelProps={{ color: 'subdued' }} />
       );
 
       expect(component).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('EuiPageBody', () => {
   describe('restrict width', () => {
     test('can be set to a default', () => {
       const component = render(
-        <EuiPageBody {...requiredProps} restrictWidth={true} />
+        <OuiPageBody {...requiredProps} restrictWidth={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('EuiPageBody', () => {
 
     test('can be set to a custom number', () => {
       const component = render(
-        <EuiPageBody {...requiredProps} restrictWidth={1024} />
+        <OuiPageBody {...requiredProps} restrictWidth={1024} />
       );
 
       expect(component).toMatchSnapshot();
@@ -65,7 +65,7 @@ describe('EuiPageBody', () => {
 
     test('can be set to a custom value and measurement', () => {
       const component = render(
-        <EuiPageBody {...requiredProps} restrictWidth="24rem" />
+        <OuiPageBody {...requiredProps} restrictWidth="24rem" />
       );
 
       expect(component).toMatchSnapshot();

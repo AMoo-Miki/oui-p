@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconStopSlash = ({ title, titleId, ...props }) => (
+const OuiIconStopSlash = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconStopSlash = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconStopSlash;
+export const icon = OuiIconStopSlash;

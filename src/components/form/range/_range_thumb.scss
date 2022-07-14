@@ -1,16 +1,16 @@
-.euiRangeThumb {
-  @include euiCustomControl($type: 'round');
-  @include euiRangeThumbStyle;
+.ouiRangeThumb {
+  @include ouiCustomControl($type: 'round');
+  @include ouiRangeThumbStyle;
   content: '';
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -($euiRangeThumbHeight / 2);
+  margin-top: -($ouiRangeThumbHeight / 2);
   pointer-events: none;
-  z-index: 1; // higher than .euiRangeHighlight that is 0
+  z-index: 1; // higher than .ouiRangeHighlight that is 0
 
   &:focus {
-    @include euiCustomControlFocused;
+    @include ouiCustomControlFocused;
   }
 
   &--hasTicks {

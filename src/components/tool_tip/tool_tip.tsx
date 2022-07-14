@@ -29,20 +29,20 @@ import React, {
 import classNames from 'classnames';
 
 import { keysOf } from '../common';
-import { EuiPortal } from '../portal';
-import { EuiToolTipPopover } from './tool_tip_popover';
+import { OuiPortal } from '../portal';
+import { OuiToolTipPopover } from './tool_tip_popover';
 import { findPopoverPosition, htmlIdGenerator, keys } from '../../services';
 import { enqueueStateChange } from '../../services/react';
 
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { OuiResizeObserver } from '../observer/resize_observer';
 
 export type ToolTipPositions = 'top' | 'right' | 'bottom' | 'left';
 
 const positionsToClassNameMap: { [key in ToolTipPositions]: string } = {
-  top: 'euiToolTip--top',
-  right: 'euiToolTip--right',
-  bottom: 'euiToolTip--bottom',
-  left: 'euiToolTip--left',
+  top: 'ouiToolTip--top',
+  right: 'ouiToolTip--right',
+  bottom: 'ouiToolTip--bottom',
+  left: 'ouiToolTip--left',
 };
 
 export const POSITIONS = keysOf(positionsToClassNameMap);
@@ -64,7 +64,7 @@ interface ToolTipStyles {
 
 const displayToClassNameMap = {
   inlineBlock: undefined,
-  block: 'euiToolTipAnchor--displayBlock',
+  block: 'ouiToolTipAnchor--displayBlock',
 };
 
 const DEFAULT_TOOLTIP_STYLES: ToolTipStyles = {
@@ -80,7 +80,7 @@ const DEFAULT_TOOLTIP_STYLES: ToolTipStyles = {
   visibility: 'hidden',
 };
 
-export interface EuiToolTipProps {
+export interface OuiToolTipProps {
   /**
    * Passes onto the the trigger.
    */
@@ -133,7 +133,7 @@ interface State {
   id: string;
 }
 
-export class EuiToolTip extends Component<EuiToolTipProps, State> {
+export class OuiToolTip extends Component<OuiToolTipProps, State> {
   _isMounted = false;
   anchor: null | HTMLElement = null;
   popover: null | HTMLElement = null;
@@ -147,7 +147,7 @@ export class EuiToolTip extends Component<EuiToolTipProps, State> {
     id: this.props.id || htmlIdGenerator()(),
   };
 
-  static defaultProps: Partial<EuiToolTipProps> = {
+  static defaultProps: Partial<OuiToolTipProps> = {
     position: 'top',
     delay: 'regular',
   };
@@ -168,7 +168,7 @@ export class EuiToolTip extends Component<EuiToolTipProps, State> {
     window.removeEventListener('mousemove', this.hasFocusMouseMoveListener);
   }
 
-  componentDidUpdate(prevProps: EuiToolTipProps, prevState: State) {
+  componentDidUpdate(prevProps: OuiToolTipProps, prevState: State) {
     if (prevState.visible === false && this.state.visible === true) {
       requestAnimationFrame(this.testAnchor);
     }
@@ -305,13 +305,13 @@ export class EuiToolTip extends Component<EuiToolTipProps, State> {
     const { arrowStyles, id, toolTipStyles, visible } = this.state;
 
     const classes = classNames(
-      'euiToolTip',
+      'ouiToolTip',
       positionsToClassNameMap[this.state.calculatedPosition],
       className
     );
 
     const anchorClasses = classNames(
-      'euiToolTipAnchor',
+      'ouiToolTipAnchor',
       display ? displayToClassNameMap[display] : null,
       anchorClassName
     );
@@ -319,8 +319,8 @@ export class EuiToolTip extends Component<EuiToolTipProps, State> {
     let tooltip;
     if (visible && (content || title)) {
       tooltip = (
-        <EuiPortal>
-          <EuiToolTipPopover
+        <OuiPortal>
+          <OuiToolTipPopover
             className={classes}
             style={toolTipStyles}
             positionToolTip={this.positionToolTip}
@@ -329,12 +329,12 @@ export class EuiToolTip extends Component<EuiToolTipProps, State> {
             id={id}
             role="tooltip"
             {...rest}>
-            <div style={arrowStyles} className="euiToolTip__arrow" />
-            <EuiResizeObserver onResize={this.positionToolTip}>
+            <div style={arrowStyles} className="ouiToolTip__arrow" />
+            <OuiResizeObserver onResize={this.positionToolTip}>
               {(resizeRef) => <div ref={resizeRef}>{content}</div>}
-            </EuiResizeObserver>
-          </EuiToolTipPopover>
-        </EuiPortal>
+            </OuiResizeObserver>
+          </OuiToolTipPopover>
+        </OuiPortal>
       );
     }
 

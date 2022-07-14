@@ -21,14 +21,14 @@ import React, { FunctionComponent, TdHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export const EuiTableRowCellCheckbox: FunctionComponent<
+export const OuiTableRowCellCheckbox: FunctionComponent<
   CommonProps & TdHTMLAttributes<HTMLTableCellElement>
 > = ({ children, className, ...rest }) => {
-  const classes = classNames('euiTableRowCellCheckbox', className);
+  const classes = classNames('ouiTableRowCellCheckbox', className);
 
   return (
     <td className={classes} {...rest}>
-      <div className="euiTableCellContent">{children}</div>
+      <div className="ouiTableCellContent">{children}</div>
     </td>
   );
 };

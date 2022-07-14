@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelectableSearch } from './selectable_search';
+import { OuiSelectableSearch } from './selectable_search';
 
-describe('EuiSelectableSearch', () => {
+describe('OuiSelectableSearch', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSelectableSearch
+      <OuiSelectableSearch
         options={[]}
         listId="list"
         onChange={() => {}}
@@ -41,7 +41,7 @@ describe('EuiSelectableSearch', () => {
   describe('props', () => {
     test('defaultValue', () => {
       const component = render(
-        <EuiSelectableSearch
+        <OuiSelectableSearch
           options={[]}
           listId="list"
           onChange={() => {}}

@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react';
 
 import {
-  EuiMarkdownEditor,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiButton,
+  OuiMarkdownEditor,
+  OuiSpacer,
+  OuiCodeBlock,
+  OuiButton,
 } from '../../../../src/components';
 
 const initialContent = `## Hello world!
@@ -48,8 +48,8 @@ export default () => {
   }, []);
   return (
     <>
-      <EuiMarkdownEditor
-        aria-label="EUI markdown editor demo"
+      <OuiMarkdownEditor
+        aria-label="OUI markdown editor demo"
         value={value}
         onChange={setValue}
         height={400}
@@ -57,17 +57,17 @@ export default () => {
         errors={messages}
         dropHandlers={dropHandlers}
       />
-      <EuiSpacer size="s" />
-      <div className="eui-textRight">
-        <EuiButton
+      <OuiSpacer size="s" />
+      <div className="oui-textRight">
+        <OuiButton
           size="s"
           iconType={isAstShowing ? 'eyeClosed' : 'eye'}
           onClick={() => setIsAstShowing(!isAstShowing)}
           fill={isAstShowing}>
           {isAstShowing ? 'Hide editor AST' : 'Show editor AST'}
-        </EuiButton>
+        </OuiButton>
       </div>
-      {isAstShowing && <EuiCodeBlock language="json">{ast}</EuiCodeBlock>}
+      {isAstShowing && <OuiCodeBlock language="json">{ast}</OuiCodeBlock>}
     </>
   );
 };

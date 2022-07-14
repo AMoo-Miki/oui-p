@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiHeaderAlert, EuiHeaderAlertProps } from './header_alert';
+export { OuiHeaderAlert, OuiHeaderAlertProps } from './header_alert';

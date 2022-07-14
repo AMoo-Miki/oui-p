@@ -122,8 +122,8 @@ else
   BRANCH="${GIT_BRANCH#*/}"
 
   # Copy files
-  EUI_DOCS_PROJECT=eui-docs-live
-  BUCKET=${GPROJECT}-${EUI_DOCS_PROJECT}
+  OUI_DOCS_PROJECT=oui-docs-live
+  BUCKET=${GPROJECT}-${OUI_DOCS_PROJECT}
 
   max_age="1800"
 

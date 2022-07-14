@@ -1,11 +1,11 @@
 // Borders
 
-$euiBorderWidthThin: 1px !default;
-$euiBorderWidthThick: 2px !default;
+$ouiBorderWidthThin: 1px !default;
+$ouiBorderWidthThick: 2px !default;
 
-$euiBorderColor: $euiColorLightShade !default;
-$euiBorderRadius: 4px !default;
-$euiBorderRadiusSmall: $euiBorderRadius / 2 !default;
-$euiBorderThick: $euiBorderWidthThick solid $euiBorderColor !default;
-$euiBorderThin: $euiBorderWidthThin solid $euiBorderColor !default;
-$euiBorderEditable: $euiBorderWidthThick dotted $euiBorderColor !default;
+$ouiBorderColor: $ouiColorLightShade !default;
+$ouiBorderRadius: 4px !default;
+$ouiBorderRadiusSmall: $ouiBorderRadius / 2 !default;
+$ouiBorderThick: $ouiBorderWidthThick solid $ouiBorderColor !default;
+$ouiBorderThin: $ouiBorderWidthThin solid $ouiBorderColor !default;
+$ouiBorderEditable: $ouiBorderWidthThick dotted $ouiBorderColor !default;

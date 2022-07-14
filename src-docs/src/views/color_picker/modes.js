@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiFormRow,
-  EuiSpacer,
+  OuiColorPicker,
+  OuiColorStops,
+  OuiFormRow,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -18,27 +18,27 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Pick a swatch" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      <OuiFormRow label="Pick a swatch" isInvalid={!!errors} error={errors}>
+        <OuiColorPicker
           mode="swatch"
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      </OuiFormRow>
+      <OuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
+        <OuiColorPicker
           mode="picker"
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow label="Set stops with swatches">
-        <EuiColorStops
+      <OuiFormRow label="Set stops with swatches">
+        <OuiColorStops
           label="Set stops with swatches"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -46,10 +46,10 @@ export default () => {
           max={100}
           mode="swatch"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Set stops with picker">
-        <EuiColorStops
+      <OuiFormRow label="Set stops with picker">
+        <OuiColorStops
           label="Set stops with picker"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -57,7 +57,7 @@ export default () => {
           max={100}
           mode="picker"
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </React.Fragment>
   );
 };

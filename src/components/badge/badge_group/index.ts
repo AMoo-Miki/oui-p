@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiBadgeGroup, EuiBadgeGroupProps } from './badge_group';
+export { OuiBadgeGroup, OuiBadgeGroupProps } from './badge_group';

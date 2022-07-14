@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiInMemoryTable,
-  EuiLink,
-  EuiHealth,
+  OuiInMemoryTable,
+  OuiLink,
+  OuiHealth,
 } from '../../../../../src/components';
 
 /*
@@ -48,9 +48,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -75,7 +75,7 @@ export const Table = () => {
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
       sortable: true,
     },
@@ -106,7 +106,7 @@ export const Table = () => {
   const [pagination, setPagination] = useState({ pageIndex: 0 });
 
   return (
-    <EuiInMemoryTable
+    <OuiInMemoryTable
       onTableChange={({ page: { index } }) =>
         setPagination({ pageIndex: index })
       }

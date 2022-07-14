@@ -21,7 +21,7 @@ import React, { TextareaHTMLAttributes, forwardRef } from 'react';
 
 import { CommonProps } from '../common';
 
-export type EuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
+export type OuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
   HTMLTextAreaElement
 > &
   CommonProps & {
@@ -32,9 +32,9 @@ export type EuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
     maxHeight: string;
   };
 
-export const EuiMarkdownEditorTextArea = forwardRef<
+export const OuiMarkdownEditorTextArea = forwardRef<
   HTMLTextAreaElement,
-  EuiMarkdownEditorTextAreaProps
+  OuiMarkdownEditorTextAreaProps
 >(
   (
     {
@@ -55,7 +55,7 @@ export const EuiMarkdownEditorTextArea = forwardRef<
       <textarea
         ref={ref}
         style={{ height, maxHeight }}
-        className="euiMarkdownEditorTextArea"
+        className="ouiMarkdownEditorTextArea"
         {...rest}
         rows={6}
         name={name}
@@ -67,4 +67,4 @@ export const EuiMarkdownEditorTextArea = forwardRef<
   }
 );
 
-EuiMarkdownEditorTextArea.displayName = 'EuiMarkdownEditorTextArea';
+OuiMarkdownEditorTextArea.displayName = 'OuiMarkdownEditorTextArea';

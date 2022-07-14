@@ -29,29 +29,29 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { useEuiResizableContainerContext } from './context';
+import { useOuiResizableContainerContext } from './context';
 import { htmlIdGenerator } from '../../services';
-import { EuiPanel } from '../panel';
+import { OuiPanel } from '../panel';
 import {
   PanelPaddingSize,
   panelPaddingValues,
-  _EuiPanelProps,
+  _OuiPanelProps,
 } from '../panel/panel';
-import { useEuiI18n } from '../i18n';
+import { useOuiI18n } from '../i18n';
 import {
-  EuiResizablePanelController,
+  OuiResizablePanelController,
   ActionToggleOptions,
   PanelModeType,
   PanelPosition,
 } from './types';
-import { EuiResizableCollapseButton } from './resizable_collapse_button';
+import { OuiResizableCollapseButton } from './resizable_collapse_button';
 
 export interface ToggleOptions {
   'data-test-subj'?: string;
   className?: string;
   /**
    * Position of the toggle button.
-   * Enums based on the `direction` of the EuiResizableContainer
+   * Enums based on the `direction` of the OuiResizableContainer
    */
   position?: 'top' | 'middle' | 'bottom' | 'left' | 'right';
 }
@@ -61,7 +61,7 @@ export type ModeOptions =
   | [PanelModeType, Partial<ToggleOptions>];
 
 export type ToggleCollapseCallback = (
-  panelId: EuiResizablePanelController['id'],
+  panelId: OuiResizablePanelController['id'],
   options: ActionToggleOptions
 ) => void;
 
@@ -78,11 +78,11 @@ export const getToggleOptions = (mode?: ModeOptions) =>
     ? { ...defaultToggleOptions, ...mode[1] }
     : defaultToggleOptions;
 
-export interface EuiResizablePanelControls {
+export interface OuiResizablePanelControls {
   isHorizontal: boolean;
   registration: {
-    register: (panel: EuiResizablePanelController) => void;
-    deregister: (panelId: EuiResizablePanelController['id']) => void;
+    register: (panel: OuiResizablePanelController) => void;
+    deregister: (panelId: OuiResizablePanelController['id']) => void;
   };
   /**
    * #ToggleCollapseCallback
@@ -93,14 +93,14 @@ export interface EuiResizablePanelControls {
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiResizablePanel--paddingSmall',
-  m: 'euiResizablePanel--paddingMedium',
-  l: 'euiResizablePanel--paddingLarge',
+  s: 'ouiResizablePanel--paddingSmall',
+  m: 'ouiResizablePanel--paddingMedium',
+  l: 'ouiResizablePanel--paddingLarge',
 };
-export interface EuiResizablePanelProps
-  extends _EuiPanelProps,
+export interface OuiResizablePanelProps
+  extends _OuiPanelProps,
     CommonProps,
-    Partial<EuiResizablePanelControls> {
+    Partial<OuiResizablePanelControls> {
   /**
    * Specify a desired minimum panel size in pixels or percents,
    * for example "300px" or "30%"
@@ -123,7 +123,7 @@ export interface EuiResizablePanelProps
    */
   size?: number;
   /**
-   * Add Eui scroll and overflow for the panel
+   * Add Oui scroll and overflow for the panel
    */
   scrollable?: boolean;
   /*
@@ -140,15 +140,15 @@ export interface EuiResizablePanelProps
    */
   children: ReactNode;
   /**
-   * Custom CSS properties applied to the wrapping `.euiResizablePanel` div
+   * Custom CSS properties applied to the wrapping `.ouiResizablePanel` div
    */
   style?: CSSProperties;
   /**
-   * Props to add to the wrapping `.euiResizablePanel` div
+   * Props to add to the wrapping `.ouiResizablePanel` div
    */
   wrapperProps?: HTMLAttributes<HTMLDivElement>;
   /**
-   * Padding to add directly to the wrapping `.euiResizablePanel` div
+   * Padding to add directly to the wrapping `.ouiResizablePanel` div
    * Gives space around the actual panel.
    */
   wrapperPadding?: PanelPaddingSize;
@@ -166,7 +166,7 @@ const getPosition = (ref: HTMLDivElement) => {
 
 const generatePanelId = htmlIdGenerator('resizable-panel');
 
-export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
+export const OuiResizablePanel: FunctionComponent<OuiResizablePanelProps> = ({
   children,
   className,
   id,
@@ -193,7 +193,7 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
       panels: {},
       resizers: {},
     },
-  } = useEuiResizableContainerContext();
+  } = useOuiResizableContainerContext();
   const divRef = useRef<HTMLDivElement>(null);
   const panelId = useRef(id || generatePanelId());
   const resizerIds = useRef<string[]>([]);
@@ -250,20 +250,20 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
   }, [paddingSize]);
 
   const classes = classNames(
-    'euiResizablePanel',
+    'ouiResizablePanel',
     paddingSizeToClassNameMap[wrapperPadding],
     {
-      'euiResizablePanel--collapsible': isCollapsible,
-      'euiResizablePanel-isCollapsed': isCollapsed,
+      'ouiResizablePanel--collapsible': isCollapsible,
+      'ouiResizablePanel-isCollapsed': isCollapsed,
     },
-    `euiResizablePanel--${position}`,
+    `ouiResizablePanel--${position}`,
     wrapperProps && wrapperProps.className
   );
 
   const panelClasses = classNames(
-    'euiResizablePanel__content',
+    'ouiResizablePanel__content',
     {
-      'euiResizablePanel__content--scrollable': scrollable,
+      'ouiResizablePanel__content--scrollable': scrollable,
     },
     className
   );
@@ -342,8 +342,8 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
     if (e.detail) e.currentTarget.blur();
   };
 
-  const toggleButtonAriaLabel = useEuiI18n(
-    'euiResizablePanel.toggleButtonAriaLabel',
+  const toggleButtonAriaLabel = useOuiI18n(
+    'ouiResizablePanel.toggleButtonAriaLabel',
     'Press to toggle this panel'
   );
 
@@ -363,7 +363,7 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
   if ((isCollapsible || modeType === 'custom') && hasLeftToggle) {
     theResizer = resizers[resizerIds.current[0]];
     theToggle = (
-      <EuiResizableCollapseButton
+      <OuiResizableCollapseButton
         externalPosition="before"
         direction={isHorizontal ? 'horizontal' : 'vertical'}
         isVisible={
@@ -379,7 +379,7 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
   } else if ((isCollapsible || modeType === 'custom') && hasRightToggle) {
     theResizer = resizers[resizerIds.current[1]];
     theToggle = (
-      <EuiResizableCollapseButton
+      <OuiResizableCollapseButton
         externalPosition="after"
         direction={isHorizontal ? 'horizontal' : 'vertical'}
         isVisible={
@@ -403,7 +403,7 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
       className={classes}>
       {/* The toggle is displayed on either side for tab order */}
       {hasVisibleToggle && hasLeftToggle && theToggle}
-      <EuiPanel
+      <OuiPanel
         className={panelClasses}
         hasShadow={hasShadow}
         borderRadius={borderRadius}
@@ -411,17 +411,17 @@ export const EuiResizablePanel: FunctionComponent<EuiResizablePanelProps> = ({
         paddingSize={isCollapsed ? 'none' : paddingSize}
         {...rest}>
         {children}
-      </EuiPanel>
+      </OuiPanel>
       {/* The toggle is displayed on either side for tab order */}
       {hasVisibleToggle && hasRightToggle && theToggle}
     </div>
   );
 };
 
-export function euiResizablePanelWithControls(
-  controls: EuiResizablePanelControls
+export function ouiResizablePanelWithControls(
+  controls: OuiResizablePanelControls
 ) {
-  return (props: EuiResizablePanelProps) => (
-    <EuiResizablePanel {...controls} {...props} />
+  return (props: OuiResizablePanelProps) => (
+    <OuiResizablePanel {...controls} {...props} />
   );
 }

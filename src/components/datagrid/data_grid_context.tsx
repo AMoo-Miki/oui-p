@@ -18,12 +18,12 @@
  */
 
 import React, { ReactElement } from 'react';
-import { EuiDataGridFocusedCell, EuiDataGridSorting } from './data_grid_types';
+import { OuiDataGridFocusedCell, OuiDataGridSorting } from './data_grid_types';
 
 export interface DataGridFocusContextShape {
-  setFocusedCell: (cell: EuiDataGridFocusedCell) => void;
+  setFocusedCell: (cell: OuiDataGridFocusedCell) => void;
   onFocusUpdate: (
-    cell: EuiDataGridFocusedCell,
+    cell: OuiDataGridFocusedCell,
     updateFocus: Function
   ) => () => void;
 }
@@ -36,7 +36,7 @@ export const DataGridFocusContext = React.createContext<
 });
 
 export const DataGridSortingContext = React.createContext<
-  EuiDataGridSorting | undefined
+  OuiDataGridSorting | undefined
 >(undefined);
 
 export interface DataGridWrapperRowsContentsShape {

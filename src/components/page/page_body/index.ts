@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiPageBody, EuiPageBodyProps } from './page_body';
+export { OuiPageBody, OuiPageBodyProps } from './page_body';

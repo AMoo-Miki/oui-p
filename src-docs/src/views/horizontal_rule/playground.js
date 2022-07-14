@@ -1,22 +1,22 @@
-import { EuiHorizontalRule } from '../../../../src/components/';
+import { OuiHorizontalRule } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const horizontalRuleConfig = () => {
-  const docgenInfo = Array.isArray(EuiHorizontalRule.__docgenInfo)
-    ? EuiHorizontalRule.__docgenInfo[0]
-    : EuiHorizontalRule.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiHorizontalRule.__docgenInfo)
+    ? OuiHorizontalRule.__docgenInfo[0]
+    : OuiHorizontalRule.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiHorizontalRule',
+      componentName: 'OuiHorizontalRule',
       props: propsToUse,
       scope: {
-        EuiHorizontalRule,
+        OuiHorizontalRule,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiHorizontalRule'],
+        '@opensearch-project/oui': {
+          named: ['OuiHorizontalRule'],
         },
       },
     },

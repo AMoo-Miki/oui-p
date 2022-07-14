@@ -20,20 +20,20 @@
 import React, { FunctionComponent, HTMLAttributes, CSSProperties } from 'react';
 import classNames from 'classnames';
 
-import { EuiListGroupItem, EuiListGroupItemProps } from './list_group_item';
+import { OuiListGroupItem, OuiListGroupItemProps } from './list_group_item';
 import { CommonProps } from '../common';
 
 type GutterSize = 'none' | 's' | 'm';
 const gutterSizeToClassNameMap: { [size in GutterSize]: string } = {
   none: '',
-  s: 'euiListGroup--gutterSmall',
-  m: 'euiListGroup--gutterMedium',
+  s: 'ouiListGroup--gutterSmall',
+  m: 'ouiListGroup--gutterMedium',
 };
 export const GUTTER_SIZES = Object.keys(
   gutterSizeToClassNameMap
 ) as GutterSize[];
 
-export type EuiListGroupProps = CommonProps &
+export type OuiListGroupProps = CommonProps &
   Omit<HTMLAttributes<HTMLUListElement>, 'color'> & {
     /**
      * Add a border to the list container
@@ -51,19 +51,19 @@ export type EuiListGroupProps = CommonProps &
     gutterSize?: GutterSize;
 
     /**
-     * Items to display in this group. See #EuiListGroupItem
+     * Items to display in this group. See #OuiListGroupItem
      */
-    listItems?: EuiListGroupItemProps[];
+    listItems?: OuiListGroupItemProps[];
 
     /**
      * Change the colors of all `listItems` at once
      */
-    color?: EuiListGroupItemProps['color'];
+    color?: OuiListGroupItemProps['color'];
 
     /**
      * Change the size of all `listItems` at once
      */
-    size?: EuiListGroupItemProps['size'];
+    size?: OuiListGroupItemProps['size'];
 
     /**
      * Sets the max-width of the page,
@@ -86,7 +86,7 @@ export type EuiListGroupProps = CommonProps &
     ariaLabelledby?: string;
   };
 
-export const EuiListGroup: FunctionComponent<EuiListGroupProps> = ({
+export const OuiListGroup: FunctionComponent<OuiListGroupProps> = ({
   children,
   className,
   listItems,
@@ -114,14 +114,14 @@ export const EuiListGroup: FunctionComponent<EuiListGroupProps> = ({
 
     newStyle = { ...style, maxWidth: value };
   } else if (maxWidth === true) {
-    widthClassName = 'euiListGroup-maxWidthDefault';
+    widthClassName = 'ouiListGroup-maxWidthDefault';
   }
 
   const classes = classNames(
-    'euiListGroup',
+    'ouiListGroup',
     {
-      'euiListGroup-flush': flush,
-      'euiListGroup-bordered': bordered,
+      'ouiListGroup-flush': flush,
+      'ouiListGroup-bordered': bordered,
     },
     gutterSizeToClassNameMap[gutterSize],
     widthClassName,
@@ -132,7 +132,7 @@ export const EuiListGroup: FunctionComponent<EuiListGroupProps> = ({
   if (listItems) {
     childrenOrListItems = listItems.map((item, index) => {
       return [
-        <EuiListGroupItem
+        <OuiListGroupItem
           key={`title-${index}`}
           showToolTip={showToolTips}
           wrapText={wrapText}
@@ -146,7 +146,7 @@ export const EuiListGroup: FunctionComponent<EuiListGroupProps> = ({
     if (showToolTips) {
       childrenOrListItems = React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement<Partial<EuiListGroupItemProps>>(child, {
+          return React.cloneElement<Partial<OuiListGroupItemProps>>(child, {
             showToolTip: true,
           });
         }

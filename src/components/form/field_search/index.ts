@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFieldSearch, EuiFieldSearchProps } from './field_search';
+export { OuiFieldSearch, OuiFieldSearchProps } from './field_search';

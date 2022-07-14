@@ -21,18 +21,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingLogo, SIZES } from './loading_logo';
+import { OuiLoadingLogo, SIZES } from './loading_logo';
 
-describe('EuiLoadingLogo', () => {
+describe('OuiLoadingLogo', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingLogo {...requiredProps} />);
+    const component = render(<OuiLoadingLogo {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('logo is rendered', () => {
     const component = render(
-      <EuiLoadingLogo logo="logoElastic" {...requiredProps} />
+      <OuiLoadingLogo logo="logoElastic" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('EuiLoadingLogo', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<EuiLoadingLogo size={size} />);
+        const component = render(<OuiLoadingLogo size={size} />);
 
         expect(component).toMatchSnapshot();
       });

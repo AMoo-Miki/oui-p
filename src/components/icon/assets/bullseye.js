@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconBullseye = ({ title, titleId, ...props }) => (
+const OuiIconBullseye = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconBullseye = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconBullseye;
+export const icon = OuiIconBullseye;

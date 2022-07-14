@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCode } from './code';
+import { OuiCode } from './code';
 
 const code = `var some = 'code';
 console.log(some);`;
 
-describe('EuiCode', () => {
+describe('OuiCode', () => {
   test('renders a code snippet', () => {
-    const component = render(<EuiCode {...requiredProps}>{code}</EuiCode>);
+    const component = render(<OuiCode {...requiredProps}>{code}</OuiCode>);
 
     expect(component).toMatchSnapshot();
   });

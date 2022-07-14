@@ -18,7 +18,7 @@
  */
 
 import React, { Component } from 'react';
-import { EuiFilterButton } from '../../filter_group';
+import { OuiFilterButton } from '../../filter_group';
 import { isNil } from '../../../services/predicate';
 import { Query } from '../query';
 import { Clause } from '../query/ast';
@@ -68,12 +68,12 @@ export class IsFilter extends Component<IsFilterProps> {
       this.valueChanged(config.field, checked);
     };
     return (
-      <EuiFilterButton
+      <OuiFilterButton
         onClick={onClick}
         hasActiveFilters={hasActiveFilters}
         aria-pressed={!!hasActiveFilters}>
         {name}
-      </EuiFilterButton>
+      </OuiFilterButton>
     );
   }
 }

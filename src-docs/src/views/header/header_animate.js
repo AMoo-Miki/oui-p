@@ -7,14 +7,14 @@ import React, {
 } from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiSpacer,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiHeader,
+  OuiHeaderLogo,
+  OuiHeaderSectionItemButton,
+  OuiIcon,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const HeaderUpdates = forwardRef(
@@ -22,10 +22,10 @@ const HeaderUpdates = forwardRef(
     const bellRef = useRef();
     const cheerRef = useRef();
 
-    // wrapping the `euiAnimate` methods to make them available through this component's `ref`
-    const euiAnimate = useCallback(() => {
-      bellRef.current?.euiAnimate();
-      cheerRef.current?.euiAnimate();
+    // wrapping the `ouiAnimate` methods to make them available through this component's `ref`
+    const ouiAnimate = useCallback(() => {
+      bellRef.current?.ouiAnimate();
+      cheerRef.current?.ouiAnimate();
     }, []);
 
     // we're using the `useImperativeHandle` which allows the child to expose a function to the parent
@@ -33,31 +33,31 @@ const HeaderUpdates = forwardRef(
     useImperativeHandle(
       ref,
       () => ({
-        euiAnimate,
+        ouiAnimate,
       }),
-      [euiAnimate]
+      [ouiAnimate]
     );
 
     const bellButton = (
-      <EuiHeaderSectionItemButton
+      <OuiHeaderSectionItemButton
         ref={bellRef}
         aria-label={`News feed: ${
           showNotification ? 'Updates available' : 'No updates'
         }`}
         notification={showNotification}>
-        <EuiIcon type="bell" />
-      </EuiHeaderSectionItemButton>
+        <OuiIcon type="bell" />
+      </OuiHeaderSectionItemButton>
     );
 
     const cheerButton = (
-      <EuiHeaderSectionItemButton
+      <OuiHeaderSectionItemButton
         ref={cheerRef}
         aria-label={`News feed: ${
           showNotification ? 'Updates available' : 'No updates'
         }`}
         notification={showNotification && notificationsNumber}>
-        <EuiIcon type="cheer" />
-      </EuiHeaderSectionItemButton>
+        <OuiIcon type="cheer" />
+      </OuiHeaderSectionItemButton>
     );
 
     return (
@@ -83,20 +83,20 @@ export default () => {
       setNotificationsNumber(notificationsNumber + 1);
     }
 
-    headerUpdatesRef.current?.euiAnimate();
+    headerUpdatesRef.current?.ouiAnimate();
   };
 
   return (
     <>
-      <EuiFlexGroup responsive={false} alignItems="center" gutterSize="m">
-        <EuiFlexItem grow={false}>
-          <EuiButton size="s" onClick={notify}>
+      <OuiFlexGroup responsive={false} alignItems="center" gutterSize="m">
+        <OuiFlexItem grow={false}>
+          <OuiButton size="s" onClick={notify}>
             Notify & animate
-          </EuiButton>
-        </EuiFlexItem>
+          </OuiButton>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButton
+        <OuiFlexItem grow={false}>
+          <OuiButton
             size="s"
             color="warning"
             onClick={() => {
@@ -104,16 +104,16 @@ export default () => {
               setNotificationsNumber(0);
             }}>
             Reset
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiHeader
+      <OuiHeader
         sections={[
           {
-            items: [<EuiHeaderLogo>Elastic</EuiHeaderLogo>],
+            items: [<OuiHeaderLogo>Elastic</OuiHeaderLogo>],
             borders: 'none',
           },
           {

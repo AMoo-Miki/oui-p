@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiText, EuiTextProps } from './text';
-export { EuiTextColor, EuiTextColorProps } from './text_color';
-export { EuiTextAlign, EuiTextAlignProps } from './text_align';
+export { OuiText, OuiTextProps } from './text';
+export { OuiTextColor, OuiTextColorProps } from './text_color';
+export { OuiTextAlign, OuiTextAlignProps } from './text_align';

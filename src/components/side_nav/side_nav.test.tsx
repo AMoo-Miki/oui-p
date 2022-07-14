@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSideNav } from './side_nav';
+import { OuiSideNav } from './side_nav';
 import { RenderItem } from './side_nav_item';
 
-describe('EuiSideNav', () => {
+describe('OuiSideNav', () => {
   test('is rendered', () => {
-    const component = render(<EuiSideNav {...requiredProps} />);
+    const component = render(<OuiSideNav {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,13 +34,13 @@ describe('EuiSideNav', () => {
   describe('props', () => {
     describe('isOpenOnMobile', () => {
       test('defaults to false', () => {
-        const component = render(<EuiSideNav />);
+        const component = render(<OuiSideNav />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered when specified as true', () => {
-        const component = render(<EuiSideNav isOpenOnMobile />);
+        const component = render(<OuiSideNav isOpenOnMobile />);
 
         expect(component).toMatchSnapshot();
       });
@@ -49,14 +49,14 @@ describe('EuiSideNav', () => {
     describe('mobileBreakpoints can be adjusted', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiSideNav mobileBreakpoints={['xs', 's', 'm', 'l', 'xl']} />
+          <OuiSideNav mobileBreakpoints={['xs', 's', 'm', 'l', 'xl']} />
         );
 
         expect(component).toMatchSnapshot();
       });
 
       test('null is rendered', () => {
-        const component = render(<EuiSideNav mobileBreakpoints={undefined} />);
+        const component = render(<OuiSideNav mobileBreakpoints={undefined} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -64,14 +64,14 @@ describe('EuiSideNav', () => {
 
     describe('heading', () => {
       test('is rendered', () => {
-        const component = render(<EuiSideNav heading="Side Nav Heading" />);
+        const component = render(<OuiSideNav heading="Side Nav Heading" />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is hidden with screenReaderOnly', () => {
         const component = render(
-          <EuiSideNav
+          <OuiSideNav
             heading="Side Nav Heading"
             headingProps={{ screenReaderOnly: true }}
           />
@@ -82,7 +82,7 @@ describe('EuiSideNav', () => {
 
       test('accepts more headingProps', () => {
         const component = render(
-          <EuiSideNav
+          <OuiSideNav
             heading="Side Nav Heading"
             headingProps={{ ...requiredProps, id: 'testID', element: 'h3' }}
           />
@@ -127,7 +127,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<OuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -161,7 +161,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<OuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -189,7 +189,7 @@ describe('EuiSideNav', () => {
         );
 
         const component = render(
-          <EuiSideNav items={sideNav} renderItem={renderItem} />
+          <OuiSideNav items={sideNav} renderItem={renderItem} />
         );
 
         expect(component).toMatchSnapshot();
@@ -224,7 +224,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<OuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -260,7 +260,7 @@ describe('EuiSideNav', () => {
           },
         ];
 
-        const component = render(<EuiSideNav items={sideNav} />);
+        const component = render(<OuiSideNav items={sideNav} />);
 
         expect(component).toMatchSnapshot();
       });

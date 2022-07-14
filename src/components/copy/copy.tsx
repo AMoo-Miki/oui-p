@@ -20,11 +20,11 @@
 import React, { Component, ReactElement, ReactNode } from 'react';
 import { CommonProps } from '../common';
 import { copyToClipboard } from '../../services';
-import { EuiToolTip, EuiToolTipProps } from '../tool_tip';
+import { OuiToolTip, OuiToolTipProps } from '../tool_tip';
 
-export interface EuiCopyProps
+export interface OuiCopyProps
   extends CommonProps,
-    Partial<Omit<EuiToolTipProps, 'children'>> {
+    Partial<Omit<OuiToolTipProps, 'children'>> {
   /**
    * Text that will be copied to clipboard when copy function is executed.
    */
@@ -45,16 +45,16 @@ export interface EuiCopyProps
   children(copy: () => void): ReactElement;
 }
 
-interface EuiCopyState {
+interface OuiCopyState {
   tooltipText: ReactNode;
 }
 
-export class EuiCopy extends Component<EuiCopyProps, EuiCopyState> {
+export class OuiCopy extends Component<OuiCopyProps, OuiCopyState> {
   static defaultProps = {
     afterMessage: 'Copied',
   };
 
-  constructor(props: EuiCopyProps) {
+  constructor(props: OuiCopyProps) {
     super(props);
 
     this.state = {
@@ -89,12 +89,12 @@ export class EuiCopy extends Component<EuiCopyProps, EuiCopyState> {
     return (
       // See `src/components/tool_tip/tool_tip.js` for explanation of below eslint-disable
       // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
-      <EuiToolTip
+      <OuiToolTip
         content={this.state.tooltipText}
         onMouseOut={this.resetTooltipText}
         {...rest}>
         {children(this.copy)}
-      </EuiToolTip>
+      </OuiToolTip>
     );
   }
 }

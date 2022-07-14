@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiTextArea } from '../../../../src/components';
+import { OuiTextArea } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default () => {
@@ -13,7 +13,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canLoading={false}>
-      <EuiTextArea
+      <OuiTextArea
         placeholder="Placeholder text"
         aria-label="Use aria labels when no actual label is in use"
         value={value}

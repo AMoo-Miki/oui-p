@@ -1,4 +1,4 @@
-@mixin euiPageRestrictWidth {
+@mixin ouiPageRestrictWidth {
   &--restrictWidth-default,
   &--restrictWidth-custom {
     margin-left: auto;
@@ -7,6 +7,6 @@
   }
 
   &--restrictWidth-default {
-    max-width: $euiPageDefaultMaxWidth;
+    max-width: $ouiPageDefaultMaxWidth;
   }
 }

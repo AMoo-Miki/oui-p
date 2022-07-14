@@ -1,36 +1,36 @@
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageHeader,
-  EuiPageSideBar,
-  EuiTitle,
-  EuiButton,
-  EuiSpacer,
+  OuiPage,
+  OuiPageBody,
+  OuiPageContent,
+  OuiPageContentBody,
+  OuiPageHeader,
+  OuiPageSideBar,
+  OuiTitle,
+  OuiButton,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiPage>
-    <EuiPageSideBar>SideBar nav</EuiPageSideBar>
-    <EuiPageBody>
-      <EuiPageHeader
+  <OuiPage>
+    <OuiPageSideBar>SideBar nav</OuiPageSideBar>
+    <OuiPageBody>
+      <OuiPageHeader
         iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[
-          <EuiButton fill>Add something</EuiButton>,
-          <EuiButton>Do something</EuiButton>,
+          <OuiButton fill>Add something</OuiButton>,
+          <OuiButton>Do something</OuiButton>,
         ]}
       />
-      <EuiPageContent>
-        <EuiTitle>
+      <OuiPageContent>
+        <OuiTitle>
           <h2>Content title</h2>
-        </EuiTitle>
-        <EuiSpacer />
-        <EuiPageContentBody>Content body</EuiPageContentBody>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+        </OuiTitle>
+        <OuiSpacer />
+        <OuiPageContentBody>Content body</OuiPageContentBody>
+      </OuiPageContent>
+    </OuiPageBody>
+  </OuiPage>
 );

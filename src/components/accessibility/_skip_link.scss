@@ -1,4 +1,4 @@
-.euiSkipLink {
+.ouiSkipLink {
   transition: none !important; // sass-lint:disable-line no-important
 
   &:focus {
@@ -7,14 +7,14 @@
 
   // Set positions on focus only as to no override screenReaderOnly position
   // When positioned absolutely, consumers still need to tell it WHERE (top,left,etc...)
-  &.euiSkipLink--absolute:focus {
+  &.ouiSkipLink--absolute:focus {
     position: absolute;
   }
 
-  &.euiSkipLink--fixed:focus {
+  &.ouiSkipLink--fixed:focus {
     position: fixed;
-    top: $euiSizeXS;
-    left: $euiSizeXS;
-    z-index: $euiZHeader + 1;
+    top: $ouiSizeXS;
+    left: $ouiSizeXS;
+    z-index: $ouiZHeader + 1;
   }
 }

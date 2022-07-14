@@ -1,8 +1,8 @@
 import { PropTypes } from 'react-view';
 import {
-  EuiCard,
-  EuiCheckableCard,
-  EuiIcon,
+  OuiCard,
+  OuiCheckableCard,
+  OuiIcon,
 } from '../../../../src/components/';
 import { htmlIdGenerator } from '../../../../src/services';
 import {
@@ -13,9 +13,9 @@ import {
 } from '../../services/playground';
 
 export const cardConfig = () => {
-  const docgenInfo = Array.isArray(EuiCard.__docgenInfo)
-    ? EuiCard.__docgenInfo[0]
-    : EuiCard.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCard.__docgenInfo)
+    ? OuiCard.__docgenInfo[0]
+    : OuiCard.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title = {
@@ -38,7 +38,7 @@ export const cardConfig = () => {
   propsToUse.icon = {
     ...propsToUse.icon,
     type: PropTypes.ReactNode,
-    value: '<EuiIcon type="logoElastic" size="xl" />',
+    value: '<OuiIcon type="logoElastic" size="xl" />',
   };
 
   propsToUse.children = {
@@ -62,15 +62,15 @@ export const cardConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCard',
+      componentName: 'OuiCard',
       props: propsToUse,
       scope: {
-        EuiCard,
-        EuiIcon,
+        OuiCard,
+        OuiIcon,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCard', 'EuiIcon'],
+        '@opensearch-project/oui': {
+          named: ['OuiCard', 'OuiIcon'],
         },
       },
       customProps: {
@@ -81,9 +81,9 @@ export const cardConfig = () => {
 };
 
 export const checkableCardConfig = () => {
-  const docgenInfo = Array.isArray(EuiCheckableCard.__docgenInfo)
-    ? EuiCheckableCard.__docgenInfo[0]
-    : EuiCheckableCard.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCheckableCard.__docgenInfo)
+    ? OuiCheckableCard.__docgenInfo[0]
+    : OuiCheckableCard.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.id = {
@@ -101,14 +101,14 @@ export const checkableCardConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCheckableCard',
+      componentName: 'OuiCheckableCard',
       props: propsToUse,
       scope: {
-        EuiCheckableCard,
+        OuiCheckableCard,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCheckableCard'],
+        '@opensearch-project/oui': {
+          named: ['OuiCheckableCard'],
         },
       },
       customProps: {

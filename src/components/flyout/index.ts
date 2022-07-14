@@ -17,10 +17,10 @@
  * under the License.
  */
 
-export { EuiFlyout, EuiFlyoutProps, EuiFlyoutSize } from './flyout';
+export { OuiFlyout, OuiFlyoutProps, OuiFlyoutSize } from './flyout';
 
-export { EuiFlyoutBody, EuiFlyoutBodyProps } from './flyout_body';
+export { OuiFlyoutBody, OuiFlyoutBodyProps } from './flyout_body';
 
-export { EuiFlyoutFooter, EuiFlyoutFooterProps } from './flyout_footer';
+export { OuiFlyoutFooter, OuiFlyoutFooterProps } from './flyout_footer';
 
-export { EuiFlyoutHeader, EuiFlyoutHeaderProps } from './flyout_header';
+export { OuiFlyoutHeader, OuiFlyoutHeaderProps } from './flyout_header';

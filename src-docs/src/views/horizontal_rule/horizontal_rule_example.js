@@ -2,7 +2,7 @@ import React from 'react';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiHorizontalRule, EuiCode } from '../../../../src/components';
+import { OuiHorizontalRule, OuiCode } from '../../../../src/components';
 
 import { horizontalRuleConfig } from './playground';
 
@@ -12,8 +12,8 @@ const horizontalRuleSource = require('!!raw-loader!./horizontal_rule');
 import HorizontalRuleMargin from './horizontal_rule_margin';
 const horizontalRuleMarginSource = require('!!raw-loader!./horizontal_rule_margin');
 
-const horizontalRuleSnippet = '<EuiHorizontalRule />';
-const horizontalRuleMarginSnippet = '<EuiHorizontalRule margin="xs" />';
+const horizontalRuleSnippet = '<OuiHorizontalRule />';
+const horizontalRuleMarginSnippet = '<OuiHorizontalRule margin="xs" />';
 
 export const HorizontalRuleExample = {
   title: 'Horizontal rule',
@@ -27,15 +27,15 @@ export const HorizontalRuleExample = {
       ],
       text: (
         <p>
-          <strong>EuiHorizontalRule</strong> is a styled{' '}
-          <EuiCode>{'<hr>'}</EuiCode> element. It can be one of three provided
-          sizes (lengths), by default it will be <EuiCode>full</EuiCode>.
+          <strong>OuiHorizontalRule</strong> is a styled{' '}
+          <OuiCode>{'<hr>'}</OuiCode> element. It can be one of three provided
+          sizes (lengths), by default it will be <OuiCode>full</OuiCode>.
         </p>
       ),
-      props: { EuiHorizontalRule },
+      props: { OuiHorizontalRule },
       snippet: horizontalRuleSnippet,
       demo: (
-        <div className="eui-textCenter">
+        <div className="oui-textCenter">
           <HorizontalRule />
         </div>
       ),
@@ -51,8 +51,8 @@ export const HorizontalRuleExample = {
       ],
       text: (
         <p>
-          The spacing added before and after <strong>EuiHorizontalRule</strong>{' '}
-          can be adjusted using the <EuiCode>margin</EuiCode> prop. Don&rsquo;t
+          The spacing added before and after <strong>OuiHorizontalRule</strong>{' '}
+          can be adjusted using the <OuiCode>margin</OuiCode> prop. Don&rsquo;t
           forget that margins will collapse against items that proceed and/or
           follow.
         </p>

@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSuggestInput } from './suggest_input';
+import { OuiSuggestInput } from './suggest_input';
 
 const sampleItems = [
   {
@@ -36,10 +36,10 @@ const sampleItems = [
   },
 ];
 
-describe('EuiSuggestInput', () => {
+describe('OuiSuggestInput', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSuggestInput
+      <OuiSuggestInput
         status="unsaved"
         suggestions={sampleItems}
         {...requiredProps}

@@ -20,18 +20,18 @@
 import React, { EventHandler, MouseEvent as ReactMouseEvent } from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiOutsideClickDetector, EuiEvent } from './outside_click_detector';
+import { OuiOutsideClickDetector, OuiEvent } from './outside_click_detector';
 
 jest.mock('./../../services/accessibility', () => {
   return jest.requireActual('./../../services/accessibility');
 });
 
-describe('EuiOutsideClickDetector', () => {
+describe('OuiOutsideClickDetector', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiOutsideClickDetector onOutsideClick={() => {}}>
+      <OuiOutsideClickDetector onOutsideClick={() => {}}>
         <div />
-      </EuiOutsideClickDetector>
+      </OuiOutsideClickDetector>
     );
 
     expect(component).toMatchSnapshot();
@@ -49,16 +49,16 @@ describe('EuiOutsideClickDetector', () => {
       const triggerDocumentMouseDown: EventHandler<any> = (
         e: ReactMouseEvent
       ) => {
-        const event = new Event('mousedown') as EuiEvent;
-        event.euiGeneratedBy = ((e.nativeEvent as unknown) as EuiEvent).euiGeneratedBy;
+        const event = new Event('mousedown') as OuiEvent;
+        event.ouiGeneratedBy = ((e.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy;
         document.dispatchEvent(event);
       };
 
       const triggerDocumentMouseUp: EventHandler<any> = (
         e: ReactMouseEvent
       ) => {
-        const event = new Event('mouseup') as EuiEvent;
-        event.euiGeneratedBy = ((e.nativeEvent as unknown) as EuiEvent).euiGeneratedBy;
+        const event = new Event('mouseup') as OuiEvent;
+        event.ouiGeneratedBy = ((e.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy;
         document.dispatchEvent(event);
       };
 
@@ -67,18 +67,18 @@ describe('EuiOutsideClickDetector', () => {
           onMouseDown={triggerDocumentMouseDown}
           onMouseUp={triggerDocumentMouseUp}>
           <div>
-            <EuiOutsideClickDetector onOutsideClick={parentDetector}>
+            <OuiOutsideClickDetector onOutsideClick={parentDetector}>
               <div>
-                <EuiOutsideClickDetector onOutsideClick={childDetector}>
+                <OuiOutsideClickDetector onOutsideClick={childDetector}>
                   <div data-test-subj="target" />
-                </EuiOutsideClickDetector>
+                </OuiOutsideClickDetector>
               </div>
-            </EuiOutsideClickDetector>
+            </OuiOutsideClickDetector>
           </div>
 
-          <EuiOutsideClickDetector onOutsideClick={unrelatedDetector}>
+          <OuiOutsideClickDetector onOutsideClick={unrelatedDetector}>
             <div />
-          </EuiOutsideClickDetector>
+          </OuiOutsideClickDetector>
         </div>
       );
 

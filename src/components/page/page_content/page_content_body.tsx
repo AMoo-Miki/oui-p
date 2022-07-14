@@ -21,23 +21,23 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../../common';
 import {
-  _EuiPageRestrictWidth,
+  _OuiPageRestrictWidth,
   setPropsForRestrictedPageWidth,
 } from '../_restrict_width';
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiPage--paddingSmall',
-  m: 'euiPage--paddingMedium',
-  l: 'euiPage--paddingLarge',
+  s: 'ouiPage--paddingSmall',
+  m: 'ouiPage--paddingMedium',
+  l: 'ouiPage--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export interface EuiPageContentBodyProps
+export interface OuiPageContentBodyProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement>,
-    _EuiPageRestrictWidth {
+    _OuiPageRestrictWidth {
   /**
    * Adjust the padding.
    * When using this setting it's best to be consistent throughout all similar usages
@@ -45,7 +45,7 @@ export interface EuiPageContentBodyProps
   paddingSize?: typeof PADDING_SIZES[number];
 }
 
-export const EuiPageContentBody: FunctionComponent<EuiPageContentBodyProps> = ({
+export const OuiPageContentBody: FunctionComponent<OuiPageContentBodyProps> = ({
   children,
   restrictWidth = false,
   paddingSize = 'none',
@@ -59,10 +59,10 @@ export const EuiPageContentBody: FunctionComponent<EuiPageContentBodyProps> = ({
   );
 
   const classes = classNames(
-    'euiPageContentBody',
+    'ouiPageContentBody',
     paddingSizeToClassNameMap[paddingSize],
     {
-      [`euiPage--${widthClassName}`]: widthClassName,
+      [`ouiPage--${widthClassName}`]: widthClassName,
     },
     className
   );

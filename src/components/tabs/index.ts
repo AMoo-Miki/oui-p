@@ -17,10 +17,10 @@
  * under the License.
  */
 
-export { EuiTab, EuiTabProps } from './tab';
-export { EuiTabs, EuiTabsProps } from './tabs';
+export { OuiTab, OuiTabProps } from './tab';
+export { OuiTabs, OuiTabsProps } from './tabs';
 export {
-  EuiTabbedContent,
-  EuiTabbedContentTab,
-  EuiTabbedContentProps,
+  OuiTabbedContent,
+  OuiTabbedContentTab,
+  OuiTabbedContentProps,
 } from './tabbed_content';

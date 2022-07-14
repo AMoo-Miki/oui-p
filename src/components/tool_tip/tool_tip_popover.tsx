@@ -29,7 +29,7 @@ type Props = CommonProps &
     popoverRef?: (ref: HTMLDivElement) => void;
   };
 
-export class EuiToolTipPopover extends Component<Props> {
+export class OuiToolTipPopover extends Component<Props> {
   private popover: HTMLDivElement | undefined;
 
   updateDimensions = () => {
@@ -49,12 +49,12 @@ export class EuiToolTipPopover extends Component<Props> {
   };
 
   componentDidMount() {
-    document.body.classList.add('euiBody-hasPortalContent');
+    document.body.classList.add('ouiBody-hasPortalContent');
     window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('euiBody-hasPortalContent');
+    document.body.classList.remove('ouiBody-hasPortalContent');
     window.removeEventListener('resize', this.updateDimensions);
   }
 
@@ -68,11 +68,11 @@ export class EuiToolTipPopover extends Component<Props> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiToolTipPopover', className);
+    const classes = classNames('ouiToolTipPopover', className);
 
     let optionalTitle;
     if (title) {
-      optionalTitle = <div className="euiToolTip__title">{title}</div>;
+      optionalTitle = <div className="ouiToolTip__title">{title}</div>;
     }
 
     return (

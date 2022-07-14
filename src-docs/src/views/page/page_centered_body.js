@@ -1,32 +1,32 @@
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiEmptyPrompt,
-  EuiPageSideBar,
-  EuiPageBody,
+  OuiPage,
+  OuiPageContent,
+  OuiEmptyPrompt,
+  OuiPageSideBar,
+  OuiPageBody,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav }) => {
   return (
-    <EuiPage paddingSize="none">
-      <EuiPageSideBar paddingSize="l" sticky>
+    <OuiPage paddingSize="none">
+      <OuiPageSideBar paddingSize="l" sticky>
         {sideNav}
-      </EuiPageSideBar>
+      </OuiPageSideBar>
 
-      <EuiPageBody paddingSize="l">
-        <EuiPageContent
+      <OuiPageBody paddingSize="l">
+        <OuiPageContent
           verticalPosition="center"
           horizontalPosition="center"
           paddingSize="none">
-          <EuiEmptyPrompt
+          <OuiEmptyPrompt
             title={<span>No spice</span>}
             body={content}
             actions={button}
           />
-        </EuiPageContent>
-      </EuiPageBody>
-    </EuiPage>
+        </OuiPageContent>
+      </OuiPageBody>
+    </OuiPage>
   );
 };

@@ -18,13 +18,13 @@
  */
 
 export {
-  EuiSelectableTemplateSitewide,
-  EuiSelectableTemplateSitewideProps,
+  OuiSelectableTemplateSitewide,
+  OuiSelectableTemplateSitewideProps,
 } from './selectable_template_sitewide';
 
 export {
-  EuiSelectableTemplateSitewideOption,
-  EuiSelectableTemplateSitewideMetaData,
-  euiSelectableTemplateSitewideFormatOptions,
-  euiSelectableTemplateSitewideRenderOptions,
+  OuiSelectableTemplateSitewideOption,
+  OuiSelectableTemplateSitewideMetaData,
+  ouiSelectableTemplateSitewideFormatOptions,
+  ouiSelectableTemplateSitewideRenderOptions,
 } from './selectable_template_sitewide_option';

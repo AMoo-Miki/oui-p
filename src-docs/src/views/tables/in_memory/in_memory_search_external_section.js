@@ -4,18 +4,18 @@ import { renderToHtml } from '../../../services';
 
 import { Table } from './in_memory_search_external';
 
-import { EuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
+import { OuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
 import {
   Criteria,
   CriteriaWithPagination,
 } from '!!prop-loader!../../../../../src/components/basic_table/basic_table';
 import { Pagination } from '!!prop-loader!../../../../../src/components/basic_table/pagination_bar';
 import {
-  EuiTableFieldDataColumnType,
-  EuiTableComputedColumnType,
-  EuiTableActionsColumnType,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  OuiTableFieldDataColumnType,
+  OuiTableComputedColumnType,
+  OuiTableActionsColumnType,
+  OuiTableSelectionType,
+  OuiTableSortingType,
 } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
 import { CustomItemAction } from '!!prop-loader!../../../../../src/components/basic_table/action_types';
 import {
@@ -44,21 +44,21 @@ export const searchExternalSection = {
   text: (
     <div>
       <p>
-        The example shows how to configure <strong>EuiInMemoryTable</strong>{' '}
+        The example shows how to configure <strong>OuiInMemoryTable</strong>{' '}
         when both external and internal search/filter states are in use.
       </p>
     </div>
   ),
   props: {
-    EuiInMemoryTable,
+    OuiInMemoryTable,
     Criteria,
     CriteriaWithPagination,
     Pagination,
-    EuiTableSortingType,
-    EuiTableSelectionType,
-    EuiTableFieldDataColumnType,
-    EuiTableComputedColumnType,
-    EuiTableActionsColumnType,
+    OuiTableSortingType,
+    OuiTableSelectionType,
+    OuiTableFieldDataColumnType,
+    OuiTableComputedColumnType,
+    OuiTableActionsColumnType,
     DefaultItemAction,
     CustomItemAction,
     Search,

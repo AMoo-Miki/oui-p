@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiResizableContainer,
-  EuiResizableContainerProps,
+  OuiResizableContainer,
+  OuiResizableContainerProps,
 } from './resizable_container';

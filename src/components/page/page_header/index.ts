@@ -17,12 +17,12 @@
  * under the License.
  */
 
-export { EuiPageHeader, EuiPageHeaderProps } from './page_header';
+export { OuiPageHeader, OuiPageHeaderProps } from './page_header';
 export {
-  EuiPageHeaderContent,
-  EuiPageHeaderContentProps,
+  OuiPageHeaderContent,
+  OuiPageHeaderContentProps,
 } from './page_header_content';
 export {
-  EuiPageHeaderSection,
-  EuiPageHeaderSectionProps,
+  OuiPageHeaderSection,
+  OuiPageHeaderSectionProps,
 } from './page_header_section';

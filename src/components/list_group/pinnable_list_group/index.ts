@@ -18,7 +18,7 @@
  */
 
 export {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupProps,
-  EuiPinnableListGroupItemProps,
+  OuiPinnableListGroup,
+  OuiPinnableListGroupProps,
+  OuiPinnableListGroupItemProps,
 } from './pinnable_list_group';

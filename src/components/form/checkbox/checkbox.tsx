@@ -29,14 +29,14 @@ import classNames from 'classnames';
 import { keysOf, CommonProps } from '../../common';
 
 const typeToClassNameMap = {
-  inList: 'euiCheckbox--inList',
+  inList: 'ouiCheckbox--inList',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
 
-export type EuiCheckboxType = keyof typeof typeToClassNameMap;
+export type OuiCheckboxType = keyof typeof typeToClassNameMap;
 
-export interface EuiCheckboxProps
+export interface OuiCheckboxProps
   extends CommonProps,
     InputHTMLAttributes<HTMLInputElement> {
   id: string;
@@ -44,7 +44,7 @@ export interface EuiCheckboxProps
   onChange: ChangeEventHandler<HTMLInputElement>; // overriding to make it required
   inputRef?: (element: HTMLInputElement) => void;
   label?: ReactNode;
-  type?: EuiCheckboxType;
+  type?: OuiCheckboxType;
   disabled?: boolean;
   /**
    * when `true` creates a shorter height checkbox row
@@ -57,7 +57,7 @@ export interface EuiCheckboxProps
   labelProps?: CommonProps & LabelHTMLAttributes<HTMLLabelElement>;
 }
 
-export class EuiCheckbox extends Component<EuiCheckboxProps> {
+export class OuiCheckbox extends Component<OuiCheckboxProps> {
   static defaultProps = {
     checked: false,
     disabled: false,
@@ -92,16 +92,16 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
     } = this.props;
 
     const classes = classNames(
-      'euiCheckbox',
+      'ouiCheckbox',
       type && typeToClassNameMap[type],
       {
-        'euiCheckbox--noLabel': !label,
-        'euiCheckbox--compressed': compressed,
+        'ouiCheckbox--noLabel': !label,
+        'ouiCheckbox--compressed': compressed,
       },
       className
     );
     const labelClasses = classNames(
-      'euiCheckbox__label',
+      'ouiCheckbox__label',
       labelProps?.className
     );
     let optionalLabel;
@@ -117,7 +117,7 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
     return (
       <div className={classes}>
         <input
-          className="euiCheckbox__input"
+          className="ouiCheckbox__input"
           type="checkbox"
           id={id}
           checked={checked}
@@ -127,7 +127,7 @@ export class EuiCheckbox extends Component<EuiCheckboxProps> {
           {...rest}
         />
 
-        <div className="euiCheckbox__square" />
+        <div className="ouiCheckbox__square" />
 
         {optionalLabel}
       </div>

@@ -1,11 +1,11 @@
 import { PropTypes } from 'react-view';
-import { EuiCollapsibleNav } from '../../../../src/components/';
+import { OuiCollapsibleNav } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const collapsibleNavConfig = () => {
-  const docgenInfo = Array.isArray(EuiCollapsibleNav.__docgenInfo)
-    ? EuiCollapsibleNav.__docgenInfo[0]
-    : EuiCollapsibleNav.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCollapsibleNav.__docgenInfo)
+    ? OuiCollapsibleNav.__docgenInfo[0]
+    : OuiCollapsibleNav.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.isOpen = {
@@ -39,14 +39,14 @@ export const collapsibleNavConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCollapsibleNav',
+      componentName: 'OuiCollapsibleNav',
       props: propsToUse,
       scope: {
-        EuiCollapsibleNav,
+        OuiCollapsibleNav,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCollapsibleNav'],
+        '@opensearch-project/oui': {
+          named: ['OuiCollapsibleNav'],
         },
       },
     },

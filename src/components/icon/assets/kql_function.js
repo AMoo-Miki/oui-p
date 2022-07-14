@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconKqlFunction = ({ title, titleId, ...props }) => (
+const OuiIconKqlFunction = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconKqlFunction = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconKqlFunction;
+export const icon = OuiIconKqlFunction;

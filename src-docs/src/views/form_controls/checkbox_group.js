@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiCheckboxGroup } from '../../../../src/components';
+import { OuiCheckboxGroup } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -45,7 +45,7 @@ export default () => {
       canReadOnly={false}
       canInvalid={false}
       canFullWidth={false}>
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         options={checkboxes}
         idToSelectedMap={checkboxIdToSelectedMap}
         onChange={(id) => onChange(id)}

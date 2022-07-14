@@ -20,28 +20,28 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiButtonIcon, EuiButtonIconPropsForButton } from '../button';
+import { OuiButtonIcon, OuiButtonIconPropsForButton } from '../button';
 import { ToggleOptions } from './resizable_panel';
-import { EuiResizableContainerProps } from './resizable_container';
+import { OuiResizableContainerProps } from './resizable_container';
 
-export type EuiResizableCollapseButtonProps = Omit<
-  EuiButtonIconPropsForButton,
+export type OuiResizableCollapseButtonProps = Omit<
+  OuiButtonIconPropsForButton,
   'iconType'
 > & {
   /**
    * Position of the toggle button.
-   * Enums based on the `direction` of the EuiResizableContainer
+   * Enums based on the `direction` of the OuiResizableContainer
    */
   internalPosition?: ToggleOptions['position'];
   /**
    * Position of the toggle button.
-   * Enums based on the `direction` of the EuiResizableContainer
+   * Enums based on the `direction` of the OuiResizableContainer
    */
   externalPosition?: 'before' | 'after';
   /**
-   * Same direction derived from EuiResizableContainer
+   * Same direction derived from OuiResizableContainer
    */
-  direction?: EuiResizableContainerProps['direction'];
+  direction?: OuiResizableContainerProps['direction'];
   /**
    *
    */
@@ -49,7 +49,7 @@ export type EuiResizableCollapseButtonProps = Omit<
   isCollapsed?: boolean;
 };
 
-export const EuiResizableCollapseButton: FunctionComponent<EuiResizableCollapseButtonProps> = ({
+export const OuiResizableCollapseButton: FunctionComponent<OuiResizableCollapseButtonProps> = ({
   className,
   externalPosition,
   internalPosition = 'middle',
@@ -61,13 +61,13 @@ export const EuiResizableCollapseButton: FunctionComponent<EuiResizableCollapseB
   const isHorizontal = direction === 'horizontal';
 
   const classes = classNames(
-    'euiResizableToggleButton',
-    `euiResizableToggleButton--${direction}`,
-    `euiResizableToggleButton--${externalPosition}`,
-    `euiResizableToggleButton--${internalPosition}`,
+    'ouiResizableToggleButton',
+    `ouiResizableToggleButton--${direction}`,
+    `ouiResizableToggleButton--${externalPosition}`,
+    `ouiResizableToggleButton--${internalPosition}`,
     {
-      'euiResizableToggleButton-isVisible': isVisible,
-      'euiResizableToggleButton-isCollapsed': isCollapsed,
+      'ouiResizableToggleButton-isVisible': isVisible,
+      'ouiResizableToggleButton-isCollapsed': isCollapsed,
     },
     className
   );
@@ -88,7 +88,7 @@ export const EuiResizableCollapseButton: FunctionComponent<EuiResizableCollapseB
   }
 
   return (
-    <EuiButtonIcon
+    <OuiButtonIcon
       display={isCollapsed ? 'empty' : 'fill'}
       color={isCollapsed ? 'text' : 'ghost'}
       {...rest}

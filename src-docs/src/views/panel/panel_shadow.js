@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { EuiPanel, EuiCode, EuiSpacer } from '../../../../src/components';
+import { OuiPanel, OuiCode, OuiSpacer } from '../../../../src/components';
 import { ThemeContext } from '../../components';
 
 export default () => {
@@ -9,25 +9,25 @@ export default () => {
 
   return (
     <div>
-      <EuiPanel hasShadow={false}>
-        <EuiCode>{'hasShadow={false}'}</EuiCode>
-      </EuiPanel>
+      <OuiPanel hasShadow={false}>
+        <OuiCode>{'hasShadow={false}'}</OuiCode>
+      </OuiPanel>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
       {/* This example only works for the Amsterdam theme. The default theme has `hasBorder={true}` by default. */}
       {isAmsterdamTheme && (
         <>
-          <EuiPanel hasBorder={true}>
-            <EuiCode>{'hasBorder={true}'}</EuiCode>
-          </EuiPanel>
-          <EuiSpacer />
+          <OuiPanel hasBorder={true}>
+            <OuiCode>{'hasBorder={true}'}</OuiCode>
+          </OuiPanel>
+          <OuiSpacer />
         </>
       )}
 
-      <EuiPanel hasShadow={false} hasBorder={false}>
-        <EuiCode>{'hasShadow={false} hasBorder={false}'}</EuiCode>
-      </EuiPanel>
+      <OuiPanel hasShadow={false} hasBorder={false}>
+        <OuiCode>{'hasShadow={false} hasBorder={false}'}</OuiCode>
+      </OuiPanel>
     </div>
   );
 };

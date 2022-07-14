@@ -18,10 +18,10 @@
  */
 
 export {
-  EuiColorPalettePicker,
-  EuiColorPalettePickerProps,
-  EuiColorPalettePickerPaletteTextProps,
-  EuiColorPalettePickerPaletteFixedProps,
-  EuiColorPalettePickerPaletteGradientProps,
-  EuiColorPalettePickerPaletteProps,
+  OuiColorPalettePicker,
+  OuiColorPalettePickerProps,
+  OuiColorPalettePickerPaletteTextProps,
+  OuiColorPalettePickerPaletteFixedProps,
+  OuiColorPalettePickerPaletteGradientProps,
+  OuiColorPalettePickerPaletteProps,
 } from './color_palette_picker';

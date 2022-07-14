@@ -1,19 +1,19 @@
-@mixin euiPopoverTitle($size: 'm') {
+@mixin ouiPopoverTitle($size: 'm') {
   @if ($size == 's') {
-    @include euiTitle('xxxs');
+    @include ouiTitle('xxxs');
   } @else if ($size == 'm') {
-    @include euiTitle('xxs');
+    @include ouiTitle('xxs');
   } @else {
-    @warn 'euiPopoverTitle only accepts "s" or "m" sizes';
+    @warn 'ouiPopoverTitle only accepts "s" or "m" sizes';
   }
 
-  padding: $euiSizeM;
+  padding: $ouiSizeM;
   text-transform: uppercase;
-  border-bottom: $euiBorderThin;
+  border-bottom: $ouiBorderThin;
 }
 
-@mixin euiPopoverFooter {
-  @include euiFontSizeS;
-  padding: $euiSizeM;
-  border-top: $euiBorderThin;
+@mixin ouiPopoverFooter {
+  @include ouiFontSizeS;
+  padding: $ouiSizeM;
+  border-top: $ouiBorderThin;
 }

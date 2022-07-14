@@ -1,24 +1,24 @@
-.euiFormControlLayoutCustomIcon {
+.ouiFormControlLayoutCustomIcon {
   pointer-events: none;
   font-size: 0; // ensures the icon stays vertically centered
 }
 
-.euiFormControlLayoutCustomIcon--clickable {
-  @include size($euiSize);
+.ouiFormControlLayoutCustomIcon--clickable {
+  @include size($ouiSize);
 
   pointer-events: all;
 
-  .euiFormControlLayoutCustomIcon__icon {
+  .ouiFormControlLayoutCustomIcon__icon {
     vertical-align: baseline;
     transform: none;
   }
 
   &:focus {
-    @include euiFocusRing;
+    @include ouiFocusRing;
   }
 
   &:disabled {
     cursor: not-allowed;
-    color: $euiFormControlDisabledColor;
+    color: $ouiFormControlDisabledColor;
   }
 }

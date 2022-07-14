@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingSpinner, SIZES } from './loading_spinner';
+import { OuiLoadingSpinner, SIZES } from './loading_spinner';
 
-describe('EuiLoadingSpinner', () => {
+describe('OuiLoadingSpinner', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingSpinner {...requiredProps} />);
+    const component = render(<OuiLoadingSpinner {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('EuiLoadingSpinner', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<EuiLoadingSpinner size={size} />);
+        const component = render(<OuiLoadingSpinner size={size} />);
 
         expect(component).toMatchSnapshot();
       });

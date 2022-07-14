@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiTablePagination,
-  EuiTablePaginationProps,
+  OuiTablePagination,
+  OuiTablePaginationProps,
 } from './table_pagination';

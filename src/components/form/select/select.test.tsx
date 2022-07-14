@@ -22,19 +22,19 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelect } from './select';
+import { OuiSelect } from './select';
 
 jest.mock('../form_control_layout', () => ({
-  EuiFormControlLayout: 'eui-form-control-layout',
+  OuiFormControlLayout: 'oui-form-control-layout',
 }));
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  OuiValidatableControl: 'oui-validatable-control',
 }));
 
-describe('EuiSelect', () => {
+describe('OuiSelect', () => {
   it('is rendered', () => {
     const component = render(
-      <EuiSelect id="id" name="name" {...requiredProps} />
+      <OuiSelect id="id" name="name" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe('EuiSelect', () => {
   describe('props', () => {
     it('options are rendered', () => {
       const component = render(
-        <EuiSelect
+        <OuiSelect
           options={[
             { value: '1', text: 'Option #1' },
             { value: '2', text: 'Option #2' },
@@ -55,26 +55,26 @@ describe('EuiSelect', () => {
     });
 
     it('isInvalid is rendered', () => {
-      const component = render(<EuiSelect isInvalid />);
+      const component = render(<OuiSelect isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     it('fullWidth is rendered', () => {
-      const component = render(<EuiSelect fullWidth />);
+      const component = render(<OuiSelect fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     it('isLoading is rendered', () => {
-      const component = render(<EuiSelect isLoading />);
+      const component = render(<OuiSelect isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     it('disabled options are rendered', () => {
       const component = render(
-        <EuiSelect
+        <OuiSelect
           options={[
             { value: '1', text: 'Option #1', disabled: false },
             { value: '2', text: 'Option #2', disabled: true },
@@ -87,7 +87,7 @@ describe('EuiSelect', () => {
 
     it('value option is rendered', () => {
       const component = render(
-        <EuiSelect
+        <OuiSelect
           options={[
             { value: '1', text: 'Option #1' },
             { value: '2', text: 'Option #2' },
@@ -104,7 +104,7 @@ describe('EuiSelect', () => {
   describe('hasNoInitialSelection', () => {
     it('renders with an extra option at the top', () => {
       const component = mount(
-        <EuiSelect
+        <OuiSelect
           hasNoInitialSelection
           options={[
             { value: '1', text: 'Option #1' },
@@ -133,7 +133,7 @@ describe('EuiSelect', () => {
 
     it('can be reset to an empty initial selection', () => {
       const component = mount(
-        <EuiSelect
+        <OuiSelect
           hasNoInitialSelection
           value="1"
           options={[

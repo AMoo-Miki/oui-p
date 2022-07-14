@@ -18,11 +18,11 @@
  */
 
 export {
-  EuiFlexGroup,
-  EuiFlexGroupProps,
-  EuiFlexGroupGutterSize,
+  OuiFlexGroup,
+  OuiFlexGroupProps,
+  OuiFlexGroupGutterSize,
 } from './flex_group';
 
-export { EuiFlexGrid, EuiFlexGridProps } from './flex_grid';
+export { OuiFlexGrid, OuiFlexGridProps } from './flex_grid';
 
-export { EuiFlexItem, EuiFlexItemProps } from './flex_item';
+export { OuiFlexItem, OuiFlexItemProps } from './flex_item';

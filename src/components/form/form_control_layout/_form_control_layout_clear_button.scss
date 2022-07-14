@@ -1,7 +1,7 @@
-.euiFormControlLayoutClearButton {
-  @include euiFormControlLayoutClearIcon('.euiFormControlLayoutClearButton__icon');
+.ouiFormControlLayoutClearButton {
+  @include ouiFormControlLayoutClearIcon('.ouiFormControlLayoutClearButton__icon');
 }
 
-.euiFormControlLayoutClearButton--small {
-  @include euiFormControlLayoutClearIcon('.euiFormControlLayoutClearButton__icon', $size: 's');
+.ouiFormControlLayoutClearButton--small {
+  @include ouiFormControlLayoutClearIcon('.ouiFormControlLayoutClearButton__icon', $size: 's');
 }

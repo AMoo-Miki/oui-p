@@ -21,29 +21,29 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTable } from './table';
-import { EuiTableRow } from './table_row';
-import { EuiTableRowCell } from './table_row_cell';
-import { EuiTableBody } from './table_body';
-import { EuiTableHeader } from './table_header';
-import { EuiTableHeaderCell } from './table_header_cell';
+import { OuiTable } from './table';
+import { OuiTableRow } from './table_row';
+import { OuiTableRowCell } from './table_row_cell';
+import { OuiTableBody } from './table_body';
+import { OuiTableHeader } from './table_header';
+import { OuiTableHeaderCell } from './table_header_cell';
 
-test('renders EuiTable', () => {
+test('renders OuiTable', () => {
   const component = (
-    <EuiTable {...requiredProps}>
-      <EuiTableHeader>
-        <EuiTableHeaderCell>Hi Title</EuiTableHeaderCell>
-        <EuiTableHeaderCell>Bye Title</EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell>Hi</EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow>
-          <EuiTableRowCell>Bye</EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+    <OuiTable {...requiredProps}>
+      <OuiTableHeader>
+        <OuiTableHeaderCell>Hi Title</OuiTableHeaderCell>
+        <OuiTableHeaderCell>Bye Title</OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell>Hi</OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow>
+          <OuiTableRowCell>Bye</OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   );
   expect(render(component)).toMatchSnapshot();
 });

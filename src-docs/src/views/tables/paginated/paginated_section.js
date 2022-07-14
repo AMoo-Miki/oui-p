@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { OuiBasicTable, OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,10 +22,10 @@ export const section = {
   text: (
     <p>
       The following example shows how to configure pagination via the{' '}
-      <EuiCode>pagination</EuiCode>
+      <OuiCode>pagination</OuiCode>
       property.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { OuiBasicTable },
   demo: <Table />,
 };

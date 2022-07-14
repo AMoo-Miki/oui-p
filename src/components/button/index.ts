@@ -21,26 +21,26 @@ export {
   COLORS,
   ButtonColor,
   ButtonSize,
-  EuiButton,
-  EuiButtonProps,
+  OuiButton,
+  OuiButtonProps,
 } from './button';
 
 export {
-  EuiButtonEmpty,
-  EuiButtonEmptyColor,
-  EuiButtonEmptyProps,
-  EuiButtonEmptySizes,
+  OuiButtonEmpty,
+  OuiButtonEmptyColor,
+  OuiButtonEmptyProps,
+  OuiButtonEmptySizes,
 } from './button_empty';
 
 export {
-  EuiButtonIcon,
-  EuiButtonIconColor,
-  EuiButtonIconProps,
-  EuiButtonIconPropsForButton,
+  OuiButtonIcon,
+  OuiButtonIconColor,
+  OuiButtonIconProps,
+  OuiButtonIconPropsForButton,
 } from './button_icon';
 
 export {
-  EuiButtonGroup,
-  EuiButtonGroupOptionProps,
-  EuiButtonGroupProps,
+  OuiButtonGroup,
+  OuiButtonGroupOptionProps,
+  OuiButtonGroupProps,
 } from './button_group';

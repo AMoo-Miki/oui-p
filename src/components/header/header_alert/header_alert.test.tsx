@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderAlert } from './header_alert';
+import { OuiHeaderAlert } from './header_alert';
 
-describe('EuiHeaderAlert', () => {
+describe('OuiHeaderAlert', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiHeaderAlert {...requiredProps} title="title" date="date" />
+      <OuiHeaderAlert {...requiredProps} title="title" date="date" />
     );
 
     expect(component).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe('EuiHeaderAlert', () => {
   test('renders action', () => {
     const action = <button>Quietly take to the ship</button>;
     const component = render(
-      <EuiHeaderAlert
+      <OuiHeaderAlert
         {...requiredProps}
         title="title"
         date="date"
@@ -49,7 +49,7 @@ describe('EuiHeaderAlert', () => {
   test('renders title as an element', () => {
     const title = <h2>Circumambulate the city</h2>;
     const component = render(
-      <EuiHeaderAlert {...requiredProps} date="date" title={title} />
+      <OuiHeaderAlert {...requiredProps} date="date" title={title} />
     );
 
     expect(component).toMatchSnapshot();
@@ -58,7 +58,7 @@ describe('EuiHeaderAlert', () => {
   test('renders date as an element', () => {
     const date = <h2>October 18, 1851</h2>;
     const component = render(
-      <EuiHeaderAlert {...requiredProps} title="shazm" date={date} />
+      <OuiHeaderAlert {...requiredProps} title="shazm" date={date} />
     );
 
     expect(component).toMatchSnapshot();

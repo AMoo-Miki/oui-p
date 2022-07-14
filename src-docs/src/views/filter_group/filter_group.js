@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiFilterGroup,
-  EuiFilterButton,
-  EuiIcon,
-  EuiSpacer,
+  OuiPopover,
+  OuiFilterGroup,
+  OuiFilterButton,
+  OuiIcon,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -37,7 +37,7 @@ export default () => {
   };
 
   const button = (
-    <EuiFilterButton
+    <OuiFilterButton
       iconType="arrowDown"
       onClick={onButtonClick}
       isSelected={isPopoverOpen}
@@ -45,50 +45,50 @@ export default () => {
       hasActiveFilters={true}
       numActiveFilters={2}>
       Composers
-    </EuiFilterButton>
+    </OuiFilterButton>
   );
 
   return (
-    <EuiFilterGroup fullWidth={true}>
-      <EuiFilterButton
+    <OuiFilterGroup fullWidth={true}>
+      <OuiFilterButton
         grow={false}
         hasActiveFilters={isFilterOn}
         onClick={toggleFilter}>
         Filter
-      </EuiFilterButton>
-      <EuiFilterButton
+      </OuiFilterButton>
+      <OuiFilterButton
         withNext
         grow={false}
         hasActiveFilters={isOnFilterOn}
         onClick={toggleOnFilter}>
         On
-      </EuiFilterButton>
-      <EuiFilterButton
+      </OuiFilterButton>
+      <OuiFilterButton
         grow={false}
         hasActiveFilters={isOffFilterOn}
         onClick={toggleOffFilter}>
         Off
-      </EuiFilterButton>
-      <EuiPopover
+      </OuiFilterButton>
+      <OuiPopover
         id="popover"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         panelPaddingSize="none">
-        <div className="euiFilterSelect__note">
-          <div className="euiFilterSelect__noteContent">
-            <EuiIcon type="minusInCircle" />
-            <EuiSpacer size="xs" />
+        <div className="ouiFilterSelect__note">
+          <div className="ouiFilterSelect__noteContent">
+            <OuiIcon type="minusInCircle" />
+            <OuiSpacer size="xs" />
             <p>No filters found</p>
           </div>
         </div>
-      </EuiPopover>
-      <EuiFilterButton
+      </OuiPopover>
+      <OuiFilterButton
         numFilters={12}
         hasActiveFilters={isFilterOn}
         onClick={toggleFilter}>
         Filter with a very long name
-      </EuiFilterButton>
-    </EuiFilterGroup>
+      </OuiFilterButton>
+    </OuiFilterGroup>
   );
 };

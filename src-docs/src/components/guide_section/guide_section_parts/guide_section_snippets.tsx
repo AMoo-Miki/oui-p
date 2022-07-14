@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import { EuiCodeBlock } from '../../../../../src/components/code';
-import { EuiSpacer } from '../../../../../src/components/spacer';
+import { OuiCodeBlock } from '../../../../../src/components/code';
+import { OuiSpacer } from '../../../../../src/components/spacer';
 
 export type GuideSectionSnippets = {
   snippets: string | string[];
@@ -12,17 +12,17 @@ export const GuideSectionSnippets: FunctionComponent<GuideSectionSnippets> = ({
   let snippetCode;
   if (typeof snippets === 'string') {
     snippetCode = (
-      <EuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
+      <OuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
         {snippets}
-      </EuiCodeBlock>
+      </OuiCodeBlock>
     );
   } else {
     snippetCode = snippets.map((snip, index) => (
       <React.Fragment key={`snippet${index}`}>
-        <EuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
+        <OuiCodeBlock language="html" fontSize="m" paddingSize="m" isCopyable>
           {snip}
-        </EuiCodeBlock>
-        {index < snippets.length - 1 && <EuiSpacer size="xs" />}
+        </OuiCodeBlock>
+        {index < snippets.length - 1 && <OuiSpacer size="xs" />}
       </React.Fragment>
     ));
   }

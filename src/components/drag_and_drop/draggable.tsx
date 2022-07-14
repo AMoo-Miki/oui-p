@@ -28,18 +28,18 @@ import React, {
 import { Draggable, DraggableProps } from 'react-beautiful-dnd';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiDroppableContext } from './droppable';
+import { OuiDroppableContext } from './droppable';
 
 const spacingToClassNameMap = {
   none: null,
-  s: 'euiDraggable--s',
-  m: 'euiDraggable--m',
-  l: 'euiDraggable--l',
+  s: 'ouiDraggable--s',
+  m: 'ouiDraggable--m',
+  l: 'ouiDraggable--l',
 };
 
-export type EuiDraggableSpacing = keyof typeof spacingToClassNameMap;
+export type OuiDraggableSpacing = keyof typeof spacingToClassNameMap;
 
-export interface EuiDraggableProps
+export interface OuiDraggableProps
   extends CommonProps,
     Omit<DraggableProps, 'children'> {
   /**
@@ -58,11 +58,11 @@ export interface EuiDraggableProps
   /**
    * Adds padding to the draggable item
    */
-  spacing?: EuiDraggableSpacing;
+  spacing?: OuiDraggableSpacing;
   style?: CSSProperties;
 }
 
-export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
+export const OuiDraggable: FunctionComponent<OuiDraggableProps> = ({
   customDragHandle = false,
   draggableId,
   isDragDisabled = false,
@@ -75,7 +75,7 @@ export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
   'data-test-subj': dataTestSubj = 'draggable',
   ...rest
 }) => {
-  const { cloneItems } = useContext(EuiDroppableContext);
+  const { cloneItems } = useContext(OuiDroppableContext);
 
   return (
     <Draggable
@@ -85,21 +85,21 @@ export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
       {...rest}>
       {(provided, snapshot, rubric) => {
         const classes = classNames(
-          'euiDraggable',
+          'ouiDraggable',
           {
-            'euiDraggable--hasClone': cloneItems,
-            'euiDraggable--hasCustomDragHandle': customDragHandle,
-            'euiDraggable--isDragging': snapshot.isDragging,
-            'euiDraggable--withoutDropAnimation': isRemovable,
+            'ouiDraggable--hasClone': cloneItems,
+            'ouiDraggable--hasCustomDragHandle': customDragHandle,
+            'ouiDraggable--isDragging': snapshot.isDragging,
+            'ouiDraggable--withoutDropAnimation': isRemovable,
           },
           spacingToClassNameMap[spacing],
           className
         );
-        const childClasses = classNames('euiDraggable__item', {
-          'euiDraggable__item--hasCustomDragHandle': customDragHandle,
-          'euiDraggable__item--isDisabled': isDragDisabled,
-          'euiDraggable__item--isDragging': snapshot.isDragging,
-          'euiDraggable__item--isDropAnimating': snapshot.isDropAnimating,
+        const childClasses = classNames('ouiDraggable__item', {
+          'ouiDraggable__item--hasCustomDragHandle': customDragHandle,
+          'ouiDraggable__item--isDisabled': isDragDisabled,
+          'ouiDraggable__item--isDragging': snapshot.isDragging,
+          'ouiDraggable__item--isDropAnimating': snapshot.isDropAnimating,
         });
         const DraggableElement =
           typeof children === 'function'
@@ -122,7 +122,7 @@ export const EuiDraggable: FunctionComponent<EuiDraggableProps> = ({
               })}
             </div>
             {cloneItems && snapshot.isDragging && (
-              <div className={classNames(classes, 'euiDraggable--clone')}>
+              <div className={classNames(classes, 'ouiDraggable--clone')}>
                 {DraggableElement}
               </div>
             )}

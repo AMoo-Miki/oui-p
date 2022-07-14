@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup justifyContent="spaceAround">
-    <EuiFlexItem grow={false}>I&rsquo;m a single centered item!</EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup justifyContent="spaceAround">
+    <OuiFlexItem grow={false}>I&rsquo;m a single centered item!</OuiFlexItem>
+  </OuiFlexGroup>
 );

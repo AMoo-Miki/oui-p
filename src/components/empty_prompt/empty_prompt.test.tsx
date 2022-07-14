@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiEmptyPrompt } from './empty_prompt';
+import { OuiEmptyPrompt } from './empty_prompt';
 
-describe('EuiEmptyPrompt', () => {
+describe('OuiEmptyPrompt', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiEmptyPrompt
+      <OuiEmptyPrompt
         iconType="arrowUp"
         title={<h2>Title</h2>}
         body={<p>Body</p>}
@@ -41,13 +41,13 @@ describe('EuiEmptyPrompt', () => {
   describe('props', () => {
     describe('iconType', () => {
       test('renders alone', () => {
-        const component = render(<EuiEmptyPrompt iconType="arrowUp" />);
+        const component = render(<OuiEmptyPrompt iconType="arrowUp" />);
         expect(component).toMatchSnapshot();
       });
 
       test('renders with iconColor', () => {
         const component = render(
-          <EuiEmptyPrompt iconType="arrowUp" iconColor="danger" />
+          <OuiEmptyPrompt iconType="arrowUp" iconColor="danger" />
         );
         expect(component).toMatchSnapshot();
       });
@@ -56,7 +56,7 @@ describe('EuiEmptyPrompt', () => {
     describe('icon', () => {
       test('renders alone', () => {
         const component = render(
-          <EuiEmptyPrompt icon={<span>Custom icon</span>} />
+          <OuiEmptyPrompt icon={<span>Custom icon</span>} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -64,27 +64,27 @@ describe('EuiEmptyPrompt', () => {
 
     describe('title', () => {
       test('renders alone', () => {
-        const component = render(<EuiEmptyPrompt title={<div>title</div>} />);
+        const component = render(<OuiEmptyPrompt title={<div>title</div>} />);
         expect(component).toMatchSnapshot();
       });
     });
 
     describe('body', () => {
       test('renders alone', () => {
-        const component = render(<EuiEmptyPrompt body="body" />);
+        const component = render(<OuiEmptyPrompt body="body" />);
         expect(component).toMatchSnapshot();
       });
     });
 
     describe('actions', () => {
       test('renders alone', () => {
-        const component = render(<EuiEmptyPrompt actions="actions" />);
+        const component = render(<OuiEmptyPrompt actions="actions" />);
         expect(component).toMatchSnapshot();
       });
 
       test('renders an array', () => {
         const component = render(
-          <EuiEmptyPrompt actions={['action1', 'action2']} />
+          <OuiEmptyPrompt actions={['action1', 'action2']} />
         );
         expect(component).toMatchSnapshot();
       });

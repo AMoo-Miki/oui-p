@@ -19,10 +19,10 @@
 
 import React, { FunctionComponent } from 'react';
 
-import { EuiFieldNumber, EuiFieldNumberProps } from '../field_number';
+import { OuiFieldNumber, OuiFieldNumberProps } from '../field_number';
 
-export interface EuiRangeInputProps
-  extends Omit<EuiFieldNumberProps, 'max' | 'min' | 'value'> {
+export interface OuiRangeInputProps
+  extends Omit<OuiFieldNumberProps, 'max' | 'min' | 'value'> {
   autoSize?: boolean;
   digitTolerance: number;
   max: number;
@@ -31,7 +31,7 @@ export interface EuiRangeInputProps
   value: string | number;
 }
 
-export const EuiRangeInput: FunctionComponent<EuiRangeInputProps> = ({
+export const OuiRangeInput: FunctionComponent<OuiRangeInputProps> = ({
   min,
   max,
   step,
@@ -54,9 +54,9 @@ export const EuiRangeInput: FunctionComponent<EuiRangeInputProps> = ({
     : undefined;
 
   return (
-    <EuiFieldNumber
+    <OuiFieldNumber
       name={name}
-      className={`euiRangeInput euiRangeInput--${side}`}
+      className={`ouiRangeInput ouiRangeInput--${side}`}
       min={Number(min)}
       max={Number(max)}
       step={step}

@@ -1,0 +1,25 @@
+.ouiRangeDraggable {
+  &:focus {
+    outline: none;
+
+    ~ .ouiRangeThumb {
+      @include ouiRangeThumbFocus;
+    }
+  }
+
+  // in Chrome/FF/Edge we don't want to focus on click
+  &:focus:not(:focus-visible)  {
+    ~ .ouiRangeThumb {
+      @include ouiRangeThumbBoxShadow;
+      outline: none;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    ~ .ouiRangeThumb {
+      @include ouiRangeThumbFocus;
+    }
+  }
+}

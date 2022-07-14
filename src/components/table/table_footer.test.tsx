@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableFooter } from './table_footer';
+import { OuiTableFooter } from './table_footer';
 
-describe('EuiTableFooter', () => {
+describe('OuiTableFooter', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTableFooter {...requiredProps}>children</EuiTableFooter>
+      <OuiTableFooter {...requiredProps}>children</OuiTableFooter>
     );
 
     expect(component).toMatchSnapshot();

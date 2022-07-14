@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiConfirmModal,
-  EuiFormRow,
-  EuiFieldText,
+  OuiButton,
+  OuiConfirmModal,
+  OuiFormRow,
+  OuiFieldText,
 } from '../../../../src/components';
 
 export default () => {
@@ -35,8 +35,8 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiConfirmModal
-        title="Delete the EUI repo?"
+      <OuiConfirmModal
+        title="Delete the OUI repo?"
         onCancel={closeModal}
         onConfirm={() => {
           closeModal();
@@ -48,21 +48,21 @@ export default () => {
         initialFocus="[name=delete]"
         confirmButtonDisabled={value.toLowerCase() !== 'delete'}
         isLoading={isLoading}>
-        <EuiFormRow label="Type the word 'delete' to confirm">
-          <EuiFieldText
+        <OuiFormRow label="Type the word 'delete' to confirm">
+          <OuiFieldText
             name="delete"
             isLoading={isLoading}
             value={value}
             onChange={onChange}
           />
-        </EuiFormRow>
-      </EuiConfirmModal>
+        </OuiFormRow>
+      </OuiConfirmModal>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={showModal}>Show loading confirm modal</EuiButton>
+      <OuiButton onClick={showModal}>Show loading confirm modal</OuiButton>
       {modal}
     </div>
   );

@@ -52,11 +52,11 @@ interface Props {
   timeout?: number;
 }
 
-export type EuiTextDiffProps = CommonProps &
+export type OuiTextDiffProps = CommonProps &
   Props &
   HTMLAttributes<HTMLElement>;
 
-export const useEuiTextDiff = ({
+export const useOuiTextDiff = ({
   className,
   insertComponent = 'ins',
   deleteComponent = 'del',
@@ -65,14 +65,14 @@ export const useEuiTextDiff = ({
   afterText = '',
   timeout = 0.1,
   ...rest
-}: EuiTextDiffProps) => {
+}: OuiTextDiffProps) => {
   const textDiff = useMemo(() => {
     const diff = new Diff({ timeout }); // options may be passed to constructor
 
     return diff.main(beforeText, afterText);
   }, [beforeText, afterText, timeout]); // produces diff array
 
-  const classes = classNames('euiTextDiff', className);
+  const classes = classNames('ouiTextDiff', className);
 
   const rendereredHtml = useMemo(() => {
     const html = [];

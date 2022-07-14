@@ -30,13 +30,13 @@ import {
 
 import { resolveWidthAsStyle } from './utils';
 
-export type EuiTableFooterCellProps = CommonProps &
+export type OuiTableFooterCellProps = CommonProps &
   TdHTMLAttributes<HTMLTableCellElement> & {
     align?: HorizontalAlignment;
     width?: string | number;
   };
 
-export const EuiTableFooterCell: FunctionComponent<EuiTableFooterCellProps> = ({
+export const OuiTableFooterCell: FunctionComponent<OuiTableFooterCellProps> = ({
   children,
   align = LEFT_ALIGNMENT,
   className,
@@ -44,17 +44,17 @@ export const EuiTableFooterCell: FunctionComponent<EuiTableFooterCellProps> = ({
   style,
   ...rest
 }) => {
-  const classes = classNames('euiTableFooterCell', className);
-  const contentClasses = classNames('euiTableCellContent', className, {
-    'euiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
+  const classes = classNames('ouiTableFooterCell', className);
+  const contentClasses = classNames('ouiTableCellContent', className, {
+    'ouiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
+    'ouiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
   });
   const styleObj = resolveWidthAsStyle(style, width);
 
   return (
     <td className={classes} style={styleObj} {...rest}>
       <div className={contentClasses}>
-        <span className="euiTableCellContent__text">{children}</span>
+        <span className="ouiTableCellContent__text">{children}</span>
       </div>
     </td>
   );

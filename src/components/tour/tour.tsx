@@ -18,25 +18,25 @@
  */
 
 import { FunctionComponent, ReactElement } from 'react';
-import { useEuiTour, EuiStatelessTourStep } from './useEuiTour';
-import { EuiTourStepProps } from './tour_step';
-import { EuiTourActions, EuiTourState } from './types';
+import { useOuiTour, OuiStatelessTourStep } from './useOuiTour';
+import { OuiTourStepProps } from './tour_step';
+import { OuiTourActions, OuiTourState } from './types';
 
-export interface EuiTourProps {
+export interface OuiTourProps {
   children: (
-    steps: EuiTourStepProps[],
-    actions: EuiTourActions,
-    state: EuiTourState
+    steps: OuiTourStepProps[],
+    actions: OuiTourActions,
+    state: OuiTourState
   ) => ReactElement;
-  steps: EuiStatelessTourStep[];
-  initialState: EuiTourState;
+  steps: OuiStatelessTourStep[];
+  initialState: OuiTourState;
 }
 
-export const EuiTour: FunctionComponent<EuiTourProps> = ({
+export const OuiTour: FunctionComponent<OuiTourProps> = ({
   children,
   steps,
   initialState,
 }) => {
-  const [stepProps, actions, state] = useEuiTour(steps, initialState);
+  const [stepProps, actions, state] = useOuiTour(steps, initialState);
   return children(stepProps, actions, state);
 };

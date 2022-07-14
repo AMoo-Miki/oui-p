@@ -17,9 +17,9 @@
  * under the License.
  */
 
-export { EuiLoadingKibana, EuiLoadingKibanaProps } from './loading_kibana';
-export { EuiLoadingElastic, EuiLoadingElasticProps } from './loading_elastic';
-export { EuiLoadingChart, EuiLoadingChartProps } from './loading_chart';
-export { EuiLoadingContent, EuiLoadingContentProps } from './loading_content';
-export { EuiLoadingSpinner, EuiLoadingSpinnerProps } from './loading_spinner';
-export { EuiLoadingLogo, EuiLoadingLogoProps } from './loading_logo';
+export { OuiLoadingKibana, OuiLoadingKibanaProps } from './loading_kibana';
+export { OuiLoadingElastic, OuiLoadingElasticProps } from './loading_elastic';
+export { OuiLoadingChart, OuiLoadingChartProps } from './loading_chart';
+export { OuiLoadingContent, OuiLoadingContentProps } from './loading_content';
+export { OuiLoadingSpinner, OuiLoadingSpinnerProps } from './loading_spinner';
+export { OuiLoadingLogo, OuiLoadingLogoProps } from './loading_logo';

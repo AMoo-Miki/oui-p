@@ -20,12 +20,12 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiNotificationEventReadButton } from './notification_event_read_button';
+import { OuiNotificationEventReadButton } from './notification_event_read_button';
 
-describe('EuiNotificationEventReadButton', () => {
+describe('OuiNotificationEventReadButton', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationEventReadButton
+      <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
         isRead={true}
@@ -38,7 +38,7 @@ describe('EuiNotificationEventReadButton', () => {
 
   test('renders isRead to false', () => {
     const component = render(
-      <EuiNotificationEventReadButton
+      <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
         isRead={false}
@@ -52,7 +52,7 @@ describe('EuiNotificationEventReadButton', () => {
   test('onClick fires for buttons', () => {
     const handler = jest.fn();
     const component = mount(
-      <EuiNotificationEventReadButton
+      <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
         isRead={false}

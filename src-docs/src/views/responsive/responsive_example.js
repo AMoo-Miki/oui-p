@@ -5,25 +5,25 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiShowFor,
-  EuiHideFor,
-  EuiCodeBlock,
+  OuiCode,
+  OuiShowFor,
+  OuiHideFor,
+  OuiCodeBlock,
 } from '../../../../src/components';
 
 import { BREAKPOINTS, BREAKPOINT_KEYS } from '../../../../src/services';
-import { EuiBreakpointSize } from '!!prop-loader!../../../../src/services/breakpoint';
+import { OuiBreakpointSize } from '!!prop-loader!../../../../src/services/breakpoint';
 
 import Responsive from './responsive';
 const responsiveSource = require('!!raw-loader!./responsive');
 const responsiveHtml = renderToHtml(Responsive);
 const responsiveSnippet = [
-  `<EuiHideFor sizes={['xs', 's']}>
+  `<OuiHideFor sizes={['xs', 's']}>
   <!-- Content to hide from xs and s screens -->
-</EuiHideFor>`,
-  `<EuiShowFor sizes={['l', 'xl']}>
+</OuiHideFor>`,
+  `<OuiShowFor sizes={['l', 'xl']}>
   <!-- <div>Content only showing for l and xl screens</div> -->
-</EuiShowFor>`,
+</OuiShowFor>`,
 ];
 
 function renderSizes(size, index) {
@@ -42,7 +42,7 @@ export const ResponsiveExample = {
   title: 'Responsive',
   sections: [
     {
-      title: 'EuiShowFor and EuiHideFor',
+      title: 'OuiShowFor and OuiHideFor',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -58,26 +58,26 @@ export const ResponsiveExample = {
           <p>
             These components will either render or not render their children
             based on the current window width. Pass an array of named
-            breakpoints to the <EuiCode>sizes</EuiCode> prop to either show or
+            breakpoints to the <OuiCode>sizes</OuiCode> prop to either show or
             hide their children respectively.
           </p>
 
           <p>
             The sizing options correlate with the keys in the{' '}
-            <EuiCode language="ts">EuiBreakpoints</EuiCode> type. The named
+            <OuiCode language="ts">OuiBreakpoints</OuiCode> type. The named
             breakpoint starts at the pixel value provided and ends before the
             next one.
           </p>
 
-          <EuiCodeBlock language="scss" paddingSize="s">
+          <OuiCodeBlock language="scss" paddingSize="s">
             {BREAKPOINT_KEYS.map(function (size, index) {
               return renderSizes(size, index);
             })}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </div>
       ),
       snippet: responsiveSnippet,
-      props: { EuiShowFor, EuiHideFor, EuiBreakpointSize },
+      props: { OuiShowFor, OuiHideFor, OuiBreakpointSize },
       demo: <Responsive />,
     },
   ],

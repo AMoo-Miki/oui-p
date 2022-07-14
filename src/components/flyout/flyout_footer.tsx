@@ -21,16 +21,16 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiFlyoutFooterProps = FunctionComponent<
+export type OuiFlyoutFooterProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiFlyoutFooter: EuiFlyoutFooterProps = ({
+export const OuiFlyoutFooter: OuiFlyoutFooterProps = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiFlyoutFooter', className);
+  const classes = classNames('ouiFlyoutFooter', className);
 
   return (
     <div className={classes} {...rest}>

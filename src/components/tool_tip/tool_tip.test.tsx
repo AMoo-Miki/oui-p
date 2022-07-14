@@ -24,14 +24,14 @@ import {
   findTestSubject,
   takeMountedSnapshot,
 } from '../../test';
-import { EuiToolTip } from './tool_tip';
+import { OuiToolTip } from './tool_tip';
 
-describe('EuiToolTip', () => {
+describe('OuiToolTip', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button>Trigger</button>
-      </EuiToolTip>
+      </OuiToolTip>
     );
 
     expect(component).toMatchSnapshot();
@@ -40,9 +40,9 @@ describe('EuiToolTip', () => {
   test('shows tooltip on focus', () => {
     jest.useFakeTimers();
     const component = mount(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>
-      </EuiToolTip>
+      </OuiToolTip>
     );
 
     const trigger = findTestSubject(component, 'trigger');
@@ -53,14 +53,14 @@ describe('EuiToolTip', () => {
 
   test('display prop renders block', () => {
     const component = render(
-      <EuiToolTip
+      <OuiToolTip
         title="title"
         id="id"
         content="content"
         {...requiredProps}
         display="block">
         <button>Trigger</button>
-      </EuiToolTip>
+      </OuiToolTip>
     );
 
     expect(component).toMatchSnapshot();

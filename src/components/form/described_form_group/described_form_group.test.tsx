@@ -21,10 +21,10 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiFormRow } from '../form_row';
-import { EuiDescribedFormGroup } from './described_form_group';
+import { OuiFormRow } from '../form_row';
+import { OuiDescribedFormGroup } from './described_form_group';
 
-describe('EuiDescribedFormGroup', () => {
+describe('OuiDescribedFormGroup', () => {
   const props = {
     title: <h3>Title</h3>,
     description: 'Test description',
@@ -32,11 +32,11 @@ describe('EuiDescribedFormGroup', () => {
 
   test('is rendered', () => {
     const component = mount(
-      <EuiDescribedFormGroup {...requiredProps} {...props}>
-        <EuiFormRow>
+      <OuiDescribedFormGroup {...requiredProps} {...props}>
+        <OuiFormRow>
           <input />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
+        </OuiFormRow>
+      </OuiDescribedFormGroup>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,11 +51,11 @@ describe('EuiDescribedFormGroup', () => {
     };
 
     const tree = mount(
-      <EuiDescribedFormGroup {...requiredProps} {...props}>
-        <EuiFormRow {...formRowProps}>
+      <OuiDescribedFormGroup {...requiredProps} {...props}>
+        <OuiFormRow {...formRowProps}>
           <input />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
+        </OuiFormRow>
+      </OuiDescribedFormGroup>
     );
 
     expect(tree).toMatchSnapshot();
@@ -68,14 +68,14 @@ describe('EuiDescribedFormGroup', () => {
       };
 
       const component = mount(
-        <EuiDescribedFormGroup
+        <OuiDescribedFormGroup
           {...requiredProps}
           {...props}
           {...describedFormGroupProps}>
-          <EuiFormRow fullWidth>
+          <OuiFormRow fullWidth>
             <input />
-          </EuiFormRow>
-        </EuiDescribedFormGroup>
+          </OuiFormRow>
+        </OuiDescribedFormGroup>
       );
 
       expect(component).toMatchSnapshot();
@@ -83,11 +83,11 @@ describe('EuiDescribedFormGroup', () => {
 
     test('gutterSize is rendered', () => {
       const component = mount(
-        <EuiDescribedFormGroup gutterSize="s" {...requiredProps} {...props}>
-          <EuiFormRow>
+        <OuiDescribedFormGroup gutterSize="s" {...requiredProps} {...props}>
+          <OuiFormRow>
             <input />
-          </EuiFormRow>
-        </EuiDescribedFormGroup>
+          </OuiFormRow>
+        </OuiDescribedFormGroup>
       );
 
       expect(component).toMatchSnapshot();
@@ -95,11 +95,11 @@ describe('EuiDescribedFormGroup', () => {
 
     test('titleSize is rendered', () => {
       const component = mount(
-        <EuiDescribedFormGroup titleSize="l" {...requiredProps} {...props}>
-          <EuiFormRow>
+        <OuiDescribedFormGroup titleSize="l" {...requiredProps} {...props}>
+          <OuiFormRow>
             <input />
-          </EuiFormRow>
-        </EuiDescribedFormGroup>
+          </OuiFormRow>
+        </OuiDescribedFormGroup>
       );
 
       expect(component).toMatchSnapshot();
@@ -107,11 +107,11 @@ describe('EuiDescribedFormGroup', () => {
 
     test("description is not rendered when it's not provided", () => {
       const component = mount(
-        <EuiDescribedFormGroup {...requiredProps} title={<h3>Title</h3>}>
-          <EuiFormRow>
+        <OuiDescribedFormGroup {...requiredProps} title={<h3>Title</h3>}>
+          <OuiFormRow>
             <input />
-          </EuiFormRow>
-        </EuiDescribedFormGroup>
+          </OuiFormRow>
+        </OuiDescribedFormGroup>
       );
 
       expect(component).toMatchSnapshot();
@@ -119,15 +119,15 @@ describe('EuiDescribedFormGroup', () => {
 
     test('props for the flex item containers are passed down', () => {
       const component = mount(
-        <EuiDescribedFormGroup
+        <OuiDescribedFormGroup
           {...requiredProps}
           {...props}
           descriptionFlexItemProps={{ grow: 2 }}
           fieldFlexItemProps={{ component: 'section' }}>
-          <EuiFormRow>
+          <OuiFormRow>
             <input />
-          </EuiFormRow>
-        </EuiDescribedFormGroup>
+          </OuiFormRow>
+        </OuiDescribedFormGroup>
       );
 
       expect(component).toMatchSnapshot();

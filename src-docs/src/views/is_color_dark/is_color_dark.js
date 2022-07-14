@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { EuiFlexGrid, EuiFlexItem } from '../../../../src/components';
+import { OuiFlexGrid, OuiFlexItem } from '../../../../src/components';
 
 import { isColorDark } from '../../../../src/services';
 
@@ -37,9 +37,9 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexGrid>
+      <OuiFlexGrid>
         {DARK_COLORS.map((color) => (
-          <EuiFlexItem
+          <OuiFlexItem
             style={{ backgroundColor: rgb(...color), ...SWATCH_STYLE }}
             key={color.join('')}>
             {isColorDark(...color) ? (
@@ -47,13 +47,13 @@ export default () => {
             ) : (
               <div style={{ color: 'black' }}>Light</div>
             )}
-          </EuiFlexItem>
+          </OuiFlexItem>
         ))}
-      </EuiFlexGrid>
+      </OuiFlexGrid>
 
-      <EuiFlexGrid>
+      <OuiFlexGrid>
         {LIGHT_COLORS.map((color) => (
-          <EuiFlexItem
+          <OuiFlexItem
             style={{ backgroundColor: rgb(...color), ...SWATCH_STYLE }}
             key={color.join('')}>
             {isColorDark(...color) ? (
@@ -61,9 +61,9 @@ export default () => {
             ) : (
               <div style={{ color: 'black' }}>Light</div>
             )}
-          </EuiFlexItem>
+          </OuiFlexItem>
         ))}
-      </EuiFlexGrid>
+      </OuiFlexGrid>
     </Fragment>
   );
 };

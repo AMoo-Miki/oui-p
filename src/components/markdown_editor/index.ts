@@ -17,20 +17,20 @@
  * under the License.
  */
 
-export { EuiMarkdownEditor, EuiMarkdownEditorProps } from './markdown_editor';
+export { OuiMarkdownEditor, OuiMarkdownEditorProps } from './markdown_editor';
 export {
-  getDefaultEuiMarkdownParsingPlugins,
-  getDefaultEuiMarkdownProcessingPlugins,
-  getDefaultEuiMarkdownUiPlugins,
+  getDefaultOuiMarkdownParsingPlugins,
+  getDefaultOuiMarkdownProcessingPlugins,
+  getDefaultOuiMarkdownUiPlugins,
 } from './plugins/markdown_default_plugins';
-export { EuiMarkdownContext } from './markdown_context';
-export { EuiMarkdownFormat, EuiMarkdownFormatProps } from './markdown_format';
+export { OuiMarkdownContext } from './markdown_context';
+export { OuiMarkdownFormat, OuiMarkdownFormatProps } from './markdown_format';
 export {
-  EuiMarkdownParseError,
-  EuiMarkdownAstNode,
-  EuiMarkdownAstNodePosition,
-  EuiMarkdownFormatting,
-  EuiMarkdownEditorUiPlugin,
+  OuiMarkdownParseError,
+  OuiMarkdownAstNode,
+  OuiMarkdownAstNodePosition,
+  OuiMarkdownFormatting,
+  OuiMarkdownEditorUiPlugin,
   RemarkRehypeHandler,
   RemarkTokenizer,
 } from './markdown_types';

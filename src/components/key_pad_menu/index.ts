@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiKeyPadMenu, EuiKeyPadMenuProps } from './key_pad_menu';
+export { OuiKeyPadMenu, OuiKeyPadMenuProps } from './key_pad_menu';
 
-export { EuiKeyPadMenuItem, EuiKeyPadMenuItemProps } from './key_pad_menu_item';
+export { OuiKeyPadMenuItem, OuiKeyPadMenuItemProps } from './key_pad_menu_item';

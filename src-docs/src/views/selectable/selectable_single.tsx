@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSelectable } from '../../../../src/components/selectable';
+import { OuiSelectable } from '../../../../src/components/selectable';
 import { Options } from './data';
 
 export default () => {
@@ -12,13 +12,13 @@ export default () => {
   );
 
   return (
-    <EuiSelectable
+    <OuiSelectable
       aria-label="Single selection example"
       options={options}
       onChange={(newOptions) => setOptions(newOptions)}
       singleSelection={true}
       listProps={{ bordered: true }}>
       {(list) => list}
-    </EuiSelectable>
+    </OuiSelectable>
   );
 };

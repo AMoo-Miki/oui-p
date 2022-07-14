@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  EuiBadge,
-  EuiHighlight,
-  EuiSpacer,
-  EuiTextColor,
-  EuiSwitch,
+  OuiBadge,
+  OuiHighlight,
+  OuiSpacer,
+  OuiTextColor,
+  OuiSwitch,
 } from '../../../../src/components';
-import { EuiSelectable } from '../../../../src/components/selectable';
+import { OuiSelectable } from '../../../../src/components/selectable';
 import { createDataStore } from '../tables/data_store';
 
 export default () => {
@@ -18,7 +18,7 @@ export default () => {
       label: `${country.name}`,
       searchableLabel: `${country.name} ${'I am secondary content, I am!'}`,
       prepend: country.flag,
-      append: <EuiBadge>{country.code}</EuiBadge>,
+      append: <OuiBadge>{country.code}</OuiBadge>,
       showIcons: false,
     };
   });
@@ -41,15 +41,15 @@ export default () => {
   const renderCountryOption = (option, searchValue) => {
     return (
       <>
-        <EuiHighlight search={searchValue}>{option.label}</EuiHighlight>
+        <OuiHighlight search={searchValue}>{option.label}</OuiHighlight>
         <br />
-        <EuiTextColor color="subdued">
+        <OuiTextColor color="subdued">
           <small>
-            <EuiHighlight search={searchValue}>
+            <OuiHighlight search={searchValue}>
               I am secondary content, I am!
-            </EuiHighlight>
+            </OuiHighlight>
           </small>
-        </EuiTextColor>
+        </OuiTextColor>
       </>
     );
   };
@@ -68,15 +68,15 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <OuiSwitch
         label="Custom content"
         checked={useCustomContent}
         onChange={onCustom}
       />
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiSelectable
+      <OuiSelectable
         aria-label="Selectable example with custom list items"
         searchable
         options={options}
@@ -88,7 +88,7 @@ export default () => {
             {list}
           </>
         )}
-      </EuiSelectable>
+      </OuiSelectable>
     </>
   );
 };

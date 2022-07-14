@@ -17,16 +17,16 @@
  * under the License.
  */
 
-export { EuiPageContent, EuiPageContentProps } from './page_content';
+export { OuiPageContent, OuiPageContentProps } from './page_content';
 export {
-  EuiPageContentBody,
-  EuiPageContentBodyProps,
+  OuiPageContentBody,
+  OuiPageContentBodyProps,
 } from './page_content_body';
 export {
-  EuiPageContentHeader,
-  EuiPageContentHeaderProps,
+  OuiPageContentHeader,
+  OuiPageContentHeaderProps,
 } from './page_content_header';
 export {
-  EuiPageContentHeaderSection,
-  EuiPageContentHeaderSectionProps,
+  OuiPageContentHeaderSection,
+  OuiPageContentHeaderSectionProps,
 } from './page_content_header_section';

@@ -1,13 +1,13 @@
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiCodeBlock,
-  EuiCopy,
-  EuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiIcon,
+  OuiPanel,
+  OuiCodeBlock,
+  OuiCopy,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const iconTypes = [
@@ -23,34 +23,34 @@ const iconTypes = [
 
 export default () => (
   <>
-    <EuiCodeBlock language="html" isCopyable paddingSize="m">
-      {'<EuiIcon type="dataVisualizer" size="xl" />'}
-    </EuiCodeBlock>
-    <EuiSpacer />
-    <EuiFlexGrid direction="column" columns={3}>
+    <OuiCodeBlock language="html" isCopyable paddingSize="m">
+      {'<OuiIcon type="dataVisualizer" size="xl" />'}
+    </OuiCodeBlock>
+    <OuiSpacer />
+    <OuiFlexGrid direction="column" columns={3}>
       {iconTypes.map((iconType) => (
-        <EuiFlexItem key={iconType}>
-          <EuiCopy
+        <OuiFlexItem key={iconType}>
+          <OuiCopy
             display="block"
             textToCopy={iconType}
             afterMessage={`${iconType} copied`}>
             {(copy) => (
-              <EuiPanel
+              <OuiPanel
                 hasShadow={false}
                 hasBorder={false}
                 onClick={copy}
                 paddingSize="s">
-                <EuiIcon
-                  className="eui-alignMiddle"
+                <OuiIcon
+                  className="oui-alignMiddle"
                   type={iconType}
                   size="xl"
                 />{' '}
                 &emsp; <small>{iconType}</small>
-              </EuiPanel>
+              </OuiPanel>
             )}
-          </EuiCopy>
-        </EuiFlexItem>
+          </OuiCopy>
+        </OuiFlexItem>
       ))}
-    </EuiFlexGrid>
+    </OuiFlexGrid>
   </>
 );

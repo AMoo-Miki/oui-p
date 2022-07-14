@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiMarkdownFormat } from '../../../../src';
+import { OuiMarkdownFormat } from '../../../../src';
 
 const markdownContent = `# h1 Heading
 ## h2 Heading
@@ -146,5 +146,5 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 `;
 
 export default () => {
-  return <EuiMarkdownFormat>{markdownContent}</EuiMarkdownFormat>;
+  return <OuiMarkdownFormat>{markdownContent}</OuiMarkdownFormat>;
 };

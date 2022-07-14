@@ -1,6 +1,6 @@
-.euiTextArea {
-  @include euiFormControlStyle;
-  line-height: $euiLineHeight; // give more spacing between multiple lines
+.ouiTextArea {
+  @include ouiFormControlStyle;
+  line-height: $ouiLineHeight; // give more spacing between multiple lines
 
   // Textareas have their own sizing
   &,
@@ -19,7 +19,7 @@ $textareaResizing: (
 
 // Create button modifiers based upon the map.
 @each $direction, $modifier in $textareaResizing {
-  .euiTextArea--#{$modifier} {
+  .ouiTextArea--#{$modifier} {
     resize: #{$direction};
   }
 }

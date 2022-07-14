@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoGolang = ({ title, titleId, ...props }) => (
+const OuiIconLogoGolang = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -139,4 +139,4 @@ const EuiIconLogoGolang = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoGolang;
+export const icon = OuiIconLogoGolang;

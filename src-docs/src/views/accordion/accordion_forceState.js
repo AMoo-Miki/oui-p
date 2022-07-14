@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import {
-  EuiAccordion,
-  EuiPanel,
-  EuiButtonGroup,
-  EuiSpacer,
+  OuiAccordion,
+  OuiPanel,
+  OuiButtonGroup,
+  OuiSpacer,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -37,23 +37,23 @@ export default () => {
 
   return (
     <div>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="This is a basic group"
         options={toggleButtons}
         idSelected={toggleIdSelected}
         onChange={onChange}
       />
-      <EuiSpacer />
-      <EuiAccordion
+      <OuiSpacer />
+      <OuiAccordion
         id={htmlIdGenerator()()}
         forceState={trigger}
         onToggle={onToggle}
         buttonContent="I am a controlled accordion"
         padding="l">
-        <EuiPanel color="subdued">
-          Any content inside of <strong>EuiAccordion</strong> will appear here.
-        </EuiPanel>
-      </EuiAccordion>
+        <OuiPanel color="subdued">
+          Any content inside of <strong>OuiAccordion</strong> will appear here.
+        </OuiPanel>
+      </OuiAccordion>
     </div>
   );
 };

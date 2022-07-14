@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSpacer } from './spacer';
+import { OuiSpacer } from './spacer';
 
-describe('EuiSpacer', () => {
+describe('OuiSpacer', () => {
   test('is rendered', () => {
-    const component = render(<EuiSpacer {...requiredProps} />);
+    const component = render(<OuiSpacer {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

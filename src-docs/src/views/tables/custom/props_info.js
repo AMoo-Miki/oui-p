@@ -1,5 +1,5 @@
 export const cellPropsInfo = {
-  EuiTableRowCell: {
+  OuiTableRowCell: {
     __docgenInfo: {
       props: {
         sharedProps: {
@@ -57,7 +57,7 @@ export const cellPropsInfo = {
 
   sharedProps: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         align: {
           description: 'Horizontal alignment of the text in the cell',
@@ -73,7 +73,7 @@ export const cellPropsInfo = {
         textOnly: {
           description:
             'Setting `textOnly` to `false` will break words unnecessarily on FF and IE. ' +
-            'To combat this problem on FF, wrap contents with the css utility `.eui-textBreakWord`.',
+            'To combat this problem on FF, wrap contents with the css utility `.oui-textBreakWord`.',
           required: false,
           type: { name: 'bool' },
         },
@@ -88,7 +88,7 @@ export const cellPropsInfo = {
 
   mobileOptions: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         show: {
           description: 'If false, will not render the cell at all for mobile',
@@ -109,7 +109,7 @@ export const cellPropsInfo = {
         },
         header: {
           description:
-            "The column's header for use in mobile view (automatically passed down when using `EuiBasicTable`). " +
+            "The column's header for use in mobile view (automatically passed down when using `OuiBasicTable`). " +
             'Or pass `false` to not show a header at all.',
           required: false,
           type: { name: 'node | bool' },

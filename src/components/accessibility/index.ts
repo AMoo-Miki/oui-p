@@ -17,6 +17,6 @@
  * under the License.
  */
 
-export { EuiKeyboardAccessible } from './keyboard_accessible';
-export { EuiScreenReaderOnly } from './screen_reader';
-export { EuiSkipLink, EuiSkipLinkProps } from './skip_link';
+export { OuiKeyboardAccessible } from './keyboard_accessible';
+export { OuiScreenReaderOnly } from './screen_reader';
+export { OuiSkipLink, OuiSkipLinkProps } from './skip_link';

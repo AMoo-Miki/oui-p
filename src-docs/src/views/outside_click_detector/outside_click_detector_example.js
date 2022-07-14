@@ -5,9 +5,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiOutsideClickDetector,
+  OuiCallOut,
+  OuiCode,
+  OuiOutsideClickDetector,
 } from '../../../../src/components';
 
 import OutsideClickDetector from './outside_click_detector';
@@ -31,16 +31,16 @@ export const OutsideClickDetectorExample = {
       text: (
         <React.Fragment>
           <p>
-            Use <strong>EuiOutsideClickDetector</strong> to trigger a handler
+            Use <strong>OuiOutsideClickDetector</strong> to trigger a handler
             when the user clicks outside of the child element.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             title={
               <span>
-                <strong>EuiSelect</strong> normalizes browser event
-                inconsistencies with <EuiCode>{'<select />'}</EuiCode> elements
+                <strong>OuiSelect</strong> normalizes browser event
+                inconsistencies with <OuiCode>{'<select />'}</OuiCode> elements
                 and as a result may not trigger{' '}
-                <strong>EuiOutsideClickDetector</strong> when targeted with
+                <strong>OuiOutsideClickDetector</strong> when targeted with
                 mouse events.
               </span>
             }
@@ -48,7 +48,7 @@ export const OutsideClickDetectorExample = {
           />
         </React.Fragment>
       ),
-      props: { EuiOutsideClickDetector },
+      props: { OuiOutsideClickDetector },
       demo: <OutsideClickDetector />,
     },
   ],

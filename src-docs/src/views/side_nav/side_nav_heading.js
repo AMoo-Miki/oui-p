@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSideNav } from '../../../../src/components';
+import { OuiSideNav } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
 export default () => {
@@ -41,7 +41,7 @@ export default () => {
   ];
 
   return (
-    <EuiSideNav
+    <OuiSideNav
       heading="Nav heading"
       toggleOpenOnMobile={() => toggleOpenOnMobile()}
       isOpenOnMobile={isSideNavOpenOnMobile}

@@ -22,17 +22,17 @@ import { render, mount } from 'enzyme';
 import { requiredProps, findTestSubject } from '../../test';
 
 import {
-  EuiGlobalToastList,
+  OuiGlobalToastList,
   Toast,
   TOAST_FADE_OUT_MS,
 } from './global_toast_list';
 
 jest.useFakeTimers();
 
-describe('EuiGlobalToastList', () => {
+describe('OuiGlobalToastList', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiGlobalToastList
+      <OuiGlobalToastList
         {...requiredProps}
         dismissToast={() => {}}
         toastLifeTimeMs={5}
@@ -65,7 +65,7 @@ describe('EuiGlobalToastList', () => {
         ];
 
         const component = render(
-          <EuiGlobalToastList
+          <OuiGlobalToastList
             toasts={toasts}
             dismissToast={() => {}}
             toastLifeTimeMs={5}
@@ -98,7 +98,7 @@ describe('EuiGlobalToastList', () => {
         ];
 
         const component = render(
-          <EuiGlobalToastList
+          <OuiGlobalToastList
             toasts={toasts}
             dismissToast={() => {}}
             toastLifeTimeMs={5}
@@ -113,7 +113,7 @@ describe('EuiGlobalToastList', () => {
       test('is called when a toast is clicked', () => {
         const dismissToastSpy = jest.fn();
         const component = mount(
-          <EuiGlobalToastList
+          <OuiGlobalToastList
             toasts={[
               {
                 'data-test-subj': 'b',
@@ -139,7 +139,7 @@ describe('EuiGlobalToastList', () => {
         const TOAST_LIFE_TIME_MS = 5;
         const dismissToastSpy = jest.fn();
         mount(
-          <EuiGlobalToastList
+          <OuiGlobalToastList
             toasts={[
               {
                 'data-test-subj': 'b',
@@ -162,7 +162,7 @@ describe('EuiGlobalToastList', () => {
         const TOAST_LIFE_TIME_MS_OVERRIDE = 100;
         const dismissToastSpy = jest.fn();
         mount(
-          <EuiGlobalToastList
+          <OuiGlobalToastList
             toasts={[
               {
                 'data-test-subj': 'b',

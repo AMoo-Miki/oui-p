@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 
-import { EuiTextDiffProps } from '../../../../src/components/text_diff';
+import { OuiTextDiffProps } from '../../../../src/components/text_diff';
 
-export const useEuiTextDiffProp: FunctionComponent<EuiTextDiffProps> = () => {
+export const useOuiTextDiffProp: FunctionComponent<OuiTextDiffProps> = () => {
   return <div />;
 };

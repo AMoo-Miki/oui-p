@@ -1,36 +1,36 @@
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiEmptyPrompt,
-  EuiPageHeader,
-  EuiPageBody,
+  OuiPage,
+  OuiPageContent,
+  OuiEmptyPrompt,
+  OuiPageHeader,
+  OuiPageBody,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content }) => (
-  <EuiPage paddingSize="none">
-    <EuiPageBody>
-      <EuiPageHeader
+  <OuiPage paddingSize="none">
+    <OuiPageBody>
+      <OuiPageHeader
         restrictWidth
         iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[button]}
         paddingSize="l"
       />
-      <EuiPageContent
+      <OuiPageContent
         borderRadius="none"
         hasShadow={false}
         style={{ display: 'flex' }}>
-        <EuiPageContent
+        <OuiPageContent
           verticalPosition="center"
           horizontalPosition="center"
           paddingSize="none"
           color="subdued"
           hasShadow={false}>
-          <EuiEmptyPrompt title={<span>No spice</span>} body={content} />
-        </EuiPageContent>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+          <OuiEmptyPrompt title={<span>No spice</span>} body={content} />
+        </OuiPageContent>
+      </OuiPageContent>
+    </OuiPageBody>
+  </OuiPage>
 );

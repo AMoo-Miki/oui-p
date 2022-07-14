@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EuiCodeEditor } from '../../../../src/components';
+import { OuiCodeEditor } from '../../../../src/components';
 import 'brace/mode/text';
 import 'brace/theme/github';
 
@@ -17,7 +17,7 @@ export default () => {
   };
 
   return (
-    <EuiCodeEditor
+    <OuiCodeEditor
       mode={new MyCustomAceMode()}
       aria-label="Custom mode code editor"
       theme="github"

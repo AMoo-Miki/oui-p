@@ -17,8 +17,8 @@
  * under the License.
  */
 
-export { EuiSuggestInput, EuiSuggestInputProps } from './suggest_input';
+export { OuiSuggestInput, OuiSuggestInputProps } from './suggest_input';
 
-export { EuiSuggestItem, EuiSuggestItemProps } from './suggest_item';
+export { OuiSuggestItem, OuiSuggestItemProps } from './suggest_item';
 
-export { EuiSuggest, EuiSuggestProps } from './suggest';
+export { OuiSuggest, OuiSuggestProps } from './suggest';

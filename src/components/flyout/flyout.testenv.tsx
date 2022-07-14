@@ -18,7 +18,7 @@
  */
 
 import React from 'react';
-export const EuiFlyout = ({
+export const OuiFlyout = ({
   as = 'div',
   role = 'dialog',
   children,
@@ -29,11 +29,11 @@ export const EuiFlyout = ({
 }: any) => {
   const Element = as;
   return (
-    <Element data-eui="EuiFlyout" data-test-subj={dataTestSubj} role={role}>
+    <Element data-oui="OuiFlyout" data-test-subj={dataTestSubj} role={role}>
       {!hideCloseButton && (
         <button
           type="button"
-          data-test-subj="euiFlyoutCloseButton"
+          data-test-subj="ouiFlyoutCloseButton"
           onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
             onClose();
             closeButtonProps?.onClick && closeButtonProps.onClick(e);

@@ -21,14 +21,14 @@
 import React, { useState, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-import { EuiFieldText, EuiFieldTextProps } from '../form';
-import { EuiToolTip } from '../tool_tip';
-import { EuiIcon } from '../icon';
-import { EuiInputPopover } from '../popover';
-import { EuiSuggestItemProps } from './suggest_item';
+import { OuiFieldText, OuiFieldTextProps } from '../form';
+import { OuiToolTip } from '../tool_tip';
+import { OuiIcon } from '../icon';
+import { OuiInputPopover } from '../popover';
+import { OuiSuggestItemProps } from './suggest_item';
 
-export type EuiSuggestInputProps = CommonProps &
-  EuiFieldTextProps & {
+export type OuiSuggestInputProps = CommonProps &
+  OuiFieldTextProps & {
     tooltipContent?: string;
 
     /**
@@ -44,7 +44,7 @@ export type EuiSuggestInputProps = CommonProps &
     /**
      * List of suggestions to display using 'suggestItem'.
      */
-    suggestions: JSX.Element[] | EuiSuggestItemProps[];
+    suggestions: JSX.Element[] | OuiSuggestItemProps[];
 
     sendValue?: Function;
   };
@@ -80,7 +80,7 @@ const statusMap: StatusMap = {
   loading: {},
 };
 
-export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = (
+export const OuiSuggestInput: FunctionComponent<OuiSuggestInputProps> = (
   props
 ) => {
   const [value, setValue] = useState<string>('');
@@ -113,21 +113,21 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = (
     icon = statusMap[status].icon || '';
     color = statusMap[status].color || '';
   }
-  const classes = classNames('euiSuggestInput', className);
+  const classes = classNames('ouiSuggestInput', className);
 
-  // EuiFieldText's append accepts an array of elements so start by creating an empty array
+  // OuiFieldText's append accepts an array of elements so start by creating an empty array
   const appendArray = [];
 
   const statusElement = (status === 'saved' || status === 'unsaved') && (
-    <EuiToolTip
+    <OuiToolTip
       position="left"
       content={tooltipContent || statusMap[status].tooltip}>
-      <EuiIcon
-        className="euiSuggestInput__statusIcon"
+      <OuiIcon
+        className="ouiSuggestInput__statusIcon"
         color={color}
         type={icon}
       />
-    </EuiToolTip>
+    </OuiToolTip>
   );
 
   // Push the status element to the array if it is not undefined
@@ -137,7 +137,7 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = (
   if (append) appendArray.push(append);
 
   const customInput = (
-    <EuiFieldText
+    <OuiFieldText
       value={value}
       fullWidth
       append={appendArray.length ? appendArray : undefined}
@@ -148,7 +148,7 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = (
   );
 
   return (
-    <EuiInputPopover
+    <OuiInputPopover
       className={classes}
       input={customInput}
       isOpen={suggestions.length > 0 && isPopoverOpen}
@@ -156,6 +156,6 @@ export const EuiSuggestInput: FunctionComponent<EuiSuggestInputProps> = (
       fullWidth
       closePopover={closePopover}>
       {suggestions}
-    </EuiInputPopover>
+    </OuiInputPopover>
   );
 };

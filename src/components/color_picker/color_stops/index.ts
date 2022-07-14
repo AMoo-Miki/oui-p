@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { EuiColorStops } from './color_stops';
+export { OuiColorStops } from './color_stops';
 export { ColorStop } from './color_stop_thumb';

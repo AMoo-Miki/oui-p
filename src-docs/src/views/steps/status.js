@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiSpacer, EuiSteps, EuiButton } from '../../../../src/components';
+import { OuiSpacer, OuiSteps, OuiButton } from '../../../../src/components';
 
 export default () => {
   const [status, setStatus] = useState('incomplete');
@@ -8,43 +8,43 @@ export default () => {
   let completeButton;
   if (status !== 'complete') {
     completeButton = (
-      <EuiButton onClick={() => setStatus('complete')}>
+      <OuiButton onClick={() => setStatus('complete')}>
         You complete me
-      </EuiButton>
+      </OuiButton>
     );
   } else {
     completeButton = (
-      <EuiButton onClick={() => setStatus('incomplete')}>Reset</EuiButton>
+      <OuiButton onClick={() => setStatus('incomplete')}>Reset</OuiButton>
     );
   }
 
   let warningButton;
   if (status !== 'warning') {
     warningButton = (
-      <EuiButton color="warning" onClick={() => setStatus('warning')}>
+      <OuiButton color="warning" onClick={() => setStatus('warning')}>
         Uh oh!
-      </EuiButton>
+      </OuiButton>
     );
   } else {
     warningButton = (
-      <EuiButton color="warning" onClick={() => setStatus('incomplete')}>
+      <OuiButton color="warning" onClick={() => setStatus('incomplete')}>
         Reset
-      </EuiButton>
+      </OuiButton>
     );
   }
 
   let dangerButton;
   if (status !== 'danger') {
     dangerButton = (
-      <EuiButton color="danger" onClick={() => setStatus('danger')}>
+      <OuiButton color="danger" onClick={() => setStatus('danger')}>
         Something terrible
-      </EuiButton>
+      </OuiButton>
     );
   } else {
     dangerButton = (
-      <EuiButton color="danger" onClick={() => setStatus('incomplete')}>
+      <OuiButton color="danger" onClick={() => setStatus('incomplete')}>
         Reset
-      </EuiButton>
+      </OuiButton>
     );
   }
 
@@ -58,7 +58,7 @@ export default () => {
       children: (
         <Fragment>
           <p>We are fancy buttons just waiting to be pushed!</p>
-          <EuiSpacer />
+          <OuiSpacer />
           {completeButton} {warningButton} {dangerButton}
         </Fragment>
       ),
@@ -68,7 +68,7 @@ export default () => {
 
   return (
     <div>
-      <EuiSteps steps={firstSetOfSteps} />
+      <OuiSteps steps={firstSetOfSteps} />
     </div>
   );
 };

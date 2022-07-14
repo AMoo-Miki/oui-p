@@ -21,16 +21,16 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiModalFooterProps = FunctionComponent<
+export type OuiModalFooterProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiModalFooter: EuiModalFooterProps = ({
+export const OuiModalFooter: OuiModalFooterProps = ({
   className,
   children,
   ...rest
 }) => {
-  const classes = classnames('euiModalFooter', className);
+  const classes = classnames('ouiModalFooter', className);
   return (
     <div className={classes} {...rest}>
       {children}

@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTourStepIndicator } from './tour_step_indicator';
+import { OuiTourStepIndicator } from './tour_step_indicator';
 
-describe('EuiTourStepIndicator', () => {
+describe('OuiTourStepIndicator', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTourStepIndicator number={1} status="active" {...requiredProps} />
+      <OuiTourStepIndicator number={1} status="active" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe('EuiTourStepIndicator', () => {
 
   test('can be complete', () => {
     const component = render(
-      <EuiTourStepIndicator number={1} status="complete" {...requiredProps} />
+      <OuiTourStepIndicator number={1} status="complete" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +42,7 @@ describe('EuiTourStepIndicator', () => {
 
   test('can be incomplete', () => {
     const component = render(
-      <EuiTourStepIndicator number={1} status="incomplete" {...requiredProps} />
+      <OuiTourStepIndicator number={1} status="incomplete" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

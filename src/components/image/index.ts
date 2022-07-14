@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiImage, EuiImageProps } from './image';
+export { OuiImage, OuiImageProps } from './image';

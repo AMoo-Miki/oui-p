@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { EuiImage, EuiText } from '../../../../src/components';
+import { OuiImage, OuiText } from '../../../../src/components';
 import { fake } from 'faker';
 
 export default () => (
-  <EuiText>
-    <EuiImage
+  <OuiText>
+    <OuiImage
       size="l"
       float="right"
       margin="l"
@@ -18,7 +18,7 @@ export default () => (
     <p>{fake('{{lorem.paragraphs}}')}</p>
     <p>{fake('{{lorem.paragraphs}}')}</p>
     <p>{fake('{{lorem.paragraphs}}')}</p>
-    <EuiImage
+    <OuiImage
       size="l"
       float="left"
       margin="l"
@@ -30,5 +30,5 @@ export default () => (
     />
     <p>{fake('{{lorem.paragraphs}}')}</p>
     <p>{fake('{{lorem.paragraphs}}')}</p>
-  </EuiText>
+  </OuiText>
 );

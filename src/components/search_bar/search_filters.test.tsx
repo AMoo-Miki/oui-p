@@ -20,10 +20,10 @@
 import React from 'react';
 import { requiredProps } from '../../test';
 import { shallow } from 'enzyme';
-import { EuiSearchFilters, SearchFilterConfig } from './search_filters';
+import { OuiSearchFilters, SearchFilterConfig } from './search_filters';
 import { Query } from './query';
 
-describe('EuiSearchFilters', () => {
+describe('OuiSearchFilters', () => {
   test('render - no filters', () => {
     const props = {
       ...requiredProps,
@@ -32,7 +32,7 @@ describe('EuiSearchFilters', () => {
       filters: [],
     };
 
-    const component = shallow(<EuiSearchFilters {...props} />);
+    const component = shallow(<OuiSearchFilters {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -59,7 +59,7 @@ describe('EuiSearchFilters', () => {
       filters,
     };
 
-    const component = shallow(<EuiSearchFilters {...props} />);
+    const component = shallow(<OuiSearchFilters {...props} />);
 
     expect(component).toMatchSnapshot();
   });

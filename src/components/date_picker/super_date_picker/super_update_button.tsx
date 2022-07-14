@@ -20,13 +20,13 @@
 import React, { Component, MouseEventHandler, Ref } from 'react';
 import classNames from 'classnames';
 
-import { EuiButton, EuiButtonProps } from '../../button';
-import { EuiI18n } from '../../i18n';
-import { EuiToolTip, EuiToolTipProps } from '../../tool_tip';
+import { OuiButton, OuiButtonProps } from '../../button';
+import { OuiI18n } from '../../i18n';
+import { OuiToolTip, OuiToolTipProps } from '../../tool_tip';
 import { CommonProps } from '../../common';
 
-export type EuiSuperUpdateButtonProps = CommonProps &
-  Partial<Omit<EuiButtonProps, 'isDisabled' | 'isLoading' | 'onClick'>> & {
+export type OuiSuperUpdateButtonProps = CommonProps &
+  Partial<Omit<OuiButtonProps, 'isDisabled' | 'isLoading' | 'onClick'>> & {
     className?: string;
     isDisabled: boolean;
     isLoading: boolean;
@@ -34,9 +34,9 @@ export type EuiSuperUpdateButtonProps = CommonProps &
     onClick: MouseEventHandler<HTMLButtonElement>;
 
     /**
-     * Passes props to `EuiToolTip`
+     * Passes props to `OuiToolTip`
      */
-    toolTipProps?: EuiToolTipProps;
+    toolTipProps?: OuiToolTipProps;
 
     /**
      * Show the "Click to apply" tooltip
@@ -44,7 +44,7 @@ export type EuiSuperUpdateButtonProps = CommonProps &
     showTooltip: boolean;
   };
 
-export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
+export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
   static defaultProps = {
     needsUpdate: false,
     isLoading: false,
@@ -54,7 +54,7 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
 
   _isMounted = false;
   tooltipTimeout: number | undefined;
-  tooltip: EuiToolTip | null = null;
+  tooltip: OuiToolTip | null = null;
 
   componentWillUnmount() {
     this._isMounted = false;
@@ -78,7 +78,7 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
     }
   }
 
-  setTootipRef: Ref<EuiToolTip> = (node) => {
+  setTootipRef: Ref<OuiToolTip> = (node) => {
     this.tooltip = node;
   };
 
@@ -110,23 +110,23 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiSuperUpdateButton', className);
+    const classes = classNames('ouiSuperUpdateButton', className);
 
     let buttonText = (
-      <EuiI18n
-        token="euiSuperUpdateButton.refreshButtonLabel"
+      <OuiI18n
+        token="ouiSuperUpdateButton.refreshButtonLabel"
         default="Refresh"
       />
     );
     if (needsUpdate || isLoading) {
       buttonText = isLoading ? (
-        <EuiI18n
-          token="euiSuperUpdateButton.updatingButtonLabel"
+        <OuiI18n
+          token="ouiSuperUpdateButton.updatingButtonLabel"
           default="Updating"
         />
       ) : (
-        <EuiI18n
-          token="euiSuperUpdateButton.updateButtonLabel"
+        <OuiI18n
+          token="ouiSuperUpdateButton.updateButtonLabel"
           default="Update"
         />
       );
@@ -135,27 +135,27 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
     let tooltipContent;
     if (isDisabled) {
       tooltipContent = (
-        <EuiI18n
-          token="euiSuperUpdateButton.cannotUpdateTooltip"
+        <OuiI18n
+          token="ouiSuperUpdateButton.cannotUpdateTooltip"
           default="Cannot update"
         />
       );
     } else if (needsUpdate && !isLoading) {
       tooltipContent = (
-        <EuiI18n
-          token="euiSuperUpdateButton.clickToApplyTooltip"
+        <OuiI18n
+          token="ouiSuperUpdateButton.clickToApplyTooltip"
           default="Click to apply"
         />
       );
     }
 
     return (
-      <EuiToolTip
+      <OuiToolTip
         ref={this.setTootipRef}
         content={tooltipContent}
         position="bottom"
         {...toolTipProps}>
-        <EuiButton
+        <OuiButton
           className={classes}
           color={needsUpdate || isLoading ? 'success' : 'primary'}
           fill
@@ -163,7 +163,7 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
           textProps={{
             ...restTextProps,
             className: classNames(
-              'euiSuperUpdateButton__text',
+              'ouiSuperUpdateButton__text',
               restTextProps?.className
             ),
           }}
@@ -172,8 +172,8 @@ export class EuiSuperUpdateButton extends Component<EuiSuperUpdateButtonProps> {
           isLoading={isLoading}
           {...rest}>
           {buttonText}
-        </EuiButton>
-      </EuiToolTip>
+        </OuiButton>
+      </OuiToolTip>
     );
   }
 }

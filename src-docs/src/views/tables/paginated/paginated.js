@@ -3,14 +3,14 @@ import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiCode,
-  EuiLink,
-  EuiHealth,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiSwitch,
+  OuiBasicTable,
+  OuiCode,
+  OuiLink,
+  OuiHealth,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
+  OuiSwitch,
 } from '../../../../../src/components';
 
 /*
@@ -52,7 +52,7 @@ export const Table = () => {
   const renderStatus = (online) => {
     const color = online ? 'success' : 'danger';
     const label = online ? 'Online' : 'Offline';
-    return <EuiHealth color={color}>{label}</EuiHealth>;
+    return <OuiHealth color={color}>{label}</OuiHealth>;
   };
 
   const togglePerPageOptions = () => setShowPerPageOptions(!showPerPageOptions);
@@ -87,21 +87,21 @@ export const Table = () => {
         fullWidth: true,
       },
       render: (name, item) => (
-        <EuiFlexGroup responsive={false} alignItems="center">
-          <EuiFlexItem>
+        <OuiFlexGroup responsive={false} alignItems="center">
+          <OuiFlexItem>
             {item.firstName} {item.lastName}
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>{renderStatus(item.online)}</EuiFlexItem>
-        </EuiFlexGroup>
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>{renderStatus(item.online)}</OuiFlexItem>
+        </OuiFlexGroup>
       ),
     },
     {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -136,18 +136,18 @@ export const Table = () => {
 
   return (
     <div>
-      <EuiSwitch
+      <OuiSwitch
         checked={!showPerPageOptions}
         label={
           <span>
             Hide per page options with{' '}
-            <EuiCode>pagination.hidePerPageOptions = true</EuiCode>
+            <OuiCode>pagination.hidePerPageOptions = true</OuiCode>
           </span>
         }
         onChange={togglePerPageOptions}
       />
-      <EuiSpacer size="xl" />
-      <EuiBasicTable
+      <OuiSpacer size="xl" />
+      <OuiBasicTable
         items={pageOfItems}
         columns={columns}
         pagination={pagination}

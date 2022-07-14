@@ -17,5 +17,5 @@
  * under the License.
  */
 
-export { EuiComboBoxInput, EuiComboBoxInputProps } from './combo_box_input';
-export { EuiComboBoxPill, EuiComboBoxPillProps } from './combo_box_pill';
+export { OuiComboBoxInput, OuiComboBoxInputProps } from './combo_box_input';
+export { OuiComboBoxPill, OuiComboBoxPillProps } from './combo_box_pill';

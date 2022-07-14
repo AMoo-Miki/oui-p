@@ -1,27 +1,27 @@
-.euiCommentTimeline__content {
-  min-width: $euiSizeXXL;
+.ouiCommentTimeline__content {
+  min-width: $ouiSizeXXL;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.euiCommentTimeline__icon--default {
+.ouiCommentTimeline__icon--default {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
   border-radius: 50%;
-  background-color: $euiColorLightestShade;
+  background-color: $ouiColorLightestShade;
 
-  &.euiCommentTimeline__icon--regular {
-    width: $euiSizeXXL;
-    height: $euiSizeXXL;
+  &.ouiCommentTimeline__icon--regular {
+    width: $ouiSizeXXL;
+    height: $ouiSizeXXL;
   }
 
-  &.euiCommentTimeline__icon--update {
-    width: $euiSizeL;
-    height: $euiSizeL;
+  &.ouiCommentTimeline__icon--update {
+    width: $ouiSizeL;
+    height: $ouiSizeL;
   }
 }

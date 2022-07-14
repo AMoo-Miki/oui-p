@@ -44,7 +44,7 @@ function isMutableRef(
   return ref != null && ref.hasOwnProperty('current');
 }
 
-export interface EuiValidatableControlProps {
+export interface OuiValidatableControlProps {
   isInvalid?: boolean;
   /**
    * ReactNode to render as this component's content
@@ -52,8 +52,8 @@ export interface EuiValidatableControlProps {
   children: ReactElementWithRef;
 }
 
-export const EuiValidatableControl: FunctionComponent<
-  CommonProps & EuiValidatableControlProps
+export const OuiValidatableControl: FunctionComponent<
+  CommonProps & OuiValidatableControlProps
 > = ({ isInvalid, children }) => {
   const control = useRef<HTMLConstraintValidityElement | null>(null);
 

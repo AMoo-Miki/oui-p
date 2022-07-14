@@ -5,7 +5,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiBreadcrumbs } from '../../../../src/components';
+import { OuiCode, OuiBreadcrumbs } from '../../../../src/components';
 import { BreadcrumbResponsiveMaxCount, BreadcrumbProps } from './props';
 
 import Breadcrumbs from './breadcrumbs';
@@ -25,9 +25,9 @@ const maxSource = require('!!raw-loader!./max');
 const maxHtml = renderToHtml(Max);
 
 const breadcrumpProps = {
-  EuiBreadcrumbs,
-  EuiBreadcrumb: BreadcrumbProps,
-  EuiBreadcrumbResponsiveMaxCount: BreadcrumbResponsiveMaxCount,
+  OuiBreadcrumbs,
+  OuiBreadcrumb: BreadcrumbProps,
+  OuiBreadcrumbResponsiveMaxCount: BreadcrumbResponsiveMaxCount,
 };
 
 export const BreadcrumbsExample = {
@@ -46,24 +46,24 @@ export const BreadcrumbsExample = {
       ],
       text: (
         <p>
-          <strong>EuiBreadcrumbs</strong> let the user track their progress
+          <strong>OuiBreadcrumbs</strong> let the user track their progress
           within and back out of a UX flow. You can provide an{' '}
-          <EuiCode>href</EuiCode> prop on any breadcrumb item that you wish to
+          <OuiCode>href</OuiCode> prop on any breadcrumb item that you wish to
           make clickable, including the last item, though we recommend the last
           item represent the current page and therefore the link is unnecessary.
           They work well within{' '}
           <Link to="/layout/page">
-            <strong>EuiPageContentHeader</strong>
+            <strong>OuiPageContentHeader</strong>
           </Link>{' '}
           but be careful not to use them within an app that also uses{' '}
           <Link to="/layout/header">
-            <strong>EuiHeaderBreadcrumbs</strong>
+            <strong>OuiHeaderBreadcrumbs</strong>
           </Link>
           .
         </p>
       ),
       props: breadcrumpProps,
-      snippet: `<EuiBreadcrumbs
+      snippet: `<OuiBreadcrumbs
   breadcrumbs={[
     {
       text: 'Breadcrumb 1',
@@ -94,7 +94,7 @@ export const BreadcrumbsExample = {
       text: (
         <>
           <p>
-            Use the <EuiCode>max</EuiCode> prop to collapse breadcrumbs beyond a
+            Use the <OuiCode>max</OuiCode> prop to collapse breadcrumbs beyond a
             certain number. The center breadcrumbs will collpase into a single
             item allowing the user to navigate these items from within a
             popover.
@@ -102,7 +102,7 @@ export const BreadcrumbsExample = {
         </>
       ),
       props: breadcrumpProps,
-      snippet: `<EuiBreadcrumbs
+      snippet: `<OuiBreadcrumbs
   max={4}
   breadcrumbs={breadcrumbs}
   aria-label=""
@@ -124,24 +124,24 @@ export const BreadcrumbsExample = {
       text: (
         <>
           <p>
-            <strong>EuiBreadcrumbs</strong> will truncate the full set by
+            <strong>OuiBreadcrumbs</strong> will truncate the full set by
             default, forcing it to a single line and setting a max width on all
             items except for the last. You can turn this off by setting{' '}
-            <EuiCode language="ts">{'truncate={false}'}</EuiCode>. You can also
+            <OuiCode language="ts">{'truncate={false}'}</OuiCode>. You can also
             force truncation on single breadcrumb <strong>item</strong> by
-            adding <EuiCode>{'truncate: true'}</EuiCode>.
+            adding <OuiCode>{'truncate: true'}</OuiCode>.
           </p>
         </>
       ),
       props: breadcrumpProps,
       demo: <Truncate />,
       snippet: [
-        `<EuiBreadcrumbs
+        `<OuiBreadcrumbs
   truncate={true}
   breadcrumbs={breadcrumbs}
   aria-label=""
 />`,
-        `<EuiBreadcrumbs
+        `<OuiBreadcrumbs
   truncate={false}
   breadcrumbs={[
     {
@@ -168,9 +168,9 @@ export const BreadcrumbsExample = {
       text: (
         <>
           <p>
-            <strong>EuiBreadcrumbs</strong> are <EuiCode>responsive</EuiCode> by
+            <strong>OuiBreadcrumbs</strong> are <OuiCode>responsive</OuiCode> by
             default and will collapse breadcrumbs on narrower screens. Setting{' '}
-            <EuiCode language="ts">{'responsive={false}'}</EuiCode> will keep
+            <OuiCode language="ts">{'responsive={false}'}</OuiCode> will keep
             all breadcrumbs visible at all screens sizes.
           </p>
           <p>
@@ -181,13 +181,13 @@ export const BreadcrumbsExample = {
       ),
       props: breadcrumpProps,
       snippet: [
-        `<EuiBreadcrumbs
+        `<OuiBreadcrumbs
   responsive={false}
   max={null}
   breadcrumbs={breadcrumbs}
   aria-label=""
 />`,
-        `<EuiBreadcrumbs
+        `<OuiBreadcrumbs
   responsive={{
     xs: 2,
     s: 5,

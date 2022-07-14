@@ -1,32 +1,32 @@
 import React from 'react';
 
 import {
-  EuiIcon,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
+  OuiIcon,
+  OuiKeyPadMenu,
+  OuiKeyPadMenuItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiKeyPadMenu>
-    <EuiKeyPadMenuItem label="Dashboard" href="#">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+  <OuiKeyPadMenu>
+    <OuiKeyPadMenuItem label="Dashboard" href="#">
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem
+    <OuiKeyPadMenuItem
       label="Dashboard"
       href="#"
       betaBadgeLabel="Beta"
       betaBadgeTooltipContent="This module is not GA. Please help us by reporting any bugs.">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
 
-    <EuiKeyPadMenuItem
+    <OuiKeyPadMenuItem
       label="Dashboard"
       href="#"
       betaBadgeLabel="External"
       betaBadgeTooltipContent="This module is an external app."
       betaBadgeIconType="popout">
-      <EuiIcon type="dashboardApp" size="l" />
-    </EuiKeyPadMenuItem>
-  </EuiKeyPadMenu>
+      <OuiIcon type="dashboardApp" size="l" />
+    </OuiKeyPadMenuItem>
+  </OuiKeyPadMenu>
 );

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiAvatar } from '../../../../src/components/';
+import { OuiDataGrid, OuiAvatar } from '../../../../src/components/';
 
 const columns = [
   {
@@ -55,7 +55,7 @@ const data = [];
 for (let i = 1; i < 5; i++) {
   data.push({
     avatar: (
-      <EuiAvatar
+      <OuiAvatar
         size="s"
         name={fake('{{name.lastName}}, {{name.firstName}}')}
       />
@@ -85,7 +85,7 @@ export default () => {
   );
 
   return (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="DataGrid demonstrating column sizing constraints"
       columns={columns}
       columnVisibility={{

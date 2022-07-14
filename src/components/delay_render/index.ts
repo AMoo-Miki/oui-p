@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiDelayRender, EuiDelayRenderProps } from './delay_render';
+export { OuiDelayRender, OuiDelayRenderProps } from './delay_render';

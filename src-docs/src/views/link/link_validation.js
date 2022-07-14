@@ -1,5 +1,5 @@
 import React from 'react';
-import { EuiLink } from '../../../../src/components';
+import { OuiLink } from '../../../../src/components';
 
 const urls = [
   'https://elastic.co',
@@ -15,9 +15,9 @@ export const LinkValidation = () => {
     <>
       {urls.map((url) => (
         <div key={url}>
-          <EuiLink color="success" href={url}>
+          <OuiLink color="success" href={url}>
             {url}
-          </EuiLink>
+          </OuiLink>
         </div>
       ))}
     </>

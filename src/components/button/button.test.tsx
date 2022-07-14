@@ -21,12 +21,12 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiButton, COLORS, SIZES } from './button';
+import { OuiButton, COLORS, SIZES } from './button';
 import { ICON_SIDES } from './button_content';
 
-describe('EuiButton', () => {
+describe('OuiButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiButton {...requiredProps}>Content</EuiButton>);
+    const component = render(<OuiButton {...requiredProps}>Content</OuiButton>);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiButton', () => {
   describe('props', () => {
     describe('fill', () => {
       it('is rendered', () => {
-        const component = render(<EuiButton fill />);
+        const component = render(<OuiButton fill />);
 
         expect(component).toMatchSnapshot();
       });
@@ -42,19 +42,19 @@ describe('EuiButton', () => {
 
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(<EuiButton isDisabled />);
+        const component = render(<OuiButton isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
 
       it('renders a button even when href is defined', () => {
-        const component = render(<EuiButton href="#" isDisabled />);
+        const component = render(<OuiButton href="#" isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
 
       it('renders if passed as disabled', () => {
-        const component = render(<EuiButton disabled />);
+        const component = render(<OuiButton disabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -62,7 +62,7 @@ describe('EuiButton', () => {
 
     describe('isLoading', () => {
       it('is rendered', () => {
-        const component = render(<EuiButton isLoading />);
+        const component = render(<OuiButton isLoading />);
 
         expect(component).toMatchSnapshot();
       });
@@ -70,13 +70,13 @@ describe('EuiButton', () => {
 
     describe('isSelected', () => {
       it('is rendered as true', () => {
-        const component = render(<EuiButton isSelected />);
+        const component = render(<OuiButton isSelected />);
 
         expect(component).toMatchSnapshot();
       });
 
       it('is rendered as false', () => {
-        const component = render(<EuiButton isSelected={false} />);
+        const component = render(<OuiButton isSelected={false} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -84,7 +84,7 @@ describe('EuiButton', () => {
 
     describe('fullWidth', () => {
       it('is rendered', () => {
-        const component = render(<EuiButton fullWidth />);
+        const component = render(<OuiButton fullWidth />);
 
         expect(component).toMatchSnapshot();
       });
@@ -92,7 +92,7 @@ describe('EuiButton', () => {
 
     describe('minWidth', () => {
       it('is rendered', () => {
-        const component = render(<EuiButton minWidth={0} />);
+        const component = render(<OuiButton minWidth={0} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -100,7 +100,7 @@ describe('EuiButton', () => {
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<EuiButton iconType="user" />);
+        const component = render(<OuiButton iconType="user" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -109,7 +109,7 @@ describe('EuiButton', () => {
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiButton color={color} />);
+          const component = render(<OuiButton color={color} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -119,7 +119,7 @@ describe('EuiButton', () => {
     describe('size', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiButton size={size} />);
+          const component = render(<OuiButton size={size} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -130,9 +130,9 @@ describe('EuiButton', () => {
       ICON_SIDES.forEach((iconSide) => {
         test(`${iconSide} is rendered`, () => {
           const component = render(
-            <EuiButton iconType="user" iconSide={iconSide}>
+            <OuiButton iconType="user" iconSide={iconSide}>
               Content
-            </EuiButton>
+            </OuiButton>
           );
 
           expect(component).toMatchSnapshot();
@@ -142,7 +142,7 @@ describe('EuiButton', () => {
 
     describe('href', () => {
       it('secures the rel attribute when the target is _blank', () => {
-        const component = render(<EuiButton href="#" target="_blank" />);
+        const component = render(<OuiButton href="#" target="_blank" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -151,14 +151,14 @@ describe('EuiButton', () => {
     describe('onClick', () => {
       it('supports onClick and href', () => {
         const handler = jest.fn();
-        const component = mount(<EuiButton href="#" onClick={handler} />);
+        const component = mount(<OuiButton href="#" onClick={handler} />);
         component.find('a').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
       });
 
       it('supports onClick as a button', () => {
         const handler = jest.fn();
-        const component = mount(<EuiButton onClick={handler} />);
+        const component = mount(<OuiButton onClick={handler} />);
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
       });
@@ -166,7 +166,7 @@ describe('EuiButton', () => {
 
     test('contentProps is rendered', () => {
       const component = render(
-        <EuiButton contentProps={requiredProps}>Content</EuiButton>
+        <OuiButton contentProps={requiredProps}>Content</OuiButton>
       );
 
       expect(component).toMatchSnapshot();
@@ -174,7 +174,7 @@ describe('EuiButton', () => {
 
     test('textProps is rendered', () => {
       const component = render(
-        <EuiButton textProps={requiredProps}>Content</EuiButton>
+        <OuiButton textProps={requiredProps}>Content</OuiButton>
       );
 
       expect(component).toMatchSnapshot();

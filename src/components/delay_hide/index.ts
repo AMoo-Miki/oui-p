@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiDelayHide, EuiDelayHideProps } from './delay_hide';
+export { OuiDelayHide, OuiDelayHideProps } from './delay_hide';

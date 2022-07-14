@@ -1,15 +1,15 @@
-.euiNotificationEventMeta {
+.ouiNotificationEventMeta {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-right: $euiSizeXS;
-  min-height: $euiSizeL; // ensures the same size of the read button to properly center align
+  margin-right: $ouiSizeXS;
+  min-height: $ouiSizeL; // ensures the same size of the read button to properly center align
 
   &--hasContextMenu {
-    padding-right: $euiSizeL;
+    padding-right: $ouiSizeL;
   }
 
   &__contextMenuWrapper {
@@ -19,7 +19,7 @@
   }
 
   &__section {
-    margin-right: $euiSizeS;
+    margin-right: $ouiSizeS;
 
     &:first-child {
       display: flex;
@@ -29,7 +29,7 @@
   }
 
   &__icon {
-    margin-right: $euiSizeS;
+    margin-right: $ouiSizeS;
   }
 
   &__badge {
@@ -38,7 +38,7 @@
   }
 
   &__time {
-    font-size: $euiFontSizeXS;
-    color: $euiTextSubduedColor;
+    font-size: $ouiFontSizeXS;
+    color: $ouiTextSubduedColor;
   }
 }

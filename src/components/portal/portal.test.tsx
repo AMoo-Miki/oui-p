@@ -19,13 +19,13 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { EuiPortal } from './portal';
+import { OuiPortal } from './portal';
 
-describe('EuiPortal', () => {
+describe('OuiPortal', () => {
   test('is rendered', () => {
     const component = mount(
       <div>
-        <EuiPortal>Content</EuiPortal>
+        <OuiPortal>Content</OuiPortal>
       </div>
     );
 

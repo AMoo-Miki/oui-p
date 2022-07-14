@@ -43,8 +43,8 @@ SOFTWARE.
  */
 
 import {
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownFormatting,
+  OuiMarkdownEditorUiPlugin,
+  OuiMarkdownFormatting,
   isPluginWithImmediateFormatting,
 } from './markdown_types';
 
@@ -56,9 +56,9 @@ import {
  * @param {string} editorID
  */
 class MarkdownActions {
-  styles: Record<string, EuiMarkdownEditorUiPlugin>;
+  styles: Record<string, OuiMarkdownEditorUiPlugin>;
 
-  constructor(public editorID: string, uiPlugins: EuiMarkdownEditorUiPlugin[]) {
+  constructor(public editorID: string, uiPlugins: OuiMarkdownEditorUiPlugin[]) {
     /**
      * This object is in the format:
      * [nameOfAction]: {[styles to apply]}
@@ -173,7 +173,7 @@ class MarkdownActions {
    * @param {object} incomingStyle
    * @memberof MarkdownActions
    */
-  applyStyle(incomingStyle: EuiMarkdownFormatting) {
+  applyStyle(incomingStyle: OuiMarkdownFormatting) {
     const defaults = {
       prefix: '',
       suffix: '',

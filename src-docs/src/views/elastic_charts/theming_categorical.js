@@ -4,35 +4,35 @@ import { Chart, Settings, Axis, DataGenerator } from '@elastic/charts';
 import { ThemeContext } from '../../components';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiSpacer,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiRange,
-  EuiCopy,
-  EuiSwitch,
-  EuiButton,
-  EuiRadioGroup,
-  EuiIcon,
-  EuiTitle,
+  OuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiFormRow,
+  OuiRange,
+  OuiCopy,
+  OuiSwitch,
+  OuiButton,
+  OuiRadioGroup,
+  OuiIcon,
+  OuiTitle,
 } from '../../../../src/components';
 
 import { CHART_COMPONENTS, ChartCard } from './shared';
 import {
-  euiPaletteColorBlind,
-  euiPalettePositive,
-  euiPaletteForStatus,
-  euiPaletteGray,
+  ouiPaletteColorBlind,
+  ouiPalettePositive,
+  ouiPaletteForStatus,
+  ouiPaletteGray,
 } from '../../../../src/services';
 
 export const Categorical = () => {
   const themeContext = useContext(ThemeContext);
-  const highlightColor = euiPaletteColorBlind()[2];
+  const highlightColor = ouiPaletteColorBlind()[2];
 
   const idPrefix = 'colorType';
 
@@ -73,8 +73,8 @@ export const Categorical = () => {
 
   const isDarkTheme = themeContext.theme.includes('dark');
   const theme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK.theme
-    : EUI_CHARTS_THEME_LIGHT.theme;
+    ? OUI_CHARTS_THEME_DARK.theme
+    : OUI_CHARTS_THEME_LIGHT.theme;
 
   const onNumChartsChange = (e) => {
     updateCorrectChart(Number(e.target.value), colorType);
@@ -136,7 +136,7 @@ export const Categorical = () => {
   };
 
   const createQuantityChart = (numCharts) => {
-    const vizColors = euiPalettePositive(numCharts);
+    const vizColors = ouiPalettePositive(numCharts);
 
     // convert series labels to percentages
     const dg = new DataGenerator();
@@ -155,12 +155,12 @@ export const Categorical = () => {
     setData(data);
     setDataString("[{x: 1, y: 5.5, g: '0 - 100%'}]");
     setVizColors(vizColors);
-    setVizColorsString(`euiPaletteCool(${numCharts})`);
+    setVizColorsString(`ouiPaletteCool(${numCharts})`);
     setChartType('BarSeries');
   };
 
   const createTrendChart = (numCharts) => {
-    const vizColors = euiPaletteForStatus(numCharts);
+    const vizColors = ouiPaletteForStatus(numCharts);
 
     // convert series labels to better/worse
     const oddSeries = numCharts % 2;
@@ -190,12 +190,12 @@ export const Categorical = () => {
     setData(data);
     setDataString("[{x: 1, y: 5.5, g: 'Better'}]");
     setVizColors(vizColors);
-    setVizColorsString(`euiPaletteForStatus(${numCharts})`);
+    setVizColorsString(`ouiPaletteForStatus(${numCharts})`);
     setChartType('BarSeries');
   };
 
   const createHighlightChart = (numCharts) => {
-    const vizColors = euiPaletteGray(numCharts);
+    const vizColors = ouiPaletteGray(numCharts);
     vizColors[vizColors.length - 1] = highlightColor;
 
     const dg = new DataGenerator();
@@ -205,7 +205,7 @@ export const Categorical = () => {
     setDataString("[{x: 1, y: 5.5, g: '0'}]");
     setVizColors(numCharts < 2 ? [highlightColor] : vizColors);
     setVizColorsString(
-      `euiPaletteGray(${numCharts})[length - 1] = highlightColor`
+      `ouiPaletteGray(${numCharts})[length - 1] = highlightColor`
     );
     setChartType('LineSeries');
   };
@@ -223,12 +223,12 @@ export const Categorical = () => {
 
   const customTitle =
     colorType === 'Highlight' ? (
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h4>
-          <EuiIcon type="dot" color={highlightColor} /> My number of issues
+          <OuiIcon type="dot" color={highlightColor} /> My number of issues
           compared to others
         </h4>
-      </EuiTitle>
+      </OuiTitle>
     ) : undefined;
 
   const customTheme = vizColors
@@ -242,9 +242,9 @@ export const Categorical = () => {
   const customColorsString = vizColors
     ? `[
   { colors: { vizColors: ${vizColorsString} }},
-  isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme
+  isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme
 ]`
-    : 'isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme';
+    : 'isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme';
 
   const charts = [];
   let customLegend;
@@ -281,7 +281,7 @@ export const Categorical = () => {
           data={data}
           xAccessor={'x'}
           yAccessors={['y']}
-          color={[euiPaletteColorBlind()[index < 2 ? 0 : 1]]}
+          color={[ouiPaletteColorBlind()[index < 2 ? 0 : 1]]}
           lineSeriesStyle={{
             line: {
               strokeWidth: isOdd ? 1 : 6,
@@ -334,14 +334,14 @@ export const Categorical = () => {
         {customLegend}
       </div>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem>
           <ChartCard
             title="Color types"
             description="Coloring multi-series non-categorical charts can have different connotations.">
-            <EuiRadioGroup
+            <OuiRadioGroup
               compressed
               options={colorTypeRadios}
               idSelected={grouped ? colorTypeRadios[0].id : colorTypeIdSelected}
@@ -349,19 +349,19 @@ export const Categorical = () => {
               disabled={grouped}
             />
           </ChartCard>
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Number of series"
             description="Do not use too many colors in a single chart as this will hinder understanding.">
-            <EuiSpacer />
-            <EuiFormRow
+            <OuiSpacer />
+            <OuiFormRow
               helpText={
                 <span id="levelsHelp3">
                   Recommended number of series is 5 or less.
                 </span>
               }>
-              <EuiRange
+              <OuiRange
                 min={1}
                 max={10}
                 showTicks
@@ -375,34 +375,34 @@ export const Categorical = () => {
                 aria-describedby="levelsHelp3"
                 aria-label="Number of series"
               />
-            </EuiFormRow>
+            </OuiFormRow>
           </ChartCard>
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Grouping data"
             description="If the series' are or can be combined into logical groups, use contrasting shapes/styles but keep the same color for within groups.">
-            <EuiSpacer />
-            <EuiSwitch
+            <OuiSpacer />
+            <OuiSwitch
               label="Show grouped"
               checked={grouped}
               onChange={onGroupChange}
             />
           </ChartCard>
-        </EuiFlexItem>
-      </EuiFlexGrid>
-      <EuiSpacer />
+        </OuiFlexItem>
+      </OuiFlexGrid>
+      <OuiSpacer />
 
-      <div className="eui-textCenter">
-        <EuiCopy
+      <div className="oui-textCenter">
+        <OuiCopy
           textToCopy={`${
             customTitle
-              ? `<EuiTitle size="xxs">
+              ? `<OuiTitle size="xxs">
   <h4>
-    <EuiIcon type="dot" color={highlightColor} /> My number of issues
+    <OuiIcon type="dot" color={highlightColor} /> My number of issues
     compared to others
   </h4>
-</EuiTitle>`
+</OuiTitle>`
               : ''
           }
 <Chart size={{height: 200}}>
@@ -433,7 +433,7 @@ export const Categorical = () => {
   />
 </Chart>`}>
           {(copy) => (
-            <EuiButton
+            <OuiButton
               fill
               onClick={copy}
               iconType="copyClipboard"
@@ -443,9 +443,9 @@ export const Categorical = () => {
                   ? "It's complicated"
                   : "Bad chart, don't copy"
                 : 'Copy code of current configuration'}
-            </EuiButton>
+            </OuiButton>
           )}
-        </EuiCopy>
+        </OuiCopy>
       </div>
     </Fragment>
   );

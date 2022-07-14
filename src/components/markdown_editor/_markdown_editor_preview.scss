@@ -1,8 +1,8 @@
-.euiMarkdownEditorPreview {
-  @include euiScrollBar;
-  background: $euiColorEmptyShade;
-  min-height: $euiMarkdownEditorMinHeight;
+.ouiMarkdownEditorPreview {
+  @include ouiScrollBar;
+  background: $ouiColorEmptyShade;
+  min-height: $ouiMarkdownEditorMinHeight;
   overflow-y: auto;
-  border: $euiBorderThin;
-  padding: $euiSizeM;
+  border: $ouiBorderThin;
+  padding: $ouiSizeM;
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconInvert = ({ title, titleId, ...props }) => (
+const OuiIconInvert = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -14,4 +14,4 @@ const EuiIconInvert = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconInvert;
+export const icon = OuiIconInvert;

@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiAccordion, EuiAccordionProps } from './accordion';
+export { OuiAccordion, OuiAccordionProps } from './accordion';

@@ -1,31 +1,37 @@
-import { cleanEuiImports } from '../../services';
+import { cleanOuiImports } from '../../services';
 
 export const renderJsSourceCode = (code) => {
   let renderedCode = code.default
     .replace(
       /(from )'(..\/)+src\/services(\/?';)/g,
-      "from '@elastic/eui/lib/services';"
+      "from '@opensearch-project/oui/lib/services';"
     )
-    .replace(/(from )'(..\/)+src\/components\/.*?';/g, "from '@elastic/eui';");
+    .replace(
+      /(from )'(..\/)+src\/components\/.*?';/g,
+      "from '@opensearch-project/oui';"
+    );
   renderedCode = renderedCode.split('\n');
   const linesWithImport = [];
   // eslint-disable-next-line guard-for-in
   for (const idx in renderedCode) {
     const line = renderedCode[idx];
-    if (line.includes('import') && line.includes("from '@elastic/eui';")) {
+    if (
+      line.includes('import') &&
+      line.includes("from '@opensearch-project/oui';")
+    ) {
       linesWithImport.push(line);
       renderedCode[idx] = '';
     }
   }
   if (linesWithImport.length > 1) {
     linesWithImport[0] = linesWithImport[0].replace(
-      " } from '@elastic/eui';",
+      " } from '@opensearch-project/oui';",
       ','
     );
     for (let i = 1; i < linesWithImport.length - 1; i++) {
       linesWithImport[i] = linesWithImport[i]
         .replace('import {', '')
-        .replace(" } from '@elastic/eui';", ',');
+        .replace(" } from '@opensearch-project/oui';", ',');
     }
     linesWithImport[linesWithImport.length - 1] = linesWithImport[
       linesWithImport.length - 1
@@ -40,5 +46,5 @@ export const renderJsSourceCode = (code) => {
     len = renderedCode.replace('\n\n\n', '\n\n').length;
   }
 
-  return cleanEuiImports(renderedCode);
+  return cleanOuiImports(renderedCode);
 };

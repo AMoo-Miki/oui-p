@@ -1,4 +1,4 @@
-@mixin euiLink {
+@mixin ouiLink {
   text-align: left;
 
   &:hover {
@@ -7,6 +7,6 @@
 
   &:focus {
     text-decoration: underline;
-    background: $euiFocusBackgroundColor;
+    background: $ouiFocusBackgroundColor;
   }
 }

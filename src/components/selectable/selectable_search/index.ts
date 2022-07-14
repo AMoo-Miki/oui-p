@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiSelectableSearch,
-  EuiSelectableSearchProps,
+  OuiSelectableSearch,
+  OuiSelectableSearchProps,
 } from './selectable_search';

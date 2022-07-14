@@ -1,6 +1,6 @@
-import { EuiSelectableOption } from '../../../../src/components/selectable/selectable_option';
+import { OuiSelectableOption } from '../../../../src/components/selectable/selectable_option';
 
-export const Options: EuiSelectableOption[] = [
+export const Options: OuiSelectableOption[] = [
   {
     label: 'Titan',
     'data-test-subj': 'titanOption',

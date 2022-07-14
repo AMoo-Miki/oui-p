@@ -133,7 +133,7 @@ what({ value: 'asdf', foo: 'asdf', bar: false }) // works
 TypeScript is okay with this as a type guard would detect the object is Foo and prevent accessing `bar`.
 Unfortunately this prevents feedback to the user about potentially unintentional effects, for example:
 
-A common pattern in EUI is to render something as a div OR as a button, depending on if an onClick prop is passed.
+A common pattern in OUI is to render something as a div OR as a button, depending on if an onClick prop is passed.
 passing additional props down through `...rest`, which can be specified as
 
 type Spanlike = HTMLAttributes<HTMLSpanElement>;

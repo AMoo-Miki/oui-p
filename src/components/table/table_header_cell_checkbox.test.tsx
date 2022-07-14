@@ -21,10 +21,10 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiTableHeaderCellCheckbox } from './table_header_cell_checkbox';
+import { OuiTableHeaderCellCheckbox } from './table_header_cell_checkbox';
 import { WARNING_MESSAGE } from './utils';
 
-describe('EuiTableHeaderCellCheckbox', () => {
+describe('OuiTableHeaderCellCheckbox', () => {
   const _consoleWarn = console.warn;
   beforeAll(() => {
     console.warn = (...args: [any?, ...any[]]) => {
@@ -38,7 +38,7 @@ describe('EuiTableHeaderCellCheckbox', () => {
   });
 
   test('is rendered', () => {
-    const component = render(<EuiTableHeaderCellCheckbox {...requiredProps} />);
+    const component = render(<OuiTableHeaderCellCheckbox {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -46,9 +46,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
   describe('width and style', () => {
     test('accepts style attribute', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox style={{ width: '20%' }}>
+        <OuiTableHeaderCellCheckbox style={{ width: '20%' }}>
           Test
-        </EuiTableHeaderCellCheckbox>
+        </OuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -56,9 +56,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
 
     test('accepts width attribute', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox width="10%">
+        <OuiTableHeaderCellCheckbox width="10%">
           Test
-        </EuiTableHeaderCellCheckbox>
+        </OuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -66,9 +66,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
 
     test('accepts width attribute as number', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox width={100}>
+        <OuiTableHeaderCellCheckbox width={100}>
           Test
-        </EuiTableHeaderCellCheckbox>
+        </OuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();
@@ -76,9 +76,9 @@ describe('EuiTableHeaderCellCheckbox', () => {
 
     test('resolves style and width attribute', () => {
       const component = (
-        <EuiTableHeaderCellCheckbox width="10%" style={{ width: '20%' }}>
+        <OuiTableHeaderCellCheckbox width="10%" style={{ width: '20%' }}>
           Test
-        </EuiTableHeaderCellCheckbox>
+        </OuiTableHeaderCellCheckbox>
       );
 
       expect(render(component)).toMatchSnapshot();

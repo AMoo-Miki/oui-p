@@ -1,8 +1,8 @@
-.euiRangeInput {
+.ouiRangeInput {
   width: auto;
-  min-width: $euiSize * 4;
+  min-width: $ouiSize * 4;
 
-  .euiRange__popover & {
+  .ouiRange__popover & {
     // sass-lint:disable no-important
     margin: 0 !important;
     width: 100%;

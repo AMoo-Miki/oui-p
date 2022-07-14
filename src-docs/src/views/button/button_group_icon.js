@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiButtonGroup } from '../../../../src/components';
+import { OuiButtonGroup } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -78,7 +78,7 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Text align"
         options={toggleButtonsIcons}
         idSelected={toggleIconIdSelected}
@@ -86,7 +86,7 @@ export default () => {
         isIconOnly
       />
       &nbsp;&nbsp;
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Text style"
         options={toggleButtonsIconsMulti}
         idToSelectedMap={toggleIconIdToSelectedMap}

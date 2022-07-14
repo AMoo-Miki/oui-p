@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconOffline = ({ title, titleId, ...props }) => (
+const OuiIconOffline = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconOffline = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconOffline;
+export const icon = OuiIconOffline;

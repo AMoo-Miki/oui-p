@@ -4,7 +4,7 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiText } from '../../../../src/components';
+import { OuiCode, OuiText } from '../../../../src/components';
 
 import InnerText from './inner_text';
 const innerTextSource = require('!!raw-loader!./inner_text');
@@ -13,19 +13,19 @@ const useInnerTextSnippet = `const [ref, innerText] = useInnerText();
 <span ref={ref} title={innerText}>
   Content
 </span>`;
-const euiInnerTextSnippet = `<EuiInnerText>
+const ouiInnerTextSnippet = `<OuiInnerText>
   {(ref, innerText) => (
     <span ref={ref} title={innerText}>
       Content
     </span>
   )}
-</EuiInnerText>`;
+</OuiInnerText>`;
 
 export const InnerTextExample = {
   title: 'Inner text',
   intro: (
     <React.Fragment>
-      <EuiText>
+      <OuiText>
         <p>
           For instances where accessing the text content of a component that may
           be wrapped or interspersed with other components, two utilities are
@@ -33,21 +33,21 @@ export const InnerTextExample = {
         </p>
         <ul>
           <li>
-            <EuiCode>useInnerText</EuiCode> - A custom React hook, usable in
+            <OuiCode>useInnerText</OuiCode> - A custom React hook, usable in
             function components
           </li>
           <li>
-            <EuiCode>{'<EuiInnerText />'}</EuiCode> - A higher order{' '}
-            <EuiCode>useInnerText</EuiCode> component for use in class
+            <OuiCode>{'<OuiInnerText />'}</OuiCode> - A higher order{' '}
+            <OuiCode>useInnerText</OuiCode> component for use in class
             components
           </li>
         </ul>
         <p>
-          Both utilities make available a <EuiCode>ref</EuiCode> reference to
+          Both utilities make available a <OuiCode>ref</OuiCode> reference to
           add to the target DOM element, and the resulting{' '}
-          <EuiCode>innerText</EuiCode> value to use as needed.
+          <OuiCode>innerText</OuiCode> value to use as needed.
         </p>
-      </EuiText>
+      </OuiText>
     </React.Fragment>
   ),
   sections: [
@@ -64,7 +64,7 @@ export const InnerTextExample = {
         },
       ],
       demo: <InnerText />,
-      snippet: [useInnerTextSnippet, euiInnerTextSnippet],
+      snippet: [useInnerTextSnippet, ouiInnerTextSnippet],
     },
   ],
 };

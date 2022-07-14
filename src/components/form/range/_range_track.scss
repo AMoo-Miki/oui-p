@@ -1,5 +1,5 @@
-.euiRangeTrack {
-  height: 100%; // Don't overflow `euiRangeWrapper`
+.ouiRangeTrack {
+  height: 100%; // Don't overflow `ouiRangeWrapper`
   flex-grow: 1;
   position: relative; // for positioning ticks/levels
   align-self: flex-start; // Adjust vertical alignment of input based on extras
@@ -10,6 +10,6 @@
   }
 
   &--disabled {
-    opacity: $euiRangeDisabledOpacity;
+    opacity: $ouiRangeDisabledOpacity;
   }
 }

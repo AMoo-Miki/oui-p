@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSelect } from '../../../../src/components';
+import { OuiSelect } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default () => {
@@ -19,7 +19,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canPrepend canAppend canReadOnly={false}>
-      <EuiSelect
+      <OuiSelect
         id="selectDocExample"
         options={options}
         value={value}

@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiBottomBar, EuiBottomBarProps } from './bottom_bar';
+export { OuiBottomBar, OuiBottomBarProps } from './bottom_bar';

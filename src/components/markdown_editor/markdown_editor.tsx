@@ -35,23 +35,23 @@ import classNames from 'classnames';
 
 import { CommonProps, OneOf } from '../common';
 import MarkdownActions, { insertText } from './markdown_actions';
-import { EuiMarkdownEditorToolbar } from './markdown_editor_toolbar';
-import { EuiMarkdownEditorTextArea } from './markdown_editor_text_area';
-import { EuiMarkdownFormat } from './markdown_format';
-import { EuiMarkdownEditorDropZone } from './markdown_editor_drop_zone';
+import { OuiMarkdownEditorToolbar } from './markdown_editor_toolbar';
+import { OuiMarkdownEditorTextArea } from './markdown_editor_text_area';
+import { OuiMarkdownFormat } from './markdown_format';
+import { OuiMarkdownEditorDropZone } from './markdown_editor_drop_zone';
 import { htmlIdGenerator } from '../../services/';
 
 import { MARKDOWN_MODE, MODE_EDITING, MODE_VIEWING } from './markdown_modes';
 import {
-  EuiMarkdownAstNode,
-  EuiMarkdownDropHandler,
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownParseError,
-  EuiMarkdownStringTagConfig,
+  OuiMarkdownAstNode,
+  OuiMarkdownDropHandler,
+  OuiMarkdownEditorUiPlugin,
+  OuiMarkdownParseError,
+  OuiMarkdownStringTagConfig,
 } from './markdown_types';
 
-import { EuiModal } from '../modal';
-import { ContextShape, EuiMarkdownContext } from './markdown_context';
+import { OuiModal } from '../modal';
+import { ContextShape, OuiMarkdownContext } from './markdown_context';
 import * as MarkdownTooltip from './plugins/markdown_tooltip';
 import {
   defaultParsingPlugins,
@@ -59,7 +59,7 @@ import {
   defaultUiPlugins,
 } from './plugins/markdown_default_plugins';
 
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { OuiResizeObserver } from '../observer/resize_observer';
 
 type CommonMarkdownEditorProps = Omit<
   HTMLAttributes<HTMLDivElement>,
@@ -87,7 +87,7 @@ type CommonMarkdownEditorProps = Omit<
 
     /**
      * Sets the `height` in pixels of the editor/preview area or pass `full` to allow
-     * the EuiMarkdownEditor to fill the height of its container.
+     * the OuiMarkdownEditor to fill the height of its container.
      * When in `full` mode the vertical resize is not allowed.
      */
     height?: number | 'full';
@@ -110,17 +110,17 @@ type CommonMarkdownEditorProps = Omit<
     processingPluginList?: PluggableList;
 
     /** defines UI for plugins' buttons in the toolbar as well as any modals or extra UI that provides content to the editor */
-    uiPlugins?: EuiMarkdownEditorUiPlugin[];
+    uiPlugins?: OuiMarkdownEditorUiPlugin[];
 
     /** errors to bubble up */
-    errors?: EuiMarkdownParseError[];
+    errors?: OuiMarkdownParseError[];
 
     /** callback triggered when parsing results are available */
     onParse?: (
-      error: EuiMarkdownParseError | null,
+      error: OuiMarkdownParseError | null,
       data: {
         messages: VFileMessage[];
-        ast: EuiMarkdownAstNode;
+        ast: OuiMarkdownAstNode;
       }
     ) => void;
 
@@ -128,10 +128,10 @@ type CommonMarkdownEditorProps = Omit<
     initialViewMode?: MARKDOWN_MODE;
 
     /** array defining any drag&drop handlers */
-    dropHandlers?: EuiMarkdownDropHandler[];
+    dropHandlers?: OuiMarkdownDropHandler[];
   };
 
-export type EuiMarkdownEditorProps = OneOf<
+export type OuiMarkdownEditorProps = OneOf<
   CommonMarkdownEditorProps,
   'aria-label' | 'aria-labelledby'
 >;
@@ -154,7 +154,7 @@ const mergeRefs = (...refs: any[]) => {
   };
 };
 
-interface EuiMarkdownEditorRef {
+interface OuiMarkdownEditorRef {
   textarea: HTMLTextAreaElement | null;
   replaceNode: ContextShape['replaceNode'];
 }
@@ -179,9 +179,9 @@ function padWithNewlinesIfNeeded(textarea: HTMLTextAreaElement, text: string) {
   return text;
 }
 
-export const EuiMarkdownEditor = forwardRef<
-  EuiMarkdownEditorRef,
-  EuiMarkdownEditorProps
+export const OuiMarkdownEditor = forwardRef<
+  OuiMarkdownEditorRef,
+  OuiMarkdownEditorProps
 >(
   (
     {
@@ -212,15 +212,15 @@ export const EuiMarkdownEditor = forwardRef<
     ]);
 
     const [pluginEditorPlugin, setPluginEditorPlugin] = useState<
-      EuiMarkdownEditorUiPlugin | undefined
+      OuiMarkdownEditorUiPlugin | undefined
     >(undefined);
 
     const toolbarPlugins = [...uiPlugins];
-    // @ts-ignore __originatedFromEui is a custom property
-    if (!uiPlugins.__originatedFromEui) {
+    // @ts-ignore __originatedFromOui is a custom property
+    if (!uiPlugins.__originatedFromOui) {
       toolbarPlugins.unshift(MarkdownTooltip.plugin);
       console.warn(
-        'Deprecation warning: uiPlugins passed to EuiMarkdownEditor does not include the tooltip plugin, which has been added for you. This automatic inclusion has been deprecated and will be removed in the future, see https://github.com/elastic/eui/pull/4383'
+        'Deprecation warning: uiPlugins passed to OuiMarkdownEditor does not include the tooltip plugin, which has been added for you. This automatic inclusion has been deprecated and will be removed in the future, see https://github.com/elastic/eui/pull/4383'
       );
     }
 
@@ -243,7 +243,7 @@ export const EuiMarkdownEditor = forwardRef<
     }, [parsingPluginList]);
 
     const [parsed, parseError] = useMemo<
-      [any | null, EuiMarkdownParseError | null]
+      [any | null, OuiMarkdownParseError | null]
     >(() => {
       try {
         const parsed = parser.processSync(value);
@@ -267,14 +267,14 @@ export const EuiMarkdownEditor = forwardRef<
 
     const contextValue = useMemo<ContextShape>(
       () => ({
-        openPluginEditor: (plugin: EuiMarkdownEditorUiPlugin) =>
+        openPluginEditor: (plugin: OuiMarkdownEditorUiPlugin) =>
           setPluginEditorPlugin(() => plugin),
         replaceNode,
       }),
       [replaceNode]
     );
 
-    const [selectedNode, setSelectedNode] = useState<EuiMarkdownAstNode>();
+    const [selectedNode, setSelectedNode] = useState<OuiMarkdownAstNode>();
 
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -285,7 +285,7 @@ export const EuiMarkdownEditor = forwardRef<
       const getCursorNode = () => {
         const { selectionStart } = textareaRef.current!;
 
-        let node: EuiMarkdownAstNode = parsed.result ?? parsed.contents;
+        let node: OuiMarkdownAstNode = parsed.result ?? parsed.contents;
 
         outer: while (true) {
           if (node.children) {
@@ -341,10 +341,10 @@ export const EuiMarkdownEditor = forwardRef<
     const [editorToolbarHeight, setEditorToolbarHeight] = useState(0);
 
     const classes = classNames(
-      'euiMarkdownEditor',
-      { 'euiMarkdownEditor--fullHeight': height === 'full' },
+      'ouiMarkdownEditor',
+      { 'ouiMarkdownEditor--fullHeight': height === 'full' },
       {
-        'euiMarkdownEditor--isPreviewing': isPreviewing,
+        'ouiMarkdownEditor--isPreviewing': isPreviewing,
       },
       className
     );
@@ -402,9 +402,9 @@ export const EuiMarkdownEditor = forwardRef<
     const editorToggleContainerHeight = `calc(100% - ${editorToolbarHeight}px)`;
 
     return (
-      <EuiMarkdownContext.Provider value={contextValue}>
+      <OuiMarkdownContext.Provider value={contextValue}>
         <div className={classes} {...rest}>
-          <EuiMarkdownEditorToolbar
+          <OuiMarkdownEditorToolbar
             ref={editorToolbarRef}
             selectedNode={selectedNode}
             markdownActions={markdownActions}
@@ -418,28 +418,28 @@ export const EuiMarkdownEditor = forwardRef<
           {isPreviewing && (
             <div
               ref={previewRef}
-              className="euiMarkdownEditorPreview"
+              className="ouiMarkdownEditorPreview"
               style={{ height: previewHeight }}>
-              <EuiMarkdownFormat
+              <OuiMarkdownFormat
                 parsingPluginList={parsingPluginList}
                 processingPluginList={processingPluginList}>
                 {value}
-              </EuiMarkdownFormat>
+              </OuiMarkdownFormat>
             </div>
           )}
           {/* Toggle the editor's display instead of unmounting to retain its undo/redo history */}
           <div
-            className="euiMarkdownEditor__toggleContainer"
+            className="ouiMarkdownEditor__toggleContainer"
             style={{
               height: editorToggleContainerHeight,
             }}>
-            <EuiMarkdownEditorDropZone
+            <OuiMarkdownEditorDropZone
               setEditorFooterHeight={setEditorFooterHeight}
               isEditing={isEditing}
               dropHandlers={dropHandlers}
               insertText={(
                 text: string,
-                config: EuiMarkdownStringTagConfig
+                config: OuiMarkdownStringTagConfig
               ) => {
                 if (config.block) {
                   text = padWithNewlinesIfNeeded(textareaRef.current!, text);
@@ -459,10 +459,10 @@ export const EuiMarkdownEditor = forwardRef<
               errors={errors}
               hasUnacceptedItems={hasUnacceptedItems}
               setHasUnacceptedItems={setHasUnacceptedItems}>
-              <EuiResizeObserver onResize={onResize}>
+              <OuiResizeObserver onResize={onResize}>
                 {(resizeRef) => {
                   return (
-                    <EuiMarkdownEditorTextArea
+                    <OuiMarkdownEditorTextArea
                       height={textAreaHeight}
                       maxHeight={textAreaMaxHeight}
                       ref={mergeRefs(textareaRef, resizeRef)}
@@ -478,11 +478,11 @@ export const EuiMarkdownEditor = forwardRef<
                     />
                   );
                 }}
-              </EuiResizeObserver>
-            </EuiMarkdownEditorDropZone>
+              </OuiResizeObserver>
+            </OuiMarkdownEditorDropZone>
 
             {pluginEditorPlugin && (
-              <EuiModal onClose={() => setPluginEditorPlugin(undefined)}>
+              <OuiModal onClose={() => setPluginEditorPlugin(undefined)}>
                 {createElement(pluginEditorPlugin.editor!, {
                   node:
                     selectedNode &&
@@ -518,12 +518,12 @@ export const EuiMarkdownEditor = forwardRef<
                     setPluginEditorPlugin(undefined);
                   },
                 })}
-              </EuiModal>
+              </OuiModal>
             )}
           </div>
         </div>
-      </EuiMarkdownContext.Provider>
+      </OuiMarkdownContext.Provider>
     );
   }
 );
-EuiMarkdownEditor.displayName = 'EuiMarkdownEditor';
+OuiMarkdownEditor.displayName = 'OuiMarkdownEditor';

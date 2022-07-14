@@ -1,0 +1,18 @@
+.ouiMarkdownEditorToolbar {
+  border-radius: $ouiFormControlBorderRadius $ouiFormControlBorderRadius 0 0;
+}
+
+.ouiMarkdownEditorTextArea {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:focus-visible {
+    outline-style: none;
+  }
+}
+
+.ouiMarkdownEditorPreview,
+.ouiMarkdownEditorFooter {
+  border-radius: 0 0 $ouiFormControlBorderRadius $ouiFormControlBorderRadius;
+}

@@ -1,0 +1,19 @@
+.ouiRadio .ouiRadio__input {
+  &:focus {
+    @include ouiCustomControlFocused('.ouiRadio__circle');
+  }
+}
+
+.ouiCheckbox .ouiCheckbox__input {
+  &:focus {
+    @include ouiCustomControlFocused('.ouiCheckbox__square');
+  }
+}
+
+.ouiSwitch .ouiSwitch__button:focus {
+  @include ouiFocusRing(null, 'outer');
+
+  .ouiSwitch__track {
+    outline: none;
+  }
+}

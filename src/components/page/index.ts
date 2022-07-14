@@ -17,30 +17,30 @@
  * under the License.
  */
 
-export { EuiPage, EuiPageProps } from './page';
+export { OuiPage, OuiPageProps } from './page';
 
-export { EuiPageBody, EuiPageBodyProps } from './page_body';
+export { OuiPageBody, OuiPageBodyProps } from './page_body';
 
 export {
-  EuiPageContent,
-  EuiPageContentProps,
-  EuiPageContentBody,
-  EuiPageContentBodyProps,
-  EuiPageContentHeader,
-  EuiPageContentHeaderProps,
-  EuiPageContentHeaderSection,
-  EuiPageContentHeaderSectionProps,
+  OuiPageContent,
+  OuiPageContentProps,
+  OuiPageContentBody,
+  OuiPageContentBodyProps,
+  OuiPageContentHeader,
+  OuiPageContentHeaderProps,
+  OuiPageContentHeaderSection,
+  OuiPageContentHeaderSectionProps,
 } from './page_content';
 
 export {
-  EuiPageHeader,
-  EuiPageHeaderContent,
-  EuiPageHeaderContentProps,
-  EuiPageHeaderProps,
-  EuiPageHeaderSection,
-  EuiPageHeaderSectionProps,
+  OuiPageHeader,
+  OuiPageHeaderContent,
+  OuiPageHeaderContentProps,
+  OuiPageHeaderProps,
+  OuiPageHeaderSection,
+  OuiPageHeaderSectionProps,
 } from './page_header';
 
-export { EuiPageSideBar, EuiPageSideBarProps } from './page_side_bar';
+export { OuiPageSideBar, OuiPageSideBarProps } from './page_side_bar';
 
-export { EuiPageTemplate, EuiPageTemplateProps } from './page_template';
+export { OuiPageTemplate, OuiPageTemplateProps } from './page_template';

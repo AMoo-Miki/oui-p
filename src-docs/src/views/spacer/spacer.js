@@ -1,42 +1,42 @@
 import React from 'react';
 
 import {
-  EuiSpacer,
-  EuiCode,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiSpacer,
+  OuiCode,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>
-      <EuiCode>xs</EuiCode>
-      <EuiSpacer size="xs" />
-    </EuiFlexItem>
+  <OuiFlexGroup>
+    <OuiFlexItem>
+      <OuiCode>xs</OuiCode>
+      <OuiSpacer size="xs" />
+    </OuiFlexItem>
 
-    <EuiFlexItem>
-      <EuiCode>s</EuiCode>
-      <EuiSpacer size="s" />
-    </EuiFlexItem>
+    <OuiFlexItem>
+      <OuiCode>s</OuiCode>
+      <OuiSpacer size="s" />
+    </OuiFlexItem>
 
-    <EuiFlexItem>
-      <EuiCode>m</EuiCode>
-      <EuiSpacer size="m" />
-    </EuiFlexItem>
+    <OuiFlexItem>
+      <OuiCode>m</OuiCode>
+      <OuiSpacer size="m" />
+    </OuiFlexItem>
 
-    <EuiFlexItem>
-      <EuiCode>l (default)</EuiCode>
-      <EuiSpacer />
-    </EuiFlexItem>
+    <OuiFlexItem>
+      <OuiCode>l (default)</OuiCode>
+      <OuiSpacer />
+    </OuiFlexItem>
 
-    <EuiFlexItem>
-      <EuiCode>xl</EuiCode>
-      <EuiSpacer size="xl" />
-    </EuiFlexItem>
+    <OuiFlexItem>
+      <OuiCode>xl</OuiCode>
+      <OuiSpacer size="xl" />
+    </OuiFlexItem>
 
-    <EuiFlexItem>
-      <EuiCode>xxl</EuiCode>
-      <EuiSpacer size="xxl" />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    <OuiFlexItem>
+      <OuiCode>xxl</OuiCode>
+      <OuiSpacer size="xxl" />
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

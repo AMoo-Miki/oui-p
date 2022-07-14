@@ -19,14 +19,14 @@
 
 import React, { Fragment, Component } from 'react';
 
-import { EuiLoadingSpinner } from '../../loading';
+import { OuiLoadingSpinner } from '../../loading';
 import {
-  EuiFormControlLayoutClearButton,
-  EuiFormControlLayoutClearButtonProps,
+  OuiFormControlLayoutClearButton,
+  OuiFormControlLayoutClearButtonProps,
 } from './form_control_layout_clear_button';
 import {
-  EuiFormControlLayoutCustomIcon,
-  EuiFormControlLayoutCustomIconProps,
+  OuiFormControlLayoutCustomIcon,
+  OuiFormControlLayoutCustomIconProps,
 } from './form_control_layout_custom_icon';
 import { IconType } from '../../icon';
 import { DistributiveOmit } from '../../common';
@@ -34,29 +34,29 @@ import { DistributiveOmit } from '../../common';
 export const ICON_SIDES: ['left', 'right'] = ['left', 'right'];
 
 type IconShape = DistributiveOmit<
-  EuiFormControlLayoutCustomIconProps,
+  OuiFormControlLayoutCustomIconProps,
   'type' | 'iconRef'
 > & {
   type: IconType;
   side?: typeof ICON_SIDES[number];
-  ref?: EuiFormControlLayoutCustomIconProps['iconRef'];
+  ref?: OuiFormControlLayoutCustomIconProps['iconRef'];
 };
 
 function isIconShape(
-  icon: EuiFormControlLayoutIconsProps['icon']
+  icon: OuiFormControlLayoutIconsProps['icon']
 ): icon is IconShape {
   return !!icon && icon.hasOwnProperty('type');
 }
 
-export interface EuiFormControlLayoutIconsProps {
+export interface OuiFormControlLayoutIconsProps {
   icon?: IconType | IconShape;
-  clear?: EuiFormControlLayoutClearButtonProps;
+  clear?: OuiFormControlLayoutClearButtonProps;
   isLoading?: boolean;
   compressed?: boolean;
 }
 
-export class EuiFormControlLayoutIcons extends Component<
-  EuiFormControlLayoutIconsProps
+export class OuiFormControlLayoutIcons extends Component<
+  OuiFormControlLayoutIconsProps
 > {
   render() {
     const { icon } = this.props;
@@ -68,7 +68,7 @@ export class EuiFormControlLayoutIcons extends Component<
     let leftIcons;
 
     if (customIcon && iconSide === 'left') {
-      leftIcons = <div className="euiFormControlLayoutIcons">{customIcon}</div>;
+      leftIcons = <div className="ouiFormControlLayoutIcons">{customIcon}</div>;
     }
 
     let rightIcons;
@@ -76,7 +76,7 @@ export class EuiFormControlLayoutIcons extends Component<
     // If the icon is on the right, it should be placed after the clear button in the DOM.
     if (clearButton || loadingSpinner || (customIcon && iconSide === 'right')) {
       rightIcons = (
-        <div className="euiFormControlLayoutIcons euiFormControlLayoutIcons--right">
+        <div className="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right">
           {clearButton}
           {loadingSpinner}
           {iconSide === 'right' ? customIcon : undefined}
@@ -108,7 +108,7 @@ export class EuiFormControlLayoutIcons extends Component<
     const { ref: iconRef, side, ...iconRest } = iconProps;
 
     return (
-      <EuiFormControlLayoutCustomIcon
+      <OuiFormControlLayoutCustomIcon
         size={compressed ? 's' : 'm'}
         iconRef={iconRef}
         {...iconRest}
@@ -123,7 +123,7 @@ export class EuiFormControlLayoutIcons extends Component<
       return null;
     }
 
-    return <EuiLoadingSpinner size="m" />;
+    return <OuiLoadingSpinner size="m" />;
   }
 
   renderClearButton() {
@@ -133,7 +133,7 @@ export class EuiFormControlLayoutIcons extends Component<
     }
 
     return (
-      <EuiFormControlLayoutClearButton
+      <OuiFormControlLayoutClearButton
         size={compressed ? 's' : 'm'}
         {...clear}
       />

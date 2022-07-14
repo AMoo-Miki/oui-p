@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiHealth, EuiHealthProps } from './health';
+export { OuiHealth, OuiHealthProps } from './health';

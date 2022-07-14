@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiStepsHorizontal } from './steps_horizontal';
+import { OuiStepsHorizontal } from './steps_horizontal';
 
 const steps = [
   {
@@ -45,10 +45,10 @@ const steps = [
   },
 ];
 
-describe('EuiStepsHorizontal', () => {
+describe('OuiStepsHorizontal', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStepsHorizontal {...requiredProps} steps={steps} />
+      <OuiStepsHorizontal {...requiredProps} steps={steps} />
     );
 
     expect(component).toMatchSnapshot();

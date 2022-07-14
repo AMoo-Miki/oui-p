@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { OuiComboBox } from '../../../../src/components';
 
 const options = [];
 let groupOptions = [];
@@ -23,7 +23,7 @@ export default () => {
   };
 
   return (
-    <EuiComboBox
+    <OuiComboBox
       placeholder="Select one or more options"
       options={options}
       selectedOptions={selectedOptions}

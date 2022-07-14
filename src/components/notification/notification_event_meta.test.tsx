@@ -19,14 +19,14 @@
 
 import React from 'react';
 import { mount, render } from 'enzyme';
-import { EuiNotificationEventMeta } from './notification_event_meta';
-import { EuiContextMenuPanel, EuiContextMenuItem } from '../context_menu';
+import { OuiNotificationEventMeta } from './notification_event_meta';
+import { OuiContextMenuPanel, OuiContextMenuItem } from '../context_menu';
 import { findTestSubject, takeMountedSnapshot } from '../../test';
 
-describe('EuiNotificationEventMeta', () => {
+describe('OuiNotificationEventMeta', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationEventMeta
+      <OuiNotificationEventMeta
         id="id"
         type="Alert"
         time={<span>2 min ago</span>}
@@ -40,7 +40,7 @@ describe('EuiNotificationEventMeta', () => {
   describe('props', () => {
     test('severity is rendered', () => {
       const component = render(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -54,7 +54,7 @@ describe('EuiNotificationEventMeta', () => {
 
     test('badgeColor  is rendered', () => {
       const component = render(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -68,7 +68,7 @@ describe('EuiNotificationEventMeta', () => {
 
     test('logoCloud  is rendered', () => {
       const component = render(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -82,19 +82,19 @@ describe('EuiNotificationEventMeta', () => {
 
     test('contextMenuItems are rendered', () => {
       const contextMenuItems = [
-        <EuiContextMenuItem key="contextMenuItemA">
+        <OuiContextMenuItem key="contextMenuItemA">
           Mark as read
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="contextMenuItemB">
+        </OuiContextMenuItem>,
+        <OuiContextMenuItem key="contextMenuItemB">
           View messages like this
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="contextMenuItemC">
+        </OuiContextMenuItem>,
+        <OuiContextMenuItem key="contextMenuItemC">
           Don’t notify me about this
-        </EuiContextMenuItem>,
+        </OuiContextMenuItem>,
       ];
 
       const component = mount(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -104,14 +104,14 @@ describe('EuiNotificationEventMeta', () => {
         />
       );
 
-      expect(component.find(EuiContextMenuPanel)).toHaveLength(0);
+      expect(component.find(OuiContextMenuPanel)).toHaveLength(0);
       findTestSubject(component, 'id-notificationEventMetaButton').simulate(
         'click'
       );
-      expect(component.find(EuiContextMenuPanel)).toHaveLength(1);
+      expect(component.find(OuiContextMenuPanel)).toHaveLength(1);
 
       expect(
-        takeMountedSnapshot(component.find(EuiContextMenuPanel))
+        takeMountedSnapshot(component.find(OuiContextMenuPanel))
       ).toMatchSnapshot();
     });
   });

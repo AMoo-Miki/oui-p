@@ -1,33 +1,33 @@
 import React from 'react';
 
-import { EuiHealth, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { OuiHealth, OuiSpacer, OuiTitle } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiHealth textSize="xs" color="success">
+    <OuiHealth textSize="xs" color="success">
       Extra small
-    </EuiHealth>
+    </OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth textSize="s" color="success">
+    <OuiHealth textSize="s" color="success">
       Small (Default)
-    </EuiHealth>
+    </OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiHealth textSize="m" color="success">
+    <OuiHealth textSize="m" color="success">
       Medium
-    </EuiHealth>
+    </OuiHealth>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiTitle size="s">
+    <OuiTitle size="s">
       <h3>
-        <EuiHealth textSize="inherit" color="success">
+        <OuiHealth textSize="inherit" color="success">
           Inherit
-        </EuiHealth>
+        </OuiHealth>
       </h3>
-    </EuiTitle>
+    </OuiTitle>
   </div>
 );

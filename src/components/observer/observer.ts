@@ -31,8 +31,8 @@ export interface Observer {
   observe: (element: Element, options?: { [key: string]: any }) => void;
 }
 
-export class EuiObserver<Props extends BaseProps> extends Component<Props> {
-  protected name: string = 'EuiObserver';
+export class OuiObserver<Props extends BaseProps> extends Component<Props> {
+  protected name: string = 'OuiObserver';
   protected childNode: null | Element = null;
   protected observer: null | Observer = null;
 
@@ -65,7 +65,7 @@ export class EuiObserver<Props extends BaseProps> extends Component<Props> {
   };
 
   beginObserve: () => void = () => {
-    throw new Error('EuiObserver has no default observation method');
+    throw new Error('OuiObserver has no default observation method');
   };
 
   render() {

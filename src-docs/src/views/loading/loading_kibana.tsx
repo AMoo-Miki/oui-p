@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { EuiLoadingLogo } from '../../../../src/components/loading';
+import { OuiLoadingLogo } from '../../../../src/components/loading';
 
 export default () => (
   <div>
-    <EuiLoadingLogo />
+    <OuiLoadingLogo />
     &emsp;
-    <EuiLoadingLogo logo="logoObservability" size="l" />
+    <OuiLoadingLogo logo="logoObservability" size="l" />
     &emsp;
-    <EuiLoadingLogo logo="logoSecurity" size="xl" />
+    <OuiLoadingLogo logo="logoSecurity" size="xl" />
   </div>
 );

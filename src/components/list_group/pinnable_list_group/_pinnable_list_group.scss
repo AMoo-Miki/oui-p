@@ -1,9 +1,9 @@
-.euiPinnableListGroup__itemExtraAction {
+.ouiPinnableListGroup__itemExtraAction {
   svg {
     transform: rotate(45deg);
   }
 }
 
-.euiPinnableListGroup__itemExtraAction-pinned:not(:hover):not(:focus) {
-  color: makeGraphicContrastColor($euiColorLightShade);
+.ouiPinnableListGroup__itemExtraAction-pinned:not(:hover):not(:focus) {
+  color: makeGraphicContrastColor($ouiColorLightShade);
 }

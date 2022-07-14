@@ -18,6 +18,6 @@
  */
 
 export {
-  EuiNotificationBadge,
-  EuiNotificationBadgeProps,
+  OuiNotificationBadge,
+  OuiNotificationBadgeProps,
 } from './badge_notification';

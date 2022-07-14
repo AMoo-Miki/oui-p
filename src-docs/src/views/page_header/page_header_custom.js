@@ -1,18 +1,18 @@
 import React from 'react';
 
 import {
-  EuiPageHeader,
-  EuiPageHeaderSection,
-  EuiTitle,
+  OuiPageHeader,
+  OuiPageHeaderSection,
+  OuiTitle,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiPageHeader alignItems="center">
-    <EuiPageHeaderSection>
-      <EuiTitle size="l">
+  <OuiPageHeader alignItems="center">
+    <OuiPageHeaderSection>
+      <OuiTitle size="l">
         <h1>Page title</h1>
-      </EuiTitle>
-    </EuiPageHeaderSection>
-    <EuiPageHeaderSection>Page abilities</EuiPageHeaderSection>
-  </EuiPageHeader>
+      </OuiTitle>
+    </OuiPageHeaderSection>
+    <OuiPageHeaderSection>Page abilities</OuiPageHeaderSection>
+  </OuiPageHeader>
 );

@@ -18,10 +18,10 @@
  */
 
 export {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from './form_control_layout';
 export {
-  EuiFormControlLayoutDelimited,
-  EuiFormControlLayoutDelimitedProps,
+  OuiFormControlLayoutDelimited,
+  OuiFormControlLayoutDelimitedProps,
 } from './form_control_layout_delimited';

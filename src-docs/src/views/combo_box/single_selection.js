@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
+import { OuiComboBox } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
 const options = [
@@ -54,7 +54,7 @@ export default () => {
       canPrepend={false}
       canIsDisabled
       canAppend>
-      <EuiComboBox
+      <OuiComboBox
         placeholder="Select a single option"
         singleSelection={{ asPlainText: true }}
         options={options}

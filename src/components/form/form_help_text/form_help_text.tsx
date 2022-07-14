@@ -22,14 +22,14 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export type EuiFormHelpTextProps = CommonProps & HTMLAttributes<HTMLDivElement>;
+export type OuiFormHelpTextProps = CommonProps & HTMLAttributes<HTMLDivElement>;
 
-export const EuiFormHelpText: FunctionComponent<EuiFormHelpTextProps> = ({
+export const OuiFormHelpText: FunctionComponent<OuiFormHelpTextProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiFormHelpText', className);
+  const classes = classNames('ouiFormHelpText', className);
 
   return (
     <div className={classes} {...rest}>

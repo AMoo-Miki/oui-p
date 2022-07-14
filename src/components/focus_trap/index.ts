@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiFocusTrap, EuiFocusTrapProps, FocusTarget } from './focus_trap';
+export { OuiFocusTrap, OuiFocusTrapProps, FocusTarget } from './focus_trap';

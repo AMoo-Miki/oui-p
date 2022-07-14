@@ -1,0 +1,23 @@
+$ouiFormControlBorderRadius: $ouiBorderRadius;
+$ouiFormControlCompressedBorderRadius: $ouiBorderRadiusSmall;
+$ouiFormInputGroupBorder: none;
+$ouiFormBackgroundReadOnlyColor: $ouiColorEmptyShade;
+
+$ouiFormControlBoxShadow: 0 0 transparent;
+
+$ouiCheckboxBorderRadius: $ouiBorderRadiusSmall;
+
+// Range
+$ouiRangeTrackColor: $ouiColorLightShade;
+$ouiRangeHighlightColor: $ouiColorDarkShade;
+
+$ouiRangeThumbBorderColor: $ouiColorEmptyShade;
+$ouiRangeThumbBackgroundColor: $ouiRangeHighlightColor;
+
+$ouiRangeTrackHeight: $ouiSizeM / 2;
+$ouiRangeTrackCompressedHeight: $ouiSizeXS;
+$ouiRangeHighlightHeight: $ouiRangeTrackHeight;
+$ouiRangeHighlightCompressedHeight: $ouiRangeTrackCompressedHeight;
+
+$ouiRangeHeight: $ouiFormControlHeight;
+$ouiRangeCompressedHeight: $ouiFormControlCompressedHeight;

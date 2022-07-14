@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconTokenIP = ({ title, titleId, ...props }) => (
+const OuiIconTokenIP = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconTokenIP = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenIP;
+export const icon = OuiIconTokenIP;

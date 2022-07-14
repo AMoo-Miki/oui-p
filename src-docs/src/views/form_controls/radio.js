@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiRadio, EuiSpacer } from '../../../../src/components';
+import { OuiRadio, OuiSpacer } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -13,16 +13,16 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRadio
+      <OuiRadio
         id={htmlIdGenerator()()}
         label="I am a radio"
         checked={checked}
         onChange={(e) => onChange(e)}
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiRadio
+      <OuiRadio
         id={htmlIdGenerator()()}
         label="I am a disabled radio"
         checked={checked}
@@ -30,9 +30,9 @@ export default () => {
         disabled
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiRadio
+      <OuiRadio
         id={htmlIdGenerator()()}
         label="I am a compressed radio"
         checked={checked}

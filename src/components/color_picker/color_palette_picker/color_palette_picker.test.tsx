@@ -21,12 +21,12 @@ import React from 'react';
 import { mount, render } from 'enzyme';
 
 import {
-  EuiColorPalettePicker,
-  EuiColorPalettePickerPaletteProps,
+  OuiColorPalettePicker,
+  OuiColorPalettePickerPaletteProps,
 } from './color_palette_picker';
 import { requiredProps, takeMountedSnapshot } from '../../../test';
 
-const palettes: EuiColorPalettePickerPaletteProps[] = [
+const palettes: OuiColorPalettePickerPaletteProps[] = [
   {
     value: 'paletteFixed',
     title: 'Palette 1',
@@ -76,10 +76,10 @@ const palettes: EuiColorPalettePickerPaletteProps[] = [
   },
 ];
 
-describe('EuiColorPalettePicker', () => {
+describe('OuiColorPalettePicker', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -91,7 +91,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected fixed palette', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -104,7 +104,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected gradient palette', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -117,7 +117,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected gradient palette with stops', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -130,7 +130,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with a selected custom text', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -143,7 +143,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('is rendered with the prop selectionDisplay set as title ', () => {
     const component = render(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
         onChange={() => {}}
@@ -157,7 +157,7 @@ describe('EuiColorPalettePicker', () => {
 
   test('more props are propagated to each option', () => {
     const component = mount(
-      <EuiColorPalettePicker
+      <OuiColorPalettePicker
         palettes={palettes}
         valueOfSelected="paletteFixed"
         onChange={() => {}}

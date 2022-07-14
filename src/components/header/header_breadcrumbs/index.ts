@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
+export { OuiHeaderBreadcrumbs } from './header_breadcrumbs';

@@ -25,7 +25,7 @@ export type PanelPosition = 'first' | 'middle' | 'last';
 
 export type PanelDirection = 'left' | 'right';
 
-export interface EuiResizablePanelController {
+export interface OuiResizablePanelController {
   id: string;
   size: number;
   getSizePx: () => number;
@@ -36,33 +36,33 @@ export interface EuiResizablePanelController {
   position: PanelPosition;
 }
 
-export interface EuiResizableButtonController {
+export interface OuiResizableButtonController {
   id: string;
   ref: HTMLElement;
   isDisabled: boolean;
   isFocused: boolean;
 }
 
-export interface EuiResizableContainerRegistry {
-  panels: { [key: string]: EuiResizablePanelController };
-  resizers: { [key: string]: EuiResizableButtonController };
+export interface OuiResizableContainerRegistry {
+  panels: { [key: string]: OuiResizablePanelController };
+  resizers: { [key: string]: OuiResizableButtonController };
 }
 
-export type EuiResizableButtonMouseEvent =
+export type OuiResizableButtonMouseEvent =
   | MouseEvent<HTMLButtonElement>
   | TouchEvent<HTMLButtonElement>;
 
-export type EuiResizableButtonKeyDownEvent = KeyboardEvent<HTMLButtonElement>;
+export type OuiResizableButtonKeyDownEvent = KeyboardEvent<HTMLButtonElement>;
 
-export interface EuiResizableContainerState {
+export interface OuiResizableContainerState {
   isDragging: boolean;
   currentResizerPos: number;
   prevPanelId: string | null;
   nextPanelId: string | null;
   containerSize: number;
   isHorizontal?: boolean;
-  panels: EuiResizableContainerRegistry['panels'];
-  resizers: EuiResizableContainerRegistry['resizers'];
+  panels: OuiResizableContainerRegistry['panels'];
+  resizers: OuiResizableContainerRegistry['resizers'];
 }
 
 export interface ActionToggleOptions {
@@ -70,26 +70,26 @@ export interface ActionToggleOptions {
 }
 
 interface ActionReset {
-  type: 'EUI_RESIZABLE_RESET';
+  type: 'OUI_RESIZABLE_RESET';
 }
 
 interface ActionInit {
-  type: 'EUI_RESIZABLE_CONTAINER_INIT';
+  type: 'OUI_RESIZABLE_CONTAINER_INIT';
   payload: { isHorizontal: boolean };
 }
 
 export interface ActionDragStart {
-  type: 'EUI_RESIZABLE_DRAG_START';
+  type: 'OUI_RESIZABLE_DRAG_START';
   payload: { prevPanelId: string; nextPanelId: string; position: number };
 }
 
 export interface ActionDragMove {
-  type: 'EUI_RESIZABLE_DRAG_MOVE';
+  type: 'OUI_RESIZABLE_DRAG_MOVE';
   payload: { prevPanelId: string; nextPanelId: string; position: number };
 }
 
 export interface ActionKeyMove {
-  type: 'EUI_RESIZABLE_KEY_MOVE';
+  type: 'OUI_RESIZABLE_KEY_MOVE';
   payload: {
     prevPanelId: string;
     nextPanelId: string;
@@ -98,12 +98,12 @@ export interface ActionKeyMove {
 }
 
 export interface ActionResize {
-  type: 'EUI_RESIZABLE_RESIZE';
+  type: 'OUI_RESIZABLE_RESIZE';
   payload: {};
 }
 
 export interface ActionToggle {
-  type: 'EUI_RESIZABLE_TOGGLE';
+  type: 'OUI_RESIZABLE_TOGGLE';
   payload: {
     panelId: string;
     options: ActionToggleOptions;
@@ -111,48 +111,48 @@ export interface ActionToggle {
 }
 
 interface ActionRegisterPanel {
-  type: 'EUI_RESIZABLE_PANEL_REGISTER';
+  type: 'OUI_RESIZABLE_PANEL_REGISTER';
   payload: {
-    panel: EuiResizablePanelController;
+    panel: OuiResizablePanelController;
   };
 }
 
 interface ActionDeregisterPanel {
-  type: 'EUI_RESIZABLE_PANEL_DEREGISTER';
+  type: 'OUI_RESIZABLE_PANEL_DEREGISTER';
   payload: {
-    panelId: EuiResizablePanelController['id'];
+    panelId: OuiResizablePanelController['id'];
   };
 }
 
 interface ActionRegisterResizer {
-  type: 'EUI_RESIZABLE_BUTTON_REGISTER';
+  type: 'OUI_RESIZABLE_BUTTON_REGISTER';
   payload: {
-    resizer: EuiResizableButtonController;
+    resizer: OuiResizableButtonController;
   };
 }
 
 interface ActionDeregisterResizer {
-  type: 'EUI_RESIZABLE_BUTTON_DEREGISTER';
+  type: 'OUI_RESIZABLE_BUTTON_DEREGISTER';
   payload: {
-    resizerId: EuiResizableButtonController['id'];
+    resizerId: OuiResizableButtonController['id'];
   };
 }
 
 export interface ActionFocus {
-  type: 'EUI_RESIZABLE_BUTTON_FOCUS';
+  type: 'OUI_RESIZABLE_BUTTON_FOCUS';
   payload: {
-    resizerId: EuiResizableButtonController['id'];
+    resizerId: OuiResizableButtonController['id'];
   };
 }
 
 interface ActionBlur {
-  type: 'EUI_RESIZABLE_BUTTON_BLUR';
+  type: 'OUI_RESIZABLE_BUTTON_BLUR';
 }
 interface ActionOnChange {
-  type: 'EUI_RESIZABLE_ONCHANGE';
+  type: 'OUI_RESIZABLE_ONCHANGE';
 }
 
-export type EuiResizableContainerAction =
+export type OuiResizableContainerAction =
   | ActionReset
   | ActionInit
   | ActionRegisterPanel
@@ -168,13 +168,13 @@ export type EuiResizableContainerAction =
   | ActionBlur
   | ActionOnChange;
 
-export interface EuiResizableContainerActions {
+export interface OuiResizableContainerActions {
   reset: () => void;
   initContainer: (isHorizontal: boolean) => void;
-  registerPanel: (panel: EuiResizablePanelController) => void;
-  deregisterPanel: (panelId: EuiResizablePanelController['id']) => void;
-  registerResizer: (resizer: EuiResizableButtonController) => void;
-  deregisterResizer: (resizerId: EuiResizableButtonController['id']) => void;
+  registerPanel: (panel: OuiResizablePanelController) => void;
+  deregisterPanel: (panelId: OuiResizablePanelController['id']) => void;
+  registerResizer: (resizer: OuiResizableButtonController) => void;
+  deregisterResizer: (resizerId: OuiResizableButtonController['id']) => void;
   dragStart: ({
     prevPanelId,
     nextPanelId,

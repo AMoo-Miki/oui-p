@@ -18,8 +18,8 @@
  */
 
 export {
-  EuiBreadcrumb,
-  EuiBreadcrumbs,
-  EuiBreadcrumbsProps,
-  EuiBreadcrumbResponsiveMaxCount,
+  OuiBreadcrumb,
+  OuiBreadcrumbs,
+  OuiBreadcrumbsProps,
+  OuiBreadcrumbResponsiveMaxCount,
 } from './breadcrumbs';

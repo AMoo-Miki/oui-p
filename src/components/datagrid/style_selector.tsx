@@ -18,12 +18,12 @@
  */
 
 import React, { ReactElement, useState } from 'react';
-import { EuiDataGridStyle } from './data_grid_types';
-import { EuiI18n } from '../i18n';
-import { EuiPopover } from '../popover';
-import { EuiButtonEmpty, EuiButtonGroup } from '../button';
+import { OuiDataGridStyle } from './data_grid_types';
+import { OuiI18n } from '../i18n';
+import { OuiPopover } from '../popover';
+import { OuiButtonEmpty, OuiButtonGroup } from '../button';
 
-export const startingStyles: EuiDataGridStyle = {
+export const startingStyles: OuiDataGridStyle = {
   cellPadding: 'm',
   fontSize: 'm',
   border: 'all',
@@ -34,7 +34,7 @@ export const startingStyles: EuiDataGridStyle = {
   stickyFooter: true,
 };
 
-const densityStyles: { [key: string]: Partial<EuiDataGridStyle> } = {
+const densityStyles: { [key: string]: Partial<OuiDataGridStyle> } = {
   expanded: {
     fontSize: 'l',
     cellPadding: 'l',
@@ -50,8 +50,8 @@ const densityStyles: { [key: string]: Partial<EuiDataGridStyle> } = {
 };
 
 export const useDataGridStyleSelector = (
-  initialStyles: EuiDataGridStyle
-): [ReactElement, EuiDataGridStyle] => {
+  initialStyles: OuiDataGridStyle
+): [ReactElement, OuiDataGridStyle] => {
   // track styles specified by the user at run time
   const [userGridStyles, setUserGridStyles] = useState({});
 
@@ -74,30 +74,30 @@ export const useDataGridStyleSelector = (
   };
 
   const styleSelector = (
-    <EuiPopover
+    <OuiPopover
       data-test-subj="dataGridStyleSelectorPopover"
       isOpen={isOpen}
       closePopover={() => setIsOpen(false)}
       anchorPosition="downCenter"
       panelPaddingSize="s"
-      panelClassName="euiDataGridColumnSelectorPopover"
+      panelClassName="ouiDataGridColumnSelectorPopover"
       button={
-        <EuiButtonEmpty
+        <OuiButtonEmpty
           size="xs"
           iconType="tableDensityExpanded"
-          className="euiDataGrid__controlBtn"
+          className="ouiDataGrid__controlBtn"
           color="text"
           data-test-subj="dataGridStyleSelectorButton"
           onClick={() => setIsOpen(!isOpen)}>
-          <EuiI18n token="euiStyleSelector.buttonText" default="Density" />
-        </EuiButtonEmpty>
+          <OuiI18n token="ouiStyleSelector.buttonText" default="Density" />
+        </OuiButtonEmpty>
       }>
-      <EuiI18n
+      <OuiI18n
         tokens={[
-          'euiStyleSelector.buttonLegend',
-          'euiStyleSelector.labelExpanded',
-          'euiStyleSelector.labelNormal',
-          'euiStyleSelector.labelCompact',
+          'ouiStyleSelector.buttonLegend',
+          'ouiStyleSelector.labelExpanded',
+          'ouiStyleSelector.labelNormal',
+          'ouiStyleSelector.labelCompact',
         ]}
         defaults={[
           'Select the display density for the data grid',
@@ -111,10 +111,10 @@ export const useDataGridStyleSelector = (
           labelNormal,
           labelCompact,
         ]: string[]) => (
-          <EuiButtonGroup
+          <OuiButtonGroup
             legend={buttonLegend}
             name="density"
-            className="eui-displayInlineBlock"
+            className="oui-displayInlineBlock"
             buttonSize="compressed"
             options={[
               {
@@ -138,8 +138,8 @@ export const useDataGridStyleSelector = (
             isIconOnly
           />
         )}
-      </EuiI18n>
-    </EuiPopover>
+      </OuiI18n>
+    </OuiPopover>
   );
 
   return [styleSelector, gridStyles];

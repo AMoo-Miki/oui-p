@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiBetaBadge, EuiBetaBadgeProps } from './beta_badge';
+export { OuiBetaBadge, OuiBetaBadgeProps } from './beta_badge';

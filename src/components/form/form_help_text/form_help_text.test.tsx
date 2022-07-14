@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiFormHelpText } from './form_help_text';
+import { OuiFormHelpText } from './form_help_text';
 
-describe('EuiFormHelpText', () => {
+describe('OuiFormHelpText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormHelpText {...requiredProps}>This is help text.</EuiFormHelpText>
+      <OuiFormHelpText {...requiredProps}>This is help text.</OuiFormHelpText>
     );
 
     expect(component).toMatchSnapshot();

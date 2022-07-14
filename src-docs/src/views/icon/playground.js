@@ -3,12 +3,12 @@ import {
   dummyFunction,
   iconValidator,
 } from '../../services/playground';
-import { EuiIcon } from '../../../../src/components/';
+import { OuiIcon } from '../../../../src/components/';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiIcon.__docgenInfo)
-    ? EuiIcon.__docgenInfo[0]
-    : EuiIcon.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiIcon.__docgenInfo)
+    ? OuiIcon.__docgenInfo[0]
+    : OuiIcon.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.type = iconValidator({ ...propsToUse.type }, 'grid');
@@ -20,14 +20,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiIcon',
+      componentName: 'OuiIcon',
       props: propsToUse,
       scope: {
-        EuiIcon,
+        OuiIcon,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiIcon'],
+        '@opensearch-project/oui': {
+          named: ['OuiIcon'],
         },
       },
 

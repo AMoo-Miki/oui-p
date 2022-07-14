@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiNotificationEvent } from './notification_event';
+export { OuiNotificationEvent } from './notification_event';

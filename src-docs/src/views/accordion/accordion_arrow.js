@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { EuiAccordion, EuiPanel } from '../../../../src/components';
+import { OuiAccordion, OuiPanel } from '../../../../src/components';
 
 export default () => (
-  <EuiAccordion
+  <OuiAccordion
     id="accordion11"
     arrowDisplay="none"
     buttonContent="This one has it removed entirely">
-    <EuiPanel color="subdued">
-      Any content inside of <strong>EuiAccordion</strong> will appear here.
-    </EuiPanel>
-  </EuiAccordion>
+    <OuiPanel color="subdued">
+      Any content inside of <strong>OuiAccordion</strong> will appear here.
+    </OuiPanel>
+  </OuiAccordion>
 );

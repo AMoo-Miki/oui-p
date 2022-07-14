@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
   <button>
-    <EuiFlexGroup component="span">
-      <EuiFlexItem component="span">
+    <OuiFlexGroup component="span">
+      <OuiFlexItem component="span">
         These items are within a button
-      </EuiFlexItem>
+      </OuiFlexItem>
 
-      <EuiFlexItem component="span">
+      <OuiFlexItem component="span">
         So they all specify component=&ldquo;span&rdquo;
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </button>
 );

@@ -1,4 +1,4 @@
-.euiPagination {
+.ouiPagination {
   display: flex;
   align-items: center;
 
@@ -6,19 +6,19 @@
     // sass-lint:disable-block no-important
     display: inline-flex;
     align-items: center;
-    line-height: 1 !important; // Override EuiText line-height
+    line-height: 1 !important; // Override OuiText line-height
 
     > *:first-child {
-      margin-right: $euiSizeXS;
+      margin-right: $ouiSizeXS;
     }
 
     > *:last-child {
-      margin-left: $euiSizeXS;
+      margin-left: $ouiSizeXS;
     }
   }
 }
 
-.euiPagination__list {
+.ouiPagination__list {
   display: flex;
   align-items: baseline;
 }

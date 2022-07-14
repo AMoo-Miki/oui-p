@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiEmptyPrompt,
-  EuiPageTemplate,
-  EuiLoadingLogo,
-  EuiButton,
+  OuiEmptyPrompt,
+  OuiPageTemplate,
+  OuiLoadingLogo,
+  OuiButton,
 } from '../../../../src/components';
 
 export default () => {
@@ -46,29 +46,29 @@ export default () => {
         title: <h2>Dashboards</h2>,
         body: <p>You don&apos;t have any dashboards yet.</p>,
         actions: [
-          <EuiButton fill iconType="plusInCircleFilled">
+          <OuiButton fill iconType="plusInCircleFilled">
             Create new dashboard
-          </EuiButton>,
+          </OuiButton>,
         ],
       };
       break;
 
     default:
       emptyPromptProps = {
-        icon: <EuiLoadingLogo logo="logoKibana" size="xl" />,
+        icon: <OuiLoadingLogo logo="logoKibana" size="xl" />,
         title: <h2>Loading Dashboards</h2>,
       };
       break;
   }
 
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       template="centeredContent"
       pageContentProps={{
         color: currentState === 'error' ? 'danger' : 'subdued',
-        role: null, // For passing a11y tests in EUI docs only
+        role: null, // For passing a11y tests in OUI docs only
       }}>
-      <EuiEmptyPrompt {...emptyPromptProps} />
-    </EuiPageTemplate>
+      <OuiEmptyPrompt {...emptyPromptProps} />
+    </OuiPageTemplate>
   );
 };

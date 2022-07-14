@@ -1,13 +1,13 @@
 // sass-lint:disable indentation
 
-$euiTokenGrayColor: lightOrDarkTheme($euiColorDarkShade, $euiColorMediumShade);
+$ouiTokenGrayColor: lightOrDarkTheme($ouiColorDarkShade, $ouiColorMediumShade);
 
 // Appends the gray color to the color blind palette
-$euiTokenTypes: map-merge($euiPaletteColorBlind, (
+$ouiTokenTypes: map-merge($ouiPaletteColorBlind, (
   'gray': (
-    graphic: $euiTokenGrayColor,
-    behindText: $euiTokenGrayColor,
+    graphic: $ouiTokenGrayColor,
+    behindText: $ouiTokenGrayColor,
   )
 ));
 
-$euiTokenTypeKeys: map-keys($euiTokenTypes);
+$ouiTokenTypeKeys: map-keys($ouiTokenTypes);

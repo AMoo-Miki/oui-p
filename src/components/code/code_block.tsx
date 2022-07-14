@@ -20,14 +20,14 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
-import { EuiCodeBlockImpl, EuiCodeBlockImplProps } from './_code_block';
+import { OuiCodeBlockImpl, OuiCodeBlockImplProps } from './_code_block';
 
-export type EuiCodeBlockProps = CommonProps &
-  Omit<EuiCodeBlockImplProps, 'inline'> &
+export type OuiCodeBlockProps = CommonProps &
+  Omit<OuiCodeBlockImplProps, 'inline'> &
   HTMLAttributes<HTMLElement>;
 
-export const EuiCodeBlock: FunctionComponent<EuiCodeBlockProps> = ({
+export const OuiCodeBlock: FunctionComponent<OuiCodeBlockProps> = ({
   ...rest
 }) => {
-  return <EuiCodeBlockImpl inline={false} {...rest} />;
+  return <OuiCodeBlockImpl inline={false} {...rest} />;
 };

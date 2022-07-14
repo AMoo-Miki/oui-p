@@ -23,11 +23,11 @@ import { requiredProps } from '../../../test/required_props';
 
 import {
   ALIGN_ITEMS,
-  EuiPageHeaderContent,
-  EuiPageHeaderContentProps,
+  OuiPageHeaderContent,
+  OuiPageHeaderContentProps,
 } from './page_header_content';
 
-const tabs: EuiPageHeaderContentProps['tabs'] = [
+const tabs: OuiPageHeaderContentProps['tabs'] = [
   {
     label: 'Tab 1',
     isSelected: true,
@@ -37,14 +37,14 @@ const tabs: EuiPageHeaderContentProps['tabs'] = [
   },
 ];
 
-const rightSideItems: EuiPageHeaderContentProps['rightSideItems'] = [
+const rightSideItems: OuiPageHeaderContentProps['rightSideItems'] = [
   <button>Button 1</button>,
   <button>Button 2</button>,
 ];
 
-describe('EuiPageHeaderContent', () => {
+describe('OuiPageHeaderContent', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageHeaderContent {...requiredProps} />);
+    const component = render(<OuiPageHeaderContent {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -53,7 +53,7 @@ describe('EuiPageHeaderContent', () => {
     describe('pageTitle', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPageHeaderContent pageTitle="Page title" />
+          <OuiPageHeaderContent pageTitle="Page title" />
         );
 
         expect(component).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe('EuiPageHeaderContent', () => {
 
       test('is rendered with icon', () => {
         const component = render(
-          <EuiPageHeaderContent pageTitle="Page title" iconType="logoKibana" />
+          <OuiPageHeaderContent pageTitle="Page title" iconType="logoKibana" />
         );
 
         expect(component).toMatchSnapshot();
@@ -69,7 +69,7 @@ describe('EuiPageHeaderContent', () => {
 
       test('is rendered with icon and iconProps', () => {
         const component = render(
-          <EuiPageHeaderContent
+          <OuiPageHeaderContent
             pageTitle="Page title"
             iconType="logoKibana"
             iconProps={requiredProps}
@@ -82,14 +82,14 @@ describe('EuiPageHeaderContent', () => {
 
     describe('tabs', () => {
       test('is rendered', () => {
-        const component = render(<EuiPageHeaderContent tabs={tabs} />);
+        const component = render(<OuiPageHeaderContent tabs={tabs} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered with tabsProps', () => {
         const component = render(
-          <EuiPageHeaderContent tabs={tabs} tabsProps={requiredProps} />
+          <OuiPageHeaderContent tabs={tabs} tabsProps={requiredProps} />
         );
 
         expect(component).toMatchSnapshot();
@@ -99,9 +99,9 @@ describe('EuiPageHeaderContent', () => {
     describe('children', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPageHeaderContent>
+          <OuiPageHeaderContent>
             <p>Anything</p>
-          </EuiPageHeaderContent>
+          </OuiPageHeaderContent>
         );
 
         expect(component).toMatchSnapshot();
@@ -111,7 +111,7 @@ describe('EuiPageHeaderContent', () => {
     describe('description', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPageHeaderContent description="Description" />
+          <OuiPageHeaderContent description="Description" />
         );
 
         expect(component).toMatchSnapshot();
@@ -121,7 +121,7 @@ describe('EuiPageHeaderContent', () => {
     describe('rightSideItems', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPageHeaderContent rightSideItems={rightSideItems} />
+          <OuiPageHeaderContent rightSideItems={rightSideItems} />
         );
 
         expect(component).toMatchSnapshot();
@@ -129,7 +129,7 @@ describe('EuiPageHeaderContent', () => {
 
       test('is rendered with rightSideGroupProps', () => {
         const component = render(
-          <EuiPageHeaderContent
+          <OuiPageHeaderContent
             rightSideItems={rightSideItems}
             rightSideGroupProps={{ responsive: true, ...requiredProps }}
           />
@@ -142,7 +142,7 @@ describe('EuiPageHeaderContent', () => {
     describe('children', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPageHeaderContent>Child</EuiPageHeaderContent>
+          <OuiPageHeaderContent>Child</OuiPageHeaderContent>
         );
 
         expect(component).toMatchSnapshot();
@@ -150,12 +150,12 @@ describe('EuiPageHeaderContent', () => {
 
       test('is rendered even if content props are passed', () => {
         const component = render(
-          <EuiPageHeaderContent
+          <OuiPageHeaderContent
             pageTitle="Page title"
             tabs={tabs}
             rightSideItems={rightSideItems}>
             Child
-          </EuiPageHeaderContent>
+          </OuiPageHeaderContent>
         );
 
         expect(component).toMatchSnapshot();
@@ -166,7 +166,7 @@ describe('EuiPageHeaderContent', () => {
       ALIGN_ITEMS.forEach((alignment) => {
         it(`${alignment} is rendered`, () => {
           const component = render(
-            <EuiPageHeaderContent
+            <OuiPageHeaderContent
               pageTitle="Page title"
               rightSideItems={rightSideItems}
               alignItems={alignment}
@@ -180,14 +180,14 @@ describe('EuiPageHeaderContent', () => {
 
     describe('responsive', () => {
       test('is rendered as false', () => {
-        const component = render(<EuiPageHeaderContent responsive={false} />);
+        const component = render(<OuiPageHeaderContent responsive={false} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered as reverse', () => {
         const component = render(
-          <EuiPageHeaderContent responsive={'reverse'} />
+          <OuiPageHeaderContent responsive={'reverse'} />
         );
 
         expect(component).toMatchSnapshot();

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconMobile = ({ title, titleId, ...props }) => (
+const OuiIconMobile = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -18,4 +18,4 @@ const EuiIconMobile = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconMobile;
+export const icon = OuiIconMobile;

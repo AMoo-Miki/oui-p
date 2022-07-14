@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTourStep } from './tour_step';
+import { OuiTourStep } from './tour_step';
 
 const steps = [
   {
@@ -37,12 +37,12 @@ const config = {
   title: 'A demo',
 };
 
-describe('EuiTourStep', () => {
+describe('OuiTourStep', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiTourStep {...config} {...steps[0]} {...requiredProps}>
+      <OuiTourStep {...config} {...steps[0]} {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </OuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -50,13 +50,13 @@ describe('EuiTourStep', () => {
 
   test('can be closed', () => {
     const component = render(
-      <EuiTourStep
+      <OuiTourStep
         {...config}
         {...steps[0]}
         isStepOpen={false}
         {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </OuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -64,9 +64,9 @@ describe('EuiTourStep', () => {
 
   test('can set a minWidth', () => {
     const component = render(
-      <EuiTourStep {...config} {...steps[0]} minWidth={240} {...requiredProps}>
+      <OuiTourStep {...config} {...steps[0]} minWidth={240} {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </OuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -74,13 +74,13 @@ describe('EuiTourStep', () => {
 
   test('can override the footer action', () => {
     const component = render(
-      <EuiTourStep
+      <OuiTourStep
         {...config}
         {...steps[0]}
         footerAction={<button onClick={() => {}}>Test</button>}
         {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </OuiTourStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -88,13 +88,13 @@ describe('EuiTourStep', () => {
 
   test('can turn off the beacon', () => {
     const component = render(
-      <EuiTourStep
+      <OuiTourStep
         {...config}
         {...steps[0]}
         decoration="none"
         {...requiredProps}>
         <span>Test</span>
-      </EuiTourStep>
+      </OuiTourStep>
     );
 
     expect(component).toMatchSnapshot();

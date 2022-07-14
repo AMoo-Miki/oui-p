@@ -21,14 +21,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSideNavItem } from './side_nav_item';
+import { OuiSideNavItem } from './side_nav_item';
 
-describe('EuiSideNavItem', () => {
+describe('OuiSideNavItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSideNavItem>
+      <OuiSideNavItem>
         <button {...requiredProps} />
-      </EuiSideNavItem>
+      </OuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,9 +36,9 @@ describe('EuiSideNavItem', () => {
 
   test("preserves child's classes", () => {
     const component = render(
-      <EuiSideNavItem>
+      <OuiSideNavItem>
         <button className="test" />
-      </EuiSideNavItem>
+      </OuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe('EuiSideNavItem', () => {
 
   test('can have truncation turned off', () => {
     const component = render(
-      <EuiSideNavItem truncate={false}>Children</EuiSideNavItem>
+      <OuiSideNavItem truncate={false}>Children</OuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -54,7 +54,7 @@ describe('EuiSideNavItem', () => {
 
   test('can be emphasized', () => {
     const component = render(
-      <EuiSideNavItem emphasize>Children</EuiSideNavItem>
+      <OuiSideNavItem emphasize>Children</OuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -62,7 +62,7 @@ describe('EuiSideNavItem', () => {
 
   test('can be disabled', () => {
     const component = render(
-      <EuiSideNavItem disabled>Children</EuiSideNavItem>
+      <OuiSideNavItem disabled>Children</OuiSideNavItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -71,9 +71,9 @@ describe('EuiSideNavItem', () => {
   describe('isSelected', () => {
     test('defaults to false', () => {
       const component = render(
-        <EuiSideNavItem>
+        <OuiSideNavItem>
           <button />
-        </EuiSideNavItem>
+        </OuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -81,9 +81,9 @@ describe('EuiSideNavItem', () => {
 
     test('is rendered when specified as true', () => {
       const component = render(
-        <EuiSideNavItem isSelected>
+        <OuiSideNavItem isSelected>
           <button />
-        </EuiSideNavItem>
+        </OuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -93,9 +93,9 @@ describe('EuiSideNavItem', () => {
   describe('href', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiSideNavItem href="#">
+        <OuiSideNavItem href="#">
           <button />
-        </EuiSideNavItem>
+        </OuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();
@@ -103,9 +103,9 @@ describe('EuiSideNavItem', () => {
 
     test('is rendered with rel', () => {
       const component = render(
-        <EuiSideNavItem href="#" rel="noopener">
+        <OuiSideNavItem href="#" rel="noopener">
           <button />
-        </EuiSideNavItem>
+        </OuiSideNavItem>
       );
 
       expect(component).toMatchSnapshot();

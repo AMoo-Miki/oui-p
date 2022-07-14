@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconTokenTokenCount = ({ title, titleId, ...props }) => (
+const OuiIconTokenTokenCount = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconTokenTokenCount = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenTokenCount;
+export const icon = OuiIconTokenTokenCount;

@@ -21,50 +21,50 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiButtonContent } from './button_content';
+import { OuiButtonContent } from './button_content';
 
-describe('EuiButtonContent', () => {
+describe('OuiButtonContent', () => {
   test('is rendered', () => {
-    const component = render(<EuiButtonContent {...requiredProps} />);
+    const component = render(<OuiButtonContent {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('children is rendered', () => {
-      const component = render(<EuiButtonContent>Content</EuiButtonContent>);
+      const component = render(<OuiButtonContent>Content</OuiButtonContent>);
 
       expect(component).toMatchSnapshot();
     });
 
     test('iconType is rendered', () => {
-      const component = render(<EuiButtonContent iconType="bolt" />);
+      const component = render(<OuiButtonContent iconType="bolt" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('iconSide is rendered', () => {
       const component = render(
-        <EuiButtonContent iconSide="right" iconType="bolt" />
+        <OuiButtonContent iconSide="right" iconType="bolt" />
       );
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiButtonContent isLoading />);
+      const component = render(<OuiButtonContent isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading replaces iconType with spinner', () => {
-      const component = render(<EuiButtonContent isLoading iconType="bolt" />);
+      const component = render(<OuiButtonContent isLoading iconType="bolt" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('textProps is rendered', () => {
-      const component = render(<EuiButtonContent textProps={requiredProps} />);
+      const component = render(<OuiButtonContent textProps={requiredProps} />);
 
       expect(component).toMatchSnapshot();
     });

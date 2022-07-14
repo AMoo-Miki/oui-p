@@ -1,0 +1,8 @@
+// Modifier naming and colors for step status'
+// Disabled/Loading/Incomplete are handled manually
+$ouiStepStatusColors: (
+  default: $ouiColorPrimary,
+  complete: $ouiColorSuccess,
+  warning: $ouiColorWarning,
+  danger: $ouiColorDanger,
+);

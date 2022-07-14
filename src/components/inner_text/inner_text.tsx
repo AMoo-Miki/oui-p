@@ -71,14 +71,14 @@ export function useInnerText(
   return [setRef, innerText];
 }
 
-export interface EuiInnerTextProps {
+export interface OuiInnerTextProps {
   /**
    * ReactNode to render as this component's content
    */
   children: (ref?: (node: RefT) => void, innerText?: string) => ReactElement;
   fallback?: string;
 }
-export const EuiInnerText: FunctionComponent<EuiInnerTextProps> = ({
+export const OuiInnerText: FunctionComponent<OuiInnerTextProps> = ({
   children,
   fallback,
 }) => {

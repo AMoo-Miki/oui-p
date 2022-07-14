@@ -25,7 +25,7 @@ module.exports = {
     recommended: {
       plugins: ['@elastic/eslint-plugin-eui'],
       rules: {
-        '@elastic/eui/href-or-on-click': 'error',
+        '@opensearch-project/oui/href-or-on-click': 'error',
       },
     },
   },

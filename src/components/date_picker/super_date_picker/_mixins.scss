@@ -1,10 +1,10 @@
-@mixin euiSuperDatePickerText {
-  @include euiFormControlText;
+@mixin ouiSuperDatePickerText {
+  @include ouiFormControlText;
   display: block;
   width: 100%;
-  padding: 0 $euiSizeS;
-  line-height: $euiFormControlLayoutGroupInputHeight;
-  height: $euiFormControlLayoutGroupInputHeight;
+  padding: 0 $ouiSizeS;
+  line-height: $ouiFormControlLayoutGroupInputHeight;
+  height: $ouiFormControlLayoutGroupInputHeight;
   word-break: break-all;
-  transition: background $euiAnimSpeedFast ease-in;
+  transition: background $ouiAnimSpeedFast ease-in;
 }

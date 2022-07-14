@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiListGroup } from '../../../../src/components';
+import { OuiListGroup } from '../../../../src/components';
 
 const myContent = [
   {
@@ -38,5 +38,5 @@ const myContent = [
 ];
 
 export default () => {
-  return <EuiListGroup listItems={myContent} />;
+  return <OuiListGroup listItems={myContent} />;
 };

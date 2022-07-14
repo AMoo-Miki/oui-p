@@ -20,14 +20,14 @@
 import React from 'react';
 import { render, mount, ReactWrapper } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
-import { EuiMarkdownEditor } from './markdown_editor';
+import { OuiMarkdownEditor } from './markdown_editor';
 import * as MarkdownTooltip from './plugins/markdown_tooltip';
 import MarkdownActions from './markdown_actions';
 
-describe('EuiMarkdownEditor', () => {
+describe('OuiMarkdownEditor', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiMarkdownEditor
+      <OuiMarkdownEditor
         editorId="editorId"
         value=""
         onChange={() => null}
@@ -42,7 +42,7 @@ describe('EuiMarkdownEditor', () => {
     describe('height', () => {
       test('is rendered with a custom size', () => {
         const component = render(
-          <EuiMarkdownEditor
+          <OuiMarkdownEditor
             editorId="editorId"
             height={400}
             value=""
@@ -56,7 +56,7 @@ describe('EuiMarkdownEditor', () => {
 
       test('is rendered in full mode', () => {
         const component = render(
-          <EuiMarkdownEditor
+          <OuiMarkdownEditor
             editorId="editorId"
             height="full"
             value=""
@@ -72,7 +72,7 @@ describe('EuiMarkdownEditor', () => {
     describe('maxHeight', () => {
       test('is rendered with a custom size', () => {
         const component = render(
-          <EuiMarkdownEditor
+          <OuiMarkdownEditor
             editorId="editorId"
             maxHeight={600}
             value=""
@@ -88,7 +88,7 @@ describe('EuiMarkdownEditor', () => {
     describe('autoExpandPreview', () => {
       test('is rendered with false', () => {
         const component = render(
-          <EuiMarkdownEditor
+          <OuiMarkdownEditor
             editorId="editorId"
             autoExpandPreview={false}
             value=""
@@ -104,23 +104,23 @@ describe('EuiMarkdownEditor', () => {
 
   test('is preview rendered', () => {
     const component = mount(
-      <EuiMarkdownEditor
+      <OuiMarkdownEditor
         editorId="editorId"
         value="## Hello world"
         onChange={() => null}
         {...requiredProps}
       />
     );
-    component.find('EuiButtonEmpty').simulate('click');
+    component.find('OuiButtonEmpty').simulate('click');
     expect(
       component
-        .find('.euiMarkdownFormat')
+        .find('.ouiMarkdownFormat')
         .childAt(0)
         .childAt(0)
         .matchesElement(<h2>Hello world</h2>)
     );
     expect(
-      component.find('.euiMarkdownFormat').childAt(0).childAt(0).text()
+      component.find('.ouiMarkdownFormat').childAt(0).childAt(0).text()
     ).toBe('Hello world');
   });
 
@@ -132,12 +132,12 @@ describe('EuiMarkdownEditor', () => {
     };
 
     const component = mount(
-      <EuiMarkdownEditor {...testProps} {...requiredProps} />
+      <OuiMarkdownEditor {...testProps} {...requiredProps} />
     );
 
     const event = { target: { value: 'sometext' } };
 
-    component.find('EuiMarkdownEditorTextArea').simulate('change', event);
+    component.find('OuiMarkdownEditorTextArea').simulate('change', event);
     expect(testProps.onChange).toHaveBeenCalledTimes(1);
     expect(testProps.onChange).toHaveBeenLastCalledWith(event.target.value);
   });
@@ -164,7 +164,7 @@ describe('EuiMarkdownEditor', () => {
         onParse: jest.fn(),
       };
 
-      mount(<EuiMarkdownEditor {...testProps} {...requiredProps} />);
+      mount(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
 
       expect(testProps.onParse).toHaveBeenCalledTimes(1);
       expect(testProps.onParse).toBeCalledWith(null, {
@@ -189,7 +189,7 @@ describe('EuiMarkdownEditor', () => {
       };
 
       const component = mount(
-        <EuiMarkdownEditor {...testProps} {...requiredProps} />
+        <OuiMarkdownEditor {...testProps} {...requiredProps} />
       );
 
       expect(component.find('button[aria-label="Show errors"]')).toHaveLength(
@@ -206,7 +206,7 @@ describe('EuiMarkdownEditor', () => {
       };
 
       const component = mount(
-        <EuiMarkdownEditor {...testProps} {...requiredProps} />
+        <OuiMarkdownEditor {...testProps} {...requiredProps} />
       );
       expect(component.find('button[aria-label="Show errors"]')).toHaveLength(
         0
@@ -240,10 +240,10 @@ describe('EuiMarkdownEditor', () => {
     let textareaNode: () => Element;
     beforeEach(() => {
       component = mount(
-        <EuiMarkdownEditor {...testProps} {...requiredProps} />
+        <OuiMarkdownEditor {...testProps} {...requiredProps} />
       );
       textareaNode = () =>
-        component.find('EuiMarkdownEditorTextArea').getDOMNode();
+        component.find('OuiMarkdownEditorTextArea').getDOMNode();
 
       const textarea = textareaNode();
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment

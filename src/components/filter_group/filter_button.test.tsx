@@ -21,18 +21,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiFilterButton } from './filter_button';
+import { OuiFilterButton } from './filter_button';
 
-describe('EuiFilterButton', () => {
+describe('OuiFilterButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiFilterButton {...requiredProps} />);
+    const component = render(<OuiFilterButton {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders zero properly', () => {
     const component = render(
-      <EuiFilterButton {...requiredProps} numFilters={0} />
+      <OuiFilterButton {...requiredProps} numFilters={0} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +42,7 @@ describe('EuiFilterButton', () => {
     describe('iconType and iconSide', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFilterButton iconType="user" iconSide="right" />
+          <OuiFilterButton iconType="user" iconSide="right" />
         );
 
         expect(component).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('EuiFilterButton', () => {
 
     describe('numFilters', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton numFilters={5} />);
+        const component = render(<OuiFilterButton numFilters={5} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -60,7 +60,7 @@ describe('EuiFilterButton', () => {
     describe('numActiveFilters and hasActiveFilters', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiFilterButton numActiveFilters={5} hasActiveFilters />
+          <OuiFilterButton numActiveFilters={5} hasActiveFilters />
         );
 
         expect(component).toMatchSnapshot();
@@ -69,7 +69,7 @@ describe('EuiFilterButton', () => {
 
     describe('isSelected', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton isSelected />);
+        const component = render(<OuiFilterButton isSelected />);
 
         expect(component).toMatchSnapshot();
       });
@@ -77,7 +77,7 @@ describe('EuiFilterButton', () => {
 
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton isDisabled />);
+        const component = render(<OuiFilterButton isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -85,7 +85,7 @@ describe('EuiFilterButton', () => {
 
     describe('type', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton type="button" />);
+        const component = render(<OuiFilterButton type="button" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -93,7 +93,7 @@ describe('EuiFilterButton', () => {
 
     describe('grow', () => {
       it('can be turned off', () => {
-        const component = render(<EuiFilterButton grow={false} />);
+        const component = render(<OuiFilterButton grow={false} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -101,7 +101,7 @@ describe('EuiFilterButton', () => {
 
     describe('withNext', () => {
       it('is rendered', () => {
-        const component = render(<EuiFilterButton withNext />);
+        const component = render(<OuiFilterButton withNext />);
 
         expect(component).toMatchSnapshot();
       });

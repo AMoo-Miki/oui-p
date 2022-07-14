@@ -17,15 +17,15 @@
  * under the License.
  */
 
-export { EuiToast } from './toast';
+export { OuiToast } from './toast';
 
 export {
-  EuiGlobalToastList,
-  EuiGlobalToastListProps,
-  Toast as EuiGlobalToastListToast,
+  OuiGlobalToastList,
+  OuiGlobalToastListProps,
+  Toast as OuiGlobalToastListToast,
 } from './global_toast_list';
 
 export {
-  EuiGlobalToastListItem,
-  EuiGlobalToastListItemProps,
+  OuiGlobalToastListItem,
+  OuiGlobalToastListItemProps,
 } from './global_toast_list_item';

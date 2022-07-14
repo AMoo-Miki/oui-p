@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageContentHeader } from './page_content_header';
+import { OuiPageContentHeader } from './page_content_header';
 
-describe('EuiPageContentHeader', () => {
+describe('OuiPageContentHeader', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageContentHeader {...requiredProps} />);
+    const component = render(<OuiPageContentHeader {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

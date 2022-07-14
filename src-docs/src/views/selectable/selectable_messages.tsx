@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react';
 
-import { EuiSelectable } from '../../../../src/components/selectable';
-import { EuiSwitch } from '../../../../src/components/form/switch';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { OuiSelectable } from '../../../../src/components/selectable';
+import { OuiSwitch } from '../../../../src/components/form/switch';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => {
   const [useCustomMessage, setUseCustomMessage] = useState(false);
@@ -13,19 +13,19 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiSwitch
+      <OuiSwitch
         label="Custom message"
         onChange={(e) => setUseCustomMessage(e.target.checked)}
         checked={useCustomMessage}
       />
       &emsp;
-      <EuiSwitch
+      <OuiSwitch
         label="Show loading"
         onChange={(e) => setIsLoading(e.target.checked)}
         checked={isLoading}
       />
-      <EuiSpacer />
-      <EuiSelectable
+      <OuiSpacer />
+      <OuiSelectable
         aria-label="Messaging example"
         options={[]}
         style={{ width: 300 }}
@@ -34,7 +34,7 @@ export default () => {
         loadingMessage={useCustomMessage ? loadingMessage : undefined}
         emptyMessage={useCustomMessage ? emptyMessage : undefined}>
         {(list) => list}
-      </EuiSelectable>
+      </OuiSelectable>
     </Fragment>
   );
 };

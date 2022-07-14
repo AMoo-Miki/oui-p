@@ -18,9 +18,9 @@
  */
 
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import { EuiObserver } from '../observer';
+import { OuiObserver } from '../observer';
 
-export interface EuiResizeObserverProps {
+export interface OuiResizeObserverProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -30,8 +30,8 @@ export interface EuiResizeObserverProps {
 
 const hasResizeObserver =
   typeof window !== 'undefined' && typeof window.ResizeObserver !== 'undefined';
-export class EuiResizeObserver extends EuiObserver<EuiResizeObserverProps> {
-  name = 'EuiResizeObserver';
+export class OuiResizeObserver extends OuiObserver<OuiResizeObserverProps> {
+  name = 'OuiResizeObserver';
 
   state = {
     height: 0,

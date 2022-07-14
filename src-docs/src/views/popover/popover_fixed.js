@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiButton, EuiPopover } from '../../../../src/components';
+import { OuiButton, OuiPopover } from '../../../../src/components';
 
 export default () => {
   const [isExampleShown, setIsExampleShown] = useState(false);
@@ -14,27 +14,27 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton
+    <OuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}
       fill>
       Show fixed popover
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
     <React.Fragment>
-      <EuiButton onClick={toggleExample}>Toggle example</EuiButton>
+      <OuiButton onClick={toggleExample}>Toggle example</OuiButton>
       {isExampleShown && (
-        <EuiPopover
+        <OuiPopover
           button={button}
           isOpen={isPopoverOpen}
           closePopover={closePopover}
           style={{ position: 'fixed', bottom: 50, right: 50, zIndex: 10 }}
           repositionOnScroll={true}>
           <div>This popover scrolls with the button element!</div>
-        </EuiPopover>
+        </OuiPopover>
       )}
     </React.Fragment>
   );

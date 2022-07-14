@@ -21,20 +21,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiBadge, COLORS, ICON_SIDES } from './badge';
+import { OuiBadge, COLORS, ICON_SIDES } from './badge';
 
-describe('EuiBadge', () => {
+describe('OuiBadge', () => {
   test('is rendered', () => {
-    const component = render(<EuiBadge {...requiredProps}>Content</EuiBadge>);
+    const component = render(<OuiBadge {...requiredProps}>Content</OuiBadge>);
 
     expect(component).toMatchSnapshot();
   });
 
   test('is disabled', () => {
     const component = render(
-      <EuiBadge isDisabled {...requiredProps}>
+      <OuiBadge isDisabled {...requiredProps}>
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,12 +42,12 @@ describe('EuiBadge', () => {
 
   test('is rendered with onClick provided', () => {
     const component = render(
-      <EuiBadge
+      <OuiBadge
         {...requiredProps}
         onClick={jest.fn()}
         onClickAriaLabel="Example of onclick event for the button">
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -55,9 +55,9 @@ describe('EuiBadge', () => {
 
   test('is rendered with href provided', () => {
     const component = render(
-      <EuiBadge {...requiredProps} href="/#/">
+      <OuiBadge {...requiredProps} href="/#/">
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -65,12 +65,12 @@ describe('EuiBadge', () => {
 
   test('is rendered with iconOnClick provided', () => {
     const component = render(
-      <EuiBadge
+      <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
         iconOnClickAriaLabel="Example of onclick event for icon within the button">
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -78,14 +78,14 @@ describe('EuiBadge', () => {
 
   test('is rendered with iconOnClick and onClick provided', () => {
     const component = render(
-      <EuiBadge
+      <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
         iconOnClickAriaLabel="Example of onclick event for icon within the button"
         onClick={jest.fn()}
         onClickAriaLabel="Example of onclick event for the button">
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -93,13 +93,13 @@ describe('EuiBadge', () => {
 
   test('is rendered with iconOnClick and href provided', () => {
     const component = render(
-      <EuiBadge
+      <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
         iconOnClickAriaLabel="Example of onclick event for icon within the anchor"
         href="/#/">
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -107,14 +107,14 @@ describe('EuiBadge', () => {
 
   test('is rendered with href and rel provided', () => {
     const component = render(
-      <EuiBadge
+      <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
         iconOnClickAriaLabel="Example of onclick event for icon within the anchor"
         href="/#/"
         rel="noopener">
         Content
-      </EuiBadge>
+      </OuiBadge>
     );
 
     expect(component).toMatchSnapshot();
@@ -123,7 +123,7 @@ describe('EuiBadge', () => {
   describe('props', () => {
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<EuiBadge iconType="user">Content</EuiBadge>);
+        const component = render(<OuiBadge iconType="user">Content</OuiBadge>);
 
         expect(component).toMatchSnapshot();
       });
@@ -132,7 +132,7 @@ describe('EuiBadge', () => {
     describe('color', () => {
       COLORS.forEach((color) => {
         it(`${color} is rendered`, () => {
-          const component = render(<EuiBadge color={color}>Content</EuiBadge>);
+          const component = render(<OuiBadge color={color}>Content</OuiBadge>);
 
           expect(component).toMatchSnapshot();
         });
@@ -140,14 +140,14 @@ describe('EuiBadge', () => {
 
       it('accepts rgba', () => {
         const component = render(
-          <EuiBadge color="rgba(255,255,255,1)">Content</EuiBadge>
+          <OuiBadge color="rgba(255,255,255,1)">Content</OuiBadge>
         );
 
         expect(component).toMatchSnapshot();
       });
 
       it('accepts hex', () => {
-        const component = render(<EuiBadge color="#333">Content</EuiBadge>);
+        const component = render(<OuiBadge color="#333">Content</OuiBadge>);
 
         expect(component).toMatchSnapshot();
       });
@@ -157,9 +157,9 @@ describe('EuiBadge', () => {
       ICON_SIDES.forEach((iconSide) => {
         it(`${iconSide} is rendered`, () => {
           const component = render(
-            <EuiBadge iconType="user" iconSide={iconSide}>
+            <OuiBadge iconType="user" iconSide={iconSide}>
               Content
-            </EuiBadge>
+            </OuiBadge>
           );
 
           expect(component).toMatchSnapshot();
@@ -171,7 +171,7 @@ describe('EuiBadge', () => {
       const style = { border: '4px solid tomato' };
 
       it('is rendered', () => {
-        const component = render(<EuiBadge style={style}>Content</EuiBadge>);
+        const component = render(<OuiBadge style={style}>Content</OuiBadge>);
 
         expect(component).toMatchSnapshot();
       });
@@ -179,9 +179,9 @@ describe('EuiBadge', () => {
       COLORS.forEach((color) => {
         it(`is rendered with ${color}`, () => {
           const component = render(
-            <EuiBadge style={style} color={color}>
+            <OuiBadge style={style} color={color}>
               Content
-            </EuiBadge>
+            </OuiBadge>
           );
 
           expect(component).toMatchSnapshot();
@@ -190,9 +190,9 @@ describe('EuiBadge', () => {
 
       it('is rendered with hollow', () => {
         const component = render(
-          <EuiBadge style={style} color="hollow">
+          <OuiBadge style={style} color="hollow">
             Content
-          </EuiBadge>
+          </OuiBadge>
         );
 
         expect(component).toMatchSnapshot();

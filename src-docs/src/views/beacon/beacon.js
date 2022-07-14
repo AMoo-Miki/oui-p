@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { EuiBeacon } from '../../../../src/components';
+import { OuiBeacon } from '../../../../src/components';
 
 export default () => (
   <>
-    <EuiBeacon />
+    <OuiBeacon />
   </>
 );

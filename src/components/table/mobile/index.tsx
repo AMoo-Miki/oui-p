@@ -17,14 +17,14 @@
  * under the License.
  */
 
-export { EuiTableHeaderMobile } from './table_header_mobile';
+export { OuiTableHeaderMobile } from './table_header_mobile';
 
 export {
-  EuiTableSortMobile,
-  EuiTableSortMobileProps,
+  OuiTableSortMobile,
+  OuiTableSortMobileProps,
 } from './table_sort_mobile';
 
 export {
-  EuiTableSortMobileItem,
-  EuiTableSortMobileItemProps,
+  OuiTableSortMobileItem,
+  OuiTableSortMobileItemProps,
 } from './table_sort_mobile_item';

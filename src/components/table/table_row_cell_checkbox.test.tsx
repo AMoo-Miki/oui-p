@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiTableRowCellCheckbox } from './table_row_cell_checkbox';
+import { OuiTableRowCellCheckbox } from './table_row_cell_checkbox';
 
-describe('EuiTableRowCellCheckbox', () => {
+describe('OuiTableRowCellCheckbox', () => {
   test('is rendered', () => {
-    const component = render(<EuiTableRowCellCheckbox {...requiredProps} />);
+    const component = render(<OuiTableRowCellCheckbox {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

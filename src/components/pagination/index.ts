@@ -17,9 +17,9 @@
  * under the License.
  */
 
-export { EuiPagination, EuiPaginationProps } from './pagination';
+export { OuiPagination, OuiPaginationProps } from './pagination';
 
 export {
-  EuiPaginationButton,
-  EuiPaginationButtonProps,
+  OuiPaginationButton,
+  OuiPaginationButtonProps,
 } from './pagination_button';

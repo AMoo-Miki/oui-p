@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import {
-  EuiRadioGroup,
-  EuiSuggest,
-  EuiSpacer,
+  OuiRadioGroup,
+  OuiSuggest,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -64,13 +64,13 @@ export default () => {
 
   return (
     <div>
-      <EuiRadioGroup
+      <OuiRadioGroup
         options={radios}
         idSelected={radioIdSelected}
         onChange={(id) => onChange(id)}
       />
-      <EuiSpacer size="xl" />
-      <EuiSuggest
+      <OuiSpacer size="xl" />
+      <OuiSuggest
         status={status}
         onInputChange={() => {}}
         onItemClick={onItemClick}

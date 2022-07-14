@@ -1,0 +1,5 @@
+// Increase the medium (currently default) size of OuiText to original 16px
+.ouiText--medium {
+  @include fontSize($ouiFontSizeM);
+  @include ouiScaleText($ouiFontSizeM);
+}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconTokenPercolator = ({ title, titleId, ...props }) => (
+const OuiIconTokenPercolator = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -17,4 +17,4 @@ const EuiIconTokenPercolator = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenPercolator;
+export const icon = OuiIconTokenPercolator;

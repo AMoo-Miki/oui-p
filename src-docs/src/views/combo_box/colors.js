@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import { EuiComboBox } from '../../../../src/components';
-import { euiPaletteColorBlindBehindText } from '../../../../src/services';
+import { OuiComboBox } from '../../../../src/components';
+import { ouiPaletteColorBlindBehindText } from '../../../../src/services';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
-const visColorsBehindText = euiPaletteColorBlindBehindText();
+const visColorsBehindText = ouiPaletteColorBlindBehindText();
 const optionsStatic = [
   {
     label: 'Titan',
@@ -89,7 +89,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <DisplayToggles canDisabled={false} canReadOnly={false} canIsDisabled>
-      <EuiComboBox
+      <OuiComboBox
         placeholder="Select or create options"
         options={options}
         selectedOptions={selectedOptions}

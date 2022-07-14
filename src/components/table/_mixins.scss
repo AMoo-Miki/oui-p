@@ -1,20 +1,20 @@
-@mixin euiTableCell {
+@mixin ouiTableCell {
   vertical-align: middle;
-  border-top: $euiBorderThin;
-  border-bottom: $euiBorderThin;
+  border-top: $ouiBorderThin;
+  border-bottom: $ouiBorderThin;
   font-weight: inherit;
   text-align: inherit;
 }
 
-@mixin euiTableCellCheckbox {
-  @include euiTableCell;
-  width: $euiTableCellCheckboxWidth;
+@mixin ouiTableCellCheckbox {
+  @include ouiTableCell;
+  width: $ouiTableCellCheckboxWidth;
   vertical-align: middle;
 }
 
-@mixin euiTableActionsBackgroundMobile {
-  background-image: linear-gradient(to right, $euiTableActionsBorderColor 0, $euiTableActionsBorderColor 1px, transparent 1px, transparent 100%);
-  background-size: $euiTableActionsAreaWidth 100%;
+@mixin ouiTableActionsBackgroundMobile {
+  background-image: linear-gradient(to right, $ouiTableActionsBorderColor 0, $ouiTableActionsBorderColor 1px, transparent 1px, transparent 100%);
+  background-size: $ouiTableActionsAreaWidth 100%;
   background-position-x: right;
   background-repeat: no-repeat;
 }

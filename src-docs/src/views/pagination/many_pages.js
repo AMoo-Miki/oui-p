@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiPagination } from '../../../../src/components';
+import { OuiPagination } from '../../../../src/components';
 
 export default function () {
   const [activePage, setActivePage] = useState(0);
@@ -11,7 +11,7 @@ export default function () {
   };
 
   return (
-    <EuiPagination
+    <OuiPagination
       aria-label="Many pages example"
       pageCount={PAGE_COUNT}
       activePage={activePage}

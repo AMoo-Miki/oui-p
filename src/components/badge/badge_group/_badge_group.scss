@@ -1,21 +1,21 @@
-$euiBadgeGroupGutterTypes: (
-  gutterExtraSmall: $euiSizeXS,
-  gutterSmall: $euiSizeS,
+$ouiBadgeGroupGutterTypes: (
+  gutterExtraSmall: $ouiSizeXS,
+  gutterSmall: $ouiSizeS,
 );
 
-.euiBadgeGroup__item {
+.ouiBadgeGroup__item {
   display: inline-block;
   max-width: 100%;
 }
 
 // Gutter Sizes
-@each $gutterName, $gutterSize in $euiBadgeGroupGutterTypes {
+@each $gutterName, $gutterSize in $ouiBadgeGroupGutterTypes {
   $halfGutterSize: $gutterSize * .5;
 
-  .euiBadgeGroup--#{$gutterName} {
+  .ouiBadgeGroup--#{$gutterName} {
     margin: -$halfGutterSize;
 
-    & > .euiBadgeGroup__item {
+    & > .ouiBadgeGroup__item {
       margin: $halfGutterSize;
       max-width: calc(100% - #{$gutterSize});
     }

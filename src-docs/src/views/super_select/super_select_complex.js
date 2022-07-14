@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 
-import { EuiSuperSelect, EuiText } from '../../../../src/components';
+import { OuiSuperSelect, OuiText } from '../../../../src/components';
 
 export default () => {
   const options = [
@@ -10,11 +10,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option one</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -24,11 +24,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option two</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -38,11 +38,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option three</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -55,7 +55,7 @@ export default () => {
   };
 
   return (
-    <EuiSuperSelect
+    <OuiSuperSelect
       options={options}
       valueOfSelected={value}
       onChange={(value) => onChange(value)}

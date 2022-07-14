@@ -21,20 +21,20 @@ import React, { HTMLAttributes, forwardRef } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiRangeWrapperProps
+export interface OuiRangeWrapperProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   fullWidth?: boolean;
   compressed?: boolean;
 }
 
-export const EuiRangeWrapper = forwardRef<HTMLDivElement, EuiRangeWrapperProps>(
+export const OuiRangeWrapper = forwardRef<HTMLDivElement, OuiRangeWrapperProps>(
   ({ children, className, fullWidth, compressed, ...rest }, ref) => {
     const classes = classNames(
-      'euiRangeWrapper',
+      'ouiRangeWrapper',
       {
-        'euiRangeWrapper--fullWidth': fullWidth,
-        'euiRangeWrapper--compressed': compressed,
+        'ouiRangeWrapper--fullWidth': fullWidth,
+        'ouiRangeWrapper--compressed': compressed,
       },
       className
     );
@@ -47,4 +47,4 @@ export const EuiRangeWrapper = forwardRef<HTMLDivElement, EuiRangeWrapperProps>(
   }
 );
 
-EuiRangeWrapper.displayName = 'EuiRangeWrapper';
+OuiRangeWrapper.displayName = 'OuiRangeWrapper';

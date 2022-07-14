@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  OuiPinnableListGroup,
+  OuiPinnableListGroupItemProps,
 } from '../../../../src/components/list_group';
 
-const someListItems: EuiPinnableListGroupItemProps[] = [
+const someListItems: OuiPinnableListGroupItemProps[] = [
   {
     id: '1',
     label: 'Label with iconType',
@@ -47,13 +47,13 @@ const someListItems: EuiPinnableListGroupItemProps[] = [
 ];
 
 export default () => {
-  const [itemList, setItemList] = useState<EuiPinnableListGroupItemProps[]>(
+  const [itemList, setItemList] = useState<OuiPinnableListGroupItemProps[]>(
     someListItems
   );
 
   return (
     <>
-      <EuiPinnableListGroup
+      <OuiPinnableListGroup
         listItems={itemList}
         onPinClick={(selectedItem) => {
           if (selectedItem.hasOwnProperty('pinned')) {
@@ -72,8 +72,8 @@ export default () => {
           }
         }}
         maxWidth="none"
-        pinTitle={(item: EuiPinnableListGroupItemProps) => `Pin ${item.label}`}
-        unpinTitle={(item: EuiPinnableListGroupItemProps) =>
+        pinTitle={(item: OuiPinnableListGroupItemProps) => `Pin ${item.label}`}
+        unpinTitle={(item: OuiPinnableListGroupItemProps) =>
           `Unpin ${item.label}`
         }
       />

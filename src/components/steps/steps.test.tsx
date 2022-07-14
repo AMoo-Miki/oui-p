@@ -21,9 +21,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiContainedStepProps, EuiSteps } from './steps';
+import { OuiContainedStepProps, OuiSteps } from './steps';
 
-const steps: EuiContainedStepProps[] = [
+const steps: OuiContainedStepProps[] = [
   {
     title: 'first title',
     children: <p>Do this first</p>,
@@ -39,16 +39,16 @@ const steps: EuiContainedStepProps[] = [
   },
 ];
 
-describe('EuiSteps', () => {
+describe('OuiSteps', () => {
   test('renders steps', () => {
-    const component = render(<EuiSteps {...requiredProps} steps={steps} />);
+    const component = render(<OuiSteps {...requiredProps} steps={steps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders steps with firstStepNumber', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} firstStepNumber={10} />
+      <OuiSteps {...requiredProps} steps={steps} firstStepNumber={10} />
     );
 
     expect(component).toMatchSnapshot();
@@ -56,7 +56,7 @@ describe('EuiSteps', () => {
 
   test('renders steps with titleSize', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} titleSize="xs" />
+      <OuiSteps {...requiredProps} steps={steps} titleSize="xs" />
     );
 
     expect(component).toMatchSnapshot();
@@ -64,7 +64,7 @@ describe('EuiSteps', () => {
 
   test('renders step title inside "headingElement" element', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} headingElement="h2" />
+      <OuiSteps {...requiredProps} steps={steps} headingElement="h2" />
     );
 
     expect(component).toMatchSnapshot();

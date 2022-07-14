@@ -21,15 +21,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiDatePickerRange } from './date_picker_range';
-import { EuiDatePicker } from './date_picker';
+import { OuiDatePickerRange } from './date_picker_range';
+import { OuiDatePicker } from './date_picker';
 
-describe('EuiDatePickerRange', () => {
+describe('OuiDatePickerRange', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiDatePickerRange
-        startDateControl={<EuiDatePicker />}
-        endDateControl={<EuiDatePicker />}
+      <OuiDatePickerRange
+        startDateControl={<OuiDatePicker />}
+        endDateControl={<OuiDatePicker />}
         {...requiredProps}
       />
     );

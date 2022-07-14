@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiDescriptionList,
-  EuiSpacer,
-  EuiTitle,
+  OuiDescriptionList,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 const favoriteVideoGames = [
@@ -23,23 +23,23 @@ const favoriteVideoGames = [
 ];
 export default () => (
   <Fragment>
-    <EuiDescriptionList
+    <OuiDescriptionList
       type="column"
       listItems={favoriteVideoGames}
       style={{ maxWidth: '400px' }}
     />
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
 
-    <EuiTitle size="s">
+    <OuiTitle size="s">
       <h3>
         The following list will become the typical row format on small screens
       </h3>
-    </EuiTitle>
+    </OuiTitle>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiDescriptionList
+    <OuiDescriptionList
       type="responsiveColumn"
       listItems={favoriteVideoGames}
       style={{ maxWidth: '400px' }}

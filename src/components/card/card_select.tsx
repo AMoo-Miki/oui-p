@@ -21,14 +21,14 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import {
-  EuiButtonEmpty,
-  EuiButtonEmptyColor,
-  EuiButtonEmptyProps,
+  OuiButtonEmpty,
+  OuiButtonEmptyColor,
+  OuiButtonEmptyProps,
 } from '../button/button_empty';
 
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 
-export type EuiCardSelectProps = EuiButtonEmptyProps & {
+export type OuiCardSelectProps = OuiButtonEmptyProps & {
   /**
    * Is in the selected state
    */
@@ -36,7 +36,7 @@ export type EuiCardSelectProps = EuiButtonEmptyProps & {
   isDisabled?: boolean;
 };
 
-export const EuiCardSelect: FunctionComponent<EuiCardSelectProps> = ({
+export const OuiCardSelect: FunctionComponent<OuiCardSelectProps> = ({
   className,
   isSelected = false,
   isDisabled,
@@ -44,16 +44,16 @@ export const EuiCardSelect: FunctionComponent<EuiCardSelectProps> = ({
   children,
   ...rest
 }) => {
-  const child = euiCardSelectableText(isSelected, isDisabled, children);
+  const child = ouiCardSelectableText(isSelected, isDisabled, children);
 
   const selectClasses = classNames(
-    'euiCardSelect',
-    `euiCardSelect--${euiCardSelectableColor(color, isSelected)}`,
+    'ouiCardSelect',
+    `ouiCardSelect--${ouiCardSelectableColor(color, isSelected)}`,
     className
   );
 
   return (
-    <EuiButtonEmpty
+    <OuiButtonEmpty
       className={selectClasses}
       color={color || 'text'}
       size="xs"
@@ -63,11 +63,11 @@ export const EuiCardSelect: FunctionComponent<EuiCardSelectProps> = ({
       aria-checked={isSelected}
       {...rest}>
       {child}
-    </EuiButtonEmpty>
+    </OuiButtonEmpty>
   );
 };
 
-function euiCardSelectableText(
+function ouiCardSelectableText(
   isSelected: boolean | undefined,
   isDisabled: boolean | undefined,
   children: ReactNode
@@ -79,18 +79,18 @@ function euiCardSelectableText(
   let text;
 
   if (isSelected) {
-    text = <EuiI18n token="euiCardSelect.selected" default="Selected" />;
+    text = <OuiI18n token="ouiCardSelect.selected" default="Selected" />;
   } else if (isDisabled) {
-    text = <EuiI18n token="euiCardSelect.unavailable" default="Unavailable" />;
+    text = <OuiI18n token="ouiCardSelect.unavailable" default="Unavailable" />;
   } else {
-    text = <EuiI18n token="euiCardSelect.select" default="Select" />;
+    text = <OuiI18n token="ouiCardSelect.select" default="Select" />;
   }
 
   return text;
 }
 
-export function euiCardSelectableColor(
-  color: EuiButtonEmptyColor | undefined,
+export function ouiCardSelectableColor(
+  color: OuiButtonEmptyColor | undefined,
   isSelected: boolean | undefined
 ): string {
   let calculatedColor;

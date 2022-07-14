@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { EuiCallOut, EuiLink } from '../../../../src/components';
+import { OuiCallOut, OuiLink } from '../../../../src/components';
 
 export default () => (
-  <EuiCallOut title="Good news, everyone!" color="success" iconType="user">
+  <OuiCallOut title="Good news, everyone!" color="success" iconType="user">
     <p>
       I have no news. Which is good! And{' '}
-      <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+      <OuiLink href="#">here&rsquo;s a link</OuiLink>.
     </p>
-  </EuiCallOut>
+  </OuiCallOut>
 );

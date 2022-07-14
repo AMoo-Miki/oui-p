@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { EuiSideNav } from '../../../../src/components';
+import { OuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
@@ -48,7 +48,7 @@ export default () => {
   ];
 
   return (
-    <EuiSideNav
+    <OuiSideNav
       aria-label="Emphasized side nav example"
       mobileTitle="Navigate within $APP_NAME"
       toggleOpenOnMobile={toggleOpenOnMobile}

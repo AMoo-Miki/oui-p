@@ -22,7 +22,7 @@ import ReactDOM from 'react-dom';
 import { resetServerContext } from 'react-beautiful-dnd';
 import html from 'html';
 import { requiredProps } from '../../test/required_props';
-import { EuiDragDropContext, EuiDraggable, EuiDroppable } from './';
+import { OuiDragDropContext, OuiDraggable, OuiDroppable } from './';
 
 function takeSnapshot(element: HTMLElement) {
   expect(
@@ -33,7 +33,7 @@ function takeSnapshot(element: HTMLElement) {
   ).toMatchSnapshot();
 }
 
-describe('EuiDraggable', () => {
+describe('OuiDraggable', () => {
   let appDiv: HTMLElement;
 
   beforeEach(() => {
@@ -51,13 +51,13 @@ describe('EuiDraggable', () => {
     const handler = jest.fn();
 
     ReactDOM.render(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
-          <EuiDraggable draggableId="testDraggable" index={0}>
+      <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <OuiDroppable droppableId="testDroppable">
+          <OuiDraggable draggableId="testDraggable" index={0}>
             {() => <div>Hello</div>}
-          </EuiDraggable>
-        </EuiDroppable>
-      </EuiDragDropContext>,
+          </OuiDraggable>
+        </OuiDroppable>
+      </OuiDragDropContext>,
       appDiv
     );
 
@@ -68,13 +68,13 @@ describe('EuiDraggable', () => {
     const handler = jest.fn();
 
     ReactDOM.render(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
-          <EuiDraggable draggableId="testDraggable" index={0}>
+      <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <OuiDroppable droppableId="testDroppable">
+          <OuiDraggable draggableId="testDraggable" index={0}>
             <div>Hello</div>
-          </EuiDraggable>
-        </EuiDroppable>
-      </EuiDragDropContext>,
+          </OuiDraggable>
+        </OuiDroppable>
+      </OuiDragDropContext>,
       appDiv
     );
 

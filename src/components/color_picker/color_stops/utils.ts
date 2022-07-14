@@ -20,7 +20,7 @@
 import { getEventPosition, getChromaColor } from '../utils';
 import { DEFAULT_VISUALIZATION_COLOR } from '../../../services';
 import { ColorStop } from './color_stop_thumb';
-import { EUI_THUMB_SIZE } from '../../form/range/utils';
+import { OUI_THUMB_SIZE } from '../../form/range/utils';
 
 export const removeStop = (colorStops: ColorStop[], index: number) => {
   if (colorStops.length === 1) {
@@ -109,7 +109,7 @@ export const isInvalid = (
 };
 
 export const calculateScale = (trackWidth: number) => {
-  const thumbToTrackRatio = EUI_THUMB_SIZE / trackWidth;
+  const thumbToTrackRatio = OUI_THUMB_SIZE / trackWidth;
   return (1 - thumbToTrackRatio) * 100;
 };
 

@@ -27,18 +27,18 @@ import { CommonProps } from '../common';
 export type ItemId<T> = string | number | ((item: T) => string);
 export type ItemIdResolved = string | number;
 
-export type EuiTableDataType =
+export type OuiTableDataType =
   | 'auto'
   | 'string'
   | 'number'
   | 'boolean'
   | 'date';
 
-export interface EuiTableFooterProps<T> {
+export interface OuiTableFooterProps<T> {
   items: T[];
   pagination?: Pagination;
 }
-export interface EuiTableFieldDataColumnType<T>
+export interface OuiTableFieldDataColumnType<T>
   extends CommonProps,
     TdHTMLAttributes<HTMLTableDataCellElement> {
   /**
@@ -56,7 +56,7 @@ export interface EuiTableFieldDataColumnType<T>
   /**
    * Describes the data types of the displayed value (serves as a rendering hint for the table)
    */
-  dataType?: EuiTableDataType;
+  dataType?: OuiTableDataType;
   /**
    * A CSS width property. Hints for the required width of the column (e.g. "30%", "100px", etc..)
    */
@@ -93,14 +93,14 @@ export interface EuiTableFieldDataColumnType<T>
   footer?:
     | string
     | ReactElement
-    | ((props: EuiTableFooterProps<T>) => ReactNode);
+    | ((props: OuiTableFooterProps<T>) => ReactNode);
   /**
    * Disables the user's ability to change the sort but still shows the current direction
    */
   readOnly?: boolean;
 }
 
-export interface EuiTableComputedColumnType<T>
+export interface OuiTableComputedColumnType<T>
   extends CommonProps,
     TdHTMLAttributes<HTMLTableDataCellElement> {
   /**
@@ -135,7 +135,7 @@ export interface EuiTableComputedColumnType<T>
   readOnly?: boolean;
 }
 
-export interface EuiTableActionsColumnType<T> {
+export interface OuiTableActionsColumnType<T> {
   /**
    * An array of one of the objects: #DefaultItemAction or #CustomItemAction
    */
@@ -154,7 +154,7 @@ export interface EuiTableActionsColumnType<T> {
   width?: string;
 }
 
-export interface EuiTableSortingType<T> {
+export interface OuiTableSortingType<T> {
   /**
    * Indicates the property/field to sort on
    */
@@ -163,7 +163,7 @@ export interface EuiTableSortingType<T> {
     direction: Direction;
   };
   /**
-   * Enables/disables unsorting of table columns. Supported by EuiInMemoryTable.
+   * Enables/disables unsorting of table columns. Supported by OuiInMemoryTable.
    */
   allowNeutralSort?: boolean;
   /**
@@ -176,7 +176,7 @@ export interface EuiTableSortingType<T> {
   readOnly?: boolean;
 }
 
-export interface EuiTableSelectionType<T> {
+export interface OuiTableSelectionType<T> {
   /**
    * A callback that will be called whenever the item selection changes
    */

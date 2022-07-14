@@ -5,11 +5,11 @@ import { createDataStore } from '../data_store';
 import { htmlIdGenerator } from '../../../../../src/services';
 
 import {
-  EuiBasicTable,
-  EuiButtonGroup,
-  EuiCallOut,
-  EuiLink,
-  EuiSpacer,
+  OuiBasicTable,
+  OuiButtonGroup,
+  OuiCallOut,
+  OuiLink,
+  OuiSpacer,
 } from '../../../../../src/components';
 
 /*
@@ -47,9 +47,9 @@ const columns = [
       render: (item) => (
         <span>
           {item.firstName}{' '}
-          <EuiLink href="#" target="_blank">
+          <OuiLink href="#" target="_blank">
             {item.lastName}
-          </EuiLink>
+          </OuiLink>
         </span>
       ),
       header: false,
@@ -62,9 +62,9 @@ const columns = [
     field: 'lastName',
     name: 'Last Name',
     render: (name) => (
-      <EuiLink href="#" target="_blank">
+      <OuiLink href="#" target="_blank">
         {name}
-      </EuiLink>
+      </OuiLink>
     ),
     mobileOptions: {
       show: false,
@@ -88,9 +88,9 @@ const customColumns = [
       render: (item) => (
         <span>
           {item.firstName}{' '}
-          <EuiLink href="#" target="_blank">
+          <OuiLink href="#" target="_blank">
             {item.lastName}
-          </EuiLink>
+          </OuiLink>
         </span>
       ),
       header: false,
@@ -103,9 +103,9 @@ const customColumns = [
     field: 'lastName',
     name: 'Last Name',
     render: (name) => (
-      <EuiLink href="#" target="_blank">
+      <OuiLink href="#" target="_blank">
         {name}
-      </EuiLink>
+      </OuiLink>
     ),
     mobileOptions: {
       show: false,
@@ -185,20 +185,20 @@ export const Table = () => {
 
   return (
     <div>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Table layout group"
         options={toggleButtons}
         idSelected={toggleIdSelected}
         onChange={onChange}
       />
-      <EuiSpacer size="m" />
-      <EuiCallOut
+      <OuiSpacer size="m" />
+      <OuiCallOut
         size="s"
         color={layout === 'auto' ? 'warning' : 'primary'}
         title={callOutText}
       />
-      <EuiSpacer size="m" />
-      <EuiBasicTable
+      <OuiSpacer size="m" />
+      <OuiBasicTable
         items={items}
         columns={layout === 'custom' ? customColumns : columns}
         tableLayout={layout === 'auto' ? 'auto' : 'fixed'}

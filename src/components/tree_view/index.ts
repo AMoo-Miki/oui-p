@@ -17,4 +17,4 @@
  * under the License.
  */
 
-export { EuiTreeView, EuiTreeViewProps } from './tree_view';
+export { OuiTreeView, OuiTreeViewProps } from './tree_view';

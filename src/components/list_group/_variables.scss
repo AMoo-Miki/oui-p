@@ -1,21 +1,21 @@
-$euiListGroupItemHoverBackground: transparentize($euiColorLightShade, .75);
-$euiListGroupItemHoverBackgroundGhost: transparentize($euiColorGhost, .9);
+$ouiListGroupItemHoverBackground: transparentize($ouiColorLightShade, .75);
+$ouiListGroupItemHoverBackgroundGhost: transparentize($ouiColorGhost, .9);
 
-$euiListGroupGutterTypes: (
-  gutterSmall: $euiSizeS,
-  gutterMedium: $euiSize,
+$ouiListGroupGutterTypes: (
+  gutterSmall: $ouiSizeS,
+  gutterMedium: $ouiSize,
 );
 
-$euiListGroupItemColorTypes: (
-  primary: $euiColorPrimaryText,
-  text: $euiTextColor,
-  subdued: $euiTextSubduedColor,
-  ghost: $euiColorGhost,
+$ouiListGroupItemColorTypes: (
+  primary: $ouiColorPrimaryText,
+  text: $ouiTextColor,
+  subdued: $ouiTextSubduedColor,
+  ghost: $ouiColorGhost,
 );
 
-$euiListGroupItemSizeTypes: (
-  xSmall: $euiFontSizeXS,
-  small: $euiFontSizeS,
-  medium: $euiFontSize,
-  large: $euiFontSizeL,
+$ouiListGroupItemSizeTypes: (
+  xSmall: $ouiFontSizeXS,
+  small: $ouiFontSizeS,
+  medium: $ouiFontSize,
+  large: $ouiFontSizeL,
 );

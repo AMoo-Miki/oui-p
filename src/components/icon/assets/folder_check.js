@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconFolderCheck = ({ title, titleId, ...props }) => (
+const OuiIconFolderCheck = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -16,4 +16,4 @@ const EuiIconFolderCheck = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconFolderCheck;
+export const icon = OuiIconFolderCheck;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconFullScreenExit = ({ title, titleId, ...props }) => (
+const OuiIconFullScreenExit = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconFullScreenExit = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconFullScreenExit;
+export const icon = OuiIconFullScreenExit;

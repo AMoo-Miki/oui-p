@@ -22,21 +22,21 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const colorsToClassNameMap = {
-  default: 'euiTextColor--default',
-  subdued: 'euiTextColor--subdued',
-  secondary: 'euiTextColor--secondary',
-  success: 'euiTextColor--success',
-  accent: 'euiTextColor--accent',
-  danger: 'euiTextColor--danger',
-  warning: 'euiTextColor--warning',
-  ghost: 'euiTextColor--ghost',
+  default: 'ouiTextColor--default',
+  subdued: 'ouiTextColor--subdued',
+  secondary: 'ouiTextColor--secondary',
+  success: 'ouiTextColor--success',
+  accent: 'ouiTextColor--accent',
+  danger: 'ouiTextColor--danger',
+  warning: 'ouiTextColor--warning',
+  ghost: 'ouiTextColor--ghost',
 };
 
 export type TextColor = keyof typeof colorsToClassNameMap;
 
 export const COLORS = keysOf(colorsToClassNameMap);
 
-export type EuiTextColorProps = CommonProps &
+export type OuiTextColorProps = CommonProps &
   Omit<
     HTMLAttributes<HTMLDivElement> & HTMLAttributes<HTMLSpanElement>,
     'color'
@@ -51,7 +51,7 @@ export type EuiTextColorProps = CommonProps &
     component?: 'div' | 'span';
   };
 
-export const EuiTextColor: FunctionComponent<EuiTextColorProps> = ({
+export const OuiTextColor: FunctionComponent<OuiTextColorProps> = ({
   children,
   color = 'default',
   className,
@@ -59,7 +59,7 @@ export const EuiTextColor: FunctionComponent<EuiTextColorProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextColor',
+    'ouiTextColor',
     colorsToClassNameMap[color],
     className
   );

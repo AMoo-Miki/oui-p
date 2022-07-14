@@ -1,6 +1,6 @@
-.euiMarkdownEditor {
+.ouiMarkdownEditor {
   &--isPreviewing {
-    .euiMarkdownEditor__toggleContainer {
+    .ouiMarkdownEditor__toggleContainer {
       display: none;
     }
   }
@@ -10,11 +10,11 @@
     flex-direction: column;
     height: 100%;
 
-    .euiMarkdownEditorTextArea {
+    .ouiMarkdownEditorTextArea {
       resize: none;
     }
 
-    .euiMarkdownEditorDropZone {
+    .ouiMarkdownEditorDropZone {
       height: 100%;
     }
   }

@@ -21,13 +21,13 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiFlexGroup } from '../flex';
+import { OuiFlexGroup } from '../flex';
 
 type FacetGroupLayout = 'vertical' | 'horizontal';
 
 const layoutToClassNameMap: { [layout in FacetGroupLayout]: string } = {
-  vertical: 'euiFacetGroup--vertical',
-  horizontal: 'euiFacetGroup--horizontal',
+  vertical: 'ouiFacetGroup--vertical',
+  horizontal: 'ouiFacetGroup--horizontal',
 };
 
 export const LAYOUTS = keysOf(layoutToClassNameMap);
@@ -37,15 +37,15 @@ type FacetGroupGutterSize = 'none' | 's' | 'm' | 'l';
 const gutterSizeToClassNameMap: {
   [gutterSize in FacetGroupGutterSize]: string;
 } = {
-  none: 'euiFacetGroup--gutterNone',
-  s: 'euiFacetGroup--gutterSmall',
-  m: 'euiFacetGroup--gutterMedium',
-  l: 'euiFacetGroup--gutterLarge',
+  none: 'ouiFacetGroup--gutterNone',
+  s: 'ouiFacetGroup--gutterSmall',
+  m: 'ouiFacetGroup--gutterMedium',
+  l: 'ouiFacetGroup--gutterLarge',
 };
 
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
 
-export type EuiFacetGroupProps = CommonProps &
+export type OuiFacetGroupProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Vertically in a column, or horizontally in one wrapping line
@@ -58,7 +58,7 @@ export type EuiFacetGroupProps = CommonProps &
     gutterSize?: FacetGroupGutterSize;
   };
 
-export const EuiFacetGroup: FunctionComponent<EuiFacetGroupProps> = ({
+export const OuiFacetGroup: FunctionComponent<OuiFacetGroupProps> = ({
   children,
   className,
   layout = 'vertical',
@@ -66,7 +66,7 @@ export const EuiFacetGroup: FunctionComponent<EuiFacetGroupProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiFacetGroup',
+    'ouiFacetGroup',
     layoutToClassNameMap[layout],
     gutterSizeToClassNameMap[gutterSize],
     className
@@ -75,13 +75,13 @@ export const EuiFacetGroup: FunctionComponent<EuiFacetGroupProps> = ({
   const wrap = layout === 'vertical' ? false : true;
 
   return (
-    <EuiFlexGroup
+    <OuiFlexGroup
       className={classes}
       direction={direction}
       wrap={wrap}
       gutterSize="none"
       {...rest}>
       {children}
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   );
 };

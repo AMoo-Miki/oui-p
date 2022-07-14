@@ -21,68 +21,68 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSelectableListItem } from './selectable_list_item';
+import { OuiSelectableListItem } from './selectable_list_item';
 
-describe('EuiSelectableListItem', () => {
+describe('OuiSelectableListItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiSelectableListItem {...requiredProps} />);
+    const component = render(<OuiSelectableListItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('checked is on', () => {
-      const component = render(<EuiSelectableListItem checked="on" />);
+      const component = render(<OuiSelectableListItem checked="on" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('checked is off', () => {
-      const component = render(<EuiSelectableListItem checked="off" />);
+      const component = render(<OuiSelectableListItem checked="off" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('showIcons can be turned off', () => {
-      const component = render(<EuiSelectableListItem showIcons={false} />);
+      const component = render(<OuiSelectableListItem showIcons={false} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isFocused', () => {
-      const component = render(<EuiSelectableListItem isFocused />);
+      const component = render(<OuiSelectableListItem isFocused />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('disabled', () => {
-      const component = render(<EuiSelectableListItem disabled />);
+      const component = render(<OuiSelectableListItem disabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('prepend', () => {
-      const component = render(<EuiSelectableListItem prepend={<span />} />);
+      const component = render(<OuiSelectableListItem prepend={<span />} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('append', () => {
-      const component = render(<EuiSelectableListItem append={<span />} />);
+      const component = render(<OuiSelectableListItem append={<span />} />);
 
       expect(component).toMatchSnapshot();
     });
 
     describe('onFocusBadge', () => {
       test('can be true', () => {
-        const component = render(<EuiSelectableListItem onFocusBadge={true} />);
+        const component = render(<OuiSelectableListItem onFocusBadge={true} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('can be custom', () => {
         const component = render(
-          <EuiSelectableListItem
+          <OuiSelectableListItem
             onFocusBadge={{
               children: 'Custom',
               iconType: 'bolt',

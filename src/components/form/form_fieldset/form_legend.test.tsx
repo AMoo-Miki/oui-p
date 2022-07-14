@@ -21,12 +21,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormLegend } from './form_legend';
+import { OuiFormLegend } from './form_legend';
 
-describe('EuiFormLegend', () => {
+describe('OuiFormLegend', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormLegend {...requiredProps}>Legend</EuiFormLegend>
+      <OuiFormLegend {...requiredProps}>Legend</OuiFormLegend>
     );
 
     expect(component).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe('EuiFormLegend', () => {
   describe('props', () => {
     test('hidden is rendered', () => {
       const component = render(
-        <EuiFormLegend display="hidden">Legend</EuiFormLegend>
+        <OuiFormLegend display="hidden">Legend</OuiFormLegend>
       );
 
       expect(component).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe('EuiFormLegend', () => {
 
     test('compressed is rendered', () => {
       const component = render(
-        <EuiFormLegend compressed>Legend</EuiFormLegend>
+        <OuiFormLegend compressed>Legend</OuiFormLegend>
       );
 
       expect(component).toMatchSnapshot();

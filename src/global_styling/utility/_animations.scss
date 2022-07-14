@@ -1,6 +1,6 @@
 // Animations as utility so they don't get duplicated in compiled CSS
 
-@keyframes euiAnimFadeIn {
+@keyframes ouiAnimFadeIn {
   0% {
     opacity: 0;
   }
@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes euiGrow {
+@keyframes ouiGrow {
   0% {
     opacity: 0;
   }
@@ -28,27 +28,27 @@
 
 @keyframes focusRingAnimate {
   0% {
-    box-shadow: 0 0 0 $euiFocusRingAnimStartSize $euiFocusRingAnimStartColor;
+    box-shadow: 0 0 0 $ouiFocusRingAnimStartSize $ouiFocusRingAnimStartColor;
   }
 
   100% {
-    box-shadow: 0 0 0 $euiFocusRingSize $euiFocusRingColor;
+    box-shadow: 0 0 0 $ouiFocusRingSize $ouiFocusRingColor;
   }
 }
 
 @keyframes focusRingAnimateLarge {
   0% {
-    box-shadow: 0 0 0 $euiFocusRingAnimStartSizeLarge $euiFocusRingAnimStartColor;
+    box-shadow: 0 0 0 $ouiFocusRingAnimStartSizeLarge $ouiFocusRingAnimStartColor;
   }
 
   100% {
-    box-shadow: 0 0 0 $euiFocusRingSizeLarge $euiFocusRingColor;
+    box-shadow: 0 0 0 $ouiFocusRingSizeLarge $ouiFocusRingColor;
   }
 }
 
 // Component specific
 
-@keyframes euiButtonActive {
+@keyframes ouiButtonActive {
   50% {
     transform: translateY(1px);
   }

@@ -35,18 +35,18 @@ export {
 } from './visualization_colors';
 export { colorPalette } from './color_palette';
 export {
-  euiPaletteForLightBackground,
-  euiPaletteForDarkBackground,
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
-} from './eui_palettes';
+  ouiPaletteForLightBackground,
+  ouiPaletteForDarkBackground,
+  ouiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
+} from './oui_palettes';
 export { rgbDef, HSV, RGB } from './color_types';
 export { getSteppedGradient } from './stepped_gradient';

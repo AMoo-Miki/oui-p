@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 import {
-  useEuiTextDiff,
-  EuiCode,
-  EuiSpacer,
-  EuiTextColor,
-  EuiText,
+  useOuiTextDiff,
+  OuiCode,
+  OuiSpacer,
+  OuiTextColor,
+  OuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,7 +17,7 @@ export default () => {
   const afterText =
     'Orbiting those at a distance of roughly ninety-nine billion yards is not insignificant dwaf red green planet whose ape- ascended life forms are so amazingly primitive that they still think digital clocks are a pretty neat idea.';
 
-  const [rendered, textDiffObject] = useEuiTextDiff({
+  const [rendered, textDiffObject] = useOuiTextDiff({
     beforeText,
     afterText,
   });
@@ -35,15 +35,15 @@ export default () => {
 
   return (
     <>
-      <EuiText>
+      <OuiText>
         <p>{rendered}</p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCode>
-        <EuiTextColor color="success"> {ins} </EuiTextColor> Insertions,
-        <EuiTextColor color="danger"> {del} </EuiTextColor>
+      </OuiText>
+      <OuiSpacer />
+      <OuiCode>
+        <OuiTextColor color="success"> {ins} </OuiTextColor> Insertions,
+        <OuiTextColor color="danger"> {del} </OuiTextColor>
         Deletions
-      </EuiCode>
+      </OuiCode>
     </>
   );
 };

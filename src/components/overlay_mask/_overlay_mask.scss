@@ -1,4 +1,4 @@
-.euiOverlayMask {
+.ouiOverlayMask {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,26 +8,26 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 10vh;
-  animation: euiAnimFadeIn $euiAnimSpeedFast ease-in;
+  animation: ouiAnimFadeIn $ouiAnimSpeedFast ease-in;
 
-  $backgroundColor: $euiColorEmptyShade;
+  $backgroundColor: $ouiColorEmptyShade;
 
-  @if (lightness($euiTextColor) > 50) {
-    $backgroundColor: $euiColorLightShade;
+  @if (lightness($ouiTextColor) > 50) {
+    $backgroundColor: $ouiColorLightShade;
   }
 
   background: transparentize($backgroundColor, .2);
 }
 
-.euiBody-hasOverlayMask {
+.ouiBody-hasOverlayMask {
   overflow: hidden;
 }
 
 // Handling the z-index based on whether it should be displayed above or below the header
-.euiOverlayMask--aboveHeader {
-  z-index: $euiZMask;
+.ouiOverlayMask--aboveHeader {
+  z-index: $ouiZMask;
 }
 
-.euiOverlayMask--belowHeader {
-  z-index: $euiZMaskBelowHeader;
+.ouiOverlayMask--belowHeader {
+  z-index: $ouiZMaskBelowHeader;
 }

@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 
 import moment from 'moment';
 
-import { EuiDatePicker, EuiDatePickerRange } from '../../../../src/components';
+import { OuiDatePicker, OuiDatePickerRange } from '../../../../src/components';
 
 export default () => {
   const [startDate, setStartDate] = useState(moment());
   const [endDate, setEndDate] = useState(moment().add(11, 'd'));
 
   return (
-    <EuiDatePickerRange
+    <OuiDatePickerRange
       startDateControl={
-        <EuiDatePicker
+        <OuiDatePicker
           selected={startDate}
           onChange={setStartDate}
           startDate={startDate}
@@ -22,7 +22,7 @@ export default () => {
         />
       }
       endDateControl={
-        <EuiDatePicker
+        <OuiDatePicker
           selected={endDate}
           onChange={setEndDate}
           startDate={startDate}

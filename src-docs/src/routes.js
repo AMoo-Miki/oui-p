@@ -5,7 +5,7 @@ import { createHashHistory } from 'history';
 
 import { GuidePage, GuideSection } from './components';
 
-import { EuiErrorBoundary } from '../../src/components';
+import { OuiErrorBoundary } from '../../src/components';
 
 import { playgroundCreator } from './services/playground';
 
@@ -272,7 +272,7 @@ const createExample = (example, customTitle) => {
   }
 
   const component = () => (
-    <EuiErrorBoundary>
+    <OuiErrorBoundary>
       <GuidePage
         title={title}
         intro={intro}
@@ -281,7 +281,7 @@ const createExample = (example, customTitle) => {
         guidelines={guidelines}>
         {renderedSections}
       </GuidePage>
-    </EuiErrorBoundary>
+    </OuiErrorBoundary>
   );
 
   return {
@@ -319,7 +319,7 @@ const navigation = [
   {
     name: 'Guidelines',
     items: [
-      // TODO uncomment when EuiMarkdownFormat has a better text formatting
+      // TODO uncomment when OuiMarkdownFormat has a better text formatting
       // createMarkdownExample(GettingStarted, 'Getting started'),
       createExample(AccessibilityGuidelines, 'Accessibility'),
       {

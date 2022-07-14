@@ -21,11 +21,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiTextArea } from './text_area';
+import { OuiTextArea } from './text_area';
 
-describe('EuiTextArea', () => {
+describe('OuiTextArea', () => {
   test('is rendered', () => {
-    const component = render(<EuiTextArea {...requiredProps} />);
+    const component = render(<OuiTextArea {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

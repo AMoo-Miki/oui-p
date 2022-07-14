@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiProgress,
-  EuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiProgress,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const mainColors = [
@@ -21,7 +21,7 @@ const vizBars = [];
 for (let i = 0; i < 10; i++) {
   vizBars.push(
     <>
-      <EuiProgress
+      <OuiProgress
         label={`vis${i}`}
         valueText={true}
         value={80}
@@ -29,17 +29,17 @@ for (let i = 0; i < 10; i++) {
         color={`vis${i}`}
         size="m"
       />
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
     </>
   );
 }
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>
+  <OuiFlexGroup>
+    <OuiFlexItem>
       {mainColors.map((value) => (
         <>
-          <EuiProgress
+          <OuiProgress
             label={value}
             valueText={true}
             value={80}
@@ -47,13 +47,13 @@ export default () => (
             color={value}
             size="m"
           />
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
         </>
       ))}
-    </EuiFlexItem>
-    <EuiFlexItem>{vizBars}</EuiFlexItem>
-    <EuiFlexItem>
-      <EuiProgress
+    </OuiFlexItem>
+    <OuiFlexItem>{vizBars}</OuiFlexItem>
+    <OuiFlexItem>
+      <OuiProgress
         valueText={true}
         label="#32CD32"
         color="#32CD32"
@@ -61,8 +61,8 @@ export default () => (
         max={100}
         size="m"
       />
-      <EuiSpacer size="s" />
-      <EuiProgress
+      <OuiSpacer size="s" />
+      <OuiProgress
         valueText={true}
         label="mediumslateblue"
         color="mediumslateblue"
@@ -70,6 +70,6 @@ export default () => (
         max={100}
         size="m"
       />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

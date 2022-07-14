@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconTokenFlattened = ({ title, titleId, ...props }) => (
+const OuiIconTokenFlattened = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -13,4 +13,4 @@ const EuiIconTokenFlattened = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconTokenFlattened;
+export const icon = OuiIconTokenFlattened;

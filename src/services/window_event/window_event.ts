@@ -26,7 +26,7 @@ interface Props<Ev extends EventNames> {
   handler: (this: Window, ev: WindowEventMap[Ev]) => any;
 }
 
-export class EuiWindowEvent<E extends EventNames> extends Component<Props<E>> {
+export class OuiWindowEvent<E extends EventNames> extends Component<Props<E>> {
   componentDidMount() {
     this.addEvent(this.props);
   }

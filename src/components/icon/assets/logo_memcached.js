@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoMemcached = ({ title, titleId, ...props }) => (
+const OuiIconLogoMemcached = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -75,4 +75,4 @@ const EuiIconLogoMemcached = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoMemcached;
+export const icon = OuiIconLogoMemcached;

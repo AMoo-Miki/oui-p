@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const EuiIconLogoAzureMono = ({ title, titleId, ...props }) => (
+const OuiIconLogoAzureMono = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -13,4 +13,4 @@ const EuiIconLogoAzureMono = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoAzureMono;
+export const icon = OuiIconLogoAzureMono;

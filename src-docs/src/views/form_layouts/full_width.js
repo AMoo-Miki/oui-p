@@ -1,47 +1,47 @@
 import React, { Fragment } from 'react';
 
 import {
-  EuiFieldSearch,
-  EuiRange,
-  EuiTextArea,
-  EuiFormRow,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiButton,
+  OuiFieldSearch,
+  OuiRange,
+  OuiTextArea,
+  OuiFormRow,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
+  OuiButton,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFlexGroup>
-      <EuiFlexItem>
-        <EuiFieldSearch
+    <OuiFlexGroup>
+      <OuiFlexItem>
+        <OuiFieldSearch
           placeholder="Search..."
           fullWidth
           aria-label="An example of search with fullWidth"
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButton>Search</EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButton>Search</OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer size="l" />
+    <OuiSpacer size="l" />
 
-    <EuiFormRow
+    <OuiFormRow
       label="Works on form rows too"
       fullWidth
       helpText="Note that the fullWidth prop is not passed to the form row's child">
-      <EuiRange fullWidth min={0} max={100} name="range" />
-    </EuiFormRow>
+      <OuiRange fullWidth min={0} max={100} name="range" />
+    </OuiFormRow>
 
-    <EuiFormRow label="Often useful for text areas" fullWidth>
-      <EuiTextArea
+    <OuiFormRow label="Often useful for text areas" fullWidth>
+      <OuiTextArea
         fullWidth
         placeholder="There is a reason we do not make forms ALWAYS 100% width.
           See how this text area becomes extremely hard to read when the individual
           lines get this long? It is much more readable when contained to a scannable max-width."
       />
-    </EuiFormRow>
+    </OuiFormRow>
   </Fragment>
 );

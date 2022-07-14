@@ -1,22 +1,22 @@
-import { EuiSpacer } from '../../../../src/components/';
+import { OuiSpacer } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const spacerConfig = () => {
-  const docgenInfo = Array.isArray(EuiSpacer.__docgenInfo)
-    ? EuiSpacer.__docgenInfo[0]
-    : EuiSpacer.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiSpacer.__docgenInfo)
+    ? OuiSpacer.__docgenInfo[0]
+    : OuiSpacer.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiSpacer',
+      componentName: 'OuiSpacer',
       props: propsToUse,
       scope: {
-        EuiSpacer,
+        OuiSpacer,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiSpacer'],
+        '@opensearch-project/oui': {
+          named: ['OuiSpacer'],
         },
       },
     },

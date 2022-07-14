@@ -20,23 +20,23 @@
 import React, { FunctionComponent } from 'react';
 import { prettyDuration } from '../pretty_duration';
 
-import { EuiI18n } from '../../../i18n';
+import { OuiI18n } from '../../../i18n';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiTitle } from '../../../title';
-import { EuiLink } from '../../../link';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
+import { OuiTitle } from '../../../title';
+import { OuiLink } from '../../../link';
+import { OuiHorizontalRule } from '../../../horizontal_rule';
 import { DurationRange, ApplyTime } from '../../types';
 
 const generateId = htmlIdGenerator();
 
-export interface EuiRecentlyUsedProps {
+export interface OuiRecentlyUsedProps {
   applyTime: ApplyTime;
   commonlyUsedRanges: DurationRange[];
   dateFormat: string;
   recentlyUsedRanges?: DurationRange[];
 }
 
-export const EuiRecentlyUsed: FunctionComponent<EuiRecentlyUsedProps> = ({
+export const OuiRecentlyUsed: FunctionComponent<OuiRecentlyUsedProps> = ({
   applyTime,
   commonlyUsedRanges,
   dateFormat,
@@ -54,31 +54,31 @@ export const EuiRecentlyUsed: FunctionComponent<EuiRecentlyUsedProps> = ({
     };
     return (
       <li
-        className="euiQuickSelectPopover__sectionItem"
+        className="ouiQuickSelectPopover__sectionItem"
         key={`${start}-${end}`}>
-        <EuiLink onClick={applyRecentlyUsed}>
+        <OuiLink onClick={applyRecentlyUsed}>
           {prettyDuration(start, end, commonlyUsedRanges, dateFormat)}
-        </EuiLink>
+        </OuiLink>
       </li>
     );
   });
 
   return (
     <fieldset>
-      <EuiTitle size="xxxs">
+      <OuiTitle size="xxxs">
         <legend id={legendId}>
-          <EuiI18n
-            token="euiRecentlyUsed.legend"
+          <OuiI18n
+            token="ouiRecentlyUsed.legend"
             default="Recently used date ranges"
           />
         </legend>
-      </EuiTitle>
-      <div className="euiQuickSelectPopover__section">
+      </OuiTitle>
+      <div className="ouiQuickSelectPopover__section">
         <ul>{links}</ul>
       </div>
-      <EuiHorizontalRule margin="s" />
+      <OuiHorizontalRule margin="s" />
     </fieldset>
   );
 };
 
-EuiRecentlyUsed.displayName = 'EuiRecentlyUsed';
+OuiRecentlyUsed.displayName = 'OuiRecentlyUsed';

@@ -1,0 +1,21 @@
+.ouiToast {
+  border: none;
+  border-radius: $ouiBorderRadius;
+}
+
+$ouiToastTypes: (
+  primary: $ouiColorPrimary,
+  success: $ouiColorSuccess,
+  warning: $ouiColorWarning,
+  danger: $ouiColorDanger
+);
+
+@each $name, $color in $ouiToastTypes {
+  .ouiToast--#{$name} {
+    border-top: 2px solid $color;
+  }
+}
+
+.ouiToastHeader__title {
+  font-weight: $ouiFontWeightBold;
+}

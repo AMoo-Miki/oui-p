@@ -17,14 +17,14 @@
  * under the License.
  */
 
-export const EUI_THUMB_SIZE = 16;
+export const OUI_THUMB_SIZE = 16;
 
 export const calculateThumbPosition = (
   value: number,
   min: number,
   max: number,
   width: number,
-  thumbSize: number = EUI_THUMB_SIZE
+  thumbSize: number = OUI_THUMB_SIZE
 ) => {
   // Calculate the left position based on value
   const decimal = (value - min) / (max - min);

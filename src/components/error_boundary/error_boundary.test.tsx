@@ -21,7 +21,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiErrorBoundary } from './error_boundary';
+import { OuiErrorBoundary } from './error_boundary';
 
 const GoodComponent = () => <div>No error</div>;
 
@@ -32,13 +32,13 @@ const BadComponent = () => {
   throw new Error(errorMessage);
 };
 
-describe('EuiErrorBoundary', () => {
+describe('OuiErrorBoundary', () => {
   test('is rendered without an error', () => {
     const component = takeMountedSnapshot(
       mount(
-        <EuiErrorBoundary {...requiredProps}>
+        <OuiErrorBoundary {...requiredProps}>
           <GoodComponent />
-        </EuiErrorBoundary>
+        </OuiErrorBoundary>
       )
     );
 
@@ -52,9 +52,9 @@ describe('EuiErrorBoundary', () => {
     // Because the error contains the stack trace, it's non-deterministic. So we'll just check that
     // it contains our error message.
     const errorText = mount(
-      <EuiErrorBoundary {...requiredProps}>
+      <OuiErrorBoundary {...requiredProps}>
         <BadComponent />
-      </EuiErrorBoundary>
+      </OuiErrorBoundary>
     ).text();
 
     expect(errorText).toContain(errorMessage);

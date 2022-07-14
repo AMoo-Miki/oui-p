@@ -20,37 +20,37 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export type EuiRangeLevelColor = 'primary' | 'success' | 'warning' | 'danger';
+export type OuiRangeLevelColor = 'primary' | 'success' | 'warning' | 'danger';
 
-export const LEVEL_COLORS: EuiRangeLevelColor[] = [
+export const LEVEL_COLORS: OuiRangeLevelColor[] = [
   'primary',
   'success',
   'warning',
   'danger',
 ];
 
-export interface EuiRangeLevel {
+export interface OuiRangeLevel {
   min: number;
   max: number;
-  color: EuiRangeLevelColor;
+  color: OuiRangeLevelColor;
 }
 
-export interface EuiRangeLevelsProps {
-  levels?: EuiRangeLevel[];
+export interface OuiRangeLevelsProps {
+  levels?: OuiRangeLevel[];
   max: number;
   min: number;
   showTicks?: boolean;
   compressed?: boolean;
 }
 
-export const EuiRangeLevels: FunctionComponent<EuiRangeLevelsProps> = ({
+export const OuiRangeLevels: FunctionComponent<OuiRangeLevelsProps> = ({
   levels = [],
   max,
   min,
   showTicks,
   compressed,
 }) => {
-  const validateLevelIsInRange = (level: EuiRangeLevel) => {
+  const validateLevelIsInRange = (level: OuiRangeLevel) => {
     if (level.min < min) {
       throw new Error(
         `The level min of ${level.min} is lower than the min value of ${min}.`
@@ -63,9 +63,9 @@ export const EuiRangeLevels: FunctionComponent<EuiRangeLevelsProps> = ({
     }
   };
 
-  const classes = classNames('euiRangeLevels', {
-    'euiRangeLevels--hasTicks': showTicks,
-    'euiRangeLevels--compressed': compressed,
+  const classes = classNames('ouiRangeLevels', {
+    'ouiRangeLevels--hasTicks': showTicks,
+    'ouiRangeLevels--compressed': compressed,
   });
 
   return (
@@ -79,7 +79,7 @@ export const EuiRangeLevels: FunctionComponent<EuiRangeLevelsProps> = ({
           <span
             key={index}
             style={{ width: `${width}%` }}
-            className={`euiRangeLevel euiRangeLevel--${level.color}`}
+            className={`ouiRangeLevel ouiRangeLevel--${level.color}`}
           />
         );
       })}

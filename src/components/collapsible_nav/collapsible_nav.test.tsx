@@ -21,17 +21,17 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiCollapsibleNav } from './collapsible_nav';
-import { EuiOverlayMaskProps } from '../overlay_mask';
+import { OuiCollapsibleNav } from './collapsible_nav';
+import { OuiOverlayMaskProps } from '../overlay_mask';
 
 jest.mock('../overlay_mask', () => ({
-  EuiOverlayMask: ({ headerZindexLocation, ...props }: any) => (
+  OuiOverlayMask: ({ headerZindexLocation, ...props }: any) => (
     <div {...props} />
   ),
 }));
 
 jest.mock('../portal', () => ({
-  EuiPortal: ({ children }: { children: any }) => children,
+  OuiPortal: ({ children }: { children: any }) => children,
 }));
 
 const propsNeededToRender = { id: 'id', isOpen: true, onClose: () => {} };
@@ -39,13 +39,13 @@ const flyoutProps = {
   size: 240,
   ownFocus: false,
   outsideClickCloses: false,
-  maskProps: { headerZindexLocation: 'above' } as EuiOverlayMaskProps,
+  maskProps: { headerZindexLocation: 'above' } as OuiOverlayMaskProps,
 };
 
-describe('EuiCollapsibleNav', () => {
+describe('OuiCollapsibleNav', () => {
   test('is rendered', () => {
     const component = mount(
-      <EuiCollapsibleNav {...propsNeededToRender} {...requiredProps} />
+      <OuiCollapsibleNav {...propsNeededToRender} {...requiredProps} />
     );
 
     expect(
@@ -58,7 +58,7 @@ describe('EuiCollapsibleNav', () => {
   describe('props', () => {
     test('onClose', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} onClose={() => {}} />
+        <OuiCollapsibleNav {...propsNeededToRender} onClose={() => {}} />
       );
 
       expect(
@@ -70,7 +70,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('size', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} size={240} />
+        <OuiCollapsibleNav {...propsNeededToRender} size={240} />
       );
 
       expect(
@@ -82,7 +82,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('isDocked', () => {
       const component = render(
-        <EuiCollapsibleNav {...propsNeededToRender} isDocked={true} />
+        <OuiCollapsibleNav {...propsNeededToRender} isDocked={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -90,7 +90,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('dockedBreakpoint', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} dockedBreakpoint={500} />
+        <OuiCollapsibleNav {...propsNeededToRender} dockedBreakpoint={500} />
       );
 
       expect(
@@ -102,7 +102,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('button', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} button={<button />} />
+        <OuiCollapsibleNav {...propsNeededToRender} button={<button />} />
       );
 
       expect(
@@ -114,7 +114,7 @@ describe('EuiCollapsibleNav', () => {
 
     test('showButtonIfDocked', () => {
       const component = mount(
-        <EuiCollapsibleNav
+        <OuiCollapsibleNav
           {...propsNeededToRender}
           button={<button />}
           isDocked={true}
@@ -129,9 +129,9 @@ describe('EuiCollapsibleNav', () => {
       ).toMatchSnapshot();
     });
 
-    test('accepts EuiFlyout props', () => {
+    test('accepts OuiFlyout props', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} {...flyoutProps} />
+        <OuiCollapsibleNav {...propsNeededToRender} {...flyoutProps} />
       );
 
       expect(
@@ -145,7 +145,7 @@ describe('EuiCollapsibleNav', () => {
   describe('close button', () => {
     test('can be hidden', () => {
       const component = mount(
-        <EuiCollapsibleNav {...propsNeededToRender} hideCloseButton={true} />
+        <OuiCollapsibleNav {...propsNeededToRender} hideCloseButton={true} />
       );
 
       expect(
@@ -157,7 +157,7 @@ describe('EuiCollapsibleNav', () => {
   });
 
   test('does not render if isOpen is false', () => {
-    const component = render(<EuiCollapsibleNav onClose={() => {}} id="id" />);
+    const component = render(<OuiCollapsibleNav onClose={() => {}} id="id" />);
 
     expect(component).toMatchSnapshot();
   });

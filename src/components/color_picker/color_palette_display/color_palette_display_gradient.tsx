@@ -20,14 +20,14 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
 import { getLinearGradient } from '../utils';
-import { EuiColorPaletteDisplayShared } from './color_palette_display';
+import { OuiColorPaletteDisplayShared } from './color_palette_display';
 
-export interface EuiColorPaletteDisplayGradientProps
+export interface OuiColorPaletteDisplayGradientProps
   extends HTMLAttributes<HTMLSpanElement>,
     CommonProps,
-    EuiColorPaletteDisplayShared {}
+    OuiColorPaletteDisplayShared {}
 
-export const EuiColorPaletteDisplayGradient: FunctionComponent<EuiColorPaletteDisplayGradientProps> = ({
+export const OuiColorPaletteDisplayGradient: FunctionComponent<OuiColorPaletteDisplayGradientProps> = ({
   palette,
   style = {},
   ...rest

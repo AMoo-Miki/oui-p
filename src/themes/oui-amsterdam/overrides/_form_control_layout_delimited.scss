@@ -1,0 +1,41 @@
+.ouiFormControlLayoutDelimited {
+  border-radius: $ouiFormControlBorderRadius;
+
+  &.ouiFormControlLayout--group {
+    .ouiFormControlLayout__childrenWrapper:first-child {
+      border-radius: $ouiFormControlBorderRadius 0 0 $ouiFormControlBorderRadius;
+    }
+  }
+
+  .ouiFormControlLayout__childrenWrapper:only-child {
+    border-radius: $ouiFormControlBorderRadius;
+    overflow: hidden;
+  }
+
+  .ouiFormControlLayout__prepend +
+  .ouiFormControlLayout__childrenWrapper {
+    &:last-child {
+      border-radius: 0 $ouiFormControlBorderRadius $ouiFormControlBorderRadius 0;
+    }
+  }
+
+  &.ouiFormControlLayout--compressed {
+    &.ouiFormControlLayout--group {
+      .ouiFormControlLayout__childrenWrapper:first-child {
+        border-radius: $ouiFormControlCompressedBorderRadius 0 0 $ouiFormControlCompressedBorderRadius;
+      }
+    }
+
+    .ouiFormControlLayout__childrenWrapper:only-child {
+      border-radius: $ouiFormControlCompressedBorderRadius;
+      overflow: hidden;
+    }
+
+    .ouiFormControlLayout__prepend +
+    .ouiFormControlLayout__childrenWrapper {
+      &:last-child {
+        border-radius: 0 $ouiFormControlCompressedBorderRadius $ouiFormControlCompressedBorderRadius 0;
+      }
+    }
+  }
+}

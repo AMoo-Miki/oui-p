@@ -17,18 +17,18 @@
  * under the License.
  */
 
-import { useEuiI18n } from '../i18n';
+import { useOuiI18n } from '../i18n';
 
 type Props = { number?: number; title?: string };
 
 export const useI18nStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n('euiStepStrings.step', 'Step {number}: {title}', {
+  const string = useOuiI18n('ouiStepStrings.step', 'Step {number}: {title}', {
     number,
     title,
   });
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleStep',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleStep',
     'Step {number}',
     { number }
   );
@@ -37,8 +37,8 @@ export const useI18nStep = ({ number, title }: Props): string => {
 };
 
 export const useI18nCompleteStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n(
-    'euiStepStrings.complete',
+  const string = useOuiI18n(
+    'ouiStepStrings.complete',
     'Step {number}: {title} is complete',
     {
       number,
@@ -46,8 +46,8 @@ export const useI18nCompleteStep = ({ number, title }: Props): string => {
     }
   );
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleComplete',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleComplete',
     'Step {number} is complete',
     { number }
   );
@@ -56,8 +56,8 @@ export const useI18nCompleteStep = ({ number, title }: Props): string => {
 };
 
 export const useI18nWarningStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n(
-    'euiStepStrings.warning',
+  const string = useOuiI18n(
+    'ouiStepStrings.warning',
     'Step {number}: {title} has warnings',
     {
       number,
@@ -65,8 +65,8 @@ export const useI18nWarningStep = ({ number, title }: Props): string => {
     }
   );
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleWarning',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleWarning',
     'Step {number} has warnings',
     { number }
   );
@@ -75,8 +75,8 @@ export const useI18nWarningStep = ({ number, title }: Props): string => {
 };
 
 export const useI18nErrorsStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n(
-    'euiStepStrings.errors',
+  const string = useOuiI18n(
+    'ouiStepStrings.errors',
     'Step {number}: {title} has errors',
     {
       number,
@@ -84,8 +84,8 @@ export const useI18nErrorsStep = ({ number, title }: Props): string => {
     }
   );
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleErrors',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleErrors',
     'Step {number} has errors',
     { number }
   );
@@ -94,8 +94,8 @@ export const useI18nErrorsStep = ({ number, title }: Props): string => {
 };
 
 export const useI18nIncompleteStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n(
-    'euiStepStrings.incomplete',
+  const string = useOuiI18n(
+    'ouiStepStrings.incomplete',
     'Step {number}: {title} is incomplete',
     {
       number,
@@ -103,8 +103,8 @@ export const useI18nIncompleteStep = ({ number, title }: Props): string => {
     }
   );
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleIncomplete',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleIncomplete',
     'Step {number} is incomplete',
     { number }
   );
@@ -113,8 +113,8 @@ export const useI18nIncompleteStep = ({ number, title }: Props): string => {
 };
 
 export const useI18nDisabledStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n(
-    'euiStepStrings.disabled',
+  const string = useOuiI18n(
+    'ouiStepStrings.disabled',
     'Step {number}: {title} is disabled',
     {
       number,
@@ -122,8 +122,8 @@ export const useI18nDisabledStep = ({ number, title }: Props): string => {
     }
   );
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleDisabled',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleDisabled',
     'Step {number} is disabled',
     { number }
   );
@@ -132,8 +132,8 @@ export const useI18nDisabledStep = ({ number, title }: Props): string => {
 };
 
 export const useI18nLoadingStep = ({ number, title }: Props): string => {
-  const string = useEuiI18n(
-    'euiStepStrings.loading',
+  const string = useOuiI18n(
+    'ouiStepStrings.loading',
     'Step {number}: {title} is loading',
     {
       number,
@@ -141,8 +141,8 @@ export const useI18nLoadingStep = ({ number, title }: Props): string => {
     }
   );
 
-  const simpleString = useEuiI18n(
-    'euiStepStrings.simpleLoading',
+  const simpleString = useOuiI18n(
+    'ouiStepStrings.simpleLoading',
     'Step {number} is loading',
     { number }
   );

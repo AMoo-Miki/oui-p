@@ -24,16 +24,16 @@ import { CommonProps } from '../common';
 
 import { getChromaColor } from './utils';
 
-export type EuiColorPickerSwatchProps = CommonProps &
+export type OuiColorPickerSwatchProps = CommonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> & {
     color?: string;
   };
 
-export const EuiColorPickerSwatch = forwardRef<
+export const OuiColorPickerSwatch = forwardRef<
   HTMLButtonElement,
-  EuiColorPickerSwatchProps
+  OuiColorPickerSwatchProps
 >(({ className, color, style, ...rest }, ref) => {
-  const classes = classNames('euiColorPickerSwatch', className);
+  const classes = classNames('ouiColorPickerSwatch', className);
   const chromaColor = useMemo(() => getChromaColor(color, true), [color]);
   const background = useMemo(
     () => (chromaColor ? chromaColor.css() : 'transparent'),
@@ -54,4 +54,4 @@ export const EuiColorPickerSwatch = forwardRef<
   );
 });
 
-EuiColorPickerSwatch.displayName = 'EuiColorPickerSwatch';
+OuiColorPickerSwatch.displayName = 'OuiColorPickerSwatch';

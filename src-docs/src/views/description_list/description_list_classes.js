@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EuiDescriptionList } from '../../../../src/components';
+import { OuiDescriptionList } from '../../../../src/components';
 
 const favoriteVideoGames = [
   {
@@ -19,12 +19,12 @@ const favoriteVideoGames = [
 ];
 export default () => (
   <div style={{ maxWidth: '400px' }}>
-    <EuiDescriptionList
+    <OuiDescriptionList
       listItems={favoriteVideoGames}
       type="column"
       align="center"
-      titleProps={{ className: 'eui-textTruncate' }}
-      descriptionProps={{ className: 'eui-textTruncate' }}
+      titleProps={{ className: 'oui-textTruncate' }}
+      descriptionProps={{ className: 'oui-textTruncate' }}
     />
   </div>
 );

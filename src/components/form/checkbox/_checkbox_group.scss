@@ -1,7 +1,7 @@
-.euiCheckboxGroup__item + .euiCheckboxGroup__item {
-  margin-top: $euiSizeXS;
+.ouiCheckboxGroup__item + .ouiCheckboxGroup__item {
+  margin-top: $ouiSizeXS;
 
-  &.euiCheckbox--compressed {
+  &.ouiCheckbox--compressed {
     margin-top: 0;
   }
 }

@@ -20,11 +20,11 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiListGroupItem, SIZES, COLORS } from './list_group_item';
+import { OuiListGroupItem, SIZES, COLORS } from './list_group_item';
 
-describe('EuiListGroupItem', () => {
+describe('OuiListGroupItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiListGroupItem label="Label" />);
+    const component = render(<OuiListGroupItem label="Label" />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('EuiListGroupItem', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
           const component = render(
-            <EuiListGroupItem label="Label" size={size} />
+            <OuiListGroupItem label="Label" size={size} />
           );
 
           expect(component).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe('EuiListGroupItem', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiListGroupItem label="Label" color={color} />
+            <OuiListGroupItem label="Label" color={color} />
           );
 
           expect(component).toMatchSnapshot();
@@ -56,7 +56,7 @@ describe('EuiListGroupItem', () => {
 
     describe('isActive', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" isActive />);
+        const component = render(<OuiListGroupItem label="Label" isActive />);
 
         expect(component).toMatchSnapshot();
       });
@@ -64,7 +64,7 @@ describe('EuiListGroupItem', () => {
 
     describe('isDisabled', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" isDisabled />);
+        const component = render(<OuiListGroupItem label="Label" isDisabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -73,7 +73,7 @@ describe('EuiListGroupItem', () => {
     describe('iconType', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="Label" iconType="empty" />
+          <OuiListGroupItem label="Label" iconType="empty" />
         );
 
         expect(component).toMatchSnapshot();
@@ -83,7 +83,7 @@ describe('EuiListGroupItem', () => {
     describe('icon', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="Label" icon={<span />} />
+          <OuiListGroupItem label="Label" icon={<span />} />
         );
 
         expect(component).toMatchSnapshot();
@@ -94,7 +94,7 @@ describe('EuiListGroupItem', () => {
     // describe('showToolTip', () => {
     //   test('is rendered', () => {
     //     const component = render(
-    //       <EuiListGroupItem label="Label" showToolTip />
+    //       <OuiListGroupItem label="Label" showToolTip />
     //     );
 
     //     expect(component).toMatchSnapshot();
@@ -103,7 +103,7 @@ describe('EuiListGroupItem', () => {
 
     describe('wrapText', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" wrapText />);
+        const component = render(<OuiListGroupItem label="Label" wrapText />);
 
         expect(component).toMatchSnapshot();
       });
@@ -112,7 +112,7 @@ describe('EuiListGroupItem', () => {
     describe('extraAction', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem
+          <OuiListGroupItem
             label="Label"
             extraAction={{
               iconType: 'empty',
@@ -127,7 +127,7 @@ describe('EuiListGroupItem', () => {
 
       test('can be disabled', () => {
         const component = render(
-          <EuiListGroupItem
+          <OuiListGroupItem
             label="Label"
             extraAction={{
               iconType: 'empty',
@@ -142,14 +142,14 @@ describe('EuiListGroupItem', () => {
 
     describe('href', () => {
       test('is rendered', () => {
-        const component = render(<EuiListGroupItem label="Label" href="#" />);
+        const component = render(<OuiListGroupItem label="Label" href="#" />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered with rel', () => {
         const component = render(
-          <EuiListGroupItem label="Label" href="#" rel="noreferrer" />
+          <OuiListGroupItem label="Label" href="#" rel="noreferrer" />
         );
 
         expect(component).toMatchSnapshot();
@@ -159,7 +159,7 @@ describe('EuiListGroupItem', () => {
     describe('onClick', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="Label" onClick={() => {}} />
+          <OuiListGroupItem label="Label" onClick={() => {}} />
         );
 
         expect(component).toMatchSnapshot();
@@ -169,7 +169,7 @@ describe('EuiListGroupItem', () => {
     describe('href and onClick', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiListGroupItem label="" onClick={() => {}} href="#" />
+          <OuiListGroupItem label="" onClick={() => {}} href="#" />
         );
 
         expect(component).toMatchSnapshot();
@@ -179,7 +179,7 @@ describe('EuiListGroupItem', () => {
 
   test('renders a disabled button even if provided an href', () => {
     const component = render(
-      <EuiListGroupItem label="Label" isDisabled href="#" />
+      <OuiListGroupItem label="Label" isDisabled href="#" />
     );
 
     expect(component).toMatchSnapshot();
@@ -187,7 +187,7 @@ describe('EuiListGroupItem', () => {
 
   test('renders a disabled button even if provided an href', () => {
     const component = render(
-      <EuiListGroupItem label="Label" isDisabled href="#" />
+      <OuiListGroupItem label="Label" isDisabled href="#" />
     );
 
     expect(component).toMatchSnapshot();
@@ -198,7 +198,7 @@ describe('EuiListGroupItem', () => {
     let consoleStub: jest.Mock;
 
     beforeEach(() => {
-      // We don't use jest.spyOn() here, because EUI's tests apply a global
+      // We don't use jest.spyOn() here, because OUI's tests apply a global
       // console.error() override that throws an exception. For these
       // tests, we just want to know if console.error() was called.
       console.warn = consoleStub = jest.fn();
@@ -210,7 +210,7 @@ describe('EuiListGroupItem', () => {
 
     test('if both iconType and icon are provided but still renders', () => {
       const component = render(
-        <EuiListGroupItem label="" iconType="empty" icon={<span />} />
+        <OuiListGroupItem label="" iconType="empty" icon={<span />} />
       );
 
       expect(consoleStub).toBeCalled();
